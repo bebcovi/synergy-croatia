@@ -1,0 +1,29 @@
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: synergy-croatia_test
+  pool: 5
+  username: synergy-croatia
+  password:
+
+staging:
+  adapter: postgresql
+  encoding: unicode
+  database: synergy-croatia_staging
+  pool: 5
+  username: synergy-croatia
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: synergy-croatia_production
+  pool: 5
+  username: synergy-croatia
+  password:
