@@ -12,6 +12,7 @@ group :assets do
 end
 
 gem "slim-rails"
+gem "simple_form"
 
 group :development do
   gem "sqlite3"

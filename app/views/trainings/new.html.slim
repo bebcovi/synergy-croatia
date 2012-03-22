@@ -1,0 +1,18 @@
+- @title = (@training.new_record? ? "Create training" : "Update training")
+
+== simple_form_for @training  do |f|
+
+  == f.input :title
+  == f.input :level
+  == f.input :description
+  == f.input :goal
+  == f.input :begins_on
+  == f.input :ends_on
+  == f.input :participating_countries, :input_html => {:value => @training.participating_countries.join(", ")}
+  == f.input :age_restriction
+  == f.input :location
+  == f.input :infoletter_url
+  == f.input :participation_form_url
+  == f.input :additional_info
+
+  == f.button :submit
