@@ -10,4 +10,9 @@ class TrainingTest < ActiveSupport::TestCase
               attribute.in?(model_attributes)
             end
   end
+
+  test "methods" do
+    require 'date'
+    assert_equal 10, Training.new(:begins_on => Date.parse("1st Jan 2012"), :ends_on => Date.parse("10th Jan 2012")).duration
+  end
 end
