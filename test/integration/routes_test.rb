@@ -7,8 +7,7 @@ class RoutesTest < ActionDispatch::IntegrationTest
   end
 
   test "HomeController" do
-    assert_routing home_path, {:controller => "home", :action => "index"}
-    assert_equal root_path, home_path
+    assert_routing root_path, {:controller => "home", :action => "index"}
   end
 
   test "TrainingsController" do
