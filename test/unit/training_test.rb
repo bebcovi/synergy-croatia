@@ -18,7 +18,7 @@ class TrainingTest < ActiveSupport::TestCase
   end
 
   test "column translations" do
-    Training.attribute_names.map(&:to_sym).each do |attribute|
+    Training.attribute_names.map(&:to_sym).except(:id).each do |attribute|
       assert_nothing_raised(I18n::MissingTranslationData) do
         I18n.t "activerecord.attributes.training.#{attribute}", :raise => true
       end
