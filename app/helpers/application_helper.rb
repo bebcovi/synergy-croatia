@@ -1,4 +1,10 @@
 module ApplicationHelper
+  Page = Struct.new(:title, :route)
+  def pages
+    [["index", root_path]].collect do |page, route|
+      Page.new(t("pages.#{page}.page_title"), route)
+    end
+  end
 
   Language = Struct.new(:name, :locale)
   def other_language
