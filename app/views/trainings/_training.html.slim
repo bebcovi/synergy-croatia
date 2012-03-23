@@ -1,0 +1,24 @@
+h2= training.title
+
+h3 O čemu se radi?
+== render_markdown(training.description)
+p Cilj: #{training.goal}
+
+h3 Gdje i kad?
+p Mjesto: #{training.location}
+p Vrijeme: #{training.begins_on} - #{training.ends_on}
+
+h3 Tko sve sudjeluje?
+p #{training.participating_countries}
+
+h3 Tko se smije prijaviti?
+p #{training.age_restriction}
+
+h3 Dodatne napomene
+== render_markdown(training.additional_info)
+
+h3 Želim saznati više&hellip;
+p== link_to "Infoletter", training.infoletter_url
+
+h3 Kako da se prijavim?
+p== link_to "Obrazac za prijavu", training.participation_form_url

@@ -13,6 +13,7 @@ end
 
 gem "slim-rails"
 gem "simple_form"
+gem "redcarpet"
 
 group :development do
   gem "sqlite3"

@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120321223937) do
+ActiveRecord::Schema.define(:version => 20120323205913) do
 
   create_table "trainings", :force => true do |t|
     t.string   "title"
-    t.string   "level"
     t.text     "description"
     t.string   "goal"
     t.date     "begins_on"
