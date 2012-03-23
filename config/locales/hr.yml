@@ -1,6 +1,7 @@
 hr:
-  new_training: "Novi trening"
-  edit_training: "Izmjeni trening"
+  pages:
+    index:
+      page_title: "Aktualno"
 
   errors:
     not_found:

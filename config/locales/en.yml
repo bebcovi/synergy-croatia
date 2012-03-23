@@ -1,6 +1,7 @@
 en:
-  new_training: "New training"
-  edit_training: "Edit training"
+  pages:
+    index:
+      page_title: "Recent"
 
   errors:
     not_found:
