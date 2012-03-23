@@ -2,6 +2,16 @@ hr:
   pages:
     index:
       page_title: "Aktualno"
+    about:
+      page_title: "O nama"
+    projects:
+      page_title: "Ostvareni projekti"
+    collaboration:
+      page_title: "Suradnja"
+    experience:
+      page_title: "Iskustva polaznika"
+    method:
+      page_title: "Metoda"
 
   errors:
     not_found:

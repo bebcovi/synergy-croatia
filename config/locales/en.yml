@@ -2,6 +2,16 @@ en:
   pages:
     index:
       page_title: "Recent"
+    about:
+      page_title: "About us"
+    projects:
+      page_title: "Projects"
+    collaboration:
+      page_title: "Collaboration"
+    experience:
+      page_title: "Attenders' experiences"
+    method:
+      page_title: "Method"
 
   errors:
     not_found:
