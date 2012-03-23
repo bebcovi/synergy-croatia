@@ -8,7 +8,7 @@ html
   body
     nav
       ol
-        - pages.each do |page|
+        - navigation_pages.each do |page|
           li== link_to page.title, page.route
 
     p== link_to other_language.name, url_for(params.update(:locale => other_language.locale))
