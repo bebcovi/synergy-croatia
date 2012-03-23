@@ -15,11 +15,5 @@ class TrainingTest < ActiveSupport::TestCase
     require 'date'
     assert_equal 10, Training.new(:begins_on => Date.parse("1st Jan 2012"),
                                   :ends_on => Date.parse("10th Jan 2012")).duration
-
-    assert_instance_of Array, trainings(:ok).participating_countries,
-      "Training#participating_countries doesn't return an array"
-
-    training = Training.new(:participating_countries => "Croatia, Romania,France")
-    assert_equal %w[Croatia Romania France], training.participating_countries
   end
 end
