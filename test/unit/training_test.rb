@@ -16,4 +16,12 @@ class TrainingTest < ActiveSupport::TestCase
     assert_equal 10, Training.new(:begins_on => Date.parse("1st Jan 2012"),
                                   :ends_on => Date.parse("10th Jan 2012")).duration
   end
+
+  test "column translations" do
+    Training.attribute_names.map(&:to_sym).each do |attribute|
+      assert_nothing_raised(I18n::MissingTranslationData) do
+        I18n.t "activerecord.attributes.training.#{attribute}", :raise => true
+      end
+    end
+  end
 end

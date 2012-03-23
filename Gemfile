@@ -29,3 +29,5 @@ end
 group :test do
   gem "turn", :require => false
 end
+
+gem "rails-i18n"
