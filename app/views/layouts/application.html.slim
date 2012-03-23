@@ -6,5 +6,6 @@ html
     == javascript_include_tag "application"
     == csrf_meta_tags
   body
-    p== link_to the_other_locale, url_for(params.update(:locale => the_other_locale))
+    p== link_to other_language.name, url_for(params.update(:locale => other_language.locale))
+
     == yield
