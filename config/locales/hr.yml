@@ -2,14 +2,15 @@ hr:
   new_training: "Novi trening"
   edit_training: "Izmjeni trening"
 
-  status_404:
-    page_title: "Stranica nije pronađena"
-    title: "404"
-    message: "Stranica koju tražite nije pronađena"
-  status_500:
-    page_title: "Greška"
-    title: "500"
-    message: "Dogodila se greška"
+  errors:
+    not_found:
+      page_title: "Stranica nije pronađena"
+      title: "404"
+      message: "Stranica koju tražite nije pronađena"
+    internal_server_error:
+      page_title: "Greška"
+      title: "500"
+      message: "Dogodila se greška"
 
   helpers:
     submit:

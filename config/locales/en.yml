@@ -2,14 +2,15 @@ en:
   new_training: "New training"
   edit_training: "Edit training"
 
-  status_404:
-    page_title: "Page not found"
-    title: "404"
-    message: "The page you're looking for can not be found."
-  status_500:
-    page_title: "Internal server error"
-    title: "500"
-    message: "There has been an error"
+  errors:
+    not_found:
+      page_title: "Page not found"
+      title: "404"
+      message: "The page you're looking for can not be found."
+    internal_server_error:
+      page_title: "Internal server error"
+      title: "500"
+      message: "There has been an error"
 
   helpers:
     submit:
