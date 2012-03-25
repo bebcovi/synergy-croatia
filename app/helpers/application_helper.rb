@@ -1,9 +1,14 @@
 module ApplicationHelper
   Page = Struct.new(:title, :route)
   def navigation_pages
-    pages = [["index", root_path], ["about", about_path],
-             ["projects", projects_path], ["collaboration", collaboration_path],
-             ["experience", experience_path], ["method", method_path]]
+    pages = {
+      "index"         => root_path,
+      "about"         => about_path,
+      "projects"      => projects_path,
+      "collaboration" => collaboration_path,
+      "experience"    => experience_path,
+      "method"        => method_path
+    }
 
     pages.collect do |page, route|
       Page.new(t("pages.#{page}.page_title"), route)
