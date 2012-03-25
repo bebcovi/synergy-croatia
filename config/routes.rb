@@ -1,6 +1,6 @@
 SynergyCroatia::Application.routes.draw do
   root :to => "pages#index"
-  get "(:locale)", :constraints => {:locale => /en|hr/}, :to => "pages#index", :as => :root
+  get "(:locale)", :constraints => {:locale => /en|hr/}, :to => "pages#index", :as => :index
 
   scope "(:locale)", :locale => /en|hr/ do
     get "about", :to => "pages#about"
