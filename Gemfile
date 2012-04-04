@@ -1,4 +1,4 @@
-source "http://rubygems.org"
+source :rubygems
 
 gem "thin"
 gem "rails", "3.2.2"
