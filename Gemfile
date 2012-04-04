@@ -1,7 +1,7 @@
 source :rubygems
 
 gem "thin"
-gem "rails", "3.2.2"
+gem "rails", "3.2.3"
 
 group :assets do
   gem "sass-rails"
