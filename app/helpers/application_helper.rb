@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def render_markdown(text)
-    MyMarkdown.render(text).html_safe
+    Redcarpet::Markdown.new(SmartHTMLRenderer).render(text).html_safe
   end
 end
