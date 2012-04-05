@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Synergy · #{@title}
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %nav
+      %ol
+        = list_of navigation_pages do |page|
+          = link_to page.title, page.route
+
+    %p= link_to_unless_current "Croatian", :locale => :hr
+    %p= link_to_unless_current "Engleski", :locale => :en
+
+    = yield

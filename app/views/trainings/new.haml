@@ -1,0 +1,17 @@
+- @title = (@training.new_record? ? t(:new_training) : t(:edit_training))
+
+= simple_form_for @training do |f|
+
+  = f.input :title
+  = f.input :description
+  = f.input :goal
+  = f.input :begins_on
+  = f.input :ends_on
+  = f.input :participating_countries
+  = f.input :age_restriction
+  = f.input :location
+  = f.input :infoletter_url
+  = f.input :participation_form_url
+  = f.input :additional_info
+
+  = f.button :submit

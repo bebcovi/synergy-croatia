@@ -11,7 +11,7 @@ group :assets do
   gem "jquery-rails"
 end
 
-gem "slim-rails"
+gem "haml-rails"
 gem "simple_form"
 gem "redcarpet"
 
