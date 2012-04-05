@@ -7,13 +7,12 @@ module ApplicationHelper
     end
   end
 
-  Language = Struct.new(:name, :locale)
-  def other_language
-    if I18n.locale == :en
-      Language.new("Croatian", :hr)
-    else
-      Language.new("English", :en)
-    end
+  def english?
+    I18n.locale == :en
+  end
+
+  def croatian?
+    I18n.locale == :hr
   end
 
   def render_markdown(text)

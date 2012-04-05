@@ -11,7 +11,9 @@
         = list_of navigation_pages do |page|
           = link_to page.title, page.route
 
-    %p= link_to_unless_current "Croatian", :locale => :hr
-    %p= link_to_unless_current "Engleski", :locale => :en
+    - if english?
+      %p= link_to "Croatian", :locale => :hr
+    - else
+      %p= link_to "Engleski", :locale => :en
 
     = yield
