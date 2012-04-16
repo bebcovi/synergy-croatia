@@ -18,6 +18,8 @@ gem "redcarpet"
 group :development do
   gem "sqlite3"
   gem "debugger", :require => "debugger"
+  gem "guard-livereload"
+  gem "foreman"
 end
 
 group :production do
