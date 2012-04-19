@@ -1,0 +1,16 @@
+// .gradients {
+//   div {
+//     width: 50px;
+//     height: 50px;
+//     position: absolute;
+//   }
+//   :nth-child(1) {
+//     $color1: rgba(black, .25) transparent;
+//     $dist1: 50%;
+//     left: 50%;
+//     z-index: -1;
+//     @include background(
+//       radial-gradient(center center, nth($color1, 1) $dist1, nth($color1, 2) $dist1)
+//     );
+//   }
+// }

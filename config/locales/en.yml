@@ -1,17 +1,17 @@
 en:
   pages:
     index:
-      page_title: "Recent"
+      page_title: "Upcoming projects"
     about:
       page_title: "About us"
-    projects:
-      page_title: "Projects"
-    collaboration:
-      page_title: "Collaboration"
-    experience:
-      page_title: "Attenders' experiences"
+    archive:
+      page_title: "Archive"
+    testimonials:
+      page_title: "Testimonials"
     method:
       page_title: "Method"
+    links:
+      page_title: "External links"
 
   errors:
     not_found:

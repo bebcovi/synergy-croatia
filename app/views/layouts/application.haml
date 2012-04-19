@@ -3,19 +3,35 @@
   %head
     %title Synergy &middot; #{@title}
     %meta{:charset => 'utf-8'}
-    %link{:href => 'http://fonts.googleapis.com/css?family=Trocchi|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin-ext,latin', :rel => 'stylesheet', :type => 'text/css'}
+    %meta{:name => 'robots', :content => 'noindex'}
+    %link{:href => 'http://fonts.googleapis.com/css?family=Trocchi|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Gentium+Basic:400,700,400italic,700italic&subset=latin-ext,latin', :rel => 'stylesheet', :type => 'text/css'}
+    %script{:src => '/zepto.min.js'}
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %nav
-      %ol
-        = list_of navigation_pages do |page|
-          = link_to page.title, page.route
+    .gradients
+      - 5.times do
+        %div
+    %header#header
+      = link_to 'Synergy Croatia', '/', :id => 'logo'
+      %h1#title= @title
+      %p#lang
+        - if english?
+          Ne znaš engleski? Odi na #{link_to "hrvatsku", :locale => :hr} verziju.
+        - else
+          Not your language? Try the #{link_to "English", :locale => :en} version.
 
-    - if english?
-      %p= link_to "Croatian", :locale => :hr
-    - else
-      %p= link_to "Engleski", :locale => :en
+    %article{:role => 'main', :id => @title.downcase.gsub(' ', '-')}
+      = yield
 
-    = yield
+    %aside
+      %nav
+        %ol
+          = list_of navigation_pages do |page|
+            = link_to page.title, page.route
+      -# %section#results
+      -#   %h1 Rezultati polaznika
+      -#   %ul
+      -#     = list_of(['neka web stranica', 'nešto drugo', 'blah']) do |item|
+      -#       = link_to item, '#'

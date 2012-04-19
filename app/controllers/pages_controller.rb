@@ -8,15 +8,15 @@ class PagesController < ApplicationController
   def about
   end
 
-  def projects
+  def archive
   end
 
-  def collaboration
-  end
-
-  def experience
+  def testimonials
   end
 
   def method
+  end
+
+  def links
   end
 end

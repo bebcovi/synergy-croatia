@@ -4,10 +4,10 @@ SynergyCroatia::Application.routes.draw do
 
   scope "(:locale)", :locale => /en|hr/ do
     get "about", :to => "pages#about"
-    get "projects", :to => "pages#projects"
-    get "collaboration", :to => "pages#collaboration"
-    get "experience", :to => "pages#experience"
+    get "archive", :to => "pages#archive"
+    get "testimonials", :to => "pages#testimonials"
     get "method", :to => "pages#method"
+    get "links", :to => "pages#links"
 
     resources :trainings
 

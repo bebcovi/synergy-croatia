@@ -1,0 +1,28 @@
+article {
+  .quote {
+    @include columns($left-sidebar, $main);
+    @include adjust-font-size-to(200px, 6);
+    text-align: right;
+    color: lighten($text, 50%);
+    font: {
+      family: $serif;
+    }
+  }
+  blockquote {
+    color: lighten($text, 20%);
+    font: {
+      family: $serif;
+      style: italic;
+    }
+    h2 {
+      $font-size: 24px;
+      @include adjust-font-size-to($font-size);
+      @include trailer(1, $font-size);
+    }
+    p {
+      $font-size: 20px;
+      @include adjust-font-size-to($font-size);
+      @include trailer(1, $font-size);
+    }
+  }
+}

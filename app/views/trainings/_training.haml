@@ -1,24 +1,31 @@
-%h2= training.title
+%h1= training.title
 
-%h3= "O čemu se radi?"
+%h2 Što?
 = render_markdown(training.description)
-%p= "Cilj: #{training.goal}"
 
-%h3= "Gdje i kad?"
-%p= "Mjesto: #{training.location}"
-%p= "Vrijeme: #{training.begins_on} - #{training.ends_on}"
+- if training.goal
+  %h2 Zašto?
+  %p Cilj treninga je #{training.goal.tap { |str| str[0] = str[0].downcase }}
 
-%h3= "Tko sve sudjeluje?"
-%p= training.participating_countries
+%h2 Gdje?
+%p #{training.location}
 
-%h3= "Tko se smije prijaviti?"
-%p= training.age_restriction
+%h2 Kad?
+%p #{l training.begins_on} &ndash; #{l training.ends_on}
 
-%h3= "Dodatne napomene"
-= render_markdown(training.additional_info)
+- if training.participating_countries
+  %h2 Koje države?
+  %p= training.participating_countries
 
-%h3= "Želim saznati više..."
-%p= link_to "Infoletter", training.infoletter_url
+-# %h2 Je li to za mene?
+-# %p 
 
-%h3 Kako da se prijavim?
-%p= link_to "Obrazac za prijavu", training.participation_form_url
+- if training.additional_info
+  %h2 Još nešto?
+  = render_markdown(training.additional_info)
+
+%h2 Želim saznati više&hellip;
+%p Za više informacija možete pruzeti ovaj #{link_to "Infoletter", training.infoletter_url}, a ako još uvijek budete imali pitanja, slobodno se obratite na našu email adresu #{mail_to 'synergy@synergy-croatia.com'}.
+
+%h2 Može!
+%p Izvrsno! U tom slučaju ispunite ovaj #{link_to "obrazac za prijavu", training.participation_form_url} i pošaljite ga na našu email adresu.

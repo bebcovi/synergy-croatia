@@ -1,0 +1,46 @@
+$logo: 2;
+$lang: 4;
+$title: $total-cols - $logo - $lang - 1;
+
+#header {
+  @include full;
+  @include clearfix;
+  @include trailer(2);
+}
+
+#logo {
+  $font-size: 24px;
+  @include columns($logo, $total-cols);
+  @include prefix(1, $total-cols);
+  @include adjust-font-size-to($font-size, 1);
+  @include leader(.5, $font-size);
+  display: block;
+  text: {
+    align: center;
+    transform: uppercase;
+    rendering: optimizeLegibility;
+  }
+  border: 0;
+  &:hover {
+    background: transparent;
+  }
+}
+
+#title {
+  @include columns($title, $total-cols);
+  @include adjust-font-size-to(62px);
+  @include trailer(0);
+  letter-spacing: -2px;
+  font: {
+    family: $sans-serif;
+    weight: 300;
+  }
+}
+
+$cols: 3;
+#lang {
+  @include columns($lang, $total-cols);
+  @include omega($total-cols);
+  @include rhythm(1, 0, 0, 0);
+  text-align: right;
+}

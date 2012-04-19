@@ -8,6 +8,7 @@ group :assets do
   gem "coffee-rails"
   gem "uglifier"
   gem "compass-rails"
+  gem "compass-susy-plugin", :require => 'susy'
   gem "jquery-rails"
 end
 
