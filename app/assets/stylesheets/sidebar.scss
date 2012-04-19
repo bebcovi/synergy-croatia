@@ -3,21 +3,6 @@ aside {
   @include omega;
 }
 
-nav {
-  $font-size: 18px;
-  @include full($right-sidebar);
-  @include adjust-font-size-to($font-size);
-  @include leader(1, $font-size);
-  // font-weight: 300;
-  text: {
-    align: right;
-    transform: uppercase;
-  }
-  &, ol, li { @include full($right-sidebar); }
-  ol { @include unstyled-list; }
-  li { @include trailer(1, $font-size); }
-}
-
 #results {
   $font-size: 14px;
   @include full($right-sidebar);

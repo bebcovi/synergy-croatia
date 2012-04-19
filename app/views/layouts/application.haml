@@ -21,15 +21,15 @@
           Ne znaš engleski? Odi na #{link_to "hrvatsku", :locale => :hr} verziju.
         - else
           Not your language? Try the #{link_to "English", :locale => :en} version.
+    %nav
+      %ol
+        = list_of navigation_pages do |page|
+          = link_to page.title, page.route
 
     %article{:role => 'main', :id => @title.downcase.gsub(' ', '-')}
       = yield
 
     %aside
-      %nav
-        %ol
-          = list_of navigation_pages do |page|
-            = link_to page.title, page.route
       -# %section#results
       -#   %h1 Rezultati polaznika
       -#   %ul
