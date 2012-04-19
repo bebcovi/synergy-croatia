@@ -1,9 +1,9 @@
 article {
   .quote {
     @include columns($left-sidebar, $main);
-    @include adjust-font-size-to(200px, 6);
+    @include adjust-font-size-to(300px, 10);
     text-align: right;
-    color: lighten($text, 50%);
+    color: darken(white, 10%);
     font: {
       family: $serif;
     }
