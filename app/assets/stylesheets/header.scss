@@ -52,6 +52,7 @@ nav {
   @include adjust-font-size-to($font-size);
   @include trailer(1, $font-size);
   font-weight: 300;
+  color: $link2;
   text: {
     align: right;
     transform: uppercase;

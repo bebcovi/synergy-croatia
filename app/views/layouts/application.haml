@@ -24,7 +24,7 @@
     %nav
       %ol
         = list_of navigation_pages do |page|
-          = link_to page.title, page.route
+          = link_to_unless_current page.title, page.route
 
     %article{:role => 'main', :id => @title.downcase.gsub(' ', '-')}
       = yield
