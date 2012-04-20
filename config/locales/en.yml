@@ -12,6 +12,9 @@ en:
       page_title: "Method"
     links:
       page_title: "External links"
+    mailchimp:
+      title: "Receive latest updates"
+      submit: "Subscribe"
 
   errors:
     not_found:

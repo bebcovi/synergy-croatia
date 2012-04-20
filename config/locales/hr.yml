@@ -12,6 +12,9 @@ hr:
       page_title: "Metoda"
     links:
       page_title: "Vanjske poveznice"
+    mailchimp:
+      title: "Želiš primati naše obavijesti?"
+      submit: "Prijavi se"
 
   errors:
     not_found:

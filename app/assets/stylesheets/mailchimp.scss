@@ -1,0 +1,17 @@
+#mailchimp {
+  @include trailer(1, $sidebar-font-size);
+  @include clearfix;
+  input {
+    &[type=email] {
+      @include rhythm-borders($lines: .25, $font-size: $sidebar-font-size);
+      width: 65%;
+      margin: 0;
+      border: 1px inset;
+      color: $text;
+    }
+    &[type=email], &[type=submit] {
+      @include adjust-font-size-to($sidebar-font-size);
+      font-family: $sans-serif;
+    }
+  }
+}
