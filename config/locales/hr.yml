@@ -49,3 +49,6 @@ hr:
         created_at: "Stvoreno"
         updated_at: "Zadnje izmjenjeno"
 
+  date:
+    formats:
+      default: ! '%d.%m.%Y'

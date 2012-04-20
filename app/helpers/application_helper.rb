@@ -19,7 +19,14 @@ module ApplicationHelper
     Redcarpet::Markdown.new(SmartHTMLRenderer).render(text).html_safe
   end
 
-  def l(time)
-    I18n.l(time, :format => :long)
+
+  def format_date_range(from, till)
+    if from.year != till.year
+      [from.strftime('%d.%m.%Y'), till.strftime('%d.%m.%Y.')]
+    elsif from.month != till.month
+      [from.strftime('%d.%m.'), till.strftime('%d.%m.%Y.')]
+    else
+      [from.strftime('%d.'), till.strftime('%d.%m.%Y.')]
+    end
   end
 end

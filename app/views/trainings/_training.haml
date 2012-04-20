@@ -11,7 +11,8 @@
 %p #{training.location}
 
 %h2 Kad?
-%p #{l training.begins_on} &ndash; #{l training.ends_on}
+- from, till = format_date_range(training.begins_on, training.ends_on)
+%p #{from} &ndash; #{till}
 
 - if training.participating_countries
   %h2 Koje države?
