@@ -1,2 +1,2 @@
 Zepto ->
-  $('#iskustva-polaznika blockquote').before $('<div class="quote">&#147;</div>')
+  $('#testimonials blockquote').before $('<div class="quote">&#147;</div>')
