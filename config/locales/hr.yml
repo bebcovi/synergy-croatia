@@ -46,6 +46,7 @@ hr:
         infoletter_url: "Infoletter"
         participation_form_url: "Obrazac za prijavu"
         additional_info: "Dodatne napomene"
+        intended_group: "Namijenjena grupa ljudi"
         created_at: "Stvoreno"
         updated_at: "Zadnje izmjenjeno"
 
