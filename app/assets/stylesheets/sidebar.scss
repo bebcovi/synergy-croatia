@@ -1,20 +1,23 @@
 aside {
+  $font-size: $sidebar-font-size;
   @include columns($right-sidebar);
   @include omega;
+  @include adjust-font-size-to($font-size);
+  @include leader(2.5, $font-size);
+  h1 {
+    $font-size: 20px;
+    @include adjust-font-size-to($font-size, $from-size: $sidebar-font-size);
+    @include trailer(.5, $font-size);
+    font: {
+      family: $sans-serif;
+      weight: 400;
+    }
+    text-transform: uppercase;
+  }
 }
 
 #results {
-  $font-size: 14px;
   @include full($right-sidebar);
-  @include adjust-font-size-to($font-size);
-  @include leader(.5, $font-size);
-  ul { @include trailer(0); }
-  li { @include trailer(0, $font-size); }
-  h1 {
-    $font-size: 18px;
-    @include adjust-font-size-to($font-size, $from-size: 14px);
-    @include trailer(.5, $font-size);
-    font-weight: normal;
-    text-transform: uppercase;
-  }
+  ul { @include trailer(0, $sidebar-font-size); }
+  li { @include trailer(0, $sidebar-font-size); }
 }
