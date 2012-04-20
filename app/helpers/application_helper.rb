@@ -19,6 +19,9 @@ module ApplicationHelper
     Redcarpet::Markdown.new(SmartHTMLRenderer).render(text).html_safe
   end
 
+  def current_page_id
+    t("pages.#{params[:action]}.page_title", :locale => :en).downcase.gsub(' ', '-')
+  end
 
   def format_date_range(from, till)
     if from.year != till.year
