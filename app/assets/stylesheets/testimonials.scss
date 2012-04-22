@@ -1,11 +1,12 @@
 article {
   .quote {
     @include columns($left-sidebar, $main);
-    @include adjust-font-size-to(300px, 10);
+    @include adjust-font-size-to(100px, 3);
     text-align: right;
     color: darken(white, 10%);
     font: {
       family: $serif;
+      weight: bold;
     }
   }
   blockquote {
