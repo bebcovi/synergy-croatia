@@ -1,0 +1,31 @@
+nav {
+  $font-size: 24px;
+  @include trailer;
+  background: nth($colors, 3);
+  font-weight: 300;
+  text: {
+    align: right;
+    transform: uppercase;
+  }
+  .inner { @include container; }
+  ol {
+    @include adjust-font-size-to($font-size);
+    @include horizontal-list(0);
+    @include full;
+    @include prefix(1);
+  }
+  li { @include trailer(0, $font-size); }
+  a {
+    @include rhythm(0, .5, .5, 0);
+    display: block;
+    padding: rhythm(.5);
+    border: 0;
+    &.active {
+      color: $link2;
+      background: white;
+      @include apply-side-rhythm-border(left, $lines: .5);
+      @include apply-side-rhythm-border(right, $lines: .5);
+      border-color: rgba(nth($colors, 5), .4);
+    }
+  }
+}

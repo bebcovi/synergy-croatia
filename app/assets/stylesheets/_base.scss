@@ -13,12 +13,12 @@ $sidebar-font-size: 16px;
 $serif: 'Gentium Basic', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$colors: #5D7370 #7FA6A1 #B8D9B8 #D6EDBD #FFF5BC;
+$colors: #383B42 #D1510D #FFF4D1 #BFBFBF #302825;
 
 $text: lighten(black, 30%);
 
 $link1: nth($colors, 2);
-$link2: nth($colors, 1);
+$link2: nth($colors, 5);
 
 @mixin unstyled-list {
   list-style: none;
