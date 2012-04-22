@@ -20,7 +20,7 @@
         %h1#title= @title
         %p#lang
           - if english?
-            Ne znaš engleski? Imaš #{link_to "hrvatsku", :locale => :hr} verziju.
+            Ne znaš engleski? Postoji #{link_to "hrvatska", :locale => :hr} verzija.
           - else
             Not your language? Try the #{link_to "English", :locale => :en} version.
     %nav

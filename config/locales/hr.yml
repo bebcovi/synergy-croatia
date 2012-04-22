@@ -13,7 +13,7 @@ hr:
     links:
       page_title: "Vanjske poveznice"
     mailchimp:
-      title: "Želiš primati naše obavijesti?"
+      title: "Želiš primati obavijesti?"
       submit: "Prijavi se"
 
   errors:

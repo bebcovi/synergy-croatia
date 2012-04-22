@@ -30,9 +30,6 @@ article {
     @include prefix($left-sidebar, $main);
     @include adjust-font-size-to($font-size);
     @include trailer(1, $font-size);
-    font: {
-      weight: bold;
-    }
   }
   $font-size: 24px;
   & > h2 {
