@@ -6,11 +6,6 @@
     @include adjust-font-size-to($font-size);
     @include rhythm(0, 0, 0, 0, $font-size);
     clear: both;
-      font-weight: normal;
-    text: {
-      align: right;
-      transform: uppercase;
-      rendering: optimizeLegibility;
-    }
+    text-align: right;
   }
 }

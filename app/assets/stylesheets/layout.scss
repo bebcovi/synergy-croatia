@@ -34,14 +34,20 @@ article {
       weight: bold;
     }
   }
+  $font-size: 24px;
   & > h2 {
-    $font-size: 24px;
     @include full($main);
     @include prefix($left-sidebar, $main);
-    @include adjust-font-size-to(24px);
-    @include rhythm(-0.5, 0, 0, 1.5, $font-size);
+    @include adjust-font-size-to($font-size);
+    @include rhythm(0, 0, 0, 1, $font-size);
     font-weight: normal;
+    text: {
+      rendering: optimizeLegibility;
+      transform: uppercase;
+    }
+    color: lighten(nth($colors, 5), 30%);
   }
+  h1 + h2 { @include rhythm(-0.5, 0, 0, 1.5, $font-size); }
   $cols: $main - $left-sidebar;
   @each $e in p, ol, ul, blockquote {
     & > #{$e} {
