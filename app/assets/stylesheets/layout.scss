@@ -31,6 +31,18 @@ article {
     @include adjust-font-size-to($font-size);
     @include trailer(1, $font-size);
   }
+  & > .img, [class^='icon-'] {
+    @include columns($left-sidebar, $main);
+    @include box-sizing(border-box);
+    padding-right: gutter($main);
+    text-align: right;
+  }
+  & > .img { @include trailer(0); }
+  [class^='icon-'] {
+    $font-size: 54px;
+    @include adjust-font-size-to($font-size, 1);
+    color: lighten($text, 30%);
+  }
   $font-size: 24px;
   & > h2 {
     @include full($main);
