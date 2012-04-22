@@ -5,6 +5,7 @@ $title: $total-cols - $logo - $lang - 1;
 #header {
   @include text-shadow(rgba(black, .25) 1px 1px 1px);
   background: nth($colors, 5);
+  outline: 1px solid darken(nth($colors, 5), 10%);
   color: white;
   .inner {
     @include container;
