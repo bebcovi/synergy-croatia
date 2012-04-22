@@ -3,6 +3,7 @@ $lang: 4;
 $title: $total-cols - $logo - $lang - 1;
 
 #header {
+  @include text-shadow(rgba(black, .25) 1px 1px 1px);
   background: nth($colors, 5);
   color: white;
   .inner {
@@ -48,7 +49,7 @@ $title: $total-cols - $logo - $lang - 1;
   letter-spacing: -2px;
   font: {
     family: $sans-serif;
-    weight: 300;
+    weight: 400;
   }
 }
 
