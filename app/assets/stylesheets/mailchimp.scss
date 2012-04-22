@@ -1,17 +1,37 @@
 #mailchimp {
+  @include full($right-sidebar);
   @include trailer(1, $sidebar-font-size);
-  @include clearfix;
+  .field {
+    @include pie-clearfix;
+    height: rhythm(1.5, $sidebar-font-size);
+  }
+  $width: 80%;
+  $margin: 3%;
   input {
-    &[type=email] {
-      @include rhythm-borders($lines: .25, $font-size: $sidebar-font-size);
-      width: 65%;
-      margin: 0;
-      border: 1px inset;
-      color: $text;
+    @include adjust-font-size-to($sidebar-font-size);
+    @include box-sizing(border-box);
+    font-family: $sans-serif;
+    width: $width;
+    margin: 0 $margin 0 0;
+    padding-left: rhythm(.25, $sidebar-font-size);
+    border: 1px inset;
+    color: $text;
+    &, .submit {
+      display: block;
+      float: left;
     }
-    &[type=email], &[type=submit] {
-      @include adjust-font-size-to($sidebar-font-size);
-      font-family: $sans-serif;
+  }
+  .submit {
+    @include rhythm-borders($lines: .25, $font-size: $sidebar-font-size);
+    @include text-shadow(white 0 1px 0);
+    width: 100% - $width + $margin;
+    font-family: "FontAwesome", sans-serif;
+    border-color: rgba(black, .2);
+    color: rgba(black, .2);
+    background: rgba(black, .05);
+    &:hover {
+      border-color: rgba(black, .35);
+      color: $link1;
     }
   }
 }

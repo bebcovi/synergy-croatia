@@ -1,4 +1,7 @@
 %form#mailchimp{:action => 'http://synergy-croatia.us4.list-manage1.com/subscribe/post?u=536e67fef09f833d4a3610cb7&amp;id=4420eab742', :method => 'post', :name => 'mc-embedded-subscribe-form', :target => '_blank'}
   %h1= t '.title'
-  %input{:type => 'email', :name => 'EMAIL', :placeholder => 'E-mail'}
-  %input{:type => 'submit', :value => t('.submit'), :name => 'subscribe'}
+  .field
+    %input{:type => 'email', :name => 'EMAIL', :placeholder => 'E-mail'}
+    %a.submit{:href => '#'} &#61443;
+  %noscript
+    %input{:type => 'submit', :value => t('.submit'), :name => 'subscribe'}
