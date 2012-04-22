@@ -3,8 +3,10 @@ $lang: 4;
 $title: $total-cols - $logo - $lang - 1;
 
 #header {
+  $color1: lighten(nth($colors, 5), 1.5%);
+  $color2: nth($colors, 5);
+  @include background(linear-gradient($color1, $color2));
   @include text-shadow(rgba(black, .25) 1px 1px 1px);
-  background: nth($colors, 5);
   outline: 1px solid darken(nth($colors, 5), 10%);
   color: white;
   .inner {
