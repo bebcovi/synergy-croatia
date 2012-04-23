@@ -1,6 +1,8 @@
 en:
   pages:
     index:
+      page_title: "Synergy Croatia"
+    upcoming:
       page_title: "Upcoming projects"
     about:
       page_title: "About us"

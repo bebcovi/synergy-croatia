@@ -1,6 +1,8 @@
 hr:
   pages:
     index:
+      page_title: "Synergy Croatia"
+    upcoming:
       page_title: "Aktualni projekti"
     about:
       page_title: "O nama"
