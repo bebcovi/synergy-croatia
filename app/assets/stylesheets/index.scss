@@ -52,7 +52,7 @@
       border-color: $color2;
     }
   }
-  $font-size: 30px;
+  $font-size: 36px;
   .about, .upcoming {
     @include adjust-font-size-to($font-size);
     @include leader(3, $font-size);
