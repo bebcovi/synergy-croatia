@@ -1,19 +1,11 @@
 @import 'compass/css3/user-interface';
 
 #synergy-croatia {
+  @include leader(3);
+  @include clearfix;
   #wrapper > & {
     @include reset-column;
     @include full;
-  }
-  @include clearfix;
-  h1 {
-    $font-size: 72px;
-    @include reset-column;
-    @include pad($left-sidebar, $right-sidebar, $total-cols);
-    @include adjust-font-size-to($font-size);
-    @include trailer(0, $font-size);
-    font-weight: normal;
-    text-align: center;
   }
   .display {
     $font-size: 200px;
