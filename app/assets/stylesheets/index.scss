@@ -17,29 +17,16 @@
   }
   .display {
     $font-size: 200px;
-    $color1: rgba(black, .05);
-    $color2: rgba(black, .1);
     @include columns($main - $left-sidebar, $total-cols);
     @include adjust-font-size-to($font-size);
     @include trailer(1, $font-size);
-    @include background(linear-gradient(
-      45deg,
-      $color1 25%,
-      $color2 25%,
-      $color2 50%,
-      $color1 50%,
-      $color1 75%,
-      $color2 75%
-    ));
-    @include background-size(4px 4px);
-    @include background-clip(text);
     @include text-shadow(
-      nth($colors, 2) -10px -10px 0,
-      rgba(black, .75) -9px -9px 1px
+      rgba(black, .6) 1px 1px 0,
+      rgba(black, .15) 7px 7px 1px
     );
     @include user-select(none);
     font-family: $display;
-    color: transparent;
+    color: nth($colors, 2);
     text-align: center;
     &:hover { cursor: default; }
   }
