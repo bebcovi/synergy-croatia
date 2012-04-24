@@ -1,10 +1,8 @@
 #upcoming-projects {
   h2 {
-    $font-size: 18px;
     @include columns($left-sidebar, $main);
     @include prefix(0, $main);
-    @include adjust-font-size-to($font-size);
-    @include rhythm(0, 0, 0, 0, $font-size);
+    @include rhythm(0, 0, 0, 0);
     clear: both;
     text-align: right;
   }
