@@ -5,11 +5,15 @@
     @include reset-column;
     @include full;
   }
-  .display {
+  h1 {
     $font-size: 300px;
+    @include prefix(0);
     @include full($total-cols);
     @include adjust-font-size-to($font-size);
-    font-family: $display;
+    font: {
+      family: $display;
+      weight: normal;
+    }
     text: {
       align: center;
       rendering: optimizeLegibility;

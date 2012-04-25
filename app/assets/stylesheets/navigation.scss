@@ -1,30 +1,28 @@
 nav {
   $font-size: 24px;
-  @include trailer;
+  @include trailer(1.5);
   background: rgba(nth($colors, 2), .1);
   font-family: $serif;
-  text: {
-    align: right;
-    transform: uppercase;
-  }
+  text-transform: uppercase;
   .inner { @include container; }
   ol {
-    @include adjust-font-size-to($font-size);
+    @include adjust-font-size-to($font-size, 2);
     @include horizontal-list(0);
     @include full;
     @include prefix(1);
   }
-  li { @include trailer(0, $font-size); }
+  li { @include trailer(0); }
   a {
-    @include rhythm(0, .5, .5, 0);
+    $lines: .7;
     display: block;
-    padding: rhythm(.5);
+    padding: 0 rhythm($lines, $font-size);
     border: 0;
     &.active {
       color: $link2;
       background: white;
-      @include apply-side-rhythm-border(left, $lines: .5);
-      @include apply-side-rhythm-border(right, $lines: .5);
+      @each $side in left, right {
+        @include apply-side-rhythm-border($side, $lines: $lines, $font-size: $font-size);
+      }
       border-color: rgba(nth($colors, 5), .4);
     }
   }
