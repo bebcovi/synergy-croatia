@@ -1,51 +1,36 @@
-@import 'compass/css3/user-interface';
-
 #synergy-croatia {
-  @include leader(3);
+  @include leader(2);
   @include clearfix;
   #wrapper > & {
     @include reset-column;
     @include full;
   }
   .display {
-    $font-size: 200px;
-    @include columns($main - $left-sidebar, $total-cols);
+    $font-size: 300px;
+    @include full($total-cols);
     @include adjust-font-size-to($font-size);
-    @include trailer(1, $font-size);
-    @include text-shadow(
-      rgba(black, .6) 1px 1px 0,
-      rgba(black, .15) 7px 7px 1px
-    );
-    @include user-select(none);
     font-family: $display;
-    color: nth($colors, 2);
-    text-align: center;
-    &:hover { cursor: default; }
-  }
-  a {
-    $color1: nth($colors, 4);
-    $color2: nth($colors, 2);
-    @include link-colors($color1, $color2, $color2, $color1, $color2);
-    border-color: $color1;
-    &:hover {
-      border-color: $color2;
+    text: {
+      align: center;
+      rendering: optimizeLegibility;
     }
-  }
-  $font-size: 36px;
-  .about, .upcoming {
-    @include adjust-font-size-to($font-size);
-    @include leader(3, $font-size);
-    font-family: $serif;
-  }
-  $dir: right;
-  .about {
-    @include columns($left-sidebar, $total-cols);
-    text-align: $dir;
-  }
-  $dir: opposite-position($dir);
-  .upcoming {
-    @include columns($right-sidebar, $total-cols);
-    @include omega($total-cols);
-    text-align: $dir;
+    a {
+      padding: 0 rhythm(2, $font-size);
+      border: 0;
+      &:hover {
+        $color1: rgba($link1, .1);
+        $color2: rgba($link1, 0);
+        @include background(linear-gradient(
+          45deg,
+          $color1 25%,
+          $color2 25%,
+          $color2 50%,
+          $color1 50%,
+          $color1 75%,
+          $color2 75%
+        ));
+        @include background-size(4px 4px);
+      }
+    }
   }
 }
