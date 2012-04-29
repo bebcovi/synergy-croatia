@@ -6,7 +6,7 @@
     @include full;
   }
   h1 {
-    $font-size: 300px;
+    $font-size: 400px;
     @include prefix(0);
     @include full($total-cols);
     @include adjust-font-size-to($font-size);
@@ -21,20 +21,6 @@
     a {
       padding: 0 rhythm(2, $font-size);
       border: 0;
-      &:hover {
-        $color1: rgba($link1, .1);
-        $color2: rgba($link1, 0);
-        @include background(linear-gradient(
-          45deg,
-          $color1 25%,
-          $color2 25%,
-          $color2 50%,
-          $color1 50%,
-          $color1 75%,
-          $color2 75%
-        ));
-        @include background-size(4px 4px);
-      }
     }
   }
 }
