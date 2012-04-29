@@ -1,17 +1,16 @@
 - @title = t(".page_title")
 
-:markdown
-  # [Agencija za mobilnost i programe EU](http://mobilnost.hr/)
+%article#amp
+  %h1= link_to 'Agencija za mobilnost i programe EU', 'http://mobilnost.hr/'
+  %p= link_to image_tag('/images/logo/amp.gif'), 'http://mobilnost.hr/', :class => 'img'
+  %p Agencija za mobilnost i programe Europske unije (AMPEU) javna je ustanova koja se bavi mobilnošću, promocijom i provedbom programa Europske unije koji se tiču obrazovanja i mladih. AMPEU je osnovana u listopadu 2007.
 
-  [![logo](/images/logo/amp.gif)](http://mobilnost.hr/)
+%article#s-gr
+  %h1= link_to 'Međunarodna Synergy mreža', 'http://www.oldevechte.nl/oldevechte.html'
+  %p= link_to image_tag('/images/logo/s-gr.png'), 'http://www.oldevechte.nl/oldevechte.html', :class => 'img'
+  %p Synergy mreža neformalna je mreža europskih NGO-a koji su usmjereni razvoju civilnog društva osnaživanjem mladih i podupiranjem njihovih projekata.
 
-  Agencija za mobilnost i programe Europske unije (AMPEU) javna je ustanova koja se bavi mobilnošću, promocijom i provedbom programa Europske unije koji se tiču obrazovanja i mladih. AMPEU je osnovana u listopadu 2007.
-
-  # [Međunarodna Synergy mreža](http://www.oldevechte.nl/oldevechte.html)
-  Synergy mreža neformalna je mreža europskih NGO-a koji su usmjereni razvoju civilnog društva osnaživanjem mladih i podupiranjem njihovih projekata.
-
-  # [Hrvatska škola Outward Bound](http://www.outwardbound.hr/)
-
-  [![logo](/images/logo/ob.jpg)](http://www.outwardbound.hr/)
-
-  HŠOB je neprofitna organizacija koja provodi programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi. Ciljevi škole su omogućiti ljudima da spoznaju vlastite mogućnosti te da zatim sami potaknu pozitivne promjene u okolini iz koje dolaze.
+%article#hsob
+  %h1= link_to 'Hrvatska škola Outward Bound', 'http://www.outwardbound.hr/'
+  %p= link_to image_tag('/images/logo/ob.jpg'), 'http://www.outwardbound.hr/', :class => 'img'
+  %p HŠOB je neprofitna organizacija koja provodi programe iskustvenog učenja kroz pustolovne aktivnosti u prirodi. Ciljevi škole su omogućiti ljudima da spoznaju vlastite mogućnosti te da zatim sami potaknu pozitivne promjene u okolini iz koje dolaze.
