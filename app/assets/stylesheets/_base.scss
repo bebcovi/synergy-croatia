@@ -23,6 +23,8 @@ $text: lighten(black, 30%);
 $link1: nth($colors, 2);
 $link2: nth($colors, 5);
 
+$default-transition-duration: 0.2s;
+
 @mixin unstyled-list {
   list-style: none;
   margin: 0;

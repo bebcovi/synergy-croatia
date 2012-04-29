@@ -15,6 +15,12 @@ a {
     border-color: nth($colors, 5);
     background: rgba(nth($colors, 2), .1);
   }
+  &, &:hover {
+    @include transition(
+      color .2s,
+      border-color .2s
+    );
+  }
 }
 
 em {
