@@ -7,7 +7,6 @@ html {
 
 body {
   @include rhythm(0, 0, 1, 0);
-  // @include susy-grid-background;
   // @include debug-vertical-alignment;
   margin: 0;
   padding: 0;
@@ -16,7 +15,10 @@ body {
   color: $text;
 }
 
-#wrapper { @include container; }
+#wrapper {
+  @include container;
+  // @include susy-grid-background;
+}
 
 article {
   #wrapper > & {
