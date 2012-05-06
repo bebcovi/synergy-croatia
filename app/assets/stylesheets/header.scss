@@ -14,12 +14,12 @@ $title: $total-cols - $logo - $lang - 1;
     @include clearfix;
   }
   a {
-    $color1: $link1;
+    $color1: nth($colors, 4);
     $color2: nth($colors, 3);
     @include link-colors($color1, $color2, $color2, $color1, $color2);
     border: 0;
+    background: none;
     &:hover {
-      background: rgba($color2, .1);
     }
   }
 }

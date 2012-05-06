@@ -16,12 +16,12 @@ $serif: 'Gentium Basic', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $display: 'Fredericka the Great', $serif;
 
-$colors: #383B42 #D1510D #FFF4D1 #BFBFBF #302825;
+$colors: #FF765E #C2AE8B #FCCF65 #FFE5C6 #B7BDC4;
 
 $text: lighten(black, 30%);
 
 $link1: nth($colors, 2);
-$link2: nth($colors, 5);
+$link2: nth($colors, 1);
 
 $default-transition-duration: 0.2s;
 

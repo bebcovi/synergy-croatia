@@ -60,7 +60,7 @@ article {
       rendering: optimizeLegibility;
       transform: uppercase;
     }
-    color: lighten(nth($colors, 5), 30%);
+    color: nth($colors, 5);
   }
   h1 + h2 { @include rhythm(-0.5, 0, 0, 1.5, $font-size); }
   $cols: $main - $left-sidebar;
