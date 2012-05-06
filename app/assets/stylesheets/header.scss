@@ -15,11 +15,12 @@ $title: $total-cols - $logo - $lang - 1;
   }
   a {
     $color1: nth($colors, 4);
-    $color2: nth($colors, 3);
+    $color2: white;
     @include link-colors($color1, $color2, $color2, $color1, $color2);
     border: 0;
     background: none;
     &:hover {
+      background: rgba(white, .2);
     }
   }
 }
