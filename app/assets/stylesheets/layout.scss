@@ -6,24 +6,22 @@ html {
 }
 
 body {
-  @include rhythm(0, 0, 1, 0);
-  // @include debug-vertical-alignment;
   margin: 0;
   padding: 0;
+  @include container;
+  @include rhythm(0, 0, 1, 0);
+  // @include debug-vertical-alignment;
   overflow-y: scroll;
   font-family: $sans-serif;
   color: $text;
 }
 
-#wrapper {
-  @include container;
-  // @include susy-grid-background;
+[role='main'] {
+  @include span-columns($main);
+  @include clearfix;
 }
 
 article {
-  #wrapper > & {
-    @include span-columns($main);
-  }
   h1 {
     $font-size: 36px;
     @include prefix($left-sidebar, $main);

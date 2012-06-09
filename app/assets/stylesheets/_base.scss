@@ -1,7 +1,9 @@
 $total-columns: 12;
 $column-width: 5em;
+$grid-padding: 0;
+$container-style: fluid;
 
-$right-sidebar: 3;
+$right-sidebar: 4;
 $left-sidebar: 2;
 $main: $total-columns - $right-sidebar;
 

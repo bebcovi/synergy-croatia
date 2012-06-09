@@ -1,9 +1,7 @@
 #synergy-croatia {
+  @include reset-columns;
   @include leader(2);
   @include clearfix;
-  #wrapper > & {
-    @include reset-columns;
-  }
   h1 {
     $font-size: 400px;
     @include prefix(0);

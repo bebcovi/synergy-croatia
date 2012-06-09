@@ -1,5 +1,6 @@
 nav {
   $font-size: 24px;
+  @include prefix(1);
   @include trailer(1.5);
   background: rgba(nth($colors, 2), .1);
   font-family: $serif;

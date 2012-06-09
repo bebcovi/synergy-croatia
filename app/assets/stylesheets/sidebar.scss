@@ -1,6 +1,7 @@
 aside {
   $font-size: $sidebar-font-size;
-  @include span-columns($right-sidebar omega);
+  @include span-columns(($right-sidebar - 1) omega);
+  @include suffix(1);
   @include adjust-font-size-to($font-size);
   @include leader(2.5, $font-size);
   h1 {

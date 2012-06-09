@@ -5,14 +5,11 @@ $title: $total-columns - $logo - $lang - 1;
 #header {
   $color1: lighten(nth($colors, 5), 1.5%);
   $color2: nth($colors, 5);
+  @include clearfix;
   @include text-shadow(rgba(black, .25) 1px 1px 1px);
   background: darken(nth($colors, 5), 30%);
   outline: 1px solid darken(nth($colors, 5), 40%);
   color: white;
-  .inner {
-    @include container;
-    @include clearfix;
-  }
   a {
     $color1: nth($colors, 4);
     $color2: white;
@@ -58,7 +55,8 @@ $title: $total-columns - $logo - $lang - 1;
 
 $cols: 3;
 #lang {
-  @include span-columns($lang omega);
+  @include span-columns(($lang - 1) omega);
+  @include suffix(1);
   @include rhythm(1, 0, 0, 0);
   text-align: right;
 }
