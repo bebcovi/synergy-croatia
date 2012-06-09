@@ -22,19 +22,16 @@ body {
 
 article {
   #wrapper > & {
-    @include columns($main);
-    @include alpha;
+    @include span-columns($main);
   }
-  article { @include full($main); }
   h1 {
     $font-size: 36px;
-    @include full($main);
     @include prefix($left-sidebar, $main);
     @include adjust-font-size-to($font-size);
     @include trailer(1, $font-size);
   }
   & > .img, [class^='icon-'] {
-    @include columns($left-sidebar, $main);
+    @include span-columns($left-sidebar, $main);
     @include box-sizing(border-box);
     padding-right: gutter($main);
     text-align: right;
@@ -51,7 +48,6 @@ article {
   }
   $font-size: 24px;
   & > h2 {
-    @include full($main);
     @include prefix($left-sidebar, $main);
     @include adjust-font-size-to($font-size);
     @include rhythm(0, 0, 0, 1, $font-size);
@@ -66,8 +62,7 @@ article {
   $cols: $main - $left-sidebar;
   @each $e in p, ol, ul, blockquote {
     & > #{$e} {
-      @include columns($cols, $main);
-      @include omega($main);
+      @include span-columns($cols omega, $main);
     }
   }
   ol, ul { @include box-sizing(border-box); }

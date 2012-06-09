@@ -1,7 +1,6 @@
 aside {
   $font-size: $sidebar-font-size;
-  @include columns($right-sidebar);
-  @include omega;
+  @include span-columns($right-sidebar omega);
   @include adjust-font-size-to($font-size);
   @include leader(2.5, $font-size);
   h1 {
@@ -17,7 +16,6 @@ aside {
 }
 
 #results {
-  @include full($right-sidebar);
   ul { @include trailer(0, $sidebar-font-size); }
   li { @include trailer(0, $sidebar-font-size); }
 }

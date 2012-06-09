@@ -1,6 +1,6 @@
 $logo: 2;
 $lang: 4;
-$title: $total-cols - $logo - $lang - 1;
+$title: $total-columns - $logo - $lang - 1;
 
 #header {
   $color1: lighten(nth($colors, 5), 1.5%);
@@ -27,8 +27,7 @@ $title: $total-cols - $logo - $lang - 1;
 
 #logo {
   $font-size: 24px;
-  @include columns($logo);
-  @include alpha;
+  @include span-columns($logo);
   @include prefix(1);
   @include adjust-font-size-to($font-size, 1);
   @include leader(.5, $font-size);
@@ -47,7 +46,7 @@ $title: $total-cols - $logo - $lang - 1;
 }
 
 #title {
-  @include columns($title);
+  @include span-columns($title);
   @include adjust-font-size-to(54px);
   @include trailer(0);
   letter-spacing: -2px;
@@ -59,8 +58,7 @@ $title: $total-cols - $logo - $lang - 1;
 
 $cols: 3;
 #lang {
-  @include columns($lang);
-  @include omega;
+  @include span-columns($lang omega);
   @include rhythm(1, 0, 0, 0);
   text-align: right;
 }

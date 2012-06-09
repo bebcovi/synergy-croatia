@@ -2,13 +2,11 @@
   @include leader(2);
   @include clearfix;
   #wrapper > & {
-    @include reset-column;
-    @include full;
+    @include reset-columns;
   }
   h1 {
     $font-size: 400px;
     @include prefix(0);
-    @include full($total-cols);
     @include adjust-font-size-to($font-size);
     font: {
       family: $display;

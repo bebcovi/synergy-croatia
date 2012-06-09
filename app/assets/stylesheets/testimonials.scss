@@ -1,6 +1,6 @@
 article {
   .quote {
-    @include columns($left-sidebar, $main);
+    @include span-columns($left-sidebar, $main);
     @include adjust-font-size-to(54px, 2);
     text-align: right;
     color: lighten($text, 30%);

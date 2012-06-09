@@ -8,7 +8,6 @@ nav {
   ol {
     @include adjust-font-size-to($font-size, 2);
     @include horizontal-list(0);
-    @include full;
   }
   li { @include trailer(0); }
   a {

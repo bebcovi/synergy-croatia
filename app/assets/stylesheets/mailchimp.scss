@@ -1,5 +1,4 @@
 #mailchimp {
-  @include full($right-sidebar);
   @include trailer(1, $sidebar-font-size);
   .field {
     @include pie-clearfix;
