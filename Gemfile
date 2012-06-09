@@ -1,16 +1,16 @@
 source :rubygems
 
 gem "thin"
-gem "rails", "3.2.3"
+gem "rails"
 
 group :assets do
   gem "sass-rails"
-  gem "coffee-rails"
-  gem "uglifier"
   gem "compass-rails"
   gem "susy", "1.0.rc.1"
   gem "font-awesome-sass-rails"
   gem "jquery-rails"
+  gem "coffee-rails"
+  gem "uglifier"
 end
 
 gem "haml-rails"
