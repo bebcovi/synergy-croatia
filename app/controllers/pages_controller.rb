@@ -4,8 +4,8 @@ class PagesController < ApplicationController
   def index
   end
 
-  def upcoming
-    @trainings = Training.where("ends_on >= '#{Date.today}'")
+  def news
+    @trainings = Training.all
   end
 
   def about
