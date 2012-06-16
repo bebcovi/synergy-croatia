@@ -13,12 +13,10 @@ test:
   password:
 
 staging:
-  adapter: postgresql
-  encoding: unicode
-  database: synergy-croatia_staging
+  adapter: sqlite3
+  database: db/staging.sqlite3
   pool: 5
-  username: synergy-croatia
-  password:
+  timeout: 5000
 
 production:
   adapter: postgresql
