@@ -1,29 +1,21 @@
-article {
-  .quote {
-    @include span-columns($left-sidebar, $main);
-    @include adjust-font-size-to(54px, 2);
-    text-align: right;
-    color: lighten($text, 30%);
-    font: {
-      family: $serif;
-      weight: bold;
-    }
+#testimonials {
+  article > h2 {
+    $font-size: 22px;
+    border-top: 1px solid nth($colors, 2);
+    @include adjust-font-size-to($font-size, 1.5);
+    @include rhythm(-1, 0, 0, 1, $font-size);
   }
-  blockquote {
-    color: lighten($text, 20%);
-    font: {
-      family: $serif;
-      style: italic;
-    }
-    h2 {
-      $font-size: 24px;
-      @include adjust-font-size-to($font-size);
-      @include trailer(1, $font-size);
-    }
-    p {
-      $font-size: 20px;
-      @include adjust-font-size-to($font-size);
-      @include trailer(1, $font-size);
-    }
+}
+
+blockquote {
+  font: {
+    family: $serif;
+    style: italic;
+  }
+  &, h2 { color: lighten($text, 20%); }
+  p {
+    $font-size: 20px;
+    @include adjust-font-size-to($font-size);
+    @include trailer(1, $font-size);
   }
 }

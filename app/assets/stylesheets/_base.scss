@@ -1,28 +1,26 @@
-$total-columns: 12;
-$column-width: 5em;
-$grid-padding: 0;
+$total-columns: 16;
+$gutter-width: 4em;
+$grid-padding: 2em;
 $container-style: fluid;
 
-$right-sidebar: 4;
-$left-sidebar: 2;
-$main: $total-columns - $right-sidebar;
+$navigation: 4;
+$sidebar: 4;
+$main: $total-columns - $navigation - $sidebar;
 
 $base-font-size: 18px;
 $base-line-height: 28px;
 
 $font_path: "fontawesome-webfont";
 
-$sidebar-font-size: 16px;
-
 $serif: 'Gentium Basic', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $display: 'Fredericka the Great', $serif;
 
-$colors: #FF765E #C2AE8B #FCCF65 #FFE5C6 #B7BDC4;
+$colors: #195073 #7f8c1f #ee913f #f2e5bd #9fd7c7;
 
 $text: lighten(black, 40%);
 
-$link1: nth($colors, 2);
+$link1: nth($colors, 3);
 $link2: nth($colors, 1);
 
 $default-transition-duration: 0.2s;

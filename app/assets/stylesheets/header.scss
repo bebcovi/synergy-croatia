@@ -1,62 +1,29 @@
-$logo: 2;
-$lang: 4;
-$title: $total-columns - $logo - $lang - 1;
-
 #header {
-  $color1: lighten(nth($colors, 5), 1.5%);
-  $color2: nth($colors, 5);
   @include clearfix;
-  @include text-shadow(rgba(black, .25) 1px 1px 1px);
-  background: darken(nth($colors, 5), 30%);
-  outline: 1px solid darken(nth($colors, 5), 40%);
-  color: white;
-  a {
-    $color1: nth($colors, 4);
-    $color2: white;
-    @include link-colors($color1, $color2, $color2, $color1, $color2);
-    border: 0;
-    background: none;
-    &:hover {
-      background: rgba(white, .2);
-    }
-  }
+  @include trailer(2);
 }
 
+$cols: $navigation;
 #logo {
   $font-size: 24px;
-  @include span-columns($logo);
-  @include prefix(1);
-  @include adjust-font-size-to($font-size, 1);
-  @include leader(.5, $font-size);
+  @include span-columns($cols);
+  @include leader(.5);
+  @include adjust-font-size-to($font-size);
   @include clearfix;
-  a {
-    display: block;
-    width: 5em;
-    float: right;
-    margin-right: gutter($logo);
-  }
   text: {
-    align: center;
+    align: right;
     transform: uppercase;
     rendering: optimizeLegibility;
   }
 }
 
-#title {
-  @include span-columns($title);
-  @include adjust-font-size-to(54px);
-  @include trailer(0);
-  letter-spacing: -2px;
-  font: {
-    family: $sans-serif;
-    weight: 400;
-  }
-}
-
-$cols: 3;
+$cols: 2;
 #lang {
-  @include span-columns(($lang - 1) omega);
-  @include suffix(1);
-  @include rhythm(1, 0, 0, 0);
+  @include span-columns($cols omega);
   text-align: right;
+  line-height: 0;
+  a {
+    border: 0;
+    &:hover { background: none; }
+  }
 }

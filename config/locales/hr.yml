@@ -2,8 +2,12 @@ hr:
   pages:
     index:
       page_title: "Synergy Croatia"
-    upcoming:
-      page_title: "Aktualni projekti"
+    news:
+      page_title: "Aktualno"
+      trainings: "Treninzi"
+      exchange: "Razmjene mladih"
+      workshops: "Radionice"
+      evs: "European Voluntary Service"
     about:
       page_title: "O nama"
     archive:
@@ -12,8 +16,8 @@ hr:
       page_title: "Iskustva polaznika"
     method:
       page_title: "Metoda"
-    links:
-      page_title: "Vanjski linkovi"
+    partners:
+      page_title: "Partneri"
     mailchimp:
       title: "Želiš primati obavijesti?"
       submit: "Prijavi se"

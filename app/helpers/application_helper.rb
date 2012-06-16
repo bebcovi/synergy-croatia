@@ -1,7 +1,7 @@
 module ApplicationHelper
   Page = Struct.new(:title, :route)
   def navigation_pages
-    pages = %w[upcoming about archive testimonials method links]
+    pages = %w[news about archive testimonials method partners]
     pages.collect do |page|
       Page.new(t("pages.#{page}.page_title"), eval("#{page}_path"))
     end

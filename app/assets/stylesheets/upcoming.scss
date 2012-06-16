@@ -1,9 +1,0 @@
-#upcoming-projects {
-  h2 {
-    @include span-columns($left-sidebar, $main);
-    @include prefix(0, $main);
-    @include rhythm(0, 0, 0, 0);
-    clear: both;
-    text-align: right;
-  }
-}

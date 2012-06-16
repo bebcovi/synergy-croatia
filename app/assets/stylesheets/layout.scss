@@ -1,7 +1,6 @@
 @include establish-baseline;
 
 html {
-  min-height: 100%;
   background: white;
 }
 
@@ -9,7 +8,8 @@ body {
   margin: 0;
   padding: 0;
   @include container;
-  @include rhythm(0, 0, 1, 0);
+  @include rhythm(0, .5, 1, 0);
+  // @include susy-grid-background;
   // @include debug-vertical-alignment;
   overflow-y: scroll;
   font-family: $sans-serif;
@@ -18,35 +18,26 @@ body {
 
 [role='main'] {
   @include span-columns($main);
-  @include clearfix;
+  @include pie-clearfix;
 }
 
 article {
   h1 {
-    $font-size: 36px;
-    @include prefix($left-sidebar, $main);
+    $font-size: 42px;
     @include adjust-font-size-to($font-size);
     @include trailer(1, $font-size);
+    font-weight: normal;
   }
-  & > .img, [class^='icon-'] {
-    @include span-columns($left-sidebar, $main);
-    @include box-sizing(border-box);
-    padding-right: gutter($main);
-    text-align: right;
+  .img {
+    float: right;
+    margin: 0 0 rhythm(.5) rhythm(.5);
+    a {
+      border: 0;
+      background: 0;
+    }
   }
-  & > .img { @include trailer(0); }
-  [class^='icon-'] {
-    $font-size: 54px;
-    @include adjust-font-size-to($font-size, 1);
-    color: lighten($text, 30%);
-  }
-  .img a {
-    border: 0;
-    background: 0;
-  }
-  $font-size: 24px;
-  & > h2 {
-    @include prefix($left-sidebar, $main);
+  $font-size: 22px;
+  h2 {
     @include adjust-font-size-to($font-size);
     @include rhythm(0, 0, 0, 1, $font-size);
     font-weight: normal;
@@ -54,15 +45,9 @@ article {
       rendering: optimizeLegibility;
       transform: uppercase;
     }
-    color: nth($colors, 5);
+    color: nth($colors, 2);
   }
-  h1 + h2 { @include rhythm(-0.5, 0, 0, 1.5, $font-size); }
-  $cols: $main - $left-sidebar;
-  @each $e in p, ol, ul, blockquote {
-    & > #{$e} {
-      @include span-columns($cols omega, $main);
-    }
+  h1 + h2 {
   }
-  ol, ul { @include box-sizing(border-box); }
   li { @include trailer(0); }
 }

@@ -1,0 +1,8 @@
+- @title = t(".page_title")
+
+- content_for :navigation do
+  %ol
+    = list_of [:trainings, :exchange, :evs, :workshops] do |project|
+      = link_to t(".#{project}")
+
+= render @trainings

@@ -1,13 +1,52 @@
+nav {
+  $font-size: 18px;
+  @include adjust-font-size-to($font-size);
+  @include span-columns($navigation);
+  @include leader(.5, $font-size);
+  text: {
+    transform: uppercase;
+    align: right;
+  }
+  ol {
+    @include unstyled-list;
+    ol {
+      $sub-font-size: 14px;
+      @include adjust-font-size-to($sub-font-size, 1, $font-size);
+      text-transform: none;
+      li { @include trailer(0); }
+      a {
+        $color1: rgba(black, .25);
+        $color2: $link2;
+        @include link-colors($color1, $color2, $color2, $color1, $color2);
+        padding-right: rhythm(.5, $sub-font-size);
+        padding-left: $grid-padding;
+        margin-left: - $grid-padding;
+        border: 0;
+      }
+    }
+  }
+  a {
+    display: block;
+    padding-right: rhythm(.5, $font-size);
+    padding-left: $grid-padding;
+    margin-left: - $grid-padding;
+  }
+  .active {
+    @extend a:hover;
+    background: none;
+    &:hover { background: rgba(nth($colors, 2), .1); }
+  }
+}
+
+$font-size: 16px;
 aside {
-  $font-size: $sidebar-font-size;
-  @include span-columns(($right-sidebar - 1) omega);
-  @include suffix(1);
+  @include span-columns($sidebar omega);
   @include adjust-font-size-to($font-size);
   @include leader(2.5, $font-size);
   h1 {
-    $font-size: 20px;
-    @include adjust-font-size-to($font-size, $from-size: $sidebar-font-size);
-    @include trailer(.5, $font-size);
+    $sub-font-size: 20px;
+    @include adjust-font-size-to($sub-font-size, 1, $font-size);
+    @include trailer(.5, $sub-font-size);
     font: {
       family: $sans-serif;
       weight: 400;
@@ -16,7 +55,48 @@ aside {
   }
 }
 
+#mailchimp {
+  @include trailer(1, $font-size);
+  .field {
+    @include pie-clearfix;
+    height: rhythm(1.5, $font-size);
+  }
+  input, .submit {
+    @include inline-block;
+    height: 100%;
+  }
+  input {
+    @include adjust-font-size-to($font-size);
+    @include box-sizing(border-box);
+    font-family: $sans-serif;
+    width: 80%;
+    margin: 0 3% 0 0;
+    padding-left: rhythm(.25, $font-size);
+    border: 1px inset;
+    color: $text;
+    &, .submit {
+      display: block;
+      float: left;
+    }
+  }
+  .submit {
+    $font-size: 24px;
+    @include adjust-font-size-to($font-size, 1.7);
+    @include text-shadow(white 0 1px 0);
+    @include box-sizing(border-box);
+    text-align: center;
+    width: 13%;
+    border: 1px solid rgba(black, .2);
+    color: rgba(black, .2);
+    background: rgba(black, .05);
+    &:hover {
+      border-color: rgba(black, .35);
+      color: $link1;
+    }
+  }
+}
+
 #results {
-  ul { @include trailer(0, $sidebar-font-size); }
-  li { @include trailer(0, $sidebar-font-size); }
+  ul { @include trailer(0, $font-size); }
+  li { @include trailer(0, $font-size); }
 }

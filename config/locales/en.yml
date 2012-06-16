@@ -2,8 +2,12 @@ en:
   pages:
     index:
       page_title: "Synergy Croatia"
-    upcoming:
-      page_title: "Upcoming projects"
+    news:
+      page_title: "News"
+      trainings: "Trainings"
+      exchange: "Youth exchange"
+      workshops: "Workshops"
+      evs: "European Voluntary Service"
     about:
       page_title: "About us"
     archive:
@@ -12,8 +16,8 @@ en:
       page_title: "Testimonials"
     method:
       page_title: "Method"
-    links:
-      page_title: "External links"
+    partners:
+      page_title: "Partners"
     mailchimp:
       title: "Receive latest updates"
       submit: "Subscribe"

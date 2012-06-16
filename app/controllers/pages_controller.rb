@@ -2,6 +2,7 @@ require 'date'
 
 class PagesController < ApplicationController
   def index
+    render :layout => 'solo'
   end
 
   def news
@@ -20,6 +21,6 @@ class PagesController < ApplicationController
   def method
   end
 
-  def links
+  def partners
   end
 end

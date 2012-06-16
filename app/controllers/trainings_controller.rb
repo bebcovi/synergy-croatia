@@ -29,6 +29,7 @@ class TrainingsController < ApplicationController
   end
 
   def show
+    @trainings = Training.all
     @training = Training.find(params[:id])
   end
 

@@ -1,0 +1,8 @@
+- @title = @training.title
+
+- content_for :navigation do
+  %ol
+    = list_of [:trainings, :exchange, :workshops, :evs] do |project|
+      = link_to t(project)
+
+= render @training
