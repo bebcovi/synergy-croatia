@@ -46,7 +46,8 @@ aside {
   h1 {
     $sub-font-size: 20px;
     @include adjust-font-size-to($sub-font-size, 1, $font-size);
-    @include trailer(.5, $sub-font-size);
+    @include trailer(1, $sub-font-size);
+    padding-left: rhythm(.5, $sub-font-size);
     font: {
       family: $sans-serif;
       weight: 400;
@@ -57,9 +58,21 @@ aside {
     $color: nth($colors, 4);
     @include border-radius;
     @include trailer(1, $font-size);
+    position: relative;
     padding: rhythm(.5, $font-size);
     background: rgba($color, .25);
     border: 1px solid $color;
+  }
+  [class^=icon] {
+    @include inline-block;
+    @include adjust-font-size-to(20px, 1, $font-size);
+    @include border-radius;
+    position: absolute;
+    padding: rhythm(.1) rhythm(.25, $font-size);
+    background: nth($colors, 3);
+    top: rhythm(0.25, $font-size);
+    left: rhythm(-0.5, $font-size);
+    color: white;
   }
 }
 
