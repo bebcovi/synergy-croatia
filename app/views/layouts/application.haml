@@ -23,7 +23,7 @@
         = list_of navigation_pages do |page|
           = link_to_unless_current page.title, page.route do
             = link_to page.title, page.route, :class => 'active'
-          - if request.path == page.route or current_page?(:controller => 'trainings', :action => 'show') and page.route == '/news'
+          - if request.path == page.route or request.path =~ /trainings\/\d+/ and page.route == '/news'
             = content_for :navigation 
 
     %article{:role => 'main'}
