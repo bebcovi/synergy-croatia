@@ -38,7 +38,7 @@ nav {
   }
 }
 
-$font-size: 16px;
+$font-size: 14px;
 aside {
   @include span-columns($sidebar omega);
   @include adjust-font-size-to($font-size);
