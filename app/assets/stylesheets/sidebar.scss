@@ -113,5 +113,5 @@ aside {
 }
 
 #results {
-  li { @include trailer(.25, $font-size); }
+  li { @include trailer(0, $font-size); }
 }
