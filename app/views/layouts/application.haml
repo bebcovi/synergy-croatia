@@ -30,11 +30,6 @@
       = yield
 
     %aside
-      %section#mailchimp
-        = render 'pages/mailchimp'
-      %section#results
-        %span.icon-group
-        %h1 Rezultati polaznika
-        %ul
-          = list_of(['neka web stranica', 'nešto drugo', 'blah']) do |item|
-            = link_to item, '#'
+      - %w[mailchimp support results].each do |item|
+        %section{:id => item}
+          = render "pages/#{item}"

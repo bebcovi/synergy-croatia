@@ -112,6 +112,19 @@ aside {
   }
 }
 
+#support {
+  button {
+    $sub-font-size: 14px;
+    @extend .button;
+    @include adjust-font-size-to($sub-font-size, 1, $font-size);
+    @include trailer(.5, $sub-font-size);
+    display: block;
+    width: 100%;
+    padding: rhythm(.25, $sub-font-size) rhythm(.5, $sub-font-size);
+    &:last-child { margin: 0; }
+  }
+}
+
 #results {
   li { @include trailer(0, $font-size); }
 }
