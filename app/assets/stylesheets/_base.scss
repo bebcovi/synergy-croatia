@@ -20,7 +20,7 @@ $display: 'Fredericka the Great', $serif;
 
 $colors: #195073 #7f8c1f #ee913f #f2e5bd #9fd7c7;
 
-$text: lighten(black, 40%);
+$text: rgba(black, .70);
 
 $link1: nth($colors, 3);
 $link2: nth($colors, 1);
