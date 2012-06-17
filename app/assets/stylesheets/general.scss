@@ -27,3 +27,22 @@ em {
   @include adjust-font-size-to(20px);
   font-family: $serif;
 }
+
+.button {
+  $color: nth($colors, 3);
+  $bg: lighten($color, 25%);
+  background: $bg;
+  @include box-shadow(rgba(white, .5) 0 0 0 1px inset);
+  @include text-shadow(white 0 1px 0);
+  @include border-radius;
+  border: 1px solid lighten($color, 10%);
+  color: darken($color, 20%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  &:hover {
+    background: lighten($bg, 3%);
+    border-color: lighten($color, 10%);
+    cursor: pointer;
+  }
+}
