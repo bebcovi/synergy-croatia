@@ -54,6 +54,9 @@ aside {
     }
     text-transform: uppercase;
   }
+  ul, ol {
+    margin: 0;
+  }
   section {
     $color: nth($colors, 4);
     @include border-radius;
@@ -103,7 +106,6 @@ aside {
     @extend .button;
     $sub-font-size: 24px;
     @include adjust-font-size-to($sub-font-size, 1.8);
-    @include text-shadow(white 0 1px 0);
     @include box-sizing(border-box);
     text-align: center;
     width: 13%;
@@ -111,6 +113,5 @@ aside {
 }
 
 #results {
-  ul { @include trailer(0, $font-size); }
-  li { @include trailer(0, $font-size); }
+  li { @include trailer(.25, $font-size); }
 }
