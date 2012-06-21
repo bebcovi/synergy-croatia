@@ -1,8 +1,6 @@
 nav {
-  $font-size: 18px;
-  @include adjust-font-size-to($font-size);
   @include span-columns($navigation);
-  @include leader(.5, $font-size);
+  @include leader(.5);
   text: {
     transform: uppercase;
     align: right;
@@ -10,15 +8,15 @@ nav {
   ol {
     @include unstyled-list;
     ol {
-      $sub-font-size: 14px;
-      @include adjust-font-size-to($sub-font-size, 1, $font-size);
+      $font-size: 14px;
+      @include adjust-font-size-to($font-size, 1);
       text-transform: none;
       li { @include trailer(0); }
       a {
         $color1: rgba(black, .25);
         $color2: $link2;
         @include link-colors($color1, $color2, $color2, $color1, $color2);
-        padding-right: rhythm(.5, $sub-font-size);
+        padding-right: rhythm(.5, $font-size);
         padding-left: $grid-padding;
         margin-left: - $grid-padding;
         border: 0;
@@ -27,7 +25,7 @@ nav {
   }
   a {
     display: block;
-    padding-right: rhythm(.5, $font-size);
+    padding-right: rhythm(.5);
     padding-left: $grid-padding;
     margin-left: - $grid-padding;
   }
