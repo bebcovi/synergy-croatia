@@ -61,6 +61,7 @@ aside {
   }
   .submit {
     @extend .button;
+    @extend .primary;
     $sub-font-size: 24px;
     @include adjust-font-size-to($sub-font-size, 1.8);
     @include box-sizing(border-box);
@@ -71,8 +72,9 @@ aside {
 
 #support {
   button {
-    $sub-font-size: 14px;
     @extend .button;
+    @extend .primary;
+    $sub-font-size: 14px;
     @include adjust-font-size-to($sub-font-size, 1, $font-size);
     @include trailer(.5, $sub-font-size);
     display: block;
