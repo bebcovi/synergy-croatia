@@ -1,0 +1,63 @@
+$font-size: 14px;
+
+form {
+  @include clearfix;
+  .inner {
+    padding: rhythm(.5);
+    background: rgba(black, .025);
+    border: 1px solid rgba(black, .1);
+  }
+}
+
+input[type='text'], input[type='url'], input[type='email'], input[type='number'], textarea {
+  @include adjust-font-size-to($font-size, 1, $base-font-size);
+  @include border-radius;
+  display: block;
+  width: 98%;
+  margin: 0;
+  padding: rhythm(.25);
+  border: 1px solid rgba(black, .40);
+  font-family: $sans;
+  color: $text;
+}
+
+textarea {
+  max-width: 98%;
+}
+
+input[type='number'] {
+  width: rhythm(2);
+}
+
+.input {
+  @include trailer(.5);
+  &:last-of-type {
+    @include trailer(.25);
+  }
+}
+
+label {
+  &:hover { cursor: pointer; }
+  &:after { content: ': '; }
+}
+
+$font-size: $form-font-size;
+input[type='submit'], .cancel {
+  @include adjust-font-size-to($font-size);
+  @extend .button;
+  @include leader(.5, $font-size);
+  display: block;
+  width: 49%;
+  padding: rhythm(.5, $font-size);
+}
+
+.cancel {
+  @extend .secondary;
+  float: left;
+}
+
+input[type='submit'] {
+  @extend .primary;
+  @include omega;
+  float: right;
+}

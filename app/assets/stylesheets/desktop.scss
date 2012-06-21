@@ -14,6 +14,14 @@
     @include span-columns($main);
   }
 
+  $cols: 3;
+  $font-size: $form-font-size;
+  input[type='submit'], .cancel {
+    float: right;
+    width: columns($cols, $main);
+    margin-left: rhythm(.5, $font-size);
+  }
+
   $cols: $navigation;
   #logo {
     @include span-columns($cols);

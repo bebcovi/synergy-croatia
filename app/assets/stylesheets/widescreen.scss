@@ -12,6 +12,11 @@
     @include span-columns($main);
   }
 
+  $cols: 3;
+  input[type='submit'], .cancel {
+    width: columns($cols, $main);
+  }
+
   $cols: $navigation;
   #logo {
     @include span-columns($cols);

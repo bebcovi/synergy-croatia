@@ -45,28 +45,25 @@ aside {
     height: rhythm(1.5, $font-size);
   }
   input, .submit {
+    @include box-sizing(border-box);
     display: block;
     float: left;
     height: 100%;
   }
   input {
     @include adjust-font-size-to($font-size, 1, $font-size);
-    @include box-sizing(border-box);
-    font-family: $sans;
     width: 80%;
     margin: 0 3% 0 0;
     padding-left: rhythm(.25, $font-size);
-    border: 1px inset;
-    color: $text;
+    border-color: rgba(black, .3);
   }
   .submit {
     @extend .button;
     @extend .primary;
     $sub-font-size: 24px;
     @include adjust-font-size-to($sub-font-size, 1.8);
-    @include box-sizing(border-box);
     padding: 0 rhythm(.25);
-    width: 13%;
+    width: 16%;
   }
 }
 
@@ -74,7 +71,7 @@ aside {
   button {
     @extend .button;
     @extend .primary;
-    $sub-font-size: 14px;
+    $sub-font-size: $form-font-size;
     @include adjust-font-size-to($sub-font-size, 1, $font-size);
     @include trailer(.5, $sub-font-size);
     display: block;
