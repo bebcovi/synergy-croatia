@@ -37,7 +37,10 @@ em {
   @include border-radius;
   border: 1px solid lighten($color, 10%);
   color: darken($color, 20%);
-  text-transform: uppercase;
+  text: {
+    transform: uppercase;
+    align: center;
+  }
   letter-spacing: 1px;
   margin: 0;
   &:hover {

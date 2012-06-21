@@ -9,7 +9,7 @@ aside {
     @include trailer(1, $sub-font-size);
     padding-left: rhythm($hpad, $sub-font-size);
     font: {
-      family: $sans-serif;
+      family: $sans;
       weight: 400;
     }
     text-transform: uppercase;
@@ -45,22 +45,19 @@ aside {
     height: rhythm(1.5, $font-size);
   }
   input, .submit {
-    @include inline-block;
+    display: block;
+    float: left;
     height: 100%;
   }
   input {
     @include adjust-font-size-to($font-size, 1, $font-size);
     @include box-sizing(border-box);
-    font-family: $sans-serif;
+    font-family: $sans;
     width: 80%;
     margin: 0 3% 0 0;
     padding-left: rhythm(.25, $font-size);
     border: 1px inset;
     color: $text;
-    &, .submit {
-      display: block;
-      float: left;
-    }
   }
   .submit {
     @extend .button;
@@ -69,7 +66,6 @@ aside {
     @include box-sizing(border-box);
     padding: 0 rhythm(.25);
     width: 13%;
-    text-align: center;
   }
 }
 
