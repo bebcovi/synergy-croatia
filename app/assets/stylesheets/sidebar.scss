@@ -1,7 +1,7 @@
 $font-size: 14px;
 aside {
   @include adjust-font-size-to($font-size);
-  @include leader(1, $font-size);
+  @include leader(.5, $font-size);
   $hpad: .85;
   h1 {
     $sub-font-size: 20px;
