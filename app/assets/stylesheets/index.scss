@@ -1,7 +1,6 @@
 #synergy-croatia {
   #logo {
     $font-size: 60px;
-    @include reset-columns;
     @include adjust-font-size-to($font-size);
     @include leader(1, $font-size);
     text-align: center;
@@ -16,7 +15,6 @@
     }
   }
   [role='main'] {
-    @include reset-columns;
     @include leader(2);
     @include clearfix;
     h1 {

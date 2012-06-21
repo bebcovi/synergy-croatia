@@ -1,25 +1,19 @@
 #header {
-  @include clearfix;
   @include trailer(2);
 }
 
-$cols: $navigation;
 #logo {
   $font-size: 24px;
-  @include span-columns($cols);
   @include leader(.5);
   @include adjust-font-size-to($font-size);
   @include clearfix;
   text: {
-    align: right;
     transform: uppercase;
     rendering: optimizeLegibility;
   }
 }
 
-$cols: 2;
 #lang {
-  @include span-columns($cols omega);
   text-align: right;
   line-height: 0;
   a {

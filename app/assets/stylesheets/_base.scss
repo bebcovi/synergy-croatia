@@ -1,11 +1,11 @@
-$total-columns: 16;
+$total-columns: 4;
 $gutter-width: 4em;
-$grid-padding: 2em;
+$grid-padding: 1em;
 $container-style: fluid;
 
-$navigation: 4;
-$sidebar: 4;
-$main: $total-columns - $navigation - $sidebar;
+$tablet-layout: 30em 4;
+$desktop-layout: 60em 16;
+$widescreen-layout: 75em 16;
 
 $base-font-size: 18px;
 $base-line-height: 28px;

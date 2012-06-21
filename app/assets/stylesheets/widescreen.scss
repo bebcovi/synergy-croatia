@@ -1,0 +1,37 @@
+@include at-breakpoint($widescreen-layout) {
+
+  $navigation: 3;
+  $sidebar: 4;
+  $main: $total-columns - $navigation - $sidebar;
+
+  body {
+    @include container;
+  }
+
+  [role='main'] {
+    @include span-columns($main);
+  }
+
+  $cols: $navigation;
+  #logo {
+    @include span-columns($cols);
+  }
+
+  $cols: 2;
+  #lang {
+    @include span-columns($cols omega);
+  }
+
+  nav {
+    @include span-columns($navigation);
+  }
+
+  aside {
+    @include span-columns($sidebar omega);
+  }
+
+  #synergy-croatia {
+    [role='main'], #logo { @include reset-columns; }
+  }
+
+}

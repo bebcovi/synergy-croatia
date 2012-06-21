@@ -1,9 +1,8 @@
 nav {
-  @include span-columns($navigation);
   @include leader(.5);
   text: {
     transform: uppercase;
-    align: right;
+    align: center;
   }
   ol {
     @include unstyled-list;
@@ -38,14 +37,14 @@ nav {
 
 $font-size: 14px;
 aside {
-  @include span-columns($sidebar omega);
   @include adjust-font-size-to($font-size);
-  @include leader(2.5, $font-size);
+  @include leader(1, $font-size);
+  $hpad: .85;
   h1 {
     $sub-font-size: 20px;
     @include adjust-font-size-to($sub-font-size, 1, $font-size);
     @include trailer(1, $sub-font-size);
-    padding-left: rhythm(.5, $sub-font-size);
+    padding-left: rhythm($hpad, $sub-font-size);
     font: {
       family: $sans-serif;
       weight: 400;
@@ -72,7 +71,7 @@ aside {
     padding: rhythm(.1) rhythm(.25, $font-size);
     background: nth($colors, 3);
     top: rhythm(0.25, $font-size);
-    left: rhythm(-0.5, $font-size);
+    left: rhythm(-1.1 + $hpad, $font-size);
     color: white;
   }
 }
@@ -105,8 +104,9 @@ aside {
     $sub-font-size: 24px;
     @include adjust-font-size-to($sub-font-size, 1.8);
     @include box-sizing(border-box);
-    text-align: center;
+    padding: 0 rhythm(.25);
     width: 13%;
+    text-align: center;
   }
 }
 

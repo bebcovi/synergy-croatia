@@ -1,0 +1,42 @@
+@include at-breakpoint($desktop-layout) {
+
+  $grid-padding: 2;
+
+  $navigation: 4;
+  $sidebar: 4;
+  $main: $total-columns - $navigation - $sidebar;
+
+  body {
+    @include container;
+  }
+
+  [role='main'] {
+    @include span-columns($main);
+  }
+
+  $cols: $navigation;
+  #logo {
+    @include span-columns($cols);
+    text-align: right;
+  }
+
+  $cols: 2;
+  #lang {
+    @include span-columns($cols omega);
+  }
+
+  nav {
+    @include span-columns($navigation);
+    text-align: right;
+  }
+
+  aside {
+    @include span-columns($sidebar omega);
+    clear: none;
+  }
+
+  #synergy-croatia {
+    [role='main'], #logo { @include reset-columns; }
+  }
+
+}

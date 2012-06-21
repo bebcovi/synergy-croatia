@@ -17,8 +17,7 @@ body {
 }
 
 [role='main'] {
-  @include span-columns($main);
-  @include pie-clearfix;
+  @include clearfix;
 }
 
 article {
@@ -47,7 +46,17 @@ article {
     }
     color: nth($colors, 2);
   }
-  h1 + h2 {
-  }
   li { @include trailer(0); }
+}
+
+#screen-width {
+  width: 80px;
+  padding-left: 5px;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(black, .75);
+  color: white;
 }
