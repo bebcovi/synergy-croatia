@@ -1,0 +1,25 @@
+hr:
+  simple_form:
+    labels:
+      training:
+        title: "Naziv"
+        level: "Stupanj"
+        description: "Opis"
+        goal: "Cilj"
+        begins_on: "Počinje"
+        ends_on: "Završava"
+        participating_countries: "Zemlje sudionice"
+        age_restriction: "Dobna granica"
+        location: "Mjesto"
+        infoletter_url: "Infoletter"
+        participation_form_url: "Obrazac za prijavu"
+        additional_info: "Dodatne napomene"
+        intended_group: "Namijenjena grupa ljudi"
+        created_at: "Stvoreno"
+        updated_at: "Zadnje izmjenjeno"
+
+  helpers:
+    submit:
+      training:
+        create: "Stvori trening"
+        update: "Spremi promjene"
