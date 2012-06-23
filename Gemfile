@@ -34,3 +34,5 @@ group :test do
 end
 
 gem "rails-i18n"
+gem "i18n-country-translations"
+gem "i18n_country_select"
