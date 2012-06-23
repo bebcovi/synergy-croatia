@@ -33,33 +33,5 @@ hr:
       title: "500"
       message: "Dogodila se greška"
 
-  helpers:
-    submit:
-      create: "Stvori"
-      update: "Spremi promjene"
-      submit: "Spremi"
-
-  activerecord:
-    models:
-      training: "Trening"
-    attributes:
-      training:
-        title: "Naziv"
-        level: "Stupanj"
-        description: "Opis"
-        goal: "Cilj"
-        begins_on: "Počinje"
-        ends_on: "Završava"
-        participating_countries: "Zemlje sudionice"
-        age_restriction: "Dobna granica"
-        location: "Mjesto"
-        infoletter_url: "Infoletter"
-        participation_form_url: "Obrazac za prijavu"
-        additional_info: "Dodatne napomene"
-        intended_group: "Namijenjena grupa ljudi"
-        created_at: "Stvoreno"
-        updated_at: "Zadnje izmjenjeno"
-
-  date:
-    formats:
-      default: ! '%d.%m.%Y'
+  words:
+    and: 'i'

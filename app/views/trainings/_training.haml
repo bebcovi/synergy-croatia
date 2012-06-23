@@ -6,22 +6,25 @@
   %h2 Zašto?
   %p Cilj treninga je #{training.goal.tap { |str| str[0] = str[0].downcase }}
 
-%h2 Gdje i kada?
+%h2 Gdje?
+%p #{training.city}, #{t "countries.#{training.country}"}
+
+%h2 Kada?
 - from, till = format_date_range(training.begins_on, training.ends_on)
 %p #{training.location}. #{from.chop}&ndash;#{till}
 
-- if training.participating_countries
+- if training.participating_countries.present?
   %h2 Koje države?
-  %p= training.participating_countries
+  %p= display_countries(training.participating_countries)
 
-- if training.additional_info
+- if training.additional_info.present?
   %h2 Još nešto?
   %ul
     - training.additional_info.each do |info|
       = render_markdown(info)
 
 %h2 Želim saznati više&hellip;
-%p Za više informacija možete pruzeti ovaj #{link_to "Infoletter", training.infoletter_url}, a ako još uvijek budete imali pitanja, slobodno se obratite na našu email adresu #{mail_to 'synergy@synergy-croatia.com'}.
+%p Za više informacija možete pruzeti ovaj #{link_to "infoletter", training.infoletter_url}, a ako još uvijek budete imali pitanja, slobodno se obratite na našu email adresu #{mail_to 'synergy@synergy-croatia.com'}.
 
 %h2 Može!
 %p Izvrsno! U tom slučaju ispunite ovaj #{link_to "obrazac za prijavu", training.participation_form_url} i pošaljite ga na našu email adresu.

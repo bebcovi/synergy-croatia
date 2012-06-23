@@ -38,3 +38,6 @@ en:
       create: "Create"
       update: "Save changes"
       submit: "Save"
+
+  words:
+    and: 'and'

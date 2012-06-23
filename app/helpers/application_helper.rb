@@ -32,4 +32,12 @@ module ApplicationHelper
       [from.strftime('%-d.'), till.strftime('%-d.%-m.%Y.')]
     end
   end
+
+  def enumerate(array)
+    if array.count <= 1
+      array.first.to_s
+    else
+      array[0..-2].join(',') + " #{t 'words.and'} " + array.last
+    end
+  end
 end
