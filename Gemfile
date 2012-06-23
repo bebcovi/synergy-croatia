@@ -29,8 +29,8 @@ group :production do
   gem "pg"
 end
 
-group :test do
-  gem "turn", :require => false
+group :development, :test do
+  gem "rspec-rails"
 end
 
 gem "rails-i18n"
