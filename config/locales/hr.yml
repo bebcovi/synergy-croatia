@@ -23,6 +23,10 @@ hr:
       title: "Želiš primati obavijesti?"
       submit: "Prijavi se"
 
+  trainings:
+    index:
+      trainings: "Treninzi"
+
   errors:
     not_found:
       page_title: "Stranica nije pronađena"
