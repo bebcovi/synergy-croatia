@@ -11,23 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120420164256) do
+ActiveRecord::Schema.define(:version => 20120623165930) do
 
   create_table "trainings", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "goal"
     t.date     "begins_on"
     t.date     "ends_on"
     t.string   "participating_countries"
-    t.integer  "age_restriction"
-    t.string   "location"
     t.string   "infoletter_url"
     t.string   "participation_form_url"
     t.text     "additional_info"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
-    t.string   "intended_group"
+    t.string   "city"
+    t.string   "country"
+    t.integer  "maximum_age"
+    t.integer  "minimum_age"
+    t.text     "summary"
   end
 
 end

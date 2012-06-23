@@ -1,7 +1,7 @@
 require 'date'
 
 class Training < ActiveRecord::Base
-  serialize :additional_info
+  serialize :participating_countries
   scope :upcoming, where("ends_on >= '#{Date.today}'")
 
   def duration

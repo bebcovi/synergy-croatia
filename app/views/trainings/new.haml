@@ -5,16 +5,17 @@
   .inner
     = f.input :title
     = f.input :description
-    = f.input :goal
+    = f.input :summary
     = f.input :begins_on
     = f.input :ends_on
-    = f.input :participating_countries
-    = f.input :age_restriction
-    = f.input :location
+    = f.country_select :participating_countries, :priority => common_countries, :multiple => true
+    = f.input :age_restriction do
+      = f.number_field(:minimum_age) + "&ndash;".html_safe + f.number_field(:maximum_age)
+    = f.country_select :country, :priority => common_countries
+    = f.input :city
+    = f.input :additional_info
     = f.input :infoletter_url
     = f.input :participation_form_url
-    = f.input :additional_info
-    = f.input :intended_group
 
   = f.button :submit
   %button.cancel Odustani

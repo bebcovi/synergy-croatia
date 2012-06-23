@@ -2,10 +2,6 @@
 
 = render_markdown(training.description)
 
-- if training.goal
-  %h2 Zašto?
-  %p Cilj treninga je #{training.goal.tap { |str| str[0] = str[0].downcase }}
-
 %h2 Gdje?
 %p #{training.city}, #{t "countries.#{training.country}"}
 
@@ -19,9 +15,7 @@
 
 - if training.additional_info.present?
   %h2 Još nešto?
-  %ul
-    - training.additional_info.each do |info|
-      = render_markdown(info)
+  = render_markdown(training.additional_info)
 
 %h2 Želim saznati više&hellip;
 %p Za više informacija možete pruzeti ovaj #{link_to "infoletter", training.infoletter_url}, a ako još uvijek budete imali pitanja, slobodno se obratite na našu email adresu #{mail_to 'synergy@synergy-croatia.com'}.
