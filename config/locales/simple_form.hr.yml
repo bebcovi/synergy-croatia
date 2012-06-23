@@ -10,6 +10,8 @@ hr:
         ends_on: "Završava"
         participating_countries: "Zemlje sudionice"
         age_restriction: "Dobna granica"
+        country: "Država"
+        city: "Grad"
         location: "Mjesto"
         infoletter_url: "Infoletter"
         participation_form_url: "Obrazac za prijavu"

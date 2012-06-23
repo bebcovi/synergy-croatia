@@ -149,7 +149,6 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.1.1)
-    sass (3.2.0.alpha.247)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -163,6 +162,7 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.10.0)
+    sass (3.2.0.alpha.247)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -216,10 +216,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   simple_form
-<<<<<<< HEAD
-  sqlite3
   susy (= 1.0.rc.1)
-=======
->>>>>>> Use PostgeSQL in all environments
   thin
   uglifier
