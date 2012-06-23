@@ -2,6 +2,7 @@ source :rubygems
 
 gem "thin"
 gem "rails"
+gem "pg"
 
 group :assets do
   gem "sass-rails"
@@ -18,15 +19,10 @@ gem "simple_form"
 gem "redcarpet"
 
 group :development do
-  gem "sqlite3"
   gem "debugger", :require => "debugger"
   gem "guard-livereload"
   gem "foreman"
   gem "pry-rails"
-end
-
-group :production do
-  gem "pg"
 end
 
 group :development, :test do
