@@ -1,0 +1,2 @@
+Zepto ->
+  $('textarea').text('')
