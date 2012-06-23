@@ -22,6 +22,7 @@ group :development do
   gem "debugger", :require => "debugger"
   gem "guard-livereload"
   gem "foreman"
+  gem "pry-rails"
 end
 
 group :production do
