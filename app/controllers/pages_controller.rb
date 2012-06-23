@@ -1,12 +1,10 @@
-require 'date'
-
 class PagesController < ApplicationController
   def index
     render :layout => 'solo'
   end
 
   def news
-    @trainings = Training.all
+    @trainings = Training.upcoming
   end
 
   def about
