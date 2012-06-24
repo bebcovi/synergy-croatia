@@ -43,8 +43,8 @@ class Training < ActiveRecord::Base
   end
 
   def delete_files
-    dropbox_client.file_delete(infoletter) if infoletter_file.present?
-    dropbox_client.file_delete(participation_form) if participation_form_file.present?
+    dropbox_client.file_delete(infoletter) rescue nil
+    dropbox_client.file_delete(participation_form) rescue nil
     true
   end
 
