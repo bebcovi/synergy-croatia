@@ -9,8 +9,7 @@
     = f.input :begins_on
     = f.input :ends_on
     = f.country_select :participating_countries, :priority => common_countries, :multiple => true
-    = f.input :age_restriction do
-      = f.number_field(:minimum_age) + "&ndash;".html_safe + f.number_field(:maximum_age)
+    = f.input(:age_restriction) { f.number_field(:minimum_age) + "&ndash;".html_safe + f.number_field(:maximum_age) }
     = f.country_select :country, :priority => common_countries
     = f.input :city
     = f.input :additional_info
