@@ -14,6 +14,7 @@ group :assets do
   gem "uglifier"
 end
 
+# Views
 gem "haml-rails"
 gem "simple_form"
 gem "redcarpet"
@@ -29,8 +30,10 @@ group :development, :test do
   gem "rspec-rails"
 end
 
+# Translations
 gem "rails-i18n"
 gem "i18n-country-translations"
 gem "i18n_country_select"
+gem "globalize3"
 
 gem "dropbox-sdk"

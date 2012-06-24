@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120624144625) do
+ActiveRecord::Schema.define(:version => 20120624173154) do
 
   create_table "testimonials", :force => true do |t|
     t.text     "body"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(:version => 20120624144625) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "training_translations", :force => true do |t|
+    t.integer  "training_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "description"
+    t.string   "infoletter"
+    t.string   "participation_form"
+    t.text     "additional_info"
+    t.text     "summary"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "training_translations", ["locale"], :name => "index_training_translations_on_locale"
+  add_index "training_translations", ["training_id"], :name => "index_training_translations_on_training_id"
 
   create_table "trainings", :force => true do |t|
     t.string   "title"

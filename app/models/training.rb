@@ -12,6 +12,9 @@ class Training < ActiveRecord::Base
   before_create  :upload_files
   before_destroy :delete_files
 
+  translates :title, :description, :infoletter, :participation_form,
+    :additional_info, :summary
+
   def duration
     (ends_on - begins_on).to_i + 1
   end
