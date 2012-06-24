@@ -1,35 +1,4 @@
 en:
-  pages:
-    index:
-      page_title: "Synergy Croatia"
-    news:
-      page_title: "News"
-    trainings_nav:
-      trainings: "Trainings"
-      exchange: "Youth exchange"
-      workshops: "Workshops"
-      evs: "EVS"
-    about:
-      page_title: "About us"
-    archive:
-      page_title: "Finished projects"
-    testimonials:
-      page_title: "Testimonials"
-    method:
-      page_title: "Method"
-    partners:
-      page_title: "Partners"
-    mailchimp:
-      title: "Receive latest updates"
-      submit: "Subscribe"
-    support:
-      title: "Support us"
-      donate: "Donate"
-      volunteer: "Volunteer"
-    results:
-      title: "Attendants' results"
-      body: "These are some of the results that our attendants achieved:"
-
   errors:
     not_found:
       page_title: "Page not found"
@@ -39,12 +8,3 @@ en:
       page_title: "Internal server error"
       title: "500"
       message: "There has been an error"
-
-  helpers:
-    submit:
-      create: "Create"
-      update: "Save changes"
-      submit: "Save"
-
-  words:
-    and: 'and'

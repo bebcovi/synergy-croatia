@@ -13,18 +13,14 @@
     %header#header
       #logo= link_to 'Synergy Croatia', '/'
       #lang
-        - if english?
-          = link_to image_tag('lang/Croatia.png'), :locale => :hr
-        - else
-          = link_to image_tag('lang/United-States.png'), :locale => :en
+        = link_to image_tag('lang/Croatia.png'), :locale => :hr
+        = link_to image_tag('lang/United-States.png'), :locale => :en
 
     %nav
       %ol
         = list_of navigation_pages do |page|
           = link_to_unless_current page.title, page.route do
             = link_to page.title, page.route, :class => 'active'
-          - if request.path == page.route or request.path =~ /trainings\/\d+/ and page.route == '/news'
-            = content_for :navigation 
 
     %article{:role => 'main'}
       = yield
@@ -32,4 +28,4 @@
     %aside
       - %w[mailchimp support results].each do |item|
         %section{:id => item}
-          = render "pages/#{item}"
+          = render "layouts/#{item}"

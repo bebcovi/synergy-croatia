@@ -1,24 +1,5 @@
 hr:
-  pages:
-    index:
-      page_title: "Synergy Croatia"
-    news:
-      page_title: "Aktualno"
-    trainings_nav:
-      trainings: "Treninzi"
-      exchange: "Razmjene mladih"
-      workshops: "Radionice"
-      evs: "EVS"
-    about:
-      page_title: "O nama"
-    archive:
-      page_title: "Ostvareni projekti"
-    testimonials:
-      page_title: "Iskustva polaznika"
-    method:
-      page_title: "Metoda"
-    partners:
-      page_title: "Partneri"
+  layouts:
     mailchimp:
       title: "Želiš primati obavijesti?"
       submit: "Prijavi se"
@@ -29,6 +10,29 @@ hr:
     results:
       title: "Rezultati polaznika"
       body: "Ovo su neki od rezultata koje su postigli naši polaznici:"
+    trainings_nav:
+      trainings: "Treninzi"
+      exchange: "Razmjene mladih"
+      workshops: "Radionice"
+      evs: "EVS"
+
+  pages:
+    index:
+      page_title: "Synergy Croatia"
+    news:
+      page_title: "Aktualno"
+    about:
+      page_title: "O nama"
+    archive:
+      page_title: "Ostvareni projekti"
+    method:
+      page_title: "Metoda"
+    partners:
+      page_title: "Partneri"
+
+  testimonials:
+    index:
+      page_title: "Iskustva polaznika"
 
   trainings:
     index:

@@ -1,22 +1,19 @@
 module ApplicationHelper
-  Page = Struct.new(:title, :route)
   def navigation_pages
-    pages = %w[news about archive testimonials method partners]
-    pages.collect do |page|
-      Page.new(t("pages.#{page}.page_title"), eval("#{page}_path"))
+    pages = [[t("pages.news.page_title"),         {:controller => "pages", :action => "news"}],
+             [t("pages.about.page_title"),        {:controller => "pages", :action => "about"}],
+             [t("pages.archive.page_title"),      {:controller => "pages", :action => "archive"}],
+             [t("testimonials.index.page_title"), {:controller => "testimonials", :action => "index"}],
+             [t("pages.method.page_title"),       {:controller => "pages", :action => "method"}],
+             [t("pages.partners.page_title"),     {:controller => "pages", :action => "partners"}]]
+
+    pages.collect do |title, route|
+      Struct.new(:title, :route).new(title, route)
     end
   end
 
-  def english?
-    I18n.locale == :en
-  end
-
-  def croatian?
-    I18n.locale == :hr
-  end
-
   def render_markdown(text)
-    Redcarpet::Markdown.new(SmartHTMLRenderer).render(text).html_safe
+    Redcarpet::Markdown.new(SmartHTMLRenderer).render(text).html_safe rescue ""
   end
 
   def current_page_id
