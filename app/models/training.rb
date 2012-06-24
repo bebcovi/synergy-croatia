@@ -7,7 +7,6 @@ class Training < ActiveRecord::Base
   attr_accessor :infoletter_file, :participation_form_file
 
   scope :upcoming, where("ends_on >= '#{Date.today}'")
-  default_scope order(:begins_on)
 
   before_update  :delete_files, :upload_files
   before_create  :upload_files
