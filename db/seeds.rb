@@ -12,7 +12,7 @@ Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik 
   DESCRIPTION
   :begins_on => Date.parse("4th May 2012"),
   :ends_on => Date.parse("10th May 2012"),
-  :participating_countries => nil,
+  :participating_countries => [],
   :infoletter_url => "http://synergy-croatia.com/wp-content/uploads/2012/01/Info-letter-Practicing-Coaching-Training-10th-to-16th-March-2012.pdf",
   :participation_form_url => "#",
   :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl)"),
@@ -30,7 +30,7 @@ Cilj je olakšavanje mladima uključivanje u tržište rada, te će im to biti i
   DESCRIPTION
   :begins_on => Date.parse("24th March 2012"),
   :ends_on => Date.parse("3rd April 2012"),
-  :participating_countries => ["ES", "SI", "HR", "RO", "HU"], # Španjolska, Slovenija, Hrvatska, Rumunjska i Mađarska
+  :participating_countries => %w[ES SI HR RO HU], # Španjolska, Slovenija, Hrvatska, Rumunjska i Mađarska
   :infoletter_url => "http://www.egyesek.hu/images/text/viy_inform.pdf",
   :participation_form_url => "http://www.google.com/url?q=http%3A%2F%2Fwww.facebook.com%2Fl.php%3Fu%3Dhttp%253A%252F%252Fwww.egyesek.hu%252Fimages%252Ftext%252Fviy_app.doc%26h%3DcAQHoxmLfAQF_XWG7K-vmEJdcwQlE5qzGojzqDLQItamtqw&sa=D&sntz=1&usg=AFQjCNHA6LzibHb5dhKxEPDAK23yrKbsnQ",
   :additional_info => <<-INFO,
