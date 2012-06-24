@@ -123,3 +123,10 @@ Cilj je olakšavanje mladima uključivanje u tržište rada, te će im to biti i
   :country => "HU",
   :minimum_age => 17,
   :maximum_age => 25
+
+upcoming_training = Training.create \
+  :title => %(Nadolazeći),
+  :country => "NL",
+  :city => "Ommen",
+  :begins_on => 3.years.from_now,
+  :ends_on =>   3.years.from_now + 10.days
