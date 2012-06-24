@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120623165930) do
+ActiveRecord::Schema.define(:version => 20120624144625) do
 
   create_table "testimonials", :force => true do |t|
     t.text     "body"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(:version => 20120623165930) do
     t.date     "begins_on"
     t.date     "ends_on"
     t.string   "participating_countries"
-    t.string   "infoletter_url"
-    t.string   "participation_form_url"
+    t.string   "infoletter"
+    t.string   "participation_form"
     t.text     "additional_info"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false

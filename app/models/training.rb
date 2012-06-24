@@ -4,15 +4,25 @@ class Training < ActiveRecord::Base
   has_many :testimonials, :dependent => :destroy
 
   serialize :participating_countries
-  attr_accessor :infoletter, :participation_form
+  attr_accessor :infoletter_file, :participation_form_file
 
   scope :upcoming, where("ends_on >= '#{Date.today}'")
   default_scope order(:begins_on)
 
-  before_save :upload_files
+  before_update  :delete_files, :upload_files
+  before_create  :upload_files
+  before_destroy :delete_files
 
   def duration
     (ends_on - begins_on).to_i + 1
+  end
+
+  def infoletter_url
+    dropbox_client.media(infoletter)['url'] + "?dl=1"
+  end
+
+  def participation_form_url
+    dropbox_client.media(participation_form)['url'] + "?dl=1"
   end
 
   def to_s
@@ -22,13 +32,18 @@ class Training < ActiveRecord::Base
   private
 
   def upload_files
-    # Infoletter
-    dropbox_client.put_file("/#{infoletter.original_filename}", infoletter.read)
-    self.infoletter_url = dropbox_client.media(infoletter.original_filename)['url'] + "?dl=1"
+    dropbox_client.put_file(infoletter_file.original_filename, infoletter_file.read)
+    dropbox_client.put_file(participation_form_file.original_filename, participation_form_file.read)
 
-    # Participation form
-    dropbox_client.put_file("/#{participation_form.original_filename}", participation_form.read)
-    self.participation_form_url = dropbox_client.media(participation_form.original_filename)['url'] + "?dl=1"
+    self.infoletter = infoletter_file.original_filename
+    self.participation_form = participation_form_file.original_filename
+
+    true
+  end
+
+  def delete_files
+    dropbox_client.file_delete(infoletter)
+    dropbox_client.file_delete(participation_form)
 
     true
   end

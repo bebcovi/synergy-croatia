@@ -3,6 +3,9 @@ require 'date'
 
 Training.destroy_all
 
+Training.skip_callback(:update, :before, :delete_files)
+Training.skip_callback(:save, :before, :upload_files)
+
 training1 = Training.create \
   :title => %(Practicing Coaching training),
   :description => <<-DESCRIPTION,
@@ -13,8 +16,6 @@ Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik 
   :begins_on => Date.parse("2nd Jan 2012"),
   :ends_on   => Date.parse("8th Jan 2012"),
   :participating_countries => [],
-  :infoletter_url => "http://synergy-croatia.com/wp-content/uploads/2012/01/Info-letter-Practicing-Coaching-Training-10th-to-16th-March-2012.pdf",
-  :participation_form_url => "#",
   :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl)"),
   :city => "Ommen",
   :country => "NL"
@@ -113,8 +114,6 @@ Cilj je olakšavanje mladima uključivanje u tržište rada, te će im to biti i
   :begins_on => Date.parse("24th March 2012"),
   :ends_on   => Date.parse("3rd April 2012"),
   :participating_countries => %w[ES SI HR RO HU], # Španjolska, Slovenija, Hrvatska, Rumunjska i Mađarska
-  :infoletter_url => "http://www.egyesek.hu/images/text/viy_inform.pdf",
-  :participation_form_url => "http://www.google.com/url?q=http%3A%2F%2Fwww.facebook.com%2Fl.php%3Fu%3Dhttp%253A%252F%252Fwww.egyesek.hu%252Fimages%252Ftext%252Fviy_app.doc%26h%3DcAQHoxmLfAQF_XWG7K-vmEJdcwQlE5qzGojzqDLQItamtqw&sa=D&sntz=1&usg=AFQjCNHA6LzibHb5dhKxEPDAK23yrKbsnQ",
   :additional_info => <<-INFO,
 * kotizacija iznosi 50 eura
 * hrana, smještaj i 70% putnih troškova su pokriveni
