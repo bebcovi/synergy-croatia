@@ -17,11 +17,11 @@ class Training < ActiveRecord::Base
   end
 
   def infoletter_url
-    dropbox_client.media(infoletter)['url'] + "?dl=1"
+    dropbox_client.media(infoletter)['url'] + "?dl=1" rescue nil
   end
 
   def participation_form_url
-    dropbox_client.media(participation_form)['url'] + "?dl=1"
+    dropbox_client.media(participation_form)['url'] + "?dl=1" rescue nil
   end
 
   def to_s
