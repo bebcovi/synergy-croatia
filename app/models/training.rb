@@ -31,19 +31,20 @@ class Training < ActiveRecord::Base
   private
 
   def upload_files
-    dropbox_client.put_file(infoletter_file.original_filename, infoletter_file.read)
-    dropbox_client.put_file(participation_form_file.original_filename, participation_form_file.read)
-
-    self.infoletter = infoletter_file.original_filename
-    self.participation_form = participation_form_file.original_filename
-
+    if infoletter_file.present?
+      dropbox_client.put_file(infoletter_file.original_filename, infoletter_file.read)
+      self.infoletter = infoletter_file.original_filename
+    end
+    if participation_form_file.present?
+      dropbox_client.put_file(participation_form_file.original_filename, participation_form_file.read)
+      self.participation_form = participation_form_file.original_filename
+    end
     true
   end
 
   def delete_files
-    dropbox_client.file_delete(infoletter)
-    dropbox_client.file_delete(participation_form)
-
+    dropbox_client.file_delete(infoletter) if infoletter_file.present?
+    dropbox_client.file_delete(participation_form) if participation_form_file.present?
     true
   end
 
