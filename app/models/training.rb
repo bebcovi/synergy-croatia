@@ -32,12 +32,12 @@ class Training < ActiveRecord::Base
 
   def upload_files
     if infoletter_file.present?
-      dropbox_client.put_file(infoletter_file.original_filename, infoletter_file.read)
-      self.infoletter = infoletter_file.original_filename
+      response = dropbox_client.put_file(infoletter_file.original_filename, infoletter_file.read)
+      self.infoletter = File.basename(response['path'])
     end
     if participation_form_file.present?
-      dropbox_client.put_file(participation_form_file.original_filename, participation_form_file.read)
-      self.participation_form = participation_form_file.original_filename
+      response = dropbox_client.put_file(participation_form_file.original_filename, participation_form_file.read)
+      self.participation_form = File.basename(response['path'])
     end
     true
   end
