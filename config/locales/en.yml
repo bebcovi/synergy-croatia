@@ -1,4 +1,26 @@
 en:
+  pages:
+    index:
+      page_title: "Synergy Croatia"
+    news:
+      page_title: "News"
+    about:
+      page_title: "About"
+    archive:
+      page_title: "Archive"
+    method:
+      page_title: "Method"
+    partners:
+      page_title: "Partners"
+
+  testimonials:
+    index:
+      page_title: "Testimonials"
+
+  trainings:
+    index:
+      trainings: "Trainings"
+
   errors:
     not_found:
       page_title: "Page not found"
