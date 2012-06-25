@@ -31,4 +31,12 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 
   config.include FactoryGirl::Syntax::Methods
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :fakeweb
+  c.default_cassette_options = {:serialize_with => :syck}
+  c.configure_rspec_metadata!
 end

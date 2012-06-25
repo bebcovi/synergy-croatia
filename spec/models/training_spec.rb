@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'date'
 
 describe Training do
-  describe "uploading files to Dropbox" do
+  describe "uploading files to Dropbox", :vcr do
     let(:dropbox_client)          { SynergyCroatia::Application.config.dropbox_client }
 
     context "create" do
@@ -53,6 +53,7 @@ describe Training do
       it "doesn't require files when updating" do
         training = create(:training)
         expect { training.update_attributes({}) }.to_not raise_error
+        training.destroy
       end
     end
 

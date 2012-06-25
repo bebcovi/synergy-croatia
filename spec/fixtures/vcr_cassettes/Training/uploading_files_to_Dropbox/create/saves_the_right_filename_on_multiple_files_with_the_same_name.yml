@@ -1,0 +1,535 @@
+--- 
+http_interactions: 
+- request: 
+    method: put
+    uri: https://api-content.dropbox.com/1/files_put/sandbox/infoletter.pdf?overwrite=false
+    body: 
+      encoding: ASCII-8BIT
+      string: ""
+    headers: 
+      content-type: 
+      - application/octet-stream
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      content-length: 
+      - 0
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:29 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      access-control-allow-origin: 
+      - "*"
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+    body: 
+      encoding: US-ASCII
+      string: "{\"revision\": 147, \"rev\": \"9308803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:29 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:29 +0000\", \"path\": \"/infoletter.pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:29 GMT
+- request: 
+    method: put
+    uri: https://api-content.dropbox.com/1/files_put/sandbox/participation_form.pdf?overwrite=false
+    body: 
+      encoding: ASCII-8BIT
+      string: ""
+    headers: 
+      content-type: 
+      - application/octet-stream
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      content-length: 
+      - 0
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:31 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      access-control-allow-origin: 
+      - "*"
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+    body: 
+      encoding: US-ASCII
+      string: "{\"revision\": 148, \"rev\": \"9408803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:30 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:30 +0000\", \"path\": \"/participation_form.pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:31 GMT
+- request: 
+    method: put
+    uri: https://api-content.dropbox.com/1/files_put/sandbox/infoletter.pdf?overwrite=false
+    body: 
+      encoding: ASCII-8BIT
+      string: ""
+    headers: 
+      content-type: 
+      - application/octet-stream
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      content-length: 
+      - 0
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:32 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      access-control-allow-origin: 
+      - "*"
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+    body: 
+      encoding: US-ASCII
+      string: "{\"revision\": 149, \"rev\": \"9508803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:32 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:32 +0000\", \"path\": \"/infoletter (1).pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:32 GMT
+- request: 
+    method: put
+    uri: https://api-content.dropbox.com/1/files_put/sandbox/participation_form.pdf?overwrite=false
+    body: 
+      encoding: ASCII-8BIT
+      string: ""
+    headers: 
+      content-type: 
+      - application/octet-stream
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      content-length: 
+      - 0
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:33 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      access-control-allow-origin: 
+      - "*"
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+    body: 
+      encoding: US-ASCII
+      string: "{\"revision\": 150, \"rev\": \"9608803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:33 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:33 +0000\", \"path\": \"/participation_form (1).pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:33 GMT
+- request: 
+    method: get
+    uri: https://api.dropbox.com/1/search/sandbox/?query=infoletter.pdf&file_limit=1000&include_deleted=false
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:34 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "[{\"revision\": 147, \"rev\": \"9308803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:29 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:29 +0000\", \"path\": \"/infoletter.pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}]"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:34 GMT
+- request: 
+    method: get
+    uri: https://api.dropbox.com/1/search/sandbox/?query=participation_form.pdf&file_limit=1000&include_deleted=false
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:36 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "[{\"revision\": 148, \"rev\": \"9408803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:30 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:30 +0000\", \"path\": \"/participation_form.pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}]"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:36 GMT
+- request: 
+    method: get
+    uri: https://api.dropbox.com/1/search/sandbox/?query=infoletter%20(1).pdf&file_limit=1000&include_deleted=false
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:37 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "[{\"revision\": 149, \"rev\": \"9508803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:32 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:32 +0000\", \"path\": \"/infoletter (1).pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}]"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:37 GMT
+- request: 
+    method: get
+    uri: https://api.dropbox.com/1/search/sandbox/?query=participation_form%20(1).pdf&file_limit=1000&include_deleted=false
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:38 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "[{\"revision\": 150, \"rev\": \"9608803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:33 +0000\", \"client_mtime\": \"Mon, 25 Jun 2012 09:40:33 +0000\", \"path\": \"/participation_form (1).pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}]"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:39 GMT
+- request: 
+    method: post
+    uri: https://api.dropbox.com/1/fileops/delete?root=sandbox&path=/infoletter.pdf
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:40 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      set-cookie: 
+      - gvc=NjA4MDczNjg5MjE3MTM2ODE5MTY2Mjc2MTYyMTk4NDA4OTQ5MjI%3D; expires=Sat, 24-Jun-2017 09:40:40 GMT; Path=/; httponly
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "{\"is_deleted\": true, \"revision\": 151, \"rev\": \"9708803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:40 +0000\", \"client_mtime\": \"Wed, 31 Dec 1969 23:59:59 +0000\", \"path\": \"/infoletter.pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:40 GMT
+- request: 
+    method: post
+    uri: https://api.dropbox.com/1/fileops/delete?root=sandbox&path=/participation_form.pdf
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:41 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      set-cookie: 
+      - gvc=MzAzOTIyODc3NTMyNDgwNzczMDU5Njk3MTI2MzEwNjM1NDg1OTUx; expires=Sat, 24-Jun-2017 09:40:41 GMT; Path=/; httponly
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "{\"is_deleted\": true, \"revision\": 152, \"rev\": \"9808803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:41 +0000\", \"client_mtime\": \"Wed, 31 Dec 1969 23:59:59 +0000\", \"path\": \"/participation_form.pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:42 GMT
+- request: 
+    method: post
+    uri: https://api.dropbox.com/1/fileops/delete?root=sandbox&path=/infoletter%20(1).pdf
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:43 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      set-cookie: 
+      - gvc=MjMxMTc4MjQ2NzM5ODkxNDk4ODA0NDE3NjQzNzQ1OTIzMzk1MjEz; expires=Sat, 24-Jun-2017 09:40:43 GMT; Path=/; httponly
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "{\"is_deleted\": true, \"revision\": 153, \"rev\": \"9908803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:43 +0000\", \"client_mtime\": \"Wed, 31 Dec 1969 23:59:59 +0000\", \"path\": \"/infoletter (1).pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:43 GMT
+- request: 
+    method: post
+    uri: https://api.dropbox.com/1/fileops/delete?root=sandbox&path=/participation_form%20(1).pdf
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+      user-agent: 
+      - OfficialDropboxRubySDK/1.3
+      authorization: 
+      - OAuth oauth_version="1.0", oauth_signature_method="PLAINTEXT", oauth_consumer_key="n0bk18wt3f8ezf8", oauth_token="1bgc1t2mjhk70mo", oauth_signature="61flf0pcu44cdmu&byqcwu47l7cqez2"
+      connection: 
+      - close
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.14
+      date: 
+      - Mon, 25 Jun 2012 09:40:46 GMT
+      content-type: 
+      - text/javascript
+      transfer-encoding: 
+      - chunked
+      connection: 
+      - close
+      set-cookie: 
+      - gvc=MTQwNTA1MDUyMTc1ODU4MTE4NzIxNDYxODU0MjU2NjEzMDQzNzM1; expires=Sat, 24-Jun-2017 09:40:46 GMT; Path=/; httponly
+      pragma: 
+      - no-cache
+      cache-control: 
+      - no-cache
+      x-frame-options: 
+      - SAMEORIGIN
+      access-control-allow-origin: 
+      - "*"
+    body: 
+      encoding: US-ASCII
+      string: "{\"is_deleted\": true, \"revision\": 154, \"rev\": \"9a08803ddc\", \"thumb_exists\": false, \"bytes\": 0, \"modified\": \"Mon, 25 Jun 2012 09:40:46 +0000\", \"client_mtime\": \"Wed, 31 Dec 1969 23:59:59 +0000\", \"path\": \"/participation_form (1).pdf\", \"is_dir\": false, \"icon\": \"page_white_acrobat\", \"root\": \"app_folder\", \"mime_type\": \"application/pdf\", \"size\": \"0 bytes\"}"
+    http_version: "1.1"
+  recorded_at: Mon, 25 Jun 2012 09:40:46 GMT
+recorded_with: VCR 2.2.2
