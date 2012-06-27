@@ -11,6 +11,8 @@ end
 
 module SynergyCroatia
   class Application < Rails::Application
+    config.autoload_paths += ["#{Rails.root}/lib"]
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 

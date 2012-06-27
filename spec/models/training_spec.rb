@@ -3,7 +3,7 @@ require 'date'
 
 describe Training do
   describe "uploading files to Dropbox", :vcr do
-    let(:dropbox_client)          { SynergyCroatia::Application.config.dropbox_client }
+    let(:dropbox_client) { SynergyCroatia::Application.config.dropbox_client }
 
     context "create" do
       it "uploads when files are given" do
