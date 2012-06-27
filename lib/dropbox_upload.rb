@@ -32,23 +32,26 @@ module DropboxUpload
             dropbox_client.media(send(attribute))['url'] + "?dl=1" rescue nil
           end
         end
+
+        include HelperMethods
+        private *HelperMethods.instance_methods
       end
     end
   end
 
-  private
+  module HelperMethods
+    def upload_to_dropbox(file)
+      response = dropbox_client.put_file(file.original_filename, file.read)
+      File.basename(response['path'])
+    end
 
-  def upload_to_dropbox(file)
-    response = dropbox_client.put_file(file.original_filename, file.read)
-    File.basename(response['path'])
-  end
+    def delete_from_dropbox(filename)
+      dropbox_client.file_delete(filename) rescue nil
+    end
 
-  def delete_from_dropbox(filename)
-    dropbox_client.file_delete(filename) rescue nil
-  end
-
-  def dropbox_client
-    SynergyCroatia::Application.config.dropbox_client
+    def dropbox_client
+      SynergyCroatia::Application.config.dropbox_client
+    end
   end
 
   def self.included(base)
