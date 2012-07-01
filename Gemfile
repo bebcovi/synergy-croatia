@@ -20,8 +20,8 @@ gem "simple_form"
 gem "redcarpet"
 
 group :development do
+  gem "guard-rails"
   gem "guard-livereload"
-  gem "foreman"
   gem "pry-rails"
 end
 
