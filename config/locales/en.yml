@@ -8,14 +8,12 @@ en:
       page_title: "About"
     archive:
       page_title: "Archive"
+    testimonials:
+      page_title: "Testimonials"
     method:
       page_title: "Method"
     partners:
       page_title: "Partners"
-
-  testimonials:
-    index:
-      page_title: "Testimonials"
 
   trainings:
     index:

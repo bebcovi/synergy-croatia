@@ -6,6 +6,7 @@ class Training < ActiveRecord::Base
   serialize :participating_countries
 
   scope :upcoming, where("ends_on >= '#{Date.today}'")
+  scope :forecoming, where("ends_on < '#{Date.today}'")
 
   has_dropbox_file :infoletter, :participation_form
 

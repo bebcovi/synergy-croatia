@@ -25,14 +25,12 @@ hr:
       page_title: "O nama"
     archive:
       page_title: "Ostvareni projekti"
+    testimonials:
+      page_title: "Iskustva polaznika"
     method:
       page_title: "Metoda"
     partners:
       page_title: "Partneri"
-
-  testimonials:
-    index:
-      page_title: "Iskustva polaznika"
 
   trainings:
     index:

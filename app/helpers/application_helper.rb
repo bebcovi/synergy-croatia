@@ -1,14 +1,9 @@
 module ApplicationHelper
   def navigation_pages
-    pages = [[t("pages.news.page_title"),         {:controller => "pages", :action => "news"}],
-             [t("pages.about.page_title"),        {:controller => "pages", :action => "about"}],
-             [t("pages.archive.page_title"),      {:controller => "pages", :action => "archive"}],
-             [t("testimonials.index.page_title"), {:controller => "testimonials", :action => "index"}],
-             [t("pages.method.page_title"),       {:controller => "pages", :action => "method"}],
-             [t("pages.partners.page_title"),     {:controller => "pages", :action => "partners"}]]
+    pages = [:news, :about, :archive, :testimonials, :method, :partners]
 
-    pages.collect do |title, route|
-      Struct.new(:title, :route).new(title, route)
+    pages.collect do |name|
+      Struct.new(:title, :route).new(t("pages.#{name}.page_title"), "/#{name}")
     end
   end
 

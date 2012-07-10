@@ -1,31 +1,16 @@
 - @title = t(".page_title")
 
 %article
-  :markdown
-    # Practicing Coaching training
+  - @trainings.each do |training|
+    %h1 #{training.title}
+    = render_markdown(training.summary)
 
-      [Cilj]
+    %dl
+      %dt #{t(".place")}
+      %dd #{training.city}, #{t("countries.#{training.country}")}
 
-      - *Mjesto*: Ommen, Nizozemska.
-      - *Trajanje*: 10. -- 16.3.2012.
-      - *Infoletter*: [Infoletter](#).
+      %dt #{t(".duration")}
+      %dd #{training.begins_on} &ndash; #{training.ends_on}
 
-%article
-  :markdown
-    # Choice training
-
-      [Cilj]
-
-      - *Mjesto*: Ommen, Nizozemska.
-      - *Trajanje*: 3. -- 8.3.2012.
-      - *Infoletter*: [Infoletter](#).
-
-%article
-  :markdown
-    # Youth Democracy project "POWER ON -- From Virtual to Public space"
-
-      [Cilj]
-
-      - *Mjesto*: Ommen, Nizozemska.
-      - *Trajanje*: 25.2. -- 3.3.2012.
-      - *Infoletter*: [Infoletter](#).
+      %dt #{t(".infoletter")}
+      %dd #{link_to "Infoletter", training.infoletter_url}

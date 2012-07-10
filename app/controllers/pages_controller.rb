@@ -11,6 +11,11 @@ class PagesController < ApplicationController
   end
 
   def archive
+    @trainings = Training.forecoming
+  end
+
+  def testimonials
+    @testimonials = Training.all.map { |training| training.testimonials.sample }.compact
   end
 
   def method
