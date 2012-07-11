@@ -12,8 +12,9 @@ form {
 input[type='text'], input[type='url'], input[type='email'], input[type='number'], textarea {
   @include adjust-font-size-to($font-size, 1, $base-font-size);
   @include border-radius;
+  @include box-sizing(border-box);
   display: block;
-  width: 98%;
+  width: 100%;
   margin: 0;
   padding: rhythm(.25);
   border: 1px solid rgba(black, .40);
@@ -22,11 +23,13 @@ input[type='text'], input[type='url'], input[type='email'], input[type='number']
 }
 
 textarea {
-  max-width: 98%;
+  max-width: 100%;
 }
 
 input[type='number'] {
+  @include inline-block;
   width: rhythm(2);
+  margin: 0 rhythm(.25);
 }
 
 .input {
