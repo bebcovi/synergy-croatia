@@ -6,7 +6,7 @@ aside {
   h1 {
     $sub-font-size: 20px;
     @include adjust-font-size-to($sub-font-size, 1, $font-size);
-    @include trailer(1, $sub-font-size);
+    @include trailer(.5, $sub-font-size);
     padding-left: rhythm($hpad, $sub-font-size);
     font: {
       family: $sans;
@@ -14,8 +14,8 @@ aside {
     }
     text-transform: uppercase;
   }
-  ul, ol {
-    margin: 0;
+  ul, ol, p {
+    &:last-child { margin: 0; }
   }
   section {
     $color: nth($colors, 4);
