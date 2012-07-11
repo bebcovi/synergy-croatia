@@ -9,6 +9,13 @@ hr:
       body: "Podržite razvoj obrazovnih mogućnosti za mlade:"
       donate: "Donacija"
       volunteer: "Volontiranje"
+    contact:
+      title: "Kontakt"
+      body: "Kontaktirajte nas na"
+    social:
+      title: "Facebook"
+      body: "Pratite nas na"
+      link: "Facebooku"
     results:
       title: "Rezultati polaznika"
       body: "Ovo su neki od rezultata koje su postigli naši polaznici:"
