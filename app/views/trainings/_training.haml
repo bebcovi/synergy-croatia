@@ -6,8 +6,7 @@
 %p #{training.city}, #{t "countries.#{training.country}"}
 
 %h2 Kada?
-- from, till = format_date_range(training.begins_on, training.ends_on)
-%p #{from.chop}&ndash;#{till}
+%p= display_date_range(training.begins_on, training.ends_on)
 
 - if training.participating_countries.present?
   %h2 Koje države?
