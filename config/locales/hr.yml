@@ -1,10 +1,12 @@
 hr:
   layouts:
     mailchimp:
-      title: "Želiš primati obavijesti?"
+      title: "Newsletter"
+      body: "Želite li primati informacije o međunarodnim događajima i obrazovnim mogućnostima za mlade i odrasle?"
       submit: "Prijavi se"
     support:
-      title: "Podrži nas"
+      title: "Podržite nas"
+      body: "Podržite razvoj obrazovnih mogućnosti za mlade:"
       donate: "Donacija"
       volunteer: "Volontiranje"
     results:
