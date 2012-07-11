@@ -1,23 +1,31 @@
 #header {
-  @include trailer(2);
-}
-
-#logo {
-  $font-size: 24px;
-  @include leader(.5);
-  @include adjust-font-size-to($font-size);
-  @include clearfix;
-  text: {
-    transform: uppercase;
-    rendering: optimizeLegibility;
+  @include trailer;
+  .fill {
+    $c1: white;
+    $c2: rgba(black, .05);
+    @include leader;
+    @include background(linear-gradient(
+      left top,
+      $c1 25%,
+      $c2 25%, $c2 50%,
+      $c1 50%, $c1 75%,
+      $c2 75%
+    ));
+    @include background-size(8px 8px);
+    height: rhythm(.5);
+    display: none;
   }
 }
 
-#lang {
-  text-align: right;
+#logo, #lang {
   line-height: 0;
   a {
     border: 0;
     &:hover { background: none; }
   }
+}
+
+#lang {
+  @include leader(.5);
+  text-align: right;
 }

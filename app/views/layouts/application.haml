@@ -11,10 +11,11 @@
     = csrf_meta_tags
   %body{:id => current_page_id}
     %header#header
-      #logo= link_to 'Synergy Croatia', '/'
+      #logo= link_to image_tag('logo/synergy-croatia.png', alt: 'logo'), '/'
+      .fill
       #lang
-        = link_to image_tag('lang/Croatia.png'), :locale => :hr
-        = link_to image_tag('lang/United-States.png'), :locale => :en
+        = link_to image_tag('lang/Croatia.png', :size => '32x32'), :locale => :hr
+        = link_to image_tag('lang/United-States.png', :size => '32x32'), :locale => :en
 
     %nav
       %ol

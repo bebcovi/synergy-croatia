@@ -28,7 +28,13 @@
     text-align: right;
   }
 
-  $cols: 2;
+  $cols: $total-columns - $navigation - $sidebar;
+  #header .fill {
+    @include span-columns($cols);
+    display: block;
+  }
+
+  $cols: $sidebar;
   #lang {
     @include span-columns($cols omega);
   }
