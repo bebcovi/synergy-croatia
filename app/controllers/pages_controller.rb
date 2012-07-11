@@ -18,9 +18,6 @@ class PagesController < ApplicationController
     @testimonials = Training.all.map { |training| training.testimonials.sample }.compact
   end
 
-  def method
-  end
-
   def partners
   end
 end

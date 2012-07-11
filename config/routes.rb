@@ -6,7 +6,6 @@ SynergyCroatia::Application.routes.draw do
     get "about",        :to => "pages#about"
     get "archive",      :to => "pages#archive"
     get "testimonials", :to => "pages#testimonials"
-    get "method",       :to => "pages#method"
     get "partners",     :to => "pages#partners"
 
     resources :trainings
