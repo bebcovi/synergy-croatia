@@ -84,3 +84,18 @@ aside {
 #results {
   li { @include trailer(0, $font-size); }
 }
+
+#syncro {
+  $color: $syncro;
+  background: rgba($color, .05);
+  border: 1px solid rgba($color, .5);
+  [class^=icon] {
+    background: $syncro;
+  }
+  a {
+    $color1: $syncro;
+    $color2: $link2;
+    @include color-link($color1, $color2);
+    &:hover { background: rgba($color1, .1); }
+  }
+}

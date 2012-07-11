@@ -10,6 +10,9 @@ hr:
     results:
       title: "Rezultati polaznika"
       body: "Ovo su neki od rezultata koje su postigli naši polaznici:"
+    syncro:
+      title: "Syncro trening centar"
+      body: "Syncro Synergy Croatia provodi profesionalne programe osobne i profesionalne izvrsnosti i coachinga. Više na"
     trainings_nav:
       trainings: "Treninzi"
       exchange: "Razmjene mladih"

@@ -22,6 +22,8 @@ $display: 'Fredericka the Great', $serif;
 
 $colors: #195073 #7f8c1f #ee913f #f2e5bd #9fd7c7;
 
+$syncro: #7aced6;
+
 $text: rgba(black, .70);
 
 $link1: nth($colors, 3);
@@ -33,4 +35,8 @@ $default-transition-duration: 0.2s;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@mixin color-link($color1, $color2) {
+  @include link-colors($color1, $color2, $color2, $color1, $color2);
 }
