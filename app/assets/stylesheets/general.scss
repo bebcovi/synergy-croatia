@@ -28,6 +28,23 @@ em {
   font-family: $serif;
 }
 
+dt, dd {
+  display: inline;
+}
+
+dt {
+  font-weight: bold;
+  &:after { content: ':'; }
+}
+
+dd {
+  margin-left: rhythm(.25);
+  &:after {
+    content: '\a';
+    white-space: pre;
+  }
+}
+
 .button {
   @include adjust-font-size-to($base-font-size, 1, $base-font-size);
   @include box-sizing(border-box);
