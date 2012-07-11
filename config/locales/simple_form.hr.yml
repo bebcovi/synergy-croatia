@@ -5,6 +5,7 @@ hr:
         title: "Naziv"
         level: "Stupanj"
         description: "Opis"
+        summary: "Sažetak"
         goal: "Cilj"
         begins_on: "Počinje"
         ends_on: "Završava"
