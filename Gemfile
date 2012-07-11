@@ -19,6 +19,14 @@ gem "haml-rails"
 gem "simple_form"
 gem "redcarpet"
 
+# Translations
+gem "rails-i18n"
+gem "i18n-country-translations"
+gem "i18n_country_select"
+gem "globalize3"
+
+gem "dropbox-sdk"
+
 group :development do
   gem "guard-rails"
   gem "guard-livereload"
@@ -35,11 +43,3 @@ group :test do
   gem "vcr"
   gem "fakeweb"
 end
-
-# Translations
-gem "rails-i18n"
-gem "i18n-country-translations"
-gem "i18n_country_select"
-gem "globalize3"
-
-gem "dropbox-sdk"
