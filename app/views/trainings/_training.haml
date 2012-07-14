@@ -17,7 +17,7 @@
   = render_markdown(training.additional_info)
 
 %h2 Želim saznati više&hellip;
-%p Za više informacija možete pruzeti ovaj #{link_to "infoletter", training.infoletter_url}, a ako još uvijek budete imali pitanja, slobodno se obratite na našu email adresu #{mail_to 'synergy@synergy-croatia.com'}.
+%p Za više informacija možete pruzeti ovaj #{link_to "infoletter", training.infoletter_url(:download => true)}, a ako još uvijek budete imali pitanja, slobodno se obratite na našu email adresu #{mail_to 'synergy@synergy-croatia.com'}.
 
 %h2 Može!
-%p Izvrsno! U tom slučaju ispunite ovaj #{link_to "obrazac za prijavu", training.participation_form_url} i pošaljite ga na našu email adresu.
+%p Izvrsno! U tom slučaju ispunite ovaj #{link_to "obrazac za prijavu", training.participation_form_url(:download => true)} i pošaljite ga na našu email adresu.
