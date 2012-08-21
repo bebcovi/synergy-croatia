@@ -1,8 +1,9 @@
 - @title = t(".page_title")
 
 %article
+  %h1= t(".page_title")
   - @trainings.each do |training|
-    %h1 #{training.title}
+    %h2 #{training.title}
     = render_markdown(training.summary)
 
     %dl

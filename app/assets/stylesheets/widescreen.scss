@@ -22,11 +22,6 @@
     @include span-columns($cols);
   }
 
-  $cols: $total-columns - $navigation - $sidebar;
-  #header .fill {
-    @include span-columns($cols);
-  }
-
   $cols: $sidebar;
   #lang {
     @include span-columns($cols omega);

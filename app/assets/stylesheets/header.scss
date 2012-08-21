@@ -1,20 +1,5 @@
 #header {
   @include trailer;
-  .fill {
-    $c1: white;
-    $c2: rgba(black, .05);
-    @include leader;
-    @include background(linear-gradient(
-      left top,
-      $c1 25%,
-      $c2 25%, $c2 50%,
-      $c1 50%, $c1 75%,
-      $c2 75%
-    ));
-    @include background-size(8px 8px);
-    height: rhythm(.5);
-    display: none;
-  }
 }
 
 #logo, #lang {

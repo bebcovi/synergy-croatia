@@ -37,6 +37,9 @@ hr:
       page_title: "O nama"
     archive:
       page_title: "Postignuća"
+      place: "Lokacija"
+      duration: "Trajanje"
+      infoletter: "Infoletter"
     testimonials:
       page_title: "Iskustva polaznika"
     method:

@@ -15,23 +15,16 @@
   }
 
   $cols: 3;
-  $font-size: $form-font-size;
   input[type='submit'], .cancel {
     float: right;
     width: columns($cols, $main);
-    margin-left: rhythm(.5, $font-size);
+    margin-left: rhythm(.5, $form-font-size);
   }
 
   $cols: $navigation;
   #logo {
     @include span-columns($cols);
     text-align: right;
-  }
-
-  $cols: $total-columns - $navigation - $sidebar;
-  #header .fill {
-    @include span-columns($cols);
-    display: block;
   }
 
   $cols: $sidebar;

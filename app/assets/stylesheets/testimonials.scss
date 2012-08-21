@@ -1,7 +1,9 @@
 #testimonials {
   article > h2 {
     $font-size: 22px;
+    width: 100%;
     border-top: 1px solid nth($colors, 2);
+    border-bottom: none;
     @include adjust-font-size-to($font-size, 1.5);
     @include rhythm(-1, 0, 0, 1, $font-size);
   }
@@ -17,5 +19,8 @@ blockquote {
     $font-size: 20px;
     @include adjust-font-size-to($font-size);
     @include trailer(1, $font-size);
+  }
+  cite:before {
+    content: '\2014';
   }
 }

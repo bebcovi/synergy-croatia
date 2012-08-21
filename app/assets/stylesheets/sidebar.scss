@@ -66,7 +66,7 @@ aside {
 }
 
 #support {
-  button {
+  a {
     @extend %primary-button;
     @include trailer(.5, $form-font-size);
     display: block;
@@ -79,9 +79,7 @@ aside {
   $color: $syncro;
   background: rgba($color, .05);
   border: 1px solid rgba($color, .5);
-  [class^=icon] {
-    background: $syncro;
-  }
+  [class^=icon] { background: $syncro; }
   a {
     $color1: $syncro;
     $color2: $link2;

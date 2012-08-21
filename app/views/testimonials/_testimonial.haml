@@ -1,7 +1,7 @@
 %h1 #{testimonial.training.title}
-- from, till = format_date_range(testimonial.training.begins_on, testimonial.training.ends_on)
-%h2 #{t "countries.#{testimonial.training.country}" }, #{from.chop}&ndash;#{till}
+%h2 #{t "countries.#{testimonial.training.country}" }, #{display_date_range(testimonial.training.begins_on, testimonial.training.ends_on)}
 
 %blockquote
   = render_markdown(testimonial.body)
-  %p.author= testimonial.author
+  %p
+    %cite= testimonial.author

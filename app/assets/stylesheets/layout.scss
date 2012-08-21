@@ -1,17 +1,11 @@
 @include establish-baseline;
 @include border-box-sizing;
 
-html {
-  background: white;
-}
-
 body {
   margin: 0;
   padding: 0;
   @include container;
   @include rhythm(0, .5, 1, 0);
-  // @include susy-grid-background;
-  // @include debug-vertical-alignment;
   overflow-y: scroll;
   font-family: $sans;
   color: $text;
@@ -40,7 +34,8 @@ article {
   h2 {
     @extend %inline-block;
     @include adjust-font-size-to($font-size);
-    @include rhythm(0, 0, 0, 1, $font-size);
+    @include rhythm(0, 0, 0, .5, $font-size);
+    border-bottom: 1px solid nth($colors, 2);
     font-weight: normal;
     text: {
       rendering: optimizeLegibility;
