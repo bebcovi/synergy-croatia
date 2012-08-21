@@ -5,7 +5,7 @@ nav {
     align: center;
   }
   ol {
-    @include unstyled-list;
+    @extend %unstyled-list;
     ol {
       $font-size: 14px;
       @include adjust-font-size-to($font-size, 1);

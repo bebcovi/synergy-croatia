@@ -38,6 +38,7 @@ article {
   }
   $font-size: 22px;
   h2 {
+    @extend %inline-block;
     @include adjust-font-size-to($font-size);
     @include rhythm(0, 0, 0, 1, $font-size);
     font-weight: normal;

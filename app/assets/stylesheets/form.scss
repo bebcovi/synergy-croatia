@@ -10,8 +10,8 @@ form {
 }
 
 input[type='text'], input[type='url'], input[type='email'], input[type='number'], textarea {
+  @extend %border-radius;
   @include adjust-font-size-to($font-size, 1, $base-font-size);
-  @include border-radius;
   display: block;
   width: 100%;
   margin: 0;
@@ -26,7 +26,7 @@ textarea {
 }
 
 input[type='number'] {
-  @include inline-block;
+  @extend %inline-block;
   width: rhythm(2);
   margin: 0 rhythm(.25);
 }
@@ -46,7 +46,6 @@ label {
 $font-size: $form-font-size;
 input[type='submit'], .cancel {
   @include adjust-font-size-to($font-size);
-  @extend .button;
   @include leader(.5, $font-size);
   display: block;
   width: 49%;
@@ -54,12 +53,12 @@ input[type='submit'], .cancel {
 }
 
 .cancel {
-  @extend .secondary;
+  @extend %secondary-button;
   float: left;
 }
 
 input[type='submit'] {
-  @extend .primary;
+  @extend %primary-button;
   @include omega;
   float: right;
 }

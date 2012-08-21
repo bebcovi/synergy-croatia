@@ -31,12 +31,6 @@ $link2: nth($colors, 1);
 
 $default-transition-duration: 0.2s;
 
-@mixin unstyled-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 @mixin color-link($color1, $color2) {
   @include link-colors($color1, $color2, $color2, $color1, $color2);
 }
