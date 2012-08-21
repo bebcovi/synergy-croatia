@@ -1,13 +1,11 @@
-$font-size: 14px;
 aside {
-  @include adjust-font-size-to($font-size);
-  @include leader(.5, $font-size);
+  @include leader(.5);
   $hpad: .85;
   h1 {
-    $sub-font-size: 20px;
-    @include adjust-font-size-to($sub-font-size, 1, $font-size);
-    @include trailer(.5, $sub-font-size);
-    padding-left: rhythm($hpad, $sub-font-size);
+    $font-size: 20px;
+    @include adjust-font-size-to($font-size);
+    @include trailer(.5, $font-size);
+    padding-left: rhythm($hpad, $font-size);
     font: {
       family: $sans;
       weight: 400;
@@ -17,21 +15,23 @@ aside {
   ul, ol, p {
     &:last-child { margin: 0; }
   }
+  p { @include adjust-font-size-to(14px); }
   section {
     $color: nth($colors, 4);
     @include border-radius;
-    @include trailer(1, $font-size);
+    @include trailer(1);
     position: relative;
-    padding: rhythm(.5, $font-size);
+    padding: rhythm(.5);
     background: rgba($color, .25);
     border: 1px solid $color;
   }
   [class^=icon] {
+    $font-size: 16px;
     @include inline-block;
-    @include adjust-font-size-to(20px, 1, $font-size);
+    @include adjust-font-size-to($font-size);
     @include border-radius;
     position: absolute;
-    padding: rhythm(.1) rhythm(.25, $font-size);
+    padding: rhythm(.25) rhythm(.35, $font-size);
     background: nth($colors, 3);
     top: rhythm(0.25, $font-size);
     left: rhythm(-1.1 + $hpad, $font-size);
@@ -42,7 +42,7 @@ aside {
 #mailchimp {
   .field {
     @include pie-clearfix;
-    height: rhythm(1.5, $font-size);
+    height: rhythm(1.5);
   }
   input, .submit {
     display: block;
@@ -50,18 +50,18 @@ aside {
     height: 100%;
   }
   input {
-    @include adjust-font-size-to($font-size, 1, $font-size);
+    @include adjust-font-size-to($base-font-size);
     width: 80%;
     margin: 0 3% 0 0;
-    padding-left: rhythm(.25, $font-size);
+    padding-left: rhythm(.25);
     border-color: rgba(black, .3);
   }
   .submit {
     @extend .button;
     @extend .primary;
-    $sub-font-size: 24px;
-    @include adjust-font-size-to($sub-font-size, 1.8);
-    padding: 0 rhythm(.25);
+    $font-size: 24px;
+    @include adjust-font-size-to($font-size, 1.5);
+    padding: 0 rhythm(.25, $font-size);
     width: 16%;
   }
 }
@@ -70,18 +70,11 @@ aside {
   button {
     @extend .button;
     @extend .primary;
-    $sub-font-size: $form-font-size;
-    @include adjust-font-size-to($sub-font-size, 1, $font-size);
-    @include trailer(.5, $sub-font-size);
+    @include trailer(.5, $form-font-size);
     display: block;
     width: 100%;
-    padding: rhythm(.25, $sub-font-size) rhythm(.5, $sub-font-size);
     &:last-child { margin: 0; }
   }
-}
-
-#results {
-  li { @include trailer(0, $font-size); }
 }
 
 #syncro {

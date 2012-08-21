@@ -1,0 +1,25 @@
+$path: 'icons/icons';
+
+@include font-face('Icons', font-files('#{$path}.woff', '#{$path}.ttf', '#{$path}.svg'), '#{$path}.eot');
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'icons';
+  font-style: normal;
+  speak: none;
+}
+
+.icon-arrow-right:before {
+  content: "\279c";
+}
+.icon-heart:before {
+  content: "\2665";
+}
+.icon-phone:before {
+  content: "\2706";
+}
+.icon-mail:before {
+  content: "\2709";
+}
+.icon-facebook:before {
+  content: "\e000";
+}
