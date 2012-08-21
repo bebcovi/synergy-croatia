@@ -45,7 +45,6 @@ aside {
     height: rhythm(1.5, $font-size);
   }
   input, .submit {
-    @include box-sizing(border-box);
     display: block;
     float: left;
     height: 100%;

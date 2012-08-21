@@ -7,7 +7,7 @@ gem "pg"
 group :assets do
   gem "sass-rails"
   gem "compass-rails"
-  gem "susy", "1.0.rc.1"
+  gem "susy"
   gem "font-awesome-sass-rails"
   gem "jquery-rails"
   gem "coffee-rails"

@@ -12,7 +12,6 @@ form {
 input[type='text'], input[type='url'], input[type='email'], input[type='number'], textarea {
   @include adjust-font-size-to($font-size, 1, $base-font-size);
   @include border-radius;
-  @include box-sizing(border-box);
   display: block;
   width: 100%;
   margin: 0;

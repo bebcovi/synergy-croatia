@@ -7,7 +7,7 @@
   $main: $total-columns - $navigation - $sidebar;
 
   body {
-    @include container;
+    @include set-container-width;
   }
 
   [role='main'] {
