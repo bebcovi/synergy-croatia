@@ -46,4 +46,8 @@
     [role=main], #logo { @include reset-columns; }
   }
 
+  [role=contentinfo] {
+    @include squish($navigation, $sidebar);
+  }
+
 }
