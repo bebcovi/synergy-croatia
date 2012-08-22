@@ -124,7 +124,10 @@ Cilj je olakšavanje mladima uključivanje u tržište rada, te će im to biti i
   :maximum_age => 25
 
 upcoming_training = Training.create \
-  :title => %(Nadolazeći),
+  :title => %(Neki tam trening),
+  :description => <<-DESCRIPTION,
+Rhoncus vel vel, pid sed rhoncus est tincidunt, nunc elit in cursus pid ultrices lectus pellentesque habitasse porta? Rhoncus enim facilisis est. Lectus rhoncus, augue magna ultrices pellentesque amet magna! Dictumst elementum nec rhoncus amet scelerisque tincidunt tincidunt lacus turpis, aliquet nisi tortor dictumst duis diam aliquet magnis ac vel porttitor turpis cras auctor pulvinar cursus. Habitasse porttitor porttitor phasellus porttitor nisi dolor et lundium? Cursus rhoncus eu turpis! Facilisis aliquam sed, dignissim aliquet dictumst lectus tincidunt ridiculus, augue aliquam, eu pulvinar et vut, quis amet habitasse dapibus porta lectus. Porttitor facilisis. Penatibus, et ut lorem rhoncus odio facilisis, lundium, eros magnis eros arcu, rhoncus aliquam mauris porttitor turpis in, elementum, rhoncus, enim amet etiam magna cras tortor aenean et.
+  DESCRIPTION
   :country => "NL",
   :city => "Ommen",
   :begins_on => 3.years.from_now,
