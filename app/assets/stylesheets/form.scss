@@ -20,6 +20,10 @@ input[type='text'], input[type='url'], input[type='email'], input[type='number']
   margin: 0;
   padding: rhythm(.25);
   border: 1px solid rgba(black, .40);
+  &:focus {
+    outline: none;
+    border-color: rgba(black, .5) !important;
+  }
 }
 
 textarea {

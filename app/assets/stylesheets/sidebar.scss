@@ -41,14 +41,16 @@ aside {
 
 #mailchimp {
   .field {
-    @include pie-clearfix;
+    @include clearfix;
     height: rhythm(1.5);
   }
+
   input, .submit {
     display: block;
     float: left;
     height: 100%;
   }
+
   input {
     @include adjust-font-size-to($base-font-size);
     width: 80%;
