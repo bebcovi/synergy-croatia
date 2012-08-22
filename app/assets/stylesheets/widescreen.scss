@@ -8,7 +8,7 @@
     @include set-container-width;
   }
 
-  [role='main'] {
+  [role=main] {
     @include span-columns($main);
   }
 
@@ -36,7 +36,7 @@
   }
 
   #synergy-croatia {
-    [role='main'], #logo { @include reset-columns; }
+    [role=main], #logo { @include reset-columns; }
   }
 
 }

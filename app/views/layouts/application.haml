@@ -10,7 +10,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body{:id => current_page_id}
-    %header#header
+    %header{:role => 'banner'}
       #logo= link_to image_tag('logo/synergy-croatia.png', size: '196x60', alt: 'logo'), root_path
       #lang
         = link_to image_tag('lang/Croatia.png', :size => '32x32'), :locale => :hr

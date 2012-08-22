@@ -1,0 +1,47 @@
+[role=main] {
+  @include trailer(.5);
+  @include clearfix;
+
+  h1 {
+    $font-size: 42px;
+    @include adjust-font-size-to($font-size);
+    @include trailer(1, $font-size);
+    font-weight: normal;
+  }
+
+  .img {
+    float: right;
+    margin: 0 0 rhythm(.5) rhythm(.5);
+    a {
+      border: 0;
+      background: 0;
+    }
+  }
+
+  $font-size: 22px;
+  h2 {
+    @extend %inline-block;
+    @include adjust-font-size-to($font-size);
+    @include rhythm(0, 0, 0, .5, $font-size);
+    border-bottom: 1px solid nth($colors, 2);
+    font-weight: normal;
+    text: {
+      rendering: optimizeLegibility;
+      transform: uppercase;
+    }
+    color: nth($colors, 2);
+  }
+
+  li { @include trailer(0); }
+
+  p.intro {
+    $font-size: 26px;
+    @include adjust-font-size-to($font-size, 1.5);
+    @include trailer(1, $font-size);
+    font: {
+      family: $serif;
+      style: italic;
+    }
+    color: rgba(black, .40);
+  }
+}
