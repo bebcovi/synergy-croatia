@@ -24,19 +24,19 @@ training1.testimonials.create \
   :body => <<-BODY,
 Ne sjećam se točno kada sam prvi put saznala za Synergy, ali se sjećam da mi se odmah uistinu svidjelo. Jednotjedni Coaching trening u manjem mjestu Ommen, Nizozemska.
 
-Imala sam pozitivan osjećaj i visoka očekivanja… i bilo mi je drago kada sam shvatila da je osjećaj bio dobar te da je cjelokupno iskustvo nadmašilo moja očekivanja.
+Imala sam pozitivan osjećaj i visoka očekivanja... i bilo mi je drago kada sam shvatila da je osjećaj bio dobar te da je cjelokupno iskustvo nadmašilo moja očekivanja.
 
 Razina gostoprimstva je bila sličnija onoj kada posjećujem prijatelje. Stvarali su ju ljudi, treneri te opća filozofija Synegy Grupe.
 
 Neformalni dio je ukazivao na njihovu posvećenost koja je, ako usporedim sa sličnim ikustvima, uistinu rijetko na toj razini iskrenosti. Ljepota na dalje je bilo prenošenje te posvećenosti na formalni dio, sam trening gdje se uistinu pazilo da ju svi sudionici osjećaju.
 
-Posljedično, svi su se osjećali ugodno , a to je omogućilo djeljenje i iskrenost – bitan faktor koji je pridonijeo cjelokupnj kvaliteti treninga.
+Posljedično, svi su se osjećali ugodno, a to je omogućilo djeljenje i iskrenost -- bitan faktor koji je pridonijeo cjelokupnj kvaliteti treninga.
 
 Sadržaj i teorija su bili sažeti, jednostavni, specifični i vrlo praktični. Koncepti su prezentirani taman koliko je dovoljno da se zahvati poanta, a zatim vježbani do razine potpunog razumijevanja i ovladavanj pojedinom tehnikom.
 
-Daljnja divna stvar je bila razmjena iskustva s dugim sudionicima. S obzirom na kontekst, bila je intenzivna. Osjećaj ugodnosti i otvorenosti za otvoriti se i uključiti cijelog sebe te prihvatiti drugog bili su prisutni od samog početka. Raznolikost naših pozadina – geografski, kulturalno, obrazovno, profesionalno te osobno – bila je bogata. To je bilo super!
+Daljnja divna stvar je bila razmjena iskustva s dugim sudionicima. S obzirom na kontekst, bila je intenzivna. Osjećaj ugodnosti i otvorenosti za otvoriti se i uključiti cijelog sebe te prihvatiti drugog bili su prisutni od samog početka. Raznolikost naših pozadina -- geografski, kulturalno, obrazovno, profesionalno te osobno – bila je bogata. To je bilo super!
 
-Ljudi sa svih strana koji rade mnogo zanimlljivih stvari i tako su razičitih osobnosti – bili su tamo s istim ciljem – narasti kao osoba, poboljšati sebe i pomoći drugima da učine isto.
+Ljudi sa svih strana koji rade mnogo zanimlljivih stvari i tako su razičitih osobnosti -- bili su tamo s istim ciljem -- narasti kao osoba, poboljšati sebe i pomoći drugima da učine isto.
   BODY
   :author => "Vanja Varga"
 
@@ -74,12 +74,12 @@ training3 = Training.create \
 
 training3.testimonials.create \
   :body => <<-BODY,
-Synergy Croatia omogućio mi je sudjelovanje na na projektu Power On – from virtual to public space. Cilj projekta je promjeniti neki javni prostor u mjestu u kojem živimo. U okviru projekta,koji inače traje 7 mjeseci, proveli smo tjedan dana u Ommenu, Nizozemska. Imam osjećaj da sam u tih tjedan dana naučila više nego u par godina akademskog obrazovanja! Osim tehničkih stvari koje smo naučili, kao što su osnove novinarstva, propagande i medija te kako pokrenuti projekt u tih jedan dana sam shvatila koliko je jednostavno pokrenuti projekt na lokalnoj razini, promjeniti neki element u zajednici u kojoj živimo i pridonijeti društvu. Također, timski rad osnova je svih vježbi i radionica koje smo imalu u Ommenu. Nije to tako jednostavno kao što se čini J. Posebno mi se svidio način na koji funkcionira zajednica Olde Vechte u Ommenu, i tim voditelja projekta. U svakom slučaju, jedno od boljih iskustava u životu!
+Synergy Croatia omogućio mi je sudjelovanje na na projektu Power On -- from virtual to public space. Cilj projekta je promjeniti neki javni prostor u mjestu u kojem živimo. U okviru projekta,koji inače traje 7 mjeseci, proveli smo tjedan dana u Ommenu, Nizozemska. Imam osjećaj da sam u tih tjedan dana naučila više nego u par godina akademskog obrazovanja! Osim tehničkih stvari koje smo naučili, kao što su osnove novinarstva, propagande i medija te kako pokrenuti projekt u tih jedan dana sam shvatila koliko je jednostavno pokrenuti projekt na lokalnoj razini, promjeniti neki element u zajednici u kojoj živimo i pridonijeti društvu. Također, timski rad osnova je svih vježbi i radionica koje smo imalu u Ommenu. Nije to tako jednostavno kao što se čini :). Posebno mi se svidio način na koji funkcionira zajednica Olde Vechte u Ommenu, i tim voditelja projekta. U svakom slučaju, jedno od boljih iskustava u životu!
   BODY
   :author => "Maja Mikeš"
 
 training4 = Training.create \
-  :title => %(Osnovni Synergy trening “Big peace comes from small pieces”),
+  :title => %(Osnovni Synergy trening "Big peace comes from small pieces"),
   :country => "NL",
   :begins_on => Date.parse("25th Apr 2010"),
   :ends_on   => Date.parse("9th May 2010")
@@ -98,9 +98,9 @@ training5 = Training.create \
 
 training5.testimonials.create \
   :body => <<-BODY,
-To mi je bio jedno od boljih iskustava u životu… Kolko zbog ljudi koje sam tamo upoznao: svi otvoreni, spremni pomoć jedni drugima, ali i sebi naravno.
+To mi je bio jedno od boljih iskustava u životu... Kolko zbog ljudi koje sam tamo upoznao: svi otvoreni, spremni pomoć jedni drugima, ali i sebi naravno.
 
-Ako se stvarno otvoriš za ono što se tamo nudi i ako počneš na neke stvari malo drugačije gledati ili čak razmišljati o nekim stvarima o kojima prije uopće nisi ni mislio da budeš ili se jednostavno nisu prije činile toliko bitnima, može ti se okrenuti cijeli svijet. Pogledaš na sebe iz nekog drugog kuta i budeš korak bliže “sebi”, a naučiš dosta o sebi kroz povratnu informaciju drugih.
+Ako se stvarno otvoriš za ono što se tamo nudi i ako počneš na neke stvari malo drugačije gledati ili čak razmišljati o nekim stvarima o kojima prije uopće nisi ni mislio da budeš ili se jednostavno nisu prije činile toliko bitnima, može ti se okrenuti cijeli svijet. Pogledaš na sebe iz nekog drugog kuta i budeš korak bliže "sebi", a naučiš dosta o sebi kroz povratnu informaciju drugih.
   BODY
   :author => "Siniša Pasanec"
 
