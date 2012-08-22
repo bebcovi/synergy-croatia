@@ -29,12 +29,12 @@ hr:
       evs: "EVS"
 
   pages:
-    index:
-      page_title: "Synergy Croatia"
-    news:
-      page_title: "Aktualno"
     about:
       page_title: "O nama"
+    news:
+      page_title: "Aktualno"
+    evs:
+      page_title: "EVS"
     archive:
       page_title: "Postignuća"
       place: "Lokacija"
@@ -60,6 +60,3 @@ hr:
       page_title: "Greška"
       title: "500"
       message: "Dogodila se greška"
-
-  words:
-    and: 'i'

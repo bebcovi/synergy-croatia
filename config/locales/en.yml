@@ -1,11 +1,11 @@
 en:
   pages:
-    index:
-      page_title: "Synergy Croatia"
-    news:
-      page_title: "News"
     about:
       page_title: "About"
+    news:
+      page_title: "News"
+    evs:
+      page_title: "EVS"
     archive:
       page_title: "Achievments"
     testimonials:

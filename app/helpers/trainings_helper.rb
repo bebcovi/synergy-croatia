@@ -5,6 +5,6 @@ module TrainingsHelper
   end
 
   def display_countries(country_codes)
-    enumerate(country_codes.map { |code| t "countries.#{code}" })
+    country_codes.map { |code| t "countries.#{code}" }.to_sentence
   end
 end

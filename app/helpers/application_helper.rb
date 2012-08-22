@@ -2,8 +2,7 @@
 
 module ApplicationHelper
   def navigation_pages
-    pages = [:news, :about, :archive, :testimonials, :partners]
-
+    pages = %w[about news evs archive testimonials partners]
     pages.collect do |name|
       Struct.new(:title, :route).new(t("pages.#{name}.page_title"), "/#{name}")
     end
@@ -24,14 +23,6 @@ module ApplicationHelper
       "#{from.strftime('%-d.%-m')}–#{till.strftime('%-d.%-m.%Y.')}"
     else
       "#{from.strftime('%-d')}–#{till.strftime('%-d.%-m.%Y.')}"
-    end
-  end
-
-  def enumerate(array)
-    if array.count <= 1
-      array.first.to_s
-    else
-      array[0..-2].join(', ') + " #{t 'words.and'} " + array.last
     end
   end
 end
