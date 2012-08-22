@@ -18,18 +18,17 @@
     }
   }
 
-  $font-size: 22px;
+  $font-size: 26px;
   h2 {
-    @extend %inline-block;
+    $color: nth($colors, 2);
     @include adjust-font-size-to($font-size);
-    @include rhythm(0, 0, 0, .5, $font-size);
-    border-bottom: 1px solid nth($colors, 2);
+    @include rhythm(0, 0, 0, 0, $font-size);
     font-weight: normal;
     text: {
       rendering: optimizeLegibility;
       transform: uppercase;
     }
-    color: nth($colors, 2);
+    color: $color;
   }
 
   li { @include trailer(0); }
