@@ -11,7 +11,7 @@
       %dd #{training.city}, #{t("countries.#{training.country}")}
 
       %dt #{t(".duration")}
-      %dd #{training.begins_on} &ndash; #{training.ends_on}
+      %dd #{display_date_range(training.begins_on, training.ends_on)}
 
       %dt #{t(".infoletter")}
       %dd #{link_to "Infoletter", training.infoletter_url}
