@@ -1,10 +1,9 @@
 $total-columns: 4;
-$gutter-width: 4em;
 $grid-padding: 1em;
 $container-style: fluid;
 
 $tablet-layout: 30em 4;
-$desktop-layout: 60em 16;
+$desktop-layout: 50em 16;
 $widescreen-layout: 75em 16;
 
 $base-font-size: 16px;
@@ -13,6 +12,7 @@ $base-line-height: 28px;
 $form-font-size: 14px;
 
 $default-border-radius: 2px;
+$default-transition-duration: 0.2s;
 
 $font_path: "fontawesome-webfont";
 
@@ -33,4 +33,24 @@ $default-transition-duration: 0.2s;
 
 @mixin color-link($color1, $color2) {
   @include link-colors($color1, $color2, $color2, $color1, $color2);
+}
+
+@mixin with-font-size-settings($font-size) {
+  $tmp: $base-font-size;
+  $base-font-size: $font-size;
+  @content;
+  $base-font-size: $tmp;
+}
+
+@mixin with-font-size($to-size, $lines: lines-for-font-size($to-size), $from-size: $base-font-size) {
+  @include adjust-font-size-to($to-size, $lines, $from-size);
+  $tmp: $base-font-size;
+  $base-font-size: $to-size;
+  @content;
+  $base-font-size: $tmp;
+}
+
+@mixin v-borders($width: 1px, $lines: 1, $font-size: $base-font-size, $border-style: $default-rhythm-border-style) {
+  @include apply-side-rhythm-border(left, $width, $lines, $font-size, $border-style);
+  @include apply-side-rhythm-border(right, $width, $lines, $font-size, $border-style);
 }

@@ -4,29 +4,29 @@
     @include set-container-width;
   }
 
-  [role=banner] {
-    @include clearfix;
+  .img {
+    float: right;
+    margin: 0 0 rhythm(.5) rhythm(.5);
   }
 
-  $cols: $total-columns / 2;
   #logo {
-    @include span-columns($cols);
+    float: left;
   }
 
   #lang {
-    @include span-columns($cols omega);
+    float: right;
   }
 
   nav {
+    clear: both;
     text-align: left;
   }
 
-  aside {
-    clear: both;
-  }
-
-  #synergy-croatia {
-    [role=main], #logo { @include reset-columns; }
+  $cols: $total-columns / 2;
+  aside section {
+    @include span-columns($cols);
+    @include nth-omega(2n);
+    &:nth-child(2) { @include padding-leader(0); }
   }
 
 }

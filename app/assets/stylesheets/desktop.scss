@@ -1,10 +1,9 @@
 @include at-breakpoint($desktop-layout) {
 
-  $grid-padding: 2;
+  $gutter-width: 4em;
 
-  $navigation: 4;
-  $sidebar: 4;
-  $main: $total-columns - $navigation - $sidebar;
+  $right: 5;
+  $main: $total-columns - $right;
 
   body {
     @include set-container-width;
@@ -12,6 +11,50 @@
 
   [role=main] {
     @include span-columns($main);
+    border-bottom: none;
+  }
+
+  #left {
+    text-align: center;
+  }
+
+  #logo, #lang {
+    @include inline-block;
+    float: none;
+  }
+
+  #logo {
+    margin-right: rhythm();
+  }
+
+  nav {
+    margin-left: rhythm(.25);
+    text-align: center;
+    li {
+      @include inline-block;
+      @include trailer(0);
+      margin-right: -4px;
+      &:last-child a { border-right: none; }
+    }
+    a {
+      padding: 0 rhythm(.5);
+      border-bottom: none;
+      border-right: 1px solid rgba(black, .15);
+    }
+  }
+
+  #expand {
+    display: none;
+  }
+
+  #right {
+    @include span-columns($right omega);
+  }
+
+  aside section {
+    @include reset-columns;
+    &:nth-child(2n) { float: none; }
+    &:nth-child(2) { @include padding-leader; }
   }
 
   $cols: 3;
@@ -21,34 +64,8 @@
     margin-left: rhythm(.5, $form-font-size);
   }
 
-  $cols: $navigation;
-  #logo {
-    @include span-columns($cols);
-    text-align: right;
+  #top {
+    display: none;
   }
-
-  $cols: $sidebar;
-  #lang {
-    @include span-columns($cols omega);
-  }
-
-  nav {
-    @include span-columns($navigation);
-    text-align: right;
-  }
-
-  aside {
-    @include span-columns($sidebar omega);
-    clear: none;
-  }
-
-  #synergy-croatia {
-    [role=main], #logo { @include reset-columns; }
-  }
-
-  [role=contentinfo] {
-    @include squish($navigation, $sidebar);
-  }
-
 
 }

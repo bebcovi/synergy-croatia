@@ -42,3 +42,5 @@ group :test do
   gem "vcr"
   gem "fakeweb"
 end
+
+gem "active_attr"

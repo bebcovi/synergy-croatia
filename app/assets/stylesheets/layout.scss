@@ -5,20 +5,14 @@ body {
   margin: 0;
   padding: 0;
   @include container;
-  @include rhythm(0, .5, 1, 0);
   overflow-y: scroll;
   font-family: $sans;
   color: $text;
-}
-
-#screen-width {
-  width: 80px;
-  padding-left: 5px;
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  right: 0;
-  text-align: center;
-  background: rgba(black, .75);
-  color: white;
+  &:before {
+    @include trailer;
+    content: '';
+    display: block;
+    height: rhythm(.25);
+    background: nth($colors, 3);
+  }
 }

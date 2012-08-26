@@ -1,5 +1,6 @@
-%span.icon-heart
-%h1= t ".title"
-%p= t ".body"
-%a{href: '#'}= t ".donate"
-%a{href: '#'}= t ".volunteer"
+%h1= t(".title").prepend_icon("heart")
+%p
+  = t(".body")
+  = link_to(t(".donate"), donate_path)
+  = t("words.or")
+  = link_to(t(".volunteer").downcase, volunteer_path) + "."

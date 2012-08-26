@@ -13,8 +13,8 @@ Practicing Coaching je trening za one koji rade s pojedincima ili grupama, koji 
 
 Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik svjesno koristi različite coaching tehnike usklađene sa vlastitim stilom. Vještine na treningu se stječu kroz iskustveno učenje. Treneri su Stella Saratsi and Marco Vlaming.
   DESCRIPTION
-  :begins_on => Date.parse("2nd Jan 2012"),
-  :ends_on   => Date.parse("8th Jan 2012"),
+  :begins_on => Date.parse("02/01/2012"),
+  :ends_on   => Date.parse("08/01/2012"),
   :participating_countries => [],
   :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl/en)"),
   :city => "Ommen",
@@ -26,7 +26,7 @@ Ne sjećam se točno kada sam prvi put saznala za Synergy, ali se sjećam da mi 
 
 Imala sam pozitivan osjećaj i visoka očekivanja... i bilo mi je drago kada sam shvatila da je osjećaj bio dobar te da je cjelokupno iskustvo nadmašilo moja očekivanja.
 
-Razina gostoprimstva je bila sličnija onoj kada posjećujem prijatelje. Stvarali su ju ljudi, treneri te opća filozofija Synegy Grupe.
+Razina gostoprimstva je bila sličnija onoj kada posjećujem prijatelje. Stvarali su ju ljudi, treneri te opća filozofija Synergy Grupe.
 
 Neformalni dio je ukazivao na njihovu posvećenost koja je, ako usporedim sa sličnim ikustvima, uistinu rijetko na toj razini iskrenosti. Ljepota na dalje je bilo prenošenje te posvećenosti na formalni dio, sam trening gdje se uistinu pazilo da ju svi sudionici osjećaju.
 
@@ -44,8 +44,8 @@ training2 = Training.create \
   :title => %("Unique & United", osnovni Synergy trening),
   :country => "CZ",
   :city    => "Naše Kamenka",
-  :begins_on => Date.parse("15th September 2011"),
-  :ends_on   => Date.parse("23th September 2011")
+  :begins_on => Date.parse("15/10/2011"),
+  :ends_on   => Date.parse("23/10/2011")
 
 training2.testimonials.create \
   :body => <<-BODY,
@@ -69,8 +69,8 @@ training3 = Training.create \
   :title => %(Trening POWER ON: from Virtual to Public Spaces),
   :country => "NL",
   :city => "Ommen",
-  :begins_on => Date.parse("25th Feb 2012"),
-  :ends_on   => Date.parse("3rd Mar 2012")
+  :begins_on => Date.parse("25/02/2012"),
+  :ends_on   => Date.parse("03/03/2012")
 
 training3.testimonials.create \
   :body => <<-BODY,
@@ -82,8 +82,8 @@ training4 = Training.create \
   :title => %("Big peace comes from small pieces", osnovni Synergy trening),
   :country => "NL",
   :city => "Ommen",
-  :begins_on => Date.parse("25th Apr 2010"),
-  :ends_on   => Date.parse("9th May 2010")
+  :begins_on => Date.parse("25/04/2010"),
+  :ends_on   => Date.parse("09/05/2010")
 
 training4.testimonials.create \
   :body => <<-BODY,
@@ -95,8 +95,8 @@ training5 = Training.create \
   :title => %("Event Wise", osnovni Synergy Trening),
   :country => "NL",
   :city => "Ommen",
-  :begins_on => Date.parse("6th Sep 2010"),
-  :ends_on   => Date.parse("11th Sep 2010")
+  :begins_on => Date.parse("06/10/2010"),
+  :ends_on   => Date.parse("11/10/2010")
 
 training5.testimonials.create \
   :body => <<-BODY,
@@ -113,9 +113,9 @@ Training.create \
 
 Cilj je olakšavanje mladima uključivanje u tržište rada, te će im to biti i omogućeno kroz pisanje kvalitetnog životopisa, simulaciju intervjua za posao te provedeng dana na pravom radnom mjestu.
   DESCRIPTION
-  :begins_on => Date.parse("24th March 2012"),
-  :ends_on   => Date.parse("3rd April 2012"),
-  :participating_countries => %w[ES SI HR RO HU], # Španjolska, Slovenija, Hrvatska, Rumunjska i Mađarska
+  :begins_on => Date.parse("24/03/2012"),
+  :ends_on   => Date.parse("03/04/2012"),
+  :participating_countries => %w[ES SI HR RO HU],
   :additional_info => <<-INFO,
 * kotizacija iznosi 50 eura
 * hrana, smještaj i 70% putnih troškova su pokriveni
@@ -125,12 +125,93 @@ Cilj je olakšavanje mladima uključivanje u tržište rada, te će im to biti i
   :minimum_age => 17,
   :maximum_age => 25
 
-upcoming_training = Training.create \
-  :title => %(Neki tam trening),
-  :description => <<-DESCRIPTION,
-Rhoncus vel vel, pid sed rhoncus est tincidunt, nunc elit in cursus pid ultrices lectus pellentesque habitasse porta? Rhoncus enim facilisis est. Lectus rhoncus, augue magna ultrices pellentesque amet magna! Dictumst elementum nec rhoncus amet scelerisque tincidunt tincidunt lacus turpis, aliquet nisi tortor dictumst duis diam aliquet magnis ac vel porttitor turpis cras auctor pulvinar cursus. Habitasse porttitor porttitor phasellus porttitor nisi dolor et lundium? Cursus rhoncus eu turpis! Facilisis aliquam sed, dignissim aliquet dictumst lectus tincidunt ridiculus, augue aliquam, eu pulvinar et vut, quis amet habitasse dapibus porta lectus. Porttitor facilisis. Penatibus, et ut lorem rhoncus odio facilisis, lundium, eros magnis eros arcu, rhoncus aliquam mauris porttitor turpis in, elementum, rhoncus, enim amet etiam magna cras tortor aenean et.
-  DESCRIPTION
-  :country => "NL",
+Training.create \
+  :title => %("Show Your Life", trening za trenere),
+  :begins_on => Date.parse("21/10/2012"),
+  :ends_on   => Date.parse("01/11/2012"),
+  :city => "Holloko",
+  :country => "HU"
+
+Training.create \
+  :title => %("All different, all equal", međunarodna razmjena o jednakosti i socijalnoj inkluziji gluhih),
+  :begins_on => Date.parse("21/10/2012"),
+  :ends_on   => Date.parse("01/11/2012"),
+  :city => "Thessaloniki",
+  :country => "GR"
+
+Training.create \
+  :title => %("LoGlo -- Local action Global reaction!", trening o ekološkoj svjesnosti i održivim ponašanjima),
+  :begins_on => Date.parse("21/10/2012"),
+  :ends_on   => Date.parse("01/11/2012"),
+  :city => "Holloko",
+  :country => "HU"
+
+Training.create \
+  :title => %("The challenges and opportunities of sustainable development", seminar o održivom razvoju),
+  :begins_on => Date.parse("05/09/2012"),
+  :ends_on   => Date.parse("12/09/2012"),
+  :city => "Gloucestershire",
+  :country => "UK"
+
+Training.create \
+  :title => %("Value in Youth", osnovni Synergy trening),
+  :begins_on => Date.parse("19/08/2012"),
+  :ends_on   => Date.parse("30/08/2012"),
+  :city => "Holloko",
+  :country => "HU"
+
+Training.create \
+  :title => %("Imagine the Beat", kinematografija, kazalište i media trening),
+  :begins_on => Date.parse("19/08/2012"),
+  :ends_on   => Date.parse("30/08/2012"),
   :city => "Ommen",
-  :begins_on => 3.years.from_now,
-  :ends_on =>   3.years.from_now + 10.days
+  :country => "NL"
+
+Training.create \
+  :title => %("Compose Your Competences", osnovni Synergy trening),
+  :begins_on => Date.parse("28/07/2012"),
+  :ends_on   => Date.parse("07/08/2012"),
+  :city => "Holloko",
+  :country => "HU"
+
+Training.create \
+  :title => %("Fire(works)", YIA projekt kratkoročne volonterske službe),
+  :begins_on => Date.parse("29/06/2011"),
+  :ends_on   => Date.parse("28/08/2011"),
+  :city => "Ommen",
+  :country => "NL"
+
+Training.create \
+  :title => %("Guide Your Life", osnovni Synergy trening),
+  :begins_on => Date.parse("01/05/2012"),
+  :ends_on   => Date.parse("13/05/2012"),
+  :city => "Ommen",
+  :country => "NL"
+
+Training.create \
+  :title => %("Value of Diversity: Turning the Key of Inclusion", coaching trening),
+  :begins_on => Date.parse("12/03/2012"),
+  :ends_on   => Date.parse("18/03/2012"),
+  :city => "Holloko",
+  :country => "HU"
+
+Training.create \
+  :title => %("POWER ON: From Virtual to Public space", audio-visual & media trening),
+  :begins_on => Date.parse("12/03/2012"),
+  :ends_on   => Date.parse("18/03/2012"),
+  :city => "Nizozemska",
+  :country => "NL"
+
+Training.create \
+  :title => %("Key Questions", osnovni Synergy trening),
+  :begins_on => Date.parse("21/08/2011"),
+  :ends_on   => Date.parse("02/09/2011"),
+  :city => "Holloko",
+  :country => "HU"
+
+Training.create \
+  :title => %("Out and About", YIA projekt kratkoročne volonterske službe),
+  :begins_on => Date.parse("22/07/2011"),
+  :ends_on   => Date.parse("21/08/2011"),
+  :city => "Ommen",
+  :country => "NL"

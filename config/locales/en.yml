@@ -1,19 +1,61 @@
 en:
+  layouts:
+    latest:
+      title: "Latest news"
+      body: "We're looking for three more lucky people for a youth exchange Value in Youth in Hungary!"
+    support:
+      title: "Support us"
+      body: "Do you want to support the development of educational possibilities for young people?"
+      donate: "Donate"
+      volunteer: "Volunteer"
+    newsletter:
+      title: "Newsletter"
+      body: "Do you want to receive news about international events and educational possibilities for young people and adults?"
+      submit: "Subscribe"
+    syncro:
+      title: "Syncro Training Center"
+      body: "Syncro Synergy Croatia is holding professional programs of personal and professional excelence and coaching. More on"
+    social:
+      title: "Social"
+      body: "Follow us on"
+    contact:
+      title: "Contact"
+      body: "Contact us via email <synergy@synergy-croatia.com> or phone:"
+
   pages:
+    index:
+      page_title: "A place for self-expression"
     about:
-      page_title: "About"
+      page_title: "About us"
     news:
-      page_title: "News"
+      page_title: "Upcoming projects"
     evs:
-      page_title: "EVS"
+      page_title: "European Voluntary Service"
+      navigation_title: "EVS"
     archive:
       page_title: "Achievments"
+      place: "Location"
+      duration: "Duration"
+      infoletter: "Infoletter"
     testimonials:
       page_title: "Testimonials"
-    method:
-      page_title: "Method"
     partners:
       page_title: "Partners"
+
+    trainings_nav:
+      trainings: "Trainings"
+      exchange: "Youth exchange"
+    archive_nav:
+      projects: "Achieved projects"
+      partnerships: "Achieved partnerships"
+
+  support:
+    donate:
+      page_title: "Donation"
+      phone: "Phone"
+      iban: "For payment from foreign countries"
+    volunteer:
+      page_title: "Volunteering"
 
   trainings:
     index:
@@ -28,3 +70,8 @@ en:
       page_title: "Internal server error"
       title: "500"
       message: "There has been an error"
+
+  words:
+    and: "and"
+    or: "or"
+    top: "top"

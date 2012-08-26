@@ -1,23 +1,20 @@
-%h1= training.title
+%article
+  %header
+    %h1= render_smart "#{training.title}, #{display_date_range(training.begins_on, training.ends_on)}"
+    %p.info #{training.city}, #{t "countries.#{training.country}"}
 
-= render_markdown(training.description)
+  = render_markdown(training.description)
 
-%h2 Gdje?
-%p #{training.city}, #{t "countries.#{training.country}"}
+  - if training.participating_countries.present?
+    %section
+      %h2 Koje države?
+      %p= display_countries(training.participating_countries)
 
-%h2 Kada?
-%p= display_date_range(training.begins_on, training.ends_on)
+  - if training.additional_info.present?
+    %section
+      %h2 Još nešto?
+      = render_markdown(training.additional_info)
 
-- if training.participating_countries.present?
-  %h2 Koje države?
-  %p= display_countries(training.participating_countries)
-
-- if training.additional_info.present?
-  %h2 Još nešto?
-  = render_markdown(training.additional_info)
-
-%h2 Želim saznati više&hellip;
-%p Za više informacija možete pruzeti ovaj #{link_to "infoletter", training.infoletter_url(:download => true)}, a ako još uvijek budete imali pitanja, slobodno se obratite na našu email adresu #{mail_to 'synergy@synergy-croatia.com'}.
-
-%h2 Može!
-%p Izvrsno! U tom slučaju ispunite ovaj #{link_to "obrazac za prijavu", training.participation_form_url(:download => true)} i pošaljite ga na našu email adresu.
+  %section
+    %h2 Prijava
+    %p Potrebno je ispuniti #{link_to "prijavnicu", training.participation_form_url(:download => true)} i najkasnije do (&hellip;) poslati na našu email adresu. Prijave se odobravaju kronološkim redom.

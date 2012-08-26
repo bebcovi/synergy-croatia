@@ -1,4 +1,4 @@
-[role=contentinfo] {
+footer {
   $font-size: 14px;
   @include adjust-font-size-to($font-size);
   position: relative;
@@ -6,19 +6,10 @@
   text-align: center;
   color: rgba(black, .35);
   &:after {
+    @include leader(.25, $font-size);
     content: '';
     display: block;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    border-top: 1px solid rgba(black, .20);
-  }
-  p {
-    @extend %inline-block;
-    @include trailer(0, $font-size);
-    position: relative;
-    z-index: 10;
-    padding: 0 rhythm(.5, $font-size);
-    background: white;
+    height: rhythm(.25, $font-size);
+    background: rgba(black, .15);
   }
 }

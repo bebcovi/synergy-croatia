@@ -1,3 +1,11 @@
-%span.icon-phone
-%h1= t ".title"
-%p #{t ".body"} #{mail_to 'synergy@synergy-croatia.com'}.
+%h1= t(".title").prepend_icon("phone")
+= render_markdown(t(".body"))
+%dl
+  %dt Juraj Boljat
+  %dd +385 98 933 4747
+
+  %dt Maja Škrljak
+  %dd +385 91 539 7248
+
+  %dt Dubravka Matić
+  %dd +385 95 801 2061

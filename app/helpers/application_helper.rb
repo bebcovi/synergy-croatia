@@ -4,7 +4,8 @@ module ApplicationHelper
   def navigation_pages
     pages = %w[about news evs archive testimonials partners]
     pages.collect do |name|
-      Struct.new(:title, :route).new(t("pages.#{name}.page_title"), "/#{name}")
+      title = I18n.translate!("pages.#{name}.navigation_title") rescue t("pages.#{name}.page_title")
+      Struct.new(:title, :route).new(title, {controller: "pages", action: name})
     end
   end
 
@@ -12,8 +13,8 @@ module ApplicationHelper
     Redcarpet::Markdown.new(SmartHTMLRenderer).render(text).html_safe rescue ""
   end
 
-  def current_page_id
-    t("pages.#{params[:action]}.page_title", :locale => :en).parameterize
+  def render_smart(text)
+    raw(Redcarpet::Render::SmartyPants.render(text))
   end
 
   def display_date_range(from, till)
@@ -24,5 +25,9 @@ module ApplicationHelper
     else
       "#{from.strftime('%-d')}–#{till.strftime('%-d.%-m.%Y.')}"
     end
+  end
+
+  def icon(name)
+    "#{content_tag :i, "", class: "icon-#{name}"} ".html_safe
   end
 end

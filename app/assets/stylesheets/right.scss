@@ -1,0 +1,90 @@
+aside {
+  @include leader(.5);
+  color: rgba(black, .5);
+
+  h1 {
+    @include with-font-size(20px) {
+      @include trailer(.5);
+      font: {
+        family: $sans;
+        weight: 400;
+      }
+      color: $text;
+      i {
+        @extend %inline-block;
+        @extend %border-radius;
+        margin-right: rhythm(.25);
+        color: nth($colors, 3);
+      }
+    }
+  }
+
+  p, ol, ul, dl {
+    @include with-font-size(14px) {
+      @include trailer(.5);
+      &:last-child { @include trailer(0); }
+    }
+  }
+
+  section {
+    $color: nth($colors, 4);
+    @include rhythm(0, 1, 1, 0);
+    border-bottom: 1px dashed rgba(black, .2);
+    &:first-child { @include padding-leader(0); }
+    &:last-child { border-bottom: none; }
+  }
+}
+
+#newsletter {
+  .field {
+    @include clearfix;
+    height: rhythm(1.5);
+  }
+
+  input, button {
+    display: block;
+    float: left;
+    height: 100%;
+  }
+
+  input {
+    width: 80%;
+    margin: 0 3% 0 0;
+    padding-left: rhythm(.25, $form-font-size);
+    border-color: rgba(black, .2);
+  }
+
+  button {
+    @include with-font-size(22px, 1.5) {
+      @extend %primary-button;
+      padding: 0 rhythm(.25);
+      width: 16%;
+    }
+  }
+}
+
+#syncro {
+  $color: $syncro;
+  i { color: $syncro; }
+  a {
+    $color1: $syncro;
+    $color2: $link2;
+    @include color-link($color1, $color2);
+    &:hover { background: rgba($color1, .1); }
+  }
+}
+
+#top {
+  @extend %border-radius;
+  @include trailer;
+  clear: both;
+  display: block;
+  text-align: center;
+  color: white;
+  border: none;
+  background: nth($colors, 3);
+  &:hover {
+    border: none;
+    background: nth($colors, 1);
+  }
+}

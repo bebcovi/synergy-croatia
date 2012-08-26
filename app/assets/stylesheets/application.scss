@@ -7,14 +7,15 @@
 @import 'layout';
 @import 'general';
 @import 'form';
-@import 'header';
-@import 'navigation';
+
+@import 'left';
 @import 'main';
-@import 'sidebar';
+@import 'right';
 @import 'footer';
 
+@import 'archive';
 @import 'testimonials';
-@import 'links';
+@import 'partners';
 
 @import 'tablet';
 @import 'desktop';

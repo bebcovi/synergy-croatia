@@ -4,7 +4,30 @@ p, h1, h2, h3, ol, ul, dl, li, blockquote {
 }
 
 h1, h2, h3 {
-  font-family: $serif;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  @include with-font-size(42px) {
+    @include trailer(1);
+  }
+}
+
+h2 {
+  @include with-font-size(20px) {
+    @include trailer(.5);
+    @include trailing-border(1px, .5);
+    text-transform: uppercase;
+    color: nth($colors, 2);
+    border-color: nth($colors, 2);
+  }
+}
+
+h3 {
+  @include with-font-size(24px) {
+    @include trailer;
+  }
 }
 
 a {
@@ -18,7 +41,7 @@ a {
   &, &:hover {
     @include transition(
       color .2s,
-      border-color .2s
+      opacity .2s
     );
   }
 }
@@ -40,4 +63,17 @@ dt {
 dd {
   @extend %append-newline;
   margin-left: rhythm(.25);
+}
+
+address {
+  @include with-font-size(14px) {
+    font-style: normal;
+    color: rgba(black, .5);
+    padding-left: rhythm(.5);
+    border-left: rhythm(.25) solid rgba(black, .2);
+    p {
+      @include trailer(0);
+      @include adjust-leading-to(1.25);
+    }
+  }
 }

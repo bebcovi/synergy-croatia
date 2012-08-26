@@ -1,0 +1,5 @@
+body.archive {
+  [role=main] article:first-of-type {
+    @include leader(0);
+  }
+}

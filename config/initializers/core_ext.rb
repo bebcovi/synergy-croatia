@@ -1,5 +1,5 @@
-class Array
-  def except(*elements)
-    self.dup.tap { |ary| elements.flatten.each { |el| ary.delete(el) } }
+class String
+  def prepend_icon(name)
+    "<i class='icon-#{name}'></i> #{self}".html_safe
   end
 end

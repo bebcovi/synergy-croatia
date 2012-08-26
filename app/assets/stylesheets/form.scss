@@ -9,59 +9,62 @@ form {
 
 input, textarea, button, select {
   @include adjust-font-size-to($form-font-size);
-  font-family: $sans;
+  font-family: inherit;
   color: $text;
 }
 
-input[type='text'], input[type='url'], input[type='email'], input[type='number'], textarea {
-  @extend %border-radius;
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: rhythm(.25);
-  border: 1px solid rgba(black, .40);
-  &:focus {
-    outline: none;
-    border-color: rgba(black, .5) !important;
+@include with-font-size-settings($form-font-size) {
+
+  input[type='text'], input[type='url'], input[type='email'], input[type='number'], textarea {
+    @extend %border-radius;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: rhythm(.25);
+    border: 1px solid rgba(black, .40);
+    &:focus {
+      outline: none;
+      border-color: rgba(black, .5) !important;
+    }
   }
-}
 
-textarea {
-  max-width: 100%;
-}
-
-input[type='number'] {
-  @extend %inline-block;
-  width: rhythm(2);
-  margin: 0 rhythm(.25);
-}
-
-.input {
-  @include trailer(.5);
-  &:last-of-type {
-    @include trailer(.25);
+  textarea {
+    max-width: 100%;
   }
-}
 
-label {
-  &:hover { cursor: pointer; }
-  &:after { content: ': '; }
-}
+  input[type='number'] {
+    @extend %inline-block;
+    width: rhythm(2);
+    margin: 0 rhythm(.25);
+  }
 
-input[type='submit'], .cancel {
-  @include adjust-font-size-to($form-font-size);
-  @include leader(.5, $form-font-size);
-  display: block;
-  width: 49%;
-  padding: rhythm(.5, $form-font-size);
-}
+  .input {
+    @include trailer(.5);
+    &:last-of-type {
+      @include trailer(.25);
+    }
+  }
 
-.cancel {
-  @extend %secondary-button;
-  float: left;
-}
+  label {
+    &:hover { cursor: pointer; }
+    &:after { content: ': '; }
+  }
 
-input[type='submit'] {
-  @extend %primary-button;
-  float: right;
+  input[type='submit'], .cancel {
+    @include leader(.5);
+    display: block;
+    width: 49%;
+    padding: rhythm(.5);
+  }
+
+  .cancel {
+    @extend %secondary-button;
+    float: left;
+  }
+
+  input[type='submit'] {
+    @extend %primary-button;
+    float: right;
+  }
+
 }

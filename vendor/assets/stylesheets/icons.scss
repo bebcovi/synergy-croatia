@@ -8,9 +8,6 @@ $path: 'icons/icons';
   speak: none;
 }
 
-.icon-arrow-right:before {
-  content: "\279c";
-}
 .icon-heart:before {
   content: "\2665";
 }
@@ -20,6 +17,21 @@ $path: 'icons/icons';
 .icon-mail:before {
   content: "\2709";
 }
+.icon-arrow-right:before {
+  content: "\279c";
+}
+.icon-share:before {
+  content: "\260d";
+}
 .icon-facebook:before {
   content: "\e000";
+}
+.icon-twitter:before {
+  content: "\e002";
+}
+.icon-feed:before {
+  content: "\e003";
+}
+.icon-calendar:before {
+  content: "\e001";
 }

@@ -1,0 +1,45 @@
+#logo, #lang {
+  text-align: center;
+}
+
+#logo {
+  @extend %image-container;
+  @include trailer;
+}
+
+#lang {
+  @extend %image-container;
+  @include rhythm(.5, 0, 0, .5);
+  height: rhythm(1.5);
+}
+
+nav {
+  @include trailer;
+  position: relative;
+  text: {
+    transform: uppercase;
+    align: center;
+  }
+  ol { @extend %unstyled-list; }
+  li { @include trailer(.5); }
+  a {
+    display: block;
+  }
+  .active {
+    @extend a:hover;
+    background: none;
+    &:hover { background: rgba(nth($colors, 2), .1); }
+  }
+}
+
+#expand {
+  position: absolute;
+  right: 0;
+  padding: 0 rhythm(.25);
+  color: white;
+  border: none;
+  background: nth($colors, 3);
+  &:hover {
+    background: nth($colors, 1);
+  }
+}

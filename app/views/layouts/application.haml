@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Synergy &middot; #{@title}
+    %title Synergy Croatia &middot; #{@title}
     %meta{:charset => 'utf-8'}
     %meta{:name => 'robots', :content => 'noindex'}
     %link{:href => 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Gentium+Basic:400,700,400italic,700italic&subset=latin-ext,latin', :rel => 'stylesheet', :type => 'text/css'}
@@ -9,26 +9,28 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body{:id => current_page_id}
-    %header{:role => 'banner'}
-      #logo= link_to image_tag('logo/synergy-croatia.png', size: '196x60', alt: 'logo'), root_path
+  %body{:class => "#{params[:controller]} #{params[:action]}"}
+    #left
+      #logo= link_to image_tag('logo.png', size: '183x56', alt: 'logo'), root_path
       #lang
         = link_to image_tag('lang/Croatia.png', :size => '32x32'), :locale => :hr
         = link_to image_tag('lang/United-States.png', :size => '32x32'), :locale => :en
-
-    %nav
-      %ol
-        = list_of navigation_pages do |page|
-          = link_to_unless_current page.title, page.route do
-            = link_to page.title, page.route, :class => 'active'
+      %nav
+        %a#expand{href: '#'} ⇕
+        %ol
+          = list_of navigation_pages do |page|
+            = link_to_unless_current page.title, page.route do
+              = link_to page.title, page.route, :class => 'active'
 
     %article{:role => 'main'}
+      %h1= @title
       = yield
 
-    %aside
-      - %w[mailchimp support contact social syncro].each do |item|
-        %section{:id => item}
-          = render "layouts/#{item}"
+    #right
+      %aside
+        - %w[latest support newsletter syncro social contact].each do |item|
+          %section{:id => item}
+            = render "layouts/#{item}"
+      = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"
 
-    %footer{:role => 'contentinfo'}
-      %p © Syncro Synergy Croatia 2012.
+    %footer © Syncro Synergy Croatia 2012.

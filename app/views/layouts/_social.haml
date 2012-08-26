@@ -1,3 +1,7 @@
-%span.icon-facebook
-%h1= t ".title"
-%p #{t ".body"} #{link_to t(".link"), "https://www.facebook.com/SynergyCroatia"}.
+%h1= t(".title").prepend_icon("share")
+%p
+  = t(".body")
+  = link_to("Facebook", "http://www.facebook.com/SynergyCroatia") + ","
+  = link_to("Twitter", "http://twitter.com/syncrotrainings")
+  = t("words.and")
+  = link_to("RSS", "#") + "."

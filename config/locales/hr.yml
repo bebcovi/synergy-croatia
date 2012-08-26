@@ -1,40 +1,40 @@
 hr:
   layouts:
-    mailchimp:
+    latest:
+      title: "Zadnje najave"
+      body: "Tražimo još troje sretnika za razmjenu mladih Value in Youth u Mađarskoj!"
+    support:
+      title: "Podržite nas"
+      body: "Želite podržati razvoj obrazovnih mogućnosti za mlade?"
+      donate: "Donirajte"
+      volunteer: "Volontirajte"
+    newsletter:
       title: "Newsletter"
       body: "Želite li primati informacije o međunarodnim događajima i obrazovnim mogućnostima za mlade i odrasle?"
       submit: "Prijavi se"
-    support:
-      title: "Podržite nas"
-      body: "Podržite razvoj obrazovnih mogućnosti za mlade:"
-      donate: "Donacija"
-      volunteer: "Volontiranje"
-    contact:
-      title: "Kontakt"
-      body: "Kontaktirajte nas na"
-    social:
-      title: "Facebook"
-      body: "Pratite nas na"
-      link: "Facebooku"
-    results:
-      title: "Rezultati polaznika"
-      body: "Ovo su neki od rezultata koje su postigli naši polaznici:"
     syncro:
       title: "Syncro trening centar"
       body: "Syncro Synergy Croatia provodi profesionalne programe osobne i profesionalne izvrsnosti i coachinga. Više na"
-    trainings_nav:
-      trainings: "Treninzi"
-      exchange: "Razmjene mladih"
-      workshops: "Radionice"
-      evs: "EVS"
+    social:
+      title: "Društvene mreže"
+      body: "Pratite naš"
+      facebook: "Facebook"
+      twitter: "Twitter"
+      rss: "RSS"
+    contact:
+      title: "Kontakt"
+      body: "Kontaktirajte nas putem emaila <synergy@synergy-croatia.com> ili putem telefona:"
 
   pages:
+    index:
+      page_title: "Mjesto za osobno izražavanje"
     about:
       page_title: "O nama"
     news:
-      page_title: "Aktualno"
+      page_title: "Najave projekata"
     evs:
-      page_title: "EVS"
+      page_title: "Europska volonterska služba"
+      navigation_title: "EVS"
     archive:
       page_title: "Postignuća"
       place: "Lokacija"
@@ -42,10 +42,23 @@ hr:
       infoletter: "Infoletter"
     testimonials:
       page_title: "Iskustva polaznika"
-    method:
-      page_title: "Metoda"
     partners:
       page_title: "Partneri"
+
+    trainings_nav:
+      trainings: "Treninzi"
+      exchange: "Razmjene mladih"
+    archive_nav:
+      projects: "Ostvareni projekti"
+      partnerships: "Ostvarena partnerstva"
+
+  support:
+    donate:
+      page_title: "Donacija"
+      phone: "Telefon"
+      iban: "Za uplate iz inozemstva"
+    volunteer:
+      page_title: "Volontiranje"
 
   trainings:
     index:
@@ -60,3 +73,8 @@ hr:
       page_title: "Greška"
       title: "500"
       message: "Dogodila se greška"
+
+  words:
+    and: "i"
+    or: "ili"
+    top: "vrh"

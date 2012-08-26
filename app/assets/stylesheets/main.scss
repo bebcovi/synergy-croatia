@@ -1,46 +1,79 @@
 [role=main] {
-  @include trailer(.5);
-  @include clearfix;
+  @include trailer;
+  border-bottom: 1px solid rgba(black, .25);
 
-  h1 {
-    $font-size: 42px;
-    @include adjust-font-size-to($font-size);
-    @include trailer(1, $font-size);
-    font-weight: normal;
+  li { @include trailer(0); }
+
+  .intro {
+    $font-size: 24px;
+    @include adjust-font-size-to($font-size, 1.5);
+    @include leader(-0.25, $font-size);
+    font: {
+      family: $serif;
+      style: italic;
+    }
+    color: rgba(black, .40);
   }
 
   .img {
-    float: right;
-    margin: 0 0 rhythm(.5) rhythm(.5);
+    @include trailer(.5);
     a {
       border: 0;
       background: 0;
     }
   }
 
-  $font-size: 26px;
-  h2 {
-    $color: nth($colors, 2);
-    @include adjust-font-size-to($font-size);
-    @include rhythm(0, 0, 0, 0, $font-size);
-    font-weight: normal;
-    text: {
-      rendering: optimizeLegibility;
-      transform: uppercase;
+  article {
+    &:first-of-type {
+      @include leader(-0.5);
     }
-    color: $color;
+
+    header h1 {
+      border-bottom: 2px solid rgba(black, .6);
+    }
+
+    h1 {
+      @include with-font-size(38px) {
+        font-family: $serif;
+        @include trailer(.5);
+      }
+    }
+
+    .info {
+      @include with-font-size(18px) {
+        @include rhythm(-0.25, 0, 0, 1);
+        color: rgba(black, .5);
+      }
+    }
   }
+}
 
-  li { @include trailer(0); }
-
-  p.intro {
-    $font-size: 26px;
-    @include adjust-font-size-to($font-size, 1.5);
-    @include trailer(1, $font-size);
-    font: {
-      family: $serif;
-      style: italic;
+#sub-nav {
+  @include with-font-size(18px) {
+    $color: gray;
+    @extend %unstyled-list;
+    @include clearfix;
+    @include rhythm(-0.25, 0, 0, 1);
+    border-top: 1px solid $color;;
+    border-bottom: 1px solid rgba($color, .25);
+    background: rgba($color, .025);
+    li { float: left; }
+    a {
+      $c1: rgba(black, .5);
+      $c2: $link1;
+      @include color-link($c1, $c2);
+      display: block;
+      padding: rhythm(.25) rhythm();
+      border-bottom: none;
+      &:hover {
+        @include v-borders;
+        border-color: rgba(black, .2);
+        background: white;
+      }
     }
-    color: rgba(black, .40);
+    .active a {
+      color: rgba(black, .75);
+      background: rgba(white, .1);
+    }
   }
 }

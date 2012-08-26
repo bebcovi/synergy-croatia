@@ -1,7 +1,11 @@
 - @title = t(".page_title")
 
+= render "archive_nav"
+
+:markdown
+  Većina projekata sufinancirana su kroz program Europske Unije Youth in Action ili Mladi na djelu. Više o programu na stranicama [Agencije za mobilnost i programe EU](http://mobilnost.hr/).
+
 %article
-  %h1= t(".page_title")
   - @trainings.each do |training|
     %h2 #{training.title}
     = render_markdown(training.summary)

@@ -19,6 +19,14 @@
   }
 }
 
+%image-container {
+  line-height: 0;
+  a {
+    border: 0;
+    &:hover { background: none; }
+  }
+}
+
 %button {
   @extend %inline-block;
   @include adjust-font-size-to($form-font-size);

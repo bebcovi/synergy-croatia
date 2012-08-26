@@ -1,14 +1,20 @@
 SynergyCroatia::Application.routes.draw do
   scope "(:locale)", :locale => /en|hr/ do
-    root :to => "pages#about"
+    root :to => "pages#index"
 
     controller :pages do
+      get "index"
       get "about"
       get "news"
       get "evs"
       get "archive"
       get "testimonials"
       get "partners"
+    end
+
+    controller :support do
+      get "donate"
+      get "volunteer"
     end
 
     resources :trainings
