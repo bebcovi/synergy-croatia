@@ -16,7 +16,7 @@ Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik 
   :begins_on => Date.parse("2nd Jan 2012"),
   :ends_on   => Date.parse("8th Jan 2012"),
   :participating_countries => [],
-  :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl)"),
+  :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl/en)"),
   :city => "Ommen",
   :country => "NL"
 
@@ -41,15 +41,15 @@ Ljudi sa svih strana koji rade mnogo zanimlljivih stvari i tako su razičitih os
   :author => "Vanja Varga"
 
 training2 = Training.create \
-  :title => %(Osnovni Synergy trening "Unique & United"),
+  :title => %("Unique & United", osnovni Synergy trening),
   :country => "CZ",
-  :city    => "Kamenka",
+  :city    => "Naše Kamenka",
   :begins_on => Date.parse("15th September 2011"),
   :ends_on   => Date.parse("23th September 2011")
 
 training2.testimonials.create \
   :body => <<-BODY,
-“DE ČEŠKIBUS”
+"DE ČEŠKIBUS"
 
 Osnovni Synergy Trening “Unique & United” jest za mene uistinu divno iskustvo.
 
@@ -79,8 +79,9 @@ Synergy Croatia omogućio mi je sudjelovanje na na projektu Power On -- from vir
   :author => "Maja Mikeš"
 
 training4 = Training.create \
-  :title => %(Osnovni Synergy trening "Big peace comes from small pieces"),
+  :title => %("Big peace comes from small pieces", osnovni Synergy trening),
   :country => "NL",
+  :city => "Ommen",
   :begins_on => Date.parse("25th Apr 2010"),
   :ends_on   => Date.parse("9th May 2010")
 
@@ -91,8 +92,9 @@ Sa Synergy treninzima upoznala sam se sasvim slučajno, preko prijateljice. Misl
   :author => "Maja Lončar"
 
 training5 = Training.create \
-  :title => %(Osnovni Synergy Trening “Event Wise”),
+  :title => %("Event Wise", osnovni Synergy Trening),
   :country => "NL",
+  :city => "Ommen",
   :begins_on => Date.parse("6th Sep 2010"),
   :ends_on   => Date.parse("11th Sep 2010")
 
@@ -105,7 +107,7 @@ Ako se stvarno otvoriš za ono što se tamo nudi i ako počneš na neke stvari m
   :author => "Siniša Pasanec"
 
 Training.create \
-  :title => %(Basic Synergy trening "Value in youth"),
+  :title => %("Value in youth", osnovni Synergy trening),
   :description => <<-DESCRIPTION,
 "Value in youth" je osnovni Synergy trening u kojem će naglasak biti na zapošljivosti mladih. Trenutna situacija pri traženju posla je vrlo izazovna, stoga je ovaj trening namijenjen mladima koji traže ili razmišljaju o promjeni posla, žele započeti vlastiti posao ili jednostavno žele poboljšati svoje šanse na tržištu rada. Kroz trening sudionici će raditi na osvješćivanju i poboljšanju svojih vještina, kompetencija i mogućnosti koje bi im mogle pomoći pri zapošljavanju. U sklopu razne radionica i aktivnosti sudionici će moći uvidjeti koji su njihovi interesi, ciljevi, vrijednosti i motivacija u radu, kako reagiraju u nepredviđenim situacijama, kako djeluju kad moraju  surađivati s drugima, na koji način sklapaju dogovore i organiziraju vrijeme.
 
