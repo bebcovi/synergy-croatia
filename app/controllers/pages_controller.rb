@@ -17,7 +17,10 @@ class PagesController < ApplicationController
   end
 
   def testimonials
-    @testimonials = Training.all.map { |training| training.testimonials.sample }.compact
+    testimonial_ids = Training.forecoming.with_testimonials.descending.select(["trainings.id", "trainings.ends_on"]).includes(:testimonials).limit(5)
+      .map { |training| training.testimonials.select("testimonials.id").descending.first.id }
+
+    @testimonials = Testimonial.where(id: testimonial_ids).descending.paginate(page: params[:page], per_page: 1)
   end
 
   def partners

@@ -3,8 +3,10 @@ class Training < ActiveRecord::Base
 
   serialize :participating_countries
 
-  scope :upcoming, where("ends_on >= current_date")
-  scope :forecoming, where("ends_on < current_date")
+  scope :upcoming, where("trainings.ends_on >= current_date")
+  scope :forecoming, where("trainings.ends_on < current_date")
+  scope :descending, order("trainings.ends_on DESC")
+  scope :with_testimonials, joins("INNER JOIN (SELECT testimonials.training_id FROM testimonials) AS testimonials ON trainings.id = testimonials.training_id")
 
   has_attached_file :infoletter,
     storage: :dropbox, dropbox_settings: "#{Rails.root}/config/dropbox.yml"
