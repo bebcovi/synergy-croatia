@@ -28,8 +28,6 @@ gem "paperclip"
 gem "paperclip-dropbox"
 
 group :development do
-  gem "guard-rails"
-  gem "guard-livereload"
   gem "pry-rails"
 end
 
