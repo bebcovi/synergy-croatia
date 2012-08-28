@@ -8,14 +8,14 @@
 %article
   - @trainings.each do |training|
     %h2 #{training.title}
-    = render_markdown(training.summary)
+    = markdown training.summary
 
     %dl
       %dt #{t(".place")}
       %dd #{training.city}, #{t("countries.#{training.country}")}
 
       %dt #{t(".duration")}
-      %dd #{display_date_range(training.begins_on, training.ends_on)}
+      %dd #{date_range training.begins_on, training.ends_on}
 
       %dt #{t(".infoletter")}
       %dd #{link_to "Infoletter", training.infoletter_url}

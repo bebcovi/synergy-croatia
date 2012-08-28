@@ -1,8 +1,8 @@
 %blockquote
-  = render_markdown(testimonial.body)
+  = markdown testimonial.body
   %p
     %cite
       %strong #{testimonial.author},
       #{testimonial.training.title},
       #{t("countries.#{testimonial.training.country}")},
-      #{display_date_range(testimonial.training.begins_on, testimonial.training.ends_on)}
+      #{date_range testimonial.training.begins_on, testimonial.training.ends_on}

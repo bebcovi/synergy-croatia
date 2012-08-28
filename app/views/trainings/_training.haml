@@ -1,20 +1,23 @@
-%article
-  %header
-    %h1= render_smart "#{training.title}, #{display_date_range(training.begins_on, training.ends_on)}"
-    %p.info #{training.city}, #{t "countries.#{training.country}"}
+- present training do |training_presenter|
 
-  = render_markdown(training.description)
+  %article
 
-  - if training.participating_countries.present?
+    %header
+      %h1= training_presenter.title
+      %p.info= training_presenter.location
+
+    = training_presenter.description
+
+    - if training.participating_countries.present?
+      %section
+        %h2 Koje države?
+        %p= training_presenter.participating_countries
+
+    - if training.additional_info.present?
+      %section
+        %h2 Još nešto?
+        = training_presenter.additional_info
+
     %section
-      %h2 Koje države?
-      %p= display_countries(training.participating_countries)
-
-  - if training.additional_info.present?
-    %section
-      %h2 Još nešto?
-      = render_markdown(training.additional_info)
-
-  %section
-    %h2 Prijava
-    %p Potrebno je ispuniti #{link_to "prijavnicu", training.participation_form.url(download: true)} i najkasnije do (&hellip;) poslati na našu email adresu. Prijave se odobravaju kronološkim redom.
+      %h2 Prijava
+      %p Potrebno je ispuniti #{link_to "prijavnicu", training_presenter.participation_form_url} i najkasnije do (&hellip;) poslati na našu email adresu. Prijave se odobravaju kronološkim redom.

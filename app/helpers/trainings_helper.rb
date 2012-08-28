@@ -4,7 +4,7 @@ module TrainingsHelper
       map { |code| [t("countries.#{code}"), code] }.sort
   end
 
-  def display_countries(country_codes)
+  def countries(country_codes)
     country_codes.map { |code| t "countries.#{code}" }.to_sentence
   end
 end
