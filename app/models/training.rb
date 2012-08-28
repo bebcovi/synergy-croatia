@@ -1,12 +1,10 @@
-require 'date'
-
 class Training < ActiveRecord::Base
   has_many :testimonials, :dependent => :destroy
 
   serialize :participating_countries
 
-  scope :upcoming, where("ends_on >= '#{Date.today}'")
-  scope :forecoming, where("ends_on < '#{Date.today}'")
+  scope :upcoming, where("ends_on >= current_date")
+  scope :forecoming, where("ends_on < current_date")
 
   has_attached_file :infoletter,
     storage: :dropbox, dropbox_settings: "#{Rails.root}/config/dropbox.yml"
