@@ -24,6 +24,8 @@ gem "i18n-country-translations"
 gem "i18n_country_select"
 gem "globalize3"
 
+# Other
+gem "active_attr"
 gem "paperclip"
 gem "paperclip-dropbox"
 gem "will_paginate"
@@ -42,5 +44,3 @@ group :test do
   gem "vcr"
   gem "fakeweb"
 end
-
-gem "active_attr"

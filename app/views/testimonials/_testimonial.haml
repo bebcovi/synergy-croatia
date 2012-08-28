@@ -1,8 +1,10 @@
-%blockquote
-  = markdown testimonial.body
-  %p
-    %cite
-      %strong #{testimonial.author},
-      #{testimonial.training.title},
-      #{t("countries.#{testimonial.training.country}")},
-      #{date_range testimonial.training.begins_on, testimonial.training.ends_on}
+- present testimonial do |testimonial_presenter|
+
+  %blockquote
+    = testimonial_presenter.content
+    %p
+      %cite
+        %strong #{testimonial_presenter.author},
+        #{testimonial_presenter.training_title},
+        #{testimonial_presenter.country},
+        #{testimonial_presenter.duration}

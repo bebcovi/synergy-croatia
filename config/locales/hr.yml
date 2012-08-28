@@ -37,7 +37,7 @@ hr:
       navigation_title: "EVS"
     archive:
       page_title: "Postignuća"
-      place: "Lokacija"
+      location: "Lokacija"
       duration: "Trajanje"
       infoletter: "Infoletter"
     testimonials:

@@ -3,7 +3,7 @@
   %article
 
     %header
-      %h1= training_presenter.title
+      %h1= training_presenter.title_with_time
       %p.info= training_presenter.location
 
     = training_presenter.description
@@ -20,4 +20,4 @@
 
     %section
       %h2 Prijava
-      %p Potrebno je ispuniti #{link_to "prijavnicu", training_presenter.participation_form_url} i najkasnije do (&hellip;) poslati na našu email adresu. Prijave se odobravaju kronološkim redom.
+      %p Potrebno je ispuniti #{training_presenter.participation_form("prijavnicu")} i najkasnije do (&hellip;) poslati na našu email adresu. Prijave se odobravaju kronološkim redom.

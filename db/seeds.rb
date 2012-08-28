@@ -147,7 +147,7 @@ Training.create \
   :begins_on => Date.parse("05/09/2012"),
   :ends_on   => Date.parse("12/09/2012"),
   :city => "Gloucestershire",
-  :country => "UK"
+  :country => "GB"
 
 Training.create \
   :title => %("Value in Youth", osnovni Synergy trening),

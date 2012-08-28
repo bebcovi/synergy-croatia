@@ -7,15 +7,18 @@
 
 %article
   - @trainings.each do |training|
-    %h2 #{training.title}
-    = markdown training.summary
 
-    %dl
-      %dt #{t(".place")}
-      %dd #{training.city}, #{t("countries.#{training.country}")}
+    - present training do |training_presenter|
 
-      %dt #{t(".duration")}
-      %dd #{date_range training.begins_on, training.ends_on}
+      %h2= training_presenter.title
+      = training_presenter.summary
 
-      %dt #{t(".infoletter")}
-      %dd #{link_to "Infoletter", training.infoletter_url}
+      %dl
+        %dt= t(".location")
+        %dd= training_presenter.location
+
+        %dt= t(".duration")
+        %dd= training_presenter.duration
+
+        %dt= t(".infoletter")
+        %dd= link_to "Infoletter", training_presenter.infoletter_url
