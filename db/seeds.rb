@@ -2,10 +2,6 @@
 require 'date'
 
 Training.destroy_all
-
-Training.skip_callback(:update, :before, :delete_files)
-Training.skip_callback(:save, :before, :upload_files)
-
 training1 = Training.create \
   :title => %(Practicing Coaching training),
   :description => <<-DESCRIPTION,

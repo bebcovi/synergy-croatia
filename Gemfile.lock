@@ -35,6 +35,7 @@ GEM
     arel (3.0.2)
     builder (3.0.0)
     chunky_png (1.2.6)
+    cocaine (0.2.1)
     coderay (1.0.7)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -61,8 +62,6 @@ GEM
     diff-lcs (1.1.3)
     dropbox-sdk (1.3)
       json
-    dropbox-upload (0.0.1)
-      dropbox-sdk (~> 1.0)
     em-websocket (0.3.8)
       addressable (>= 2.1.1)
       eventmachine (>= 0.12.9)
@@ -125,6 +124,14 @@ GEM
     paper_trail (2.6.3)
       activerecord (~> 3.0)
       railties (~> 3.0)
+    paperclip (3.1.4)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (>= 0.0.2)
+      mime-types
+    paperclip-dropbox (0.0.1)
+      dropbox-sdk (~> 1.3)
     pg (0.14.0)
     polyglot (0.3.3)
     pry (0.9.10)
@@ -220,7 +227,6 @@ DEPENDENCIES
   coffee-rails
   compass-rails
   debugger
-  dropbox-upload
   factory_girl_rails
   fakeweb
   globalize3
@@ -230,6 +236,8 @@ DEPENDENCIES
   i18n-country-translations
   i18n_country_select
   jquery-rails
+  paperclip
+  paperclip-dropbox
   pg
   pry-rails
   rails

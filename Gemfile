@@ -24,7 +24,8 @@ gem "i18n-country-translations"
 gem "i18n_country_select"
 gem "globalize3"
 
-gem "dropbox-upload"
+gem "paperclip"
+gem "paperclip-dropbox"
 
 group :development do
   gem "guard-rails"

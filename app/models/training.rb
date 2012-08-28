@@ -8,10 +8,13 @@ class Training < ActiveRecord::Base
   scope :upcoming, where("ends_on >= '#{Date.today}'")
   scope :forecoming, where("ends_on < '#{Date.today}'")
 
-  has_dropbox_file :infoletter, :participation_form
+  has_attached_file :infoletter,
+    storage: :dropbox, dropbox_settings: "#{Rails.root}/config/dropbox.yml"
 
-  translates :title, :description, :infoletter, :participation_form,
-    :additional_info, :summary
+  has_attached_file :participation_form,
+    storage: :dropbox, dropbox_settings: "#{Rails.root}/config/dropbox.yml"
+
+  translates :title, :description, :additional_info, :summary
 
   def duration
     (ends_on - begins_on).to_i + 1

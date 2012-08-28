@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120624173154) do
+ActiveRecord::Schema.define(:version => 20120827192432) do
 
   create_table "testimonials", :force => true do |t|
     t.text     "body"
@@ -43,16 +43,22 @@ ActiveRecord::Schema.define(:version => 20120624173154) do
     t.date     "begins_on"
     t.date     "ends_on"
     t.string   "participating_countries"
-    t.string   "infoletter"
-    t.string   "participation_form"
     t.text     "additional_info"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "city"
     t.string   "country"
     t.integer  "maximum_age"
     t.integer  "minimum_age"
     t.text     "summary"
+    t.string   "infoletter_file_name"
+    t.string   "infoletter_content_type"
+    t.integer  "infoletter_file_size"
+    t.datetime "infoletter_updated_at"
+    t.string   "participation_form_file_name"
+    t.string   "participation_form_content_type"
+    t.integer  "participation_form_file_size"
+    t.datetime "participation_form_updated_at"
   end
 
 end
