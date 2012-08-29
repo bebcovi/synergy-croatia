@@ -11,54 +11,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120827192432) do
+ActiveRecord::Schema.define(:version => 20120423060706) do
 
   create_table "testimonials", :force => true do |t|
-    t.text     "body"
+    t.text     "content_hr"
+    t.text     "content_en"
     t.string   "author"
     t.integer  "training_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "training_translations", :force => true do |t|
-    t.integer  "training_id"
-    t.string   "locale"
-    t.string   "title"
-    t.text     "description"
-    t.string   "infoletter"
-    t.string   "participation_form"
-    t.text     "additional_info"
-    t.text     "summary"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
-  add_index "training_translations", ["locale"], :name => "index_training_translations_on_locale"
-  add_index "training_translations", ["training_id"], :name => "index_training_translations_on_training_id"
-
   create_table "trainings", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
+    t.string   "title_hr"
+    t.string   "title_en"
+    t.text     "description_hr"
+    t.text     "description_en"
+    t.text     "summary_hr"
+    t.text     "summary_en"
     t.date     "begins_on"
     t.date     "ends_on"
     t.string   "participating_countries"
-    t.text     "additional_info"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
-    t.string   "city"
+    t.string   "city_hr"
+    t.string   "city_en"
     t.string   "country"
     t.integer  "maximum_age"
     t.integer  "minimum_age"
-    t.text     "summary"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "infoletter_file_name"
     t.string   "infoletter_content_type"
     t.integer  "infoletter_file_size"
     t.datetime "infoletter_updated_at"
-    t.string   "participation_form_file_name"
-    t.string   "participation_form_content_type"
-    t.integer  "participation_form_file_size"
-    t.datetime "participation_form_updated_at"
+    t.string   "application_form_file_name"
+    t.string   "application_form_content_type"
+    t.integer  "application_form_file_size"
+    t.datetime "application_form_updated_at"
   end
 
 end

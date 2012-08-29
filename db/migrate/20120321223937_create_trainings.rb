@@ -1,24 +1,24 @@
 class CreateTrainings < ActiveRecord::Migration
   def change
     create_table :trainings do |t|
-      t.string :title
-      t.string :level
-      t.text :description
-      t.string :goal
-
+      t.string :title_hr
+      t.string :title_en
+      t.text :description_hr
+      t.text :description_en
+      t.text :summary_hr
+      t.text :summary_en
       t.date :begins_on
       t.date :ends_on
-
       t.string :participating_countries
-      t.integer :age_restriction
-      t.string :location
-
-      t.string :infoletter_url
-      t.string :participation_form_url
-
-      t.text :additional_info
+      t.string :city_hr
+      t.string :city_en
+      t.string :country
+      t.integer :maximum_age
+      t.integer :minimum_age
 
       t.timestamps
     end
+    add_attachment :trainings, :infoletter
+    add_attachment :trainings, :application_form
   end
 end

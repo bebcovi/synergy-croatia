@@ -12,10 +12,6 @@ test:
   <<: *defaults
   database: synergy-croatia_test
 
-staging:
-  <<: *defaults
-  database: synergy-croatia_staging
-
 production:
   <<: *defaults
   database: synergy-croatia_production

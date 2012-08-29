@@ -22,7 +22,6 @@ gem "redcarpet"
 gem "rails-i18n"
 gem "i18n-country-translations"
 gem "i18n_country_select"
-gem "globalize3"
 
 # Other
 gem "active_attr"

@@ -1,5 +1,4 @@
 # encoding: utf-8
-require 'date'
 
 Training.destroy_all
 training1 = Training.create \
@@ -9,8 +8,8 @@ Practicing Coaching je trening za one koji rade s pojedincima ili grupama, koji 
 
 Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik svjesno koristi različite coaching tehnike usklađene sa vlastitim stilom. Vještine na treningu se stječu kroz iskustveno učenje. Treneri su Stella Saratsi and Marco Vlaming.
   DESCRIPTION
-  :begins_on => Date.parse("02/01/2012"),
-  :ends_on   => Date.parse("08/01/2012"),
+  :begins_on => "02/01/2012",
+  :ends_on   => "08/01/2012",
   :participating_countries => [],
   :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl/en)"),
   :city => "Ommen",
