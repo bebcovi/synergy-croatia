@@ -7,6 +7,11 @@ class PagesController < ApplicationController
 
   def news
     @trainings = Training.upcoming.descending
+
+    respond_to do |format|
+      format.html
+      format.atom { render layout: false }
+    end
   end
 
   def evs

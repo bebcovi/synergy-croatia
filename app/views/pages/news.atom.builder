@@ -1,4 +1,4 @@
-atom_feed language: params[:locale] do |feed|
+atom_feed language: I18n.locale do |feed|
   feed.title("Synergy Croatia · #{t(".page_title")}")
   feed.updated @trainings.maximum(:updated_at)
 
