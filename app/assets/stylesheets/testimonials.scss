@@ -19,4 +19,15 @@ body.testimonials {
       content: '\2014';
     }
   }
+  .pagination {
+    @include clearfix;
+
+    * { display: none; }
+
+    :first-child, :last-child { display: inline; }
+    :first-child { float: left; }
+    :last-child { float: right; }
+
+    .disabled { color: rgba(black, .25); }
+  }
 }

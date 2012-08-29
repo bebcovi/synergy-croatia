@@ -77,8 +77,8 @@ hr:
     unauthorized: "Neovlašteni pristup"
 
   will_paginate:
-    previous_label: "&#8592; Prethodna"
-    next_label: "Sljedeća &#8594;"
+    previous_label: "&larr; Prethodna"
+    next_label: "Sljedeća &rarr;"
     page_gap: "&hellip;"
 
   countries:
