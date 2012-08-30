@@ -26,7 +26,6 @@ gem "i18n_country_select"
 # Other
 gem "active_attr"
 gem "paperclip"
-gem "paperclip-dropbox"
 gem "will_paginate"
 
 group :development do
