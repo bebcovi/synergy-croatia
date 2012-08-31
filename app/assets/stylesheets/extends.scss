@@ -29,7 +29,6 @@
 
 %button {
   @extend %inline-block;
-  @include adjust-font-size-to($form-font-size);
   @include box-shadow(rgba(white, .5) 0 0 0 1px inset);
   @include text-shadow(white 0 1px 0);
   @include border-radius;

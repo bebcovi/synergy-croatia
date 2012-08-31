@@ -8,63 +8,62 @@ form {
 }
 
 input, textarea, button, select {
-  @include adjust-font-size-to($form-font-size);
-  font-family: inherit;
+  font: {
+    family: inherit;
+    size: inherit;
+  }
+  line-height: inherit;
   color: $text;
 }
 
-@include with-font-size-settings($form-font-size) {
-
-  input[type='text'], input[type='url'], input[type='email'], input[type='number'], textarea {
-    @extend %border-radius;
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: rhythm(.25);
-    border: 1px solid rgba(black, .40);
-    &:focus {
-      outline: none;
-      border-color: rgba(black, .5) !important;
-    }
+input[type='text'], input[type='password'], input[type='url'], input[type='email'], input[type='number'], input[type='tel'], textarea {
+  @extend %border-radius;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: rhythm(.25);
+  border: 1px solid rgba(black, .25);
+  &:focus {
+    outline: none;
+    border-color: rgba(black, .5) !important;
   }
+}
 
-  textarea {
-    max-width: 100%;
+textarea {
+  max-width: 100%;
+}
+
+input[type='number'] {
+  @extend %inline-block;
+  width: rhythm(2);
+  margin: 0 rhythm(.25);
+}
+
+.input {
+  @include trailer(.5);
+  &:last-of-type {
+    @include trailer(.25);
   }
+}
 
-  input[type='number'] {
-    @extend %inline-block;
-    width: rhythm(2);
-    margin: 0 rhythm(.25);
-  }
+label {
+  &:hover { cursor: pointer; }
+  &:after { content: ': '; }
+}
 
-  .input {
-    @include trailer(.5);
-    &:last-of-type {
-      @include trailer(.25);
-    }
-  }
+input[type='submit'], .cancel {
+  @include leader(.5);
+  display: block;
+  width: 49%;
+  padding: rhythm(.5);
+}
 
-  label {
-    &:hover { cursor: pointer; }
-    &:after { content: ': '; }
-  }
+.cancel {
+  @extend %secondary-button;
+  float: left;
+}
 
-  input[type='submit'], .cancel {
-    @include leader(.5);
-    display: block;
-    width: 49%;
-    padding: rhythm(.5);
-  }
-
-  .cancel {
-    @extend %secondary-button;
-    float: left;
-  }
-
-  input[type='submit'] {
-    @extend %primary-button;
-    float: right;
-  }
-
+input[type='submit'] {
+  @extend %primary-button;
+  float: right;
 }
