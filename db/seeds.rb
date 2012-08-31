@@ -11,7 +11,7 @@ Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik 
   :begins_on => "02/01/2012",
   :ends_on   => "08/01/2012",
   :participating_countries => [],
-  :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl/en)"),
+  # :additional_info => %("Dodatne informacije možete saznati i na [www.oldevechte.nl](www.oldevechte.nl/en)"),
   :city => "Ommen",
   :country => "NL"
 
@@ -111,10 +111,10 @@ Cilj je olakšavanje mladima uključivanje u tržište rada, te će im to biti i
   :begins_on => Date.parse("24/03/2012"),
   :ends_on   => Date.parse("03/04/2012"),
   :participating_countries => %w[ES SI HR RO HU],
-  :additional_info => <<-INFO,
-* kotizacija iznosi 50 eura
-* hrana, smještaj i 70% putnih troškova su pokriveni
-  INFO
+  # :additional_info => <<-INFO,
+# * kotizacija iznosi 50 eura
+# * hrana, smještaj i 70% putnih troškova su pokriveni
+  # INFO
   :city => "Holloko",
   :country => "HU",
   :minimum_age => 17,
