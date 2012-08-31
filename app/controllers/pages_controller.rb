@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def index
+    @training = Training.non_exchange.descending.first
+    @exchange = Training.exchange.descending.first
   end
 
   def about
