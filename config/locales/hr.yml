@@ -21,9 +21,6 @@ hr:
       facebook: "Facebook"
       twitter: "Twitter"
       rss: "RSS"
-    contact:
-      title: "Kontakt"
-      body: "Kontaktirajte nas putem emaila <synergy@synergy-croatia.com> ili putem telefona:"
 
   pages:
     index:
@@ -44,6 +41,9 @@ hr:
       page_title: "Iskustva polaznika"
     partners:
       page_title: "Partneri"
+    contact:
+      page_title: "Kontakt"
+      body: "Kontaktirajte nas putem emaila <synergy@synergy-croatia.com> ili putem telefona:"
 
     projects_nav:
       trainings: "Treninzi"

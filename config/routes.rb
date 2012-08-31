@@ -16,6 +16,7 @@ SynergyCroatia::Application.routes.draw do
       get "archive"
       get "testimonials"
       get "partners"
+      get "contact"
     end
 
     controller :support do

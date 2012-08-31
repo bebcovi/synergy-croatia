@@ -32,7 +32,7 @@
 
     #right
       %aside
-        - %w[latest support newsletter syncro social contact].each do |item|
+        - %w[latest support newsletter social syncro].each do |item|
           %section{id: item}
             = render "layouts/#{item}"
       = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"

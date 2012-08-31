@@ -18,9 +18,6 @@ en:
     social:
       title: "Social"
       body: "Follow us on"
-    contact:
-      title: "Contact"
-      body: "Contact us via email <synergy@synergy-croatia.com> or phone:"
 
   pages:
     index:
@@ -41,6 +38,9 @@ en:
       page_title: "Testimonials"
     partners:
       page_title: "Partners"
+    contact:
+      page_title: "Contact"
+      body: "Contact us via email <synergy@synergy-croatia.com> or phone:"
 
     trainings_nav:
       trainings: "Trainings"
