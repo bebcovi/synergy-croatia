@@ -1,5 +1,7 @@
 @include at-breakpoint($widescreen-layout) {
 
+  $gutter-width: 4em;
+
   $left: 3;
   $right: 4;
   $main: $total-columns - $left - $right;
@@ -43,6 +45,8 @@
     }
     a {
       padding-right: rhythm(.5);
+      padding-left: $grid-padding;
+      margin-left: - $grid-padding;
       border-right: none;
       border-bottom: 1px solid nth($colors, 4);
     }
@@ -51,6 +55,11 @@
   #right {
     @include span-columns($right omega);
     @include leader(.75);
+  }
+
+  #latest {
+    @include apply-side-rhythm-border(left);
+    margin-left: - rhythm();
   }
 
   $cols: 3;

@@ -30,9 +30,20 @@ aside {
     $color: nth($colors, 4);
     @include rhythm(0, 1, 1, 0);
     border-bottom: 1px dashed rgba(black, .2);
-    &:first-child { @include padding-leader(0); }
     &:last-child { border-bottom: none; }
   }
+}
+
+#latest {
+  @include leading-border(1px, 1);
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
+  margin-left: - $grid-padding;
+  margin-right: - $grid-padding;
+  color: rgba(black, .6);
+  border-bottom-style: solid;
+  border-color: rgba($link1, .5);
+  background: rgba($link1, .025);
 }
 
 #newsletter {

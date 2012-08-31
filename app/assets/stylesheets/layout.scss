@@ -9,6 +9,8 @@ body {
   font-family: $sans;
   color: $text;
   &:before {
+    padding: 0 $grid-padding;
+    margin: 0 0 - $grid-padding;
     @include trailer;
     content: '';
     display: block;

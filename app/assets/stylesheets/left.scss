@@ -22,9 +22,7 @@ nav {
   }
   ol { @extend %unstyled-list; }
   li { @include trailer(.5); }
-  a {
-    display: block;
-  }
+  a { display: block; }
   .active {
     @extend a:hover;
     background: none;

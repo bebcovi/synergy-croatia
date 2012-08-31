@@ -1,6 +1,5 @@
 [role=main] {
   @include trailer;
-  border-bottom: 1px solid rgba(black, .25);
 
   li { @include trailer(0); }
 

@@ -1,6 +1,6 @@
 @include at-breakpoint($desktop-layout) {
 
-  $gutter-width: 4em;
+  $gutter-width: 8em;
 
   $right: 5;
   $main: $total-columns - $right;
@@ -11,7 +11,6 @@
 
   [role=main] {
     @include span-columns($main);
-    border-bottom: none;
   }
 
   #left {
@@ -28,7 +27,6 @@
   }
 
   nav {
-    margin-left: rhythm(.25);
     text-align: center;
     li {
       @include inline-block;
@@ -53,8 +51,16 @@
 
   aside section {
     @include reset-columns;
+    padding-right: $grid-padding;
+    &, &:nth-child(2n) { margin-right: - $grid-padding; }
     &:nth-child(2n) { float: none; }
     &:nth-child(2) { @include padding-leader; }
+  }
+
+  #latest {
+    @include apply-side-rhythm-border(left, 1px, .5);
+    @include border-left-radius;
+    margin-left: - rhythm(.5);
   }
 
   $cols: 3;
