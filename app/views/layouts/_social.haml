@@ -1,5 +1,6 @@
 %h1= t(".title").prepend_icon("share")
 %p
-  #{t(".body")} #{link_to("Facebook", "http://www.facebook.com/SynergyCroatia")},
-  #{link_to("Twitter", "http://twitter.com/syncrotrainings")} #{t("words.and")}
-  #{link_to("RSS", projects_path(format: "atom"))}.
+  = t(".body") + ":"
+  = link_to icon("facebook"), "http://www.facebook.com/SynergyCroatia", id: "facebook"
+  = link_to icon("twitter"), "http://twitter.com/syncrotrainings", id: "twitter"
+  = link_to icon("feed"), projects_path(format: "atom"), id: "feed"

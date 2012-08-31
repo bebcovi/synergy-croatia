@@ -74,6 +74,27 @@ aside {
   }
 }
 
+#social {
+  a {
+    @include with-font-size(18px) {
+      @extend %inline-block;
+      @extend %border-radius;
+      @include color-link(white, white);
+      @include v-borders(1px, .1);
+      width: rhythm(1.15);
+      margin-top: -5px;
+      margin-left: rhythm(.1);
+      text-align: center;
+      border: 1px solid rgba(black, .075);
+      background: rgba(black, .1);
+      &:first-child { margin-left: rhythm(.25); }
+    }
+  }
+  #facebook:hover { background: $facebook; }
+  #twitter:hover  { background: $twitter; }
+  #feed:hover     { background: $feed; }
+}
+
 #syncro {
   $color: $syncro;
   i { color: $syncro; }
