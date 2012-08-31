@@ -1,0 +1,11 @@
+- present training do |training_presenter|
+
+  %article
+
+    %header
+      %h1= training_presenter.title
+      %p.info= training_presenter.location
+
+    = training_presenter.description
+
+%p= link_to "Opširnije", training
