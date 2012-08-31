@@ -3,17 +3,6 @@
 
   li { @include trailer(0); }
 
-  .intro {
-    $font-size: 24px;
-    @include adjust-font-size-to($font-size, 1.5);
-    @include leader(-0.25, $font-size);
-    font: {
-      family: $serif;
-      style: italic;
-    }
-    color: rgba(black, .40);
-  }
-
   .img {
     @include trailer(.5);
     a {
