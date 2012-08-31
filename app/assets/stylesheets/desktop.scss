@@ -51,6 +51,7 @@
 
   aside section {
     @include reset-columns;
+    padding-left: rhythm(.5);
     padding-right: $grid-padding;
     &, &:nth-child(2n) { margin-right: - $grid-padding; }
     &:nth-child(2n) { float: none; }
@@ -60,7 +61,7 @@
   #latest {
     @include apply-side-rhythm-border(left, 1px, .5);
     @include border-left-radius;
-    margin-left: - rhythm(.5);
+    margin-left: 0;
   }
 
   $cols: 3;
