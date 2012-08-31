@@ -1,4 +1,5 @@
 class Training < ActiveRecord::Base
+  belongs_to :category
   has_many :testimonials, :dependent => :destroy
 
   serialize :participating_countries
@@ -10,7 +11,10 @@ class Training < ActiveRecord::Base
   has_dropbox_file :infoletter
   has_dropbox_file :application_form
 
-  translates :title, :description, :summary, :city
+  translates :description
+  translates :summary
+  translates :expenses
+  translates :city
 
   def duration
     (ends_on - begins_on).to_i + 1

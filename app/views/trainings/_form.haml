@@ -1,0 +1,27 @@
+= simple_form_for @training do |f|
+
+  .inner
+    = f.input :category do
+      = f.association :category, prompt: "Izaberi...", wrapper: false, label: false
+      ili stvori #{link_to "novi", new_category_path}.
+    = f.input :name
+    = f.input :description_hr
+    = f.input :description_en
+    = f.input :summary_hr
+    = f.input :summary_en
+    = f.input :expenses_hr
+    = f.input :expenses_en
+    = f.input :begins_on
+    = f.input :ends_on
+    = f.country_select :participating_countries, priority: common_countries, multiple: true, size: 10
+    = f.input(:age_restriction) { raw("#{f.number_field(:minimum_age)} – #{f.number_field(:maximum_age)}") }
+    = f.country_select :country, priority: common_countries
+    = f.input :city_hr
+    = f.input :city_en
+    = f.input :infoletter
+    = f.input :application_form
+    = f.input :deadline
+    = f.input :available_space
+
+  = f.button :submit
+  = cancel_button "Odustani", news_path

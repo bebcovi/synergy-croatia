@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120423060706) do
+ActiveRecord::Schema.define(:version => 20120829154906) do
+
+  create_table "categories", :force => true do |t|
+    t.string "name_hr"
+    t.string "name_en"
+  end
 
   create_table "testimonials", :force => true do |t|
     t.text     "content_hr"
@@ -23,30 +28,28 @@ ActiveRecord::Schema.define(:version => 20120423060706) do
   end
 
   create_table "trainings", :force => true do |t|
-    t.string   "title_hr"
-    t.string   "title_en"
+    t.string   "name"
     t.text     "description_hr"
     t.text     "description_en"
     t.text     "summary_hr"
     t.text     "summary_en"
+    t.text     "expenses_hr"
+    t.text     "expenses_en"
     t.date     "begins_on"
     t.date     "ends_on"
     t.string   "participating_countries"
     t.string   "city_hr"
     t.string   "city_en"
     t.string   "country"
+    t.string   "infoletter"
+    t.string   "application_form"
     t.integer  "maximum_age"
     t.integer  "minimum_age"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.string   "infoletter_file_name"
-    t.string   "infoletter_content_type"
-    t.integer  "infoletter_file_size"
-    t.datetime "infoletter_updated_at"
-    t.string   "application_form_file_name"
-    t.string   "application_form_content_type"
-    t.integer  "application_form_file_size"
-    t.datetime "application_form_updated_at"
+    t.date     "deadline"
+    t.integer  "available_space"
+    t.integer  "category_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
 end

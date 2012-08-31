@@ -5,6 +5,7 @@ class TrainingsController < ApplicationController
 
   def new
     @training = Training.new
+    @countries = Country.all
   end
 
   def create
@@ -19,6 +20,7 @@ class TrainingsController < ApplicationController
 
   def edit
     @training = Training.find(params[:id])
+    @countries = Country.all
     render :new
   end
 

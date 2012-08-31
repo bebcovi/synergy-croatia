@@ -1,0 +1,9 @@
+- @title = "Prijava"
+
+= simple_form_for :user do |f|
+
+  = f.input :username, input_html: {value: params[:user].try(:[], :username) }
+  = f.input :password
+
+  = f.button :submit, "Prijava"
+  = cancel_button "Odustani", root_path
