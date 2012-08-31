@@ -1,1 +1,10 @@
 hr:
+  simple_form:
+    labels:
+      volunteer:
+        name: "Ime i prezime"
+        profession: "Zanimanje"
+        age: "Godine"
+        email: "E-mail"
+        phone: "Telefon"
+        other: "Ostalo"

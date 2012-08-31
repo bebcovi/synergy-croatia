@@ -3,4 +3,27 @@
 :markdown
   Želiš li razvijati svoje organizacijske vještine, raditi u timu, osmišljavati zanimljive projekte, provoditi zamisli u djelo, dodatno se educirati u cijelog Europi i pritom imati podršku Syncro tima?! Prijavi se za volontiranje u Syncro Synergy Croatia!
 
+= simple_form_for @volunteer, url: volunteer_path do |f|
+
+  = f.error_notification
+
+  = f.input :name
+  = f.input :profession
+  = f.input :age
+  = f.input :email
+  = f.input :phone
+
+  %p U Syncro Synergy Croatia zanima me:
+
+  %ul
+    = f.collection_check_boxes :interests, interests, :first, :last, collection_wrapper_tag: false, item_wrapper_tag: :li
+    %li #{check_box_tag :other}#{f.input :interests, wrapper: false, input_html: {name: "volunteer[interests][]"}, label: "Drugo"}
+
+  %p Želim volontirati zbog:
+
+  = f.input :reason, as: :text, label: false
+
+  = f.button :button, "Prijavi se"
+
+:markdown
   Volonteri koji započinju svoj radu u Syncro dobivaju svog mentora koji prati njihov rad i napredak u toku godine dana. Uz pomoć mentora, volonteri određuju što žele naučiti i čime žele ovladati u određeno vrijeme. Jednom kada su odredili ciljeve, volonteri započinju praksu kroz opažanje i asistiranje. Prema individualnom planu i volji uključuju se u manje zadatke, a potom i u veće. Volonterima koji pokažu samostalnost i odgovornost dat će se mogućnost samostalnog vođenja projekata i daljnje uključivanje u organizacijski tim. Volonteri Syncro Synergy Croatia imaju priliku stjecati dodatne interpersonalne i organizacijske vještine kroz treninge u Hrvatskoj i vani.

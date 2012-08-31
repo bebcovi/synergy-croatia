@@ -27,10 +27,12 @@ gem "i18n_country_select"
 gem "active_attr"
 gem "will_paginate"
 gem "dropbox-sdk"
+gem "prawn"
 
 group :development do
   gem "pry-rails"
   gem "paperclip"
+  gem "letter_opener", github: "davidcornu/letter_opener"
 end
 
 group :development, :test do

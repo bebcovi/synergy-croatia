@@ -21,6 +21,7 @@ SynergyCroatia::Application.routes.draw do
     controller :support do
       get "donate"
       get "volunteer"
+      post "volunteer", to: :apply
     end
 
     resources :trainings
