@@ -20,7 +20,7 @@ aside {
   }
 
   p, ol, ul, dl {
-    @include with-font-size(14px) {
+    @include with-font-size(13px) {
       @include trailer(.5);
       &:last-child { @include trailer(0); }
     }
