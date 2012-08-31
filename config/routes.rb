@@ -27,8 +27,8 @@ SynergyCroatia::Application.routes.draw do
     resources :categories
 
     controller :errors do
-      match "404", :to => :not_found
-      match "500", :to => :internal_server_error
+      match "404", to: :not_found
+      match "500", to: :internal_server_error
     end
   end
 end
