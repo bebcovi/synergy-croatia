@@ -30,6 +30,7 @@ gem "dropbox-sdk"
 
 group :development do
   gem "pry-rails"
+  gem "paperclip"
 end
 
 group :development, :test do

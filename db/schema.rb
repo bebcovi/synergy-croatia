@@ -41,15 +41,21 @@ ActiveRecord::Schema.define(:version => 20120829154906) do
     t.string   "city_hr"
     t.string   "city_en"
     t.string   "country"
-    t.string   "infoletter"
-    t.string   "application_form"
+    t.string   "infoletter_file_name"
+    t.string   "infoletter_content_type"
+    t.integer  "infoletter_file_size"
+    t.datetime "infoletter_updated_at"
+    t.string   "application_form_file_name"
+    t.string   "application_form_content_type"
+    t.integer  "application_form_file_size"
+    t.datetime "application_form_updated_at"
     t.integer  "maximum_age"
     t.integer  "minimum_age"
     t.date     "deadline"
     t.integer  "available_space"
     t.integer  "category_id"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
 end

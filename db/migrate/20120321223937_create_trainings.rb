@@ -14,8 +14,15 @@ class CreateTrainings < ActiveRecord::Migration
       t.string :city_hr
       t.string :city_en
       t.string :country
-      t.string :infoletter
-      t.string :application_form
+
+      if Rails.env.development?
+        t.attachment :infoletter
+        t.attachment :application_form
+      else
+        t.string :infoletter
+        t.string :application_form
+      end
+
       t.integer :maximum_age
       t.integer :minimum_age
       t.date :deadline

@@ -8,8 +8,13 @@ class Training < ActiveRecord::Base
   scope :forecoming, where("trainings.ends_on < current_date")
   scope :descending, order("trainings.ends_on DESC")
 
-  has_dropbox_file :infoletter
-  has_dropbox_file :application_form
+  if Rails.env.development?
+    has_attached_file :infoletter
+    has_attached_file :application_form
+  else
+    has_dropbox_file :infoletter
+    has_dropbox_file :application_form
+  end
 
   translates :description
   translates :summary
