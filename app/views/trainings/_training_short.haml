@@ -1,6 +1,6 @@
-- present training do |training_presenter|
+%article{class: training.training? ? "training" : "exchange"}
 
-  %article
+  - present training do |training_presenter|
 
     %header
       %h1= training_presenter.title
@@ -8,4 +8,4 @@
 
     = training_presenter.description
 
-%p= link_to "Opširnije", training
+  %p= link_to "Opširnije", training

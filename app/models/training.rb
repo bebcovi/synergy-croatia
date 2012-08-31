@@ -1,28 +1,20 @@
 class Training < ActiveRecord::Base
   belongs_to :category
-  has_many :testimonials, :dependent => :destroy
+  has_many :testimonials, dependent: :destroy
 
   serialize :participating_countries
 
+  default_scope order("trainings.ends_on DESC")
   scope :upcoming, where("trainings.ends_on >= current_date")
   scope :forecoming, where("trainings.ends_on < current_date")
-  scope :descending, order("trainings.ends_on DESC")
-  scope :filter, lambda { |filter|
-    result = scoped
 
-    if filter
-      case filter[:category]
-      when "trainings"
-        result = non_exchange
-      when "exchange"
-        result = exchange
-      end
-    end
+  def training?
+    category != Category.find_by_name_en("Youth Exchange")
+  end
 
-    result
-  }
-  scope :non_exchange, where(category_id: Category.where("categories.name_en <> 'Youth Exchange'").pluck(:id))
-  scope :exchange, where(category_id: Category.where("categories.name_en = 'Youth Exchange'").pluck(:id))
+  def exchange?
+    category == Category.find_by_name_en("Youth Exchange")
+  end
 
   if Rails.env.development?
     has_attached_file :infoletter

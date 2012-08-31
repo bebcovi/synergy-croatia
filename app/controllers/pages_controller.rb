@@ -1,14 +1,12 @@
 class PagesController < ApplicationController
   def index
-    @training = Training.non_exchange.descending.first
-    @exchange = Training.exchange.descending.first
   end
 
   def about
   end
 
   def news
-    @trainings = Training.upcoming.descending.filter(params[:filter])
+    @trainings = Training.upcoming
 
     respond_to do |format|
       format.html
@@ -20,11 +18,11 @@ class PagesController < ApplicationController
   end
 
   def archive
-    @trainings = Training.forecoming.descending
+    @trainings = Training.forecoming
   end
 
   def testimonials
-    @testimonials = Testimonial.descending.limit(5).paginate(page: params[:page], per_page: 1)
+    @testimonials = Testimonial.limit(5).paginate(page: params[:page], per_page: 1)
   end
 
   def partners

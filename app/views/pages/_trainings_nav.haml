@@ -1,5 +1,3 @@
 %ol#sub-nav
-  %li
   = list_of [:trainings, :exchange] do |category|
-    - text = t(".#{category}")
-    = link_to text, filter: {category: category}
+    = link_to t(".#{category}"), "##{category}"

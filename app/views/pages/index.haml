@@ -6,4 +6,5 @@
 
     Mi stvaramo igralište, a vi donosite igru.
 
-= render partial: "trainings/training_short", collection: [@training, @exchange], as: :training
+%p= link_to "Treninzi", "#{news_path}#trainings"
+%p= link_to "Razmjena mladih", "#{news_path}#exchange"
