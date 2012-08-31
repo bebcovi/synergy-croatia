@@ -1,12 +1,13 @@
 class CreateTrainings < ActiveRecord::Migration
   def change
     create_table :trainings do |t|
-      t.string :title_hr
-      t.string :title_en
+      t.string :name
       t.text :description_hr
       t.text :description_en
       t.text :summary_hr
       t.text :summary_en
+      t.text :expenses_hr
+      t.text :expenses_en
       t.date :begins_on
       t.date :ends_on
       t.string :participating_countries
@@ -15,10 +16,13 @@ class CreateTrainings < ActiveRecord::Migration
       t.string :country
       t.integer :maximum_age
       t.integer :minimum_age
+      t.string :infoletter
+      t.string :application_form
+      t.date :deadline
+      t.integer :available_space
+      t.references :category
 
       t.timestamps
     end
-    add_attachment :trainings, :infoletter
-    add_attachment :trainings, :application_form
   end
 end
