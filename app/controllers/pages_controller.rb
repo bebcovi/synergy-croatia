@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def news
-    @trainings = Training.upcoming.descending
+    @trainings = Training.upcoming.descending.filter(params[:filter])
 
     respond_to do |format|
       format.html

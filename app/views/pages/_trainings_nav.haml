@@ -1,4 +1,5 @@
 %ol#sub-nav
-  = list_of [:trainings, :exchange] do |project|
-    - result = t(".#{project}")
-    = link_to result, "##{result.downcase}"
+  %li
+  = list_of [:trainings, :exchange] do |category|
+    - text = t(".#{category}")
+    = link_to text, filter: {category: category}

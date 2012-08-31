@@ -7,6 +7,22 @@ class Training < ActiveRecord::Base
   scope :upcoming, where("trainings.ends_on >= current_date")
   scope :forecoming, where("trainings.ends_on < current_date")
   scope :descending, order("trainings.ends_on DESC")
+  scope :filter, lambda { |filter|
+    result = scoped
+
+    if filter
+      case filter[:category]
+      when "trainings"
+        result = non_exchange
+      when "exchange"
+        result = exchange
+      end
+    end
+
+    result
+  }
+  scope :non_exchange, where(category_id: Category.where("categories.name_en <> 'Youth Exchange'").pluck(:id))
+  scope :exchange, where(category_id: Category.where("categories.name_en = 'Youth Exchange'").pluck(:id))
 
   if Rails.env.development?
     has_attached_file :infoletter
