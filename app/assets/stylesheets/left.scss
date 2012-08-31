@@ -5,6 +5,7 @@
 #logo {
   @extend %image-container;
   @include trailer;
+  @include leader(-2);
 }
 
 #lang {

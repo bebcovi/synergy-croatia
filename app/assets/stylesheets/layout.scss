@@ -12,7 +12,10 @@ body {
     padding: 0 $grid-padding;
     margin: 0 0 - $grid-padding;
     @include trailer;
+    @include box-shadow(white 0 0 15px 10px);
     content: '';
+    position: relative;
+    z-index: 10;
     display: block;
     height: rhythm(.25);
     background: nth($colors, 3);
