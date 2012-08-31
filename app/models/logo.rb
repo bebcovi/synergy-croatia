@@ -5,7 +5,7 @@ class Logo
   attr_accessor :src, :title, :url
 
   def self.all
-    filenames = Dir["#{Rails.root}/app/assets/images/partners/*"].map { |f| File.basename(f) }
+    filenames = Dir["#{Rails.root}/vendor/assets/images/partners/*"].map { |f| File.basename(f) }
     filenames.map do |filename|
       name = filename.sub(/\.\w{3,4}$/, "")
       new(
