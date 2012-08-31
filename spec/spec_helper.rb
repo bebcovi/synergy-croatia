@@ -26,9 +26,13 @@ RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
-VCR.configure do |c|
-  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  c.hook_into :fakeweb
-  c.default_cassette_options = {:serialize_with => :syck}
-  c.configure_rspec_metadata!
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :fakeweb
+  config.default_cassette_options = {
+    serialize_with: :syck,
+    record: :new_episodes
+  }
+  config.configure_rspec_metadata!
+  config.allow_http_connections_when_no_cassette = true
 end

@@ -7,10 +7,8 @@ class Training < ActiveRecord::Base
   scope :upcoming, where("trainings.ends_on >= current_date")
   scope :forecoming, where("trainings.ends_on < current_date")
 
-  has_attached_file :infoletter,
-    storage: :dropbox, dropbox_settings: "#{Rails.root}/config/dropbox.yml"
-  has_attached_file :application_form,
-    storage: :dropbox, dropbox_settings: "#{Rails.root}/config/dropbox.yml"
+  has_dropbox_file :infoletter
+  has_dropbox_file :application_form
 
   translates :title, :description, :summary, :city
 

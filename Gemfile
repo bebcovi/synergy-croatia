@@ -25,8 +25,8 @@ gem "i18n_country_select"
 
 # Other
 gem "active_attr"
-gem "paperclip"
 gem "will_paginate"
+gem "dropbox-sdk"
 
 group :development do
   gem "pry-rails"
@@ -41,4 +41,5 @@ group :test do
   gem "factory_girl_rails"
   gem "vcr"
   gem "fakeweb"
+  gem "faraday"
 end
