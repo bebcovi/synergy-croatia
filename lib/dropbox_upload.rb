@@ -2,63 +2,66 @@ module DropboxUpload
   module ClassMethods
     def has_dropbox_file(name, options = {})
       define_method(name) do
-        DropboxUpload::DropboxFile.new(read_attribute(name))
+        @dropbox_files ||= {}
+        @dropbox_files[name] ||= DropboxUpload::DropboxFile.new(name, read_attribute(name))
       end
 
       define_method("#{name}=") do |value|
         if send(name).present?
-          @queued_for_delete = send(name).filename
+          send(name).queue_or_delete
         end
 
         unless value.nil?
-          write_attribute(name, value.original_filename)
-          @queued_for_write = value
+          send(name).queue_for_upload(value)
         end
       end
 
       before_save do
-        if @queued_for_delete
-          DropboxUpload::Helpers.delete(@queued_for_delete)
-        end
-
-        if @queued_for_write
-          url = DropboxUpload::Helpers.upload(@queued_for_write)
-          write_attribute(name, url)
-        end
-
+        url = send(name).save
+        write_attribute(name, url) if url
         true
       end
 
-      before_destroy do
-        if send(name).present?
-          @queued_for_delete = send(name).filename
-        end
-      end
-
       after_destroy do
-        if @queued_for_delete
-          DropboxUpload::Helpers.delete(@queued_for_delete)
-        end
+        send(name).delete
+        true
       end
     end
   end
 
   class DropboxFile
-    def initialize(url)
-      @url = url
+    def initialize(name, value)
+      @name = name
+      @value = value
     end
 
     def url(options = {})
-      @url + (options[:download] ? "?dl=1" : "")
+      @value + (options[:download] ? "?dl=1" : "")
     rescue NoMethodError
       nil
     end
 
     def filename
-      File.basename(@url)
+      File.basename(@value)
     rescue TypeError
       nil
     end
+
+    def queue_for_upload(file)
+      @queued_for_upload = file
+    end
+
+    def queue_for_delete
+      @queued_for_delete = true
+    end
+
+    def save
+      delete if @queued_for_delete
+      upload if @queued_for_upload
+    end
+
+    def delete() Helpers.delete(filename) end
+    def upload() Helpers.upload(@queued_for_upload) end
 
     def present?
       !!filename
@@ -78,7 +81,8 @@ module DropboxUpload
     end
 
     def delete(filename)
-      dropbox_client.file_delete(filename)
+      dropbox_client.file_delete(filename.to_s)
+      nil
     rescue DropboxError
     end
 
@@ -88,7 +92,7 @@ module DropboxUpload
     end
 
     def dropbox_client
-      @dropbox_client ||= Rails.configuration.dropbox_client
+      Rails.configuration.dropbox_client
     end
   end
 

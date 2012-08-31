@@ -4,9 +4,9 @@ class Training < ActiveRecord::Base
 
   serialize :participating_countries
 
-  default_scope order("trainings.ends_on DESC")
   scope :upcoming, where("trainings.ends_on >= current_date")
   scope :forecoming, where("trainings.ends_on < current_date")
+  scope :descending, order("trainings.ends_on DESC")
 
   has_dropbox_file :infoletter
   has_dropbox_file :application_form

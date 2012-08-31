@@ -1,46 +1,56 @@
+# encoding: utf-8
+
 class TrainingsController < ApplicationController
-  def index
-    @trainings = Training.all
-  end
+  manages :trainings
+  before_filter :authorize!
+
+  # Actions
 
   def new
     @training = Training.new
-    @countries = Country.all
   end
 
   def create
-    @training = Training.new(params[:training])
-
-    if @training.save
-      redirect_to training_path(@training)
-    else
-      render :new
-    end
+    training_manager.create(params[:training])
   end
 
   def edit
     @training = Training.find(params[:id])
-    @countries = Country.all
-    render :new
   end
 
   def update
-    @training = Training.find(params[:id])
-
-    if @training.update_attributes(params[:training])
-      redirect_to training_path(@training)
-    else
-      render :new
-    end
+    training_manager.update(params[:id], params[:training])
   end
 
   def show
-    @trainings = Training.all
     @training = Training.find(params[:id])
   end
 
   def destroy
-    training = Training.destroy(params[:id])
-    redirect_to :back, :notice => "Training \"#{training.title}\" has been deleted"
+    training_manager.destroy(params[:id])
+  end
+
+  # Callbacks
+
+  def create_succeeded(training)
+    redirect_to training
+  end
+
+  def create_failed(training)
+    @training = training
+    render :new
+  end
+
+  def update_succeeded(training)
+    redirect_to training
+  end
+
+  def update_failed(training)
+    @training = training
+    render :edit
+  end
+
+  def destroy_succeeded(training)
+    redirect_to news_path, notice: "Trening je uspješno izbrisan."
   end
 end

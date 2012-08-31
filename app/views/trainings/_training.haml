@@ -1,23 +1,42 @@
 - present training do |training_presenter|
 
+  - if logged_in?
+    .controls-small
+      = training_presenter.edit_button "Izmjeni"
+      = training_presenter.delete_button "Izbriši"
+
   %article
 
     %header
-      %h1= training_presenter.title_with_time
+      %h1= training_presenter.title
       %p.info= training_presenter.location
 
-    = training_presenter.description
+    %section
+      %h2 O čemu se radi?
+      = training_presenter.description
 
-    - if training.participating_countries.present?
+    - if training.participating_countries?
       %section
-        %h2 Koje države?
+        %h2 Tko sve sudjeluje?
         %p= training_presenter.participating_countries
 
-    - if training.additional_info.present?
-      %section
-        %h2 Još nešto?
-        = training_presenter.additional_info
+    %section
+      %h2 Tko se može prijaviti?
+      = training_presenter.intended_group
+
+    %section
+      %h2 Troškovi
+      = training_presenter.expenses
+
+    %section
+      %h2 Želim saznati više...
+      %p
+        Za dodatne informacije možete preuzeti ovaj #{link_to "infoletter", training_presenter.infoletter.url}.
+        Ako imate bilo kakvih pitanja, slobodno nas kontaktirajte na #{mail_to "synergy@synergy-croatia.com"}.
 
     %section
       %h2 Prijava
-      %p Potrebno je ispuniti #{link_to "prijavnicu", training_presenter.participation_form_url} i najkasnije do (&hellip;) poslati na našu email adresu. Prijave se odobravaju kronološkim redom.
+      %p
+        Potrebno je ispuniti #{link_to "prijavnicu", training_presenter.application_form.url} i
+        najkasnije do #{l training_presenter.deadline} poslati na našu email adresu.
+        Prijave se odobravaju kronološkim redom.

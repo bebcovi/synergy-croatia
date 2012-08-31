@@ -78,6 +78,7 @@ hr:
     and: "i"
     or: "ili"
     top: "vrh"
+    unauthorized: "Neovlašteni pristup"
 
   will_paginate:
     previous_label: "&#8592; Prethodna"

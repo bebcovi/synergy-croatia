@@ -1,7 +1,5 @@
-module CountrySelectInput
-  def country_select(attribute_name, options = {})
-    input(attribute_name) do
-      country_code_select(attribute_name, options.delete(:priority), {}, options)
-    end
+class CountrySelectInput < SimpleForm::Inputs::Base
+  def input
+    @builder.country_code_select(attribute_name, options.delete(:priority), {}, options)
   end
 end

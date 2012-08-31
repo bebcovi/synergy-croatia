@@ -2,4 +2,6 @@
 
 = render "trainings_nav"
 
+= add_button "Novi trening", new_training_path if logged_in?
+
 = render @trainings

@@ -2,6 +2,8 @@ module TrainingsHelper
   def common_countries
     Training.pluck(:participating_countries).compact.inject(:+).uniq.
       map { |code| [t("countries.#{code}"), code] }.sort
+  rescue
+    []
   end
 
   def countries(country_codes)

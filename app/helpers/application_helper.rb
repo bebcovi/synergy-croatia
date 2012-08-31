@@ -36,4 +36,32 @@ module ApplicationHelper
     presenter = klass.new(object, self)
     yield presenter
   end
+
+  def back_button(text, path, options = {})
+    link_to "← #{text}", path, {class: "back"}.merge(options)
+  end
+
+  def cancel_button(text, path, options = {})
+    link_to text, path, {class: "cancel"}.merge(options)
+  end
+
+  def add_button(text, path, options = {})
+    link_to text, path, {class: "add"}.merge(options)
+  end
+
+  def edit_button(text, path, options = {})
+    link_to text, path, {class: "edit"}.merge(options)
+  end
+
+  def delete_button(text, path, options = {})
+    link_to text, path, {class: "delete", method: :delete, confirm: "Jeste li sigurni?"}.merge(options)
+  end
+
+  def croatian?
+    I18n.locale == :hr
+  end
+
+  def english?
+    I18n.locale == :en
+  end
 end

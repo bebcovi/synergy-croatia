@@ -35,5 +35,6 @@ Training.create! [
     description_en: "The international youth exchange \"All different, all equal\" gathers a group of 24 participants from Europe, and the main topic is inclusion of young people with hearing disorders and connecting with proactive young people from other countries. So, if you like to hang out, travel, meet new people, and learn something new about other cultures in the process, this time you have the opportunity to get to acquainted with Greece, learn the sign language, meet and play with your own prejudice, and come home a little richer.",
     summary_hr: "Međunarodna razmjena mladih \"All different, all equal\", okuplja grupu od 24 sudionika iz Europe, a glavna tema je inkluzija mladih s oštećenjem sluha te povezivanje s proaktivnim mladima iz drugih zemalja.",
     summary_en: "The international youth exchange \"All different, all equal\" gathers a group of 24 participants from Europe, and the main topic is inclusion of young people with hearing disorders and connecting with proactive young people from other countries.",
+    deadline: "05/09/2012"
   }
 ]

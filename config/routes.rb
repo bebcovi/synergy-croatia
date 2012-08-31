@@ -2,6 +2,12 @@ SynergyCroatia::Application.routes.draw do
   scope "(:locale)", :locale => /en|hr/ do
     root :to => "pages#index"
 
+    controller :sessions do
+      get "login", to: :new
+      post "login", to: :create
+      delete "logout", to: :destroy
+    end
+
     controller :pages do
       get "index"
       get "about"
@@ -18,6 +24,7 @@ SynergyCroatia::Application.routes.draw do
     end
 
     resources :trainings
+    resources :categories
 
     controller :errors do
       match "404", :to => :not_found

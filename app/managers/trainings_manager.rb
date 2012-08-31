@@ -3,9 +3,9 @@ class TrainingsManager < Struct.new(:listener)
     training = Training.new(attributes)
 
     if training.save
-      listener.create_training_succeeded(training)
+      listener.create_succeeded(training)
     else
-      listener.create_training_failed(training)
+      listener.create_failed(training)
     end
   end
 
@@ -13,14 +13,14 @@ class TrainingsManager < Struct.new(:listener)
     training = Training.find(id)
 
     if @training.update_attributes(attributes)
-      listener.update_training_succeeded(training)
+      listener.update_succeeded(training)
     else
-      listener.update_training_failed(training)
+      listener.update_failed(training)
     end
   end
 
   def destroy(id)
     training = Training.destroy(id)
-    listener.destroy_training_succeeded(training)
+    listener.destroy_succeeded(training)
   end
 end

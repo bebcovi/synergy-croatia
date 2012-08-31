@@ -1,20 +1,3 @@
-- @title = "New training"
+- @title = "Novi trening"
 
-= simple_form_for @training do |f|
-
-  .inner
-    = f.input :title
-    = f.input :description
-    = f.input :summary
-    = f.input :begins_on
-    = f.input :ends_on
-    = f.country_select :participating_countries, :priority => common_countries, :multiple => true
-    = f.input(:age_restriction) { f.number_field(:minimum_age) + "&ndash;".html_safe + f.number_field(:maximum_age) }
-    = f.country_select :country, :priority => common_countries
-    = f.input :city
-    = f.input :additional_info
-    = f.input :infoletter, :as => :file
-    = f.input :participation_form, :as => :file
-
-  = f.button :submit
-  %button.cancel Odustani
+= render "form"
