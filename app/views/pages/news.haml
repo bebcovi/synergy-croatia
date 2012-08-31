@@ -1,7 +1,7 @@
 - @title = t(".page_title")
 
-= render "trainings_nav"
+= render "projects_nav"
 
-= add_button "Novi trening", new_training_path if logged_in?
+= add_button "Novi trening", new_project_path if logged_in?
 
-= render partial: "trainings/training_short", collection: @trainings, as: :training
+= render partial: "projects/project_short", collection: @projects, as: :project

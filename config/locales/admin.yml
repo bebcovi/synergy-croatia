@@ -2,8 +2,8 @@ hr: &admin
   simple_form:
     labels:
 
-      training:
-        category: "Tip treninga"
+      project:
+        category: "Tip projekta"
         name: "Naziv"
         description_hr: "Opis (Hrvatski)"
         description_en: "Opis (Engleski)"

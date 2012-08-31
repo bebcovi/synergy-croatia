@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-Training.create! [
+Project.create! [
   {
     name: "Show your Life",
     category: Category.find_by_name_en("International Media training"),

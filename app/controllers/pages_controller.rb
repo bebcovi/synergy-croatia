@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def news
-    @trainings = Training.upcoming
+    @projects = Project.upcoming
 
     respond_to do |format|
       format.html
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def archive
-    @trainings = Training.forecoming
+    @projects = Project.forecoming
   end
 
   def testimonials

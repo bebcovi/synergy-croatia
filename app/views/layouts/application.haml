@@ -2,38 +2,38 @@
 %html
   %head
     %title Synergy Croatia &middot; #{@title}
-    %meta{:charset => 'utf-8'}
-    %meta{:name => 'robots', :content => 'noindex'}
-    %link{:href => 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Gentium+Basic:400,700,400italic,700italic&subset=latin-ext,latin', :rel => 'stylesheet', :type => 'text/css'}
+    %meta{charset: 'utf-8'}
+    %meta{name: 'robots', content: 'noindex'}
+    %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Gentium+Basic:400,700,400italic,700italic&subset=latin-ext,latin', :rel => 'stylesheet', :type => 'text/css'}
     = favicon_link_tag
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    = auto_discovery_link_tag :atom, trainings_path(format: "atom")
-  %body{:class => "#{params[:controller]} #{params[:action]}"}
+    = auto_discovery_link_tag :atom, projects_path(format: "atom")
+  %body{class: "#{params[:controller]} #{params[:action]}"}
     - if logged_in?
       %p Prijavljeni ste kao administrator. | #{link_to "Odjava", logout_path, method: :delete}
 
     #left
       #logo= link_to image_tag('logo.png', size: '183x56', alt: 'logo'), root_path
       #lang
-        = link_to image_tag('lang/Croatia.png', :size => '32x32'), :locale => :hr
-        = link_to image_tag('lang/United-States.png', :size => '32x32'), :locale => :en
+        = link_to image_tag('lang/Croatia.png', size: '32x32'), locale: :hr
+        = link_to image_tag('lang/United-States.png', size: '32x32'), locale: :en
       %nav
         %a#expand{href: '#'} ⇕
         %ol
           = list_of navigation_pages do |page|
             = link_to_unless_current page.title, page.route do
-              = link_to page.title, page.route, :class => 'active'
+              = link_to page.title, page.route, class: 'active'
 
-    %article{:role => 'main'}
+    %article{role: 'main'}
       %h1= @title
       = yield
 
     #right
       %aside
         - %w[latest support newsletter syncro social contact].each do |item|
-          %section{:id => item}
+          %section{id: item}
             = render "layouts/#{item}"
       = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"
 

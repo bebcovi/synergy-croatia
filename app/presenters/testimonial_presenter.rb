@@ -9,15 +9,15 @@ class TestimonialPresenter < BasePresenter
     testimonial.author
   end
 
-  def training_title
-    smarty_pants testimonial.training.title
+  def project_title
+    smarty_pants testimonial.project.name
   end
 
-  def country
-    t "countries.#{testimonial.training.country}"
+  def project_country
+    t "countries.#{testimonial.project.country}"
   end
 
-  def duration
-    date_range testimonial.training.begins_on, testimonial.training.ends_on
+  def project_duration
+    date_range testimonial.project.begins_on, testimonial.project.ends_on
   end
 end

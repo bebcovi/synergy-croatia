@@ -1,4 +1,3 @@
 %ol#sub-nav
-  = list_of [:projects, :partnerships] do |project|
-    - result = t(".#{project}")
-    = link_to result, "##{result.downcase}"
+  = list_of [:projects, :partnerships] do |category|
+    = link_to t(".#{category}"), "##{category}"

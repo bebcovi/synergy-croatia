@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :trainings
+  has_many :projects
 
   translates :name
 

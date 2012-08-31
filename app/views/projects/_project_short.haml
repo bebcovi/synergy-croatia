@@ -1,0 +1,11 @@
+%article{class: project.training? ? "training" : "exchange"}
+
+  - present project do |project_presenter|
+
+    %header
+      %h1= project_presenter.title
+      %p.info= project_presenter.location
+
+    = project_presenter.description
+
+  %p= link_to "Opširnije", project

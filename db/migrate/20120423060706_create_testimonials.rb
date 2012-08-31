@@ -4,7 +4,7 @@ class CreateTestimonials < ActiveRecord::Migration
       t.text :content_hr
       t.text :content_en
       t.string :author
-      t.references :training
+      t.references :project
 
       t.timestamps
     end

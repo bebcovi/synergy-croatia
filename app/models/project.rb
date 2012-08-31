@@ -1,12 +1,12 @@
-class Training < ActiveRecord::Base
+class Project < ActiveRecord::Base
   belongs_to :category
   has_many :testimonials, dependent: :destroy
 
   serialize :participating_countries
 
-  default_scope order("trainings.ends_on DESC")
-  scope :upcoming, where("trainings.ends_on >= current_date")
-  scope :forecoming, where("trainings.ends_on < current_date")
+  default_scope order("#{table_name}.ends_on DESC")
+  scope :upcoming, where("#{table_name}.ends_on >= current_date")
+  scope :forecoming, where("#{table_name}.ends_on < current_date")
 
   def training?
     category != Category.find_by_name_en("Youth Exchange")

@@ -1,0 +1,42 @@
+- present project do |project_presenter|
+
+  - if logged_in?
+    .controls-small
+      = project_presenter.edit_button "Izmjeni"
+      = project_presenter.delete_button "Izbriši"
+
+  %article
+
+    %header
+      %h1= project_presenter.title
+      %p.info= project_presenter.location
+
+    %section
+      %h2 O čemu se radi?
+      = project_presenter.description
+
+    - if project.participating_countries?
+      %section
+        %h2 Tko sve sudjeluje?
+        %p= project_presenter.participating_countries
+
+    %section
+      %h2 Tko se može prijaviti?
+      = project_presenter.intended_group
+
+    %section
+      %h2 Troškovi
+      = project_presenter.expenses
+
+    %section
+      %h2 Želim saznati više...
+      %p
+        Za dodatne informacije možete preuzeti ovaj #{link_to "infoletter", project_presenter.infoletter.url, target: "_blank"}.
+        Ako imate bilo kakvih pitanja, slobodno nas kontaktirajte na #{mail_to "synergy@synergy-croatia.com"}.
+
+    %section
+      %h2 Prijava
+      %p
+        Potrebno je ispuniti #{link_to "prijavnicu", project_presenter.application_form.url} i
+        najkasnije do #{l project_presenter.deadline} poslati na našu email adresu.
+        Prijave se odobravaju kronološkim redom.

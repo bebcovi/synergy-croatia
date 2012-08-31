@@ -18,16 +18,7 @@ ActiveRecord::Schema.define(:version => 20120829154906) do
     t.string "name_en"
   end
 
-  create_table "testimonials", :force => true do |t|
-    t.text     "content_hr"
-    t.text     "content_en"
-    t.string   "author"
-    t.integer  "training_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "trainings", :force => true do |t|
+  create_table "projects", :force => true do |t|
     t.string   "name"
     t.text     "description_hr"
     t.text     "description_en"
@@ -56,6 +47,15 @@ ActiveRecord::Schema.define(:version => 20120829154906) do
     t.integer  "category_id"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "testimonials", :force => true do |t|
+    t.text     "content_hr"
+    t.text     "content_en"
+    t.string   "author"
+    t.integer  "project_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

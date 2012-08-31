@@ -45,7 +45,7 @@ hr:
     partners:
       page_title: "Partneri"
 
-    trainings_nav:
+    projects_nav:
       trainings: "Treninzi"
       exchange: "Razmjene mladih"
     archive_nav:
@@ -59,10 +59,6 @@ hr:
       iban: "Za uplate iz inozemstva"
     volunteer:
       page_title: "Volontiranje"
-
-  trainings:
-    index:
-      trainings: "Treninzi"
 
   errors:
     not_found:
