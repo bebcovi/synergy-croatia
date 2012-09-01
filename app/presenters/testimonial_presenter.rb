@@ -2,14 +2,18 @@ class TestimonialPresenter < BasePresenter
   presents :testimonial
 
   def content
-    markdown testimonial.body
+    markdown testimonial.content
   end
 
   def author
     testimonial.author
   end
 
-  def project_title
+  def project
+    [project_name, project_country, project_duration].reject(&:empty?).join(", ")
+  end
+
+  def project_name
     smarty_pants testimonial.project.name
   end
 

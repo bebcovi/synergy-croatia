@@ -80,3 +80,6 @@ hr:
     previous_label: "&#8592; Prethodna"
     next_label: "Sljedeća &#8594;"
     page_gap: "&hellip;"
+
+  countries:
+    CZ: "Češka"

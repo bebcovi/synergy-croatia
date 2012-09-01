@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def smarty_pants(text)
-    raw(Redcarpet::Render::SmartyPants.render(text))
+    raw(Redcarpet::Render::SmartyPants.render(text.to_s))
   end
 
   def date_range(from, till)

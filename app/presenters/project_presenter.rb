@@ -4,7 +4,7 @@ class ProjectPresenter < BasePresenter
   presents :project
 
   def title
-    smarty_pants "\"#{project.name}\", #{project.category}, #{duration}"
+    smarty_pants [content_tag(:span, project.name, class: "name"), project.category, duration].compact.join(", ")
   end
 
   def location
