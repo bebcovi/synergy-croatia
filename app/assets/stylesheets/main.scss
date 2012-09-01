@@ -33,13 +33,12 @@
 
 #sub-nav {
   @include with-font-size(18px) {
-    $color: gray;
     @extend %unstyled-list;
+    @extend %border-radius;
+    @include rhythm(-0.25, 0, 0, 1.25);
     @include clearfix;
-    @include rhythm(-0.25, 0, 0, 1);
-    border-top: 1px solid $color;;
-    border-bottom: 1px solid rgba($color, .25);
-    background: rgba($color, .025);
+    border: 1px solid rgba(black, .25);
+    background: rgba(black, .025);
     li { float: left; }
     a {
       $c1: rgba(black, .5);
@@ -54,9 +53,15 @@
         background: white;
       }
     }
-    .active a {
-      color: rgba(black, .75);
-      background: rgba(white, .1);
+    li:first-child a {
+      padding-left: rhythm();
+      border-left: none;
+    }
+    .active {
+      a {
+        color: rgba(black, .75);
+        background: rgba(white, .1);
+      }
     }
   }
 }
