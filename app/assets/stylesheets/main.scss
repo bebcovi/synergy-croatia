@@ -1,8 +1,6 @@
 [role=main] {
   @include trailer;
 
-  li { @include trailer(0); }
-
   .img {
     @include trailer(.5);
     a {
@@ -12,25 +10,22 @@
   }
 
   article {
-    &:first-of-type {
-      @include leader(-0.5);
-    }
-
-    header h1 {
-      border-bottom: 2px solid rgba(black, .6);
-    }
-
     h1 {
-      @include with-font-size(38px) {
+      @include with-font-size(32px, 1.5) {
+        $color: nth($colors, 1);
+        @include trailing-border(2px, .25);
         font-family: $serif;
-        @include trailer(.5);
+        color: $color;
+        border-color: rgba($color, .75);
+        span {
+          font-weight: bold;
+        }
       }
     }
-
     .info {
       @include with-font-size(18px) {
         @include rhythm(-0.25, 0, 0, 1);
-        color: rgba(black, .5);
+        color: rgba(black, .4);
       }
     }
   }
