@@ -6,38 +6,31 @@ hr: &admin
       project:
         category: "Tip projekta"
         name: "Naziv"
-        description_hr: "Opis"
-        description_en: "Opis"
-        summary_hr: "Sažetak"
-        summary_en: "Sažetak"
-        expenses_hr: "Troškovi"
-        expenses_en: "Troškovi"
+        description: "Opis"
+        summary: "Sažetak"
+        expenses: "Troškovi"
         begins_on: "Počinje"
         ends_on: "Završava"
         participating_countries: "Zemlje sudionice"
         age_restriction: "Dobna granica"
         country: "Država"
-        city_hr: "Grad"
-        city_en: "Grad"
+        city: "Grad"
         infoletter: "Infoletter"
         application_form: "Obrazac za prijavu"
         deadline: "Rok za prijavu"
         available_space: "Broj slobodnih mjesta"
 
       category:
-        name_hr: "Naziv"
-        name_en: "Naziv"
+        name: "Naziv"
 
       post:
-        title_hr: "Naslov"
-        title_en: "Naslov"
-        body_hr: "Sadržaj"
-        body_en: "Sadržaj"
+        title: "Naslov"
+        body: "Sadržaj"
 
       testimonial:
-        content_hr: "Sadržaj"
-        content_en: "Sadržaj"
+        content: "Sadržaj"
         author: "Autor"
+        expires_on: "Istječe"
 
       announcement:
         content: "Sadržaj"

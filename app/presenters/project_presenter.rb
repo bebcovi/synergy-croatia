@@ -64,12 +64,27 @@ class ProjectPresenter < BasePresenter
     end
   end
 
-  def infoletter_url
-    project.infoletter.url
+  def infoletter_link(text, options = {})
+    if project.infoletter.exists?
+      if project.infoletter.original_filename[/\.\w{3,4}$/] == ".pdf"
+        options.update(target: "_blank")
+      end
+      link_to text, project.infoletter.url, options
+    else
+      link_to text, "#", options
+    end
   end
 
-  def application_form_url
-    project.application_form.url
+  def application_form_link(text, options = {})
+    if project.application_form.exists?
+      link_to text, project.application_form.url
+    else
+      link_to text, "#", options
+    end
+  end
+
+  def deadline
+    l project.deadline
   end
 
   def edit_button(text, options = {})

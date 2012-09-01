@@ -15,3 +15,13 @@ module ActiveRecord
     end
   end
 end
+
+module I18n
+  class << self
+    alias normal_translate translate
+    def translate(*args)
+      key = args.shift.to_s
+      normal_translate(key.sub(/_(en|hr)$/, "").to_sym, *args)
+    end
+  end
+end

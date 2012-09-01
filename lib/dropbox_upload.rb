@@ -46,6 +46,7 @@ module DropboxUpload
     rescue TypeError
       nil
     end
+    alias original_filename filename
 
     def queue_for_upload(file)
       @queued_for_upload = file

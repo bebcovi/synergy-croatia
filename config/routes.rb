@@ -1,18 +1,4 @@
 SynergyCroatia::Application.routes.draw do
-  namespace :admin do
-    scope "(:locale)", locale: /en|hr/ do
-      root to: "home#index"
-
-      resources :projects do
-        resources :testimonials, only: [:new, :create]
-      end
-      resources :testimonials, except: [:new, :create]
-      resources :categories
-      resources :posts
-      resource :announcements
-    end
-  end
-
   scope "(:locale)", locale: /en|hr/ do
     root to: "pages#index"
 
@@ -42,7 +28,23 @@ SynergyCroatia::Application.routes.draw do
       get "volunteer"
       post "volunteer", to: :create
     end
+  end
 
+  namespace :admin do
+    scope "(:locale)", locale: /en|hr/ do
+      root to: "home#index"
+
+      resources :projects do
+        resources :testimonials, only: [:new, :create]
+      end
+      resources :testimonials, except: [:new, :create]
+      resources :categories
+      resources :posts
+      resource :announcement
+    end
+  end
+
+  scope "(:locale)", locale: /en|hr/ do
     controller :errors do
       match "404", to: :not_found
       match "500", to: :internal_server_error

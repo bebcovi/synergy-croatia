@@ -12,9 +12,7 @@ Category.destroy_all
 load("#{Rails.root}/db/seeds/categories.rb")
 
 Project.destroy_all
-Dir["#{Rails.root}/db/seeds/projects/*.rb"].each do |project|
-  load project
-end
+Dir["#{Rails.root}/db/seeds/projects/*.rb"].each &method(:load)
 
 Post.destroy_all
 load("#{Rails.root}/db/seeds/posts.rb")

@@ -1,6 +1,6 @@
 - url = @project.new_record? ? admin_projects_path : admin_project_path(@project)
 
-= simple_form_for @project, url: url do |f|
+= simple_form_for @project, url: url, defaults: {locale: :hr} do |f|
 
   .inner
     = f.input :category do

@@ -1,6 +1,6 @@
 - url = @testimonial.new_record? ? admin_project_testimonials_path(params[:project_id]) : admin_testimonial_path(@testimonial)
 
-= simple_form_for @testimonial, url: url do |f|
+= simple_form_for @testimonial, url: url, defaults: {locale: :hr} do |f|
 
   = f.error_notification
 

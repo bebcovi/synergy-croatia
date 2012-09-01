@@ -36,9 +36,9 @@
       = yield
 
     %aside
-      - %w[latest support newsletter social syncro].each do |item|
-        %section{id: item}
-          = render item
+      = render "latest" if @announcement
+      - %w[support newsletter social syncro].each do |item|
+        = render item
 
     = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"
 

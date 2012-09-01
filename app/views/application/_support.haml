@@ -1,6 +1,7 @@
-%h1= t(".title").prepend_icon("heart")
-%p
-  = t(".body")
-  = link_to(t(".donate"), donate_path)
-  = t("words.or")
-  = link_to(t(".volunteer").downcase, volunteer_path) + "."
+%section#support
+  %h1= t(".title").prepend_icon("heart")
+  %p
+    = t(".body")
+    = link_to(t(".donate"), donate_path)
+    = t("words.or")
+    = link_to(t(".volunteer").downcase, volunteer_path) + "."

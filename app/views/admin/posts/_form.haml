@@ -1,6 +1,6 @@
 - url = @post.new_record? ? admin_posts_path : admin_post_path(@post)
 
-= simple_form_for @post, url: url do |f|
+= simple_form_for @post, url: url, defaults: {locale: :hr} do |f|
 
   = f.error_notification
 
