@@ -12,7 +12,6 @@
       %p.info= project_presenter.location
 
     %section
-      %h2 O čemu se radi?
       = project_presenter.description
 
     - if project.participating_countries?
@@ -22,7 +21,7 @@
 
     %section
       %h2 Tko se može prijaviti?
-      = project_presenter.intended_group
+      %p= project_presenter.intended_group
 
     %section
       %h2 Troškovi
