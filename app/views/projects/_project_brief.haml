@@ -1,0 +1,15 @@
+%article
+  - present project do |project_presenter|
+
+    %h2= project_presenter.title
+    = project_presenter.summary
+
+    %dl
+      %dt= t(".location")
+      %dd= project_presenter.location
+
+      %dt= t(".duration")
+      %dd= project_presenter.duration
+
+      %dt= t(".infoletter")
+      %dd= link_to "Infoletter", project_presenter.infoletter.url

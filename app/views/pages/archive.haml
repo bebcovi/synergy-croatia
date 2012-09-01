@@ -5,20 +5,4 @@
 :markdown
   Većina projekata sufinancirana su kroz program Europske Unije Youth in Action ili Mladi na djelu. Više o programu na stranicama [Agencije za mobilnost i programe EU](http://mobilnost.hr/).
 
-%article
-  - @projects.each do |project|
-
-    - present project do |project_presenter|
-
-      %h2= project_presenter.title
-      = project_presenter.summary
-
-      %dl
-        %dt= t(".location")
-        %dd= project_presenter.location
-
-        %dt= t(".duration")
-        %dd= project_presenter.duration
-
-        %dt= t(".infoletter")
-        %dd= link_to "Infoletter", project_presenter.infoletter.url
+= render partial: "projects/project_brief", collection: @projects, as: :project
