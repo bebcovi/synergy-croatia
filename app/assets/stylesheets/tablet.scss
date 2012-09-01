@@ -46,15 +46,4 @@
     a { padding-left: rhythm(.25); }
   }
 
-  $cols: $total-columns / 2;
-  aside section {
-    @include span-columns($cols);
-    @include nth-omega(2n);
-  }
-
-  #latest {
-    @include reset-columns;
-    margin-right: - $grid-padding;
-  }
-
 }

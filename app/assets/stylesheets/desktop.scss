@@ -83,6 +83,12 @@
     margin-right: - $grid-padding;
   }
 
+  #newsletter {
+    button {
+      @include with-font-size(16px) {
+        padding: 0 rhythm(.25);
+      }
+    }
   }
 
   #top, #expand { display: none; }
