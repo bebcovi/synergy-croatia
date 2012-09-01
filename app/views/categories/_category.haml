@@ -1,0 +1,12 @@
+- present category do |category_presenter|
+
+  - if admin? and category.not_in?(forbidden_categories)
+    .small-controls
+      = category_presenter.edit_button "Izmjeni"
+      = category_presenter.delete_button "Izbriši"
+
+  %dl
+    %dt Naziv (Hrvatski)
+    %dd= category_presenter.name_hr
+    %dt Naziv (Engleski)
+    %dd= category_presenter.name_en
