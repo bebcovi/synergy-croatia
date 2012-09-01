@@ -17,7 +17,7 @@
 
   %ul
     = f.collection_check_boxes :interests, interests, :first, :last, collection_wrapper_tag: false, item_wrapper_tag: :li
-    %li #{check_box_tag :other}#{f.input :interests, wrapper: false, input_html: {name: "volunteer[interests][]"}, label: "Drugo"}
+    %li #{check_box_tag :other}#{f.input :interests, wrapper: false, input_html: {name: "volunteer[interests][]"}, label: "Drugo", label_html: {for: "other"}}
 
   %p Želim volontirati zbog:
 
