@@ -1,14 +1,13 @@
 #log {
-  @extend body:before;
-  @include leader(-1.35);
-  height: auto;
+  @include trailer;
+  margin-left: - $grid-padding;
+  margin-right: - $grid-padding;
   text-align: center;
-  font-weight: bold;
-  color: white;
-  a {
-    @include color-link(white, white);
-    font-weight: normal;
-    border-bottom: none;
+  p {
+    @include with-font-size(13px) {
+      @include trailer(0);
+      color: rgba(black, .5);
+    }
   }
 }
 

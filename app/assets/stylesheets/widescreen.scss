@@ -2,12 +2,13 @@
 
   $gutter-width: 4em;
 
-  $left: 3;
-  $right: 4;
-  $main: $total-columns - $left - $right;
+  $navigation: 3;
+  $sidebar: 4;
+  $main: $total-columns - $navigation - $sidebar;
 
   body {
     @include set-container-width;
+    &:before { @include trailer(0); }
   }
 
   h1 {
@@ -16,35 +17,47 @@
     }
   }
 
-  [role=main] {
-    @include span-columns($main);
-  }
+  [role=main] { @include span-columns($main); }
 
-  #left {
-    @include span-columns($left);
-    @include leader(.5);
-  }
-
-  #logo, #lang {
-    display: block;
-    text-align: right;
-  }
+  #logo, #lang { @include trailer(0); }
 
   #logo {
-    @include trailer(1.5);
+    @include span-columns($navigation);
+    @include leader(-1);
+    margin-left: 0;
     margin-right: 0;
+    text-align: right;
+    img { margin-left: - rhythm(2); }
   }
 
-  #lang { @include trailer; }
+  #lang {
+    @include span-columns($sidebar omega);
+    @include leader(2);
+    text-align: left;
+  }
+
+  #log {
+    text-align: left;
+    p {
+      @include squish($navigation, $sidebar);
+    }
+  }
 
   nav {
+    @include span-columns($navigation);
+    @include leader;
     text-align: right;
     li {
       @include trailer;
       display: list-item;
+      &:after {
+        content: '';
+        padding: 0;
+      }
     }
     a {
-      padding-right: rhythm(.5);
+      display: block;
+      padding-right: rhythm(.25);
       padding-left: $grid-padding;
       margin-left: - $grid-padding;
       border-right: none;
@@ -52,13 +65,10 @@
     }
   }
 
-  #right {
-    @include span-columns($right omega);
+  aside {
+    @include span-columns($sidebar omega);
     @include leader(.75);
-  }
-
-  aside section {
-    padding-left: rhythm();
+    section { padding-left: rhythm(); }
   }
 
   #latest {

@@ -1,0 +1,20 @@
+#header {
+  @include pie-clearfix;
+}
+
+#logo, #lang {
+  text-align: center;
+}
+
+#logo {
+  @extend %image-container;
+  @include rhythm(-1, 0, 0, .5);
+  height: rhythm(4.75);
+  margin-left: - rhythm(1.5);
+}
+
+#lang {
+  @extend %image-container;
+  @include trailer(.5);
+  height: rhythm(1.5);
+}

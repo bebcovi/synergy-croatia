@@ -11,30 +11,32 @@
     = csrf_meta_tags
     = auto_discovery_link_tag :atom, projects_path(format: "atom")
   %body{class: "#{params[:controller]} #{params[:action]}"}
-    - if logged_in?
-      %p Prijavljeni ste kao administrator. | #{link_to "Odjava", logout_path, method: :delete}
-
-    #left
-      #logo= link_to image_tag('logo.png', size: '213x112', alt: 'logo'), root_path
+    %header#header
+      #logo= link_to image_tag('logo.png', alt: 'logo'), root_path
       #lang
         = link_to image_tag('lang/Croatia.png', size: '32x32'), locale: :hr
         = link_to image_tag('lang/United-Kindom.png', size: '32x32'), locale: :en
-      %nav
-        %a#expand{href: '#'} ⇕
-        %ol
-          = list_of navigation_pages do |page|
-            = link_to_unless_current page.title, page.route do
-              = link_to page.title, page.route, class: 'active'
+
+    - if logged_in?
+      #log
+        %p Prijavljeni ste kao administrator. | #{link_to "Odjava", logout_path, method: :delete}
+
+    %nav
+      %a#expand{href: '#'} ⇕
+      %ol
+        = list_of navigation_pages do |page|
+          = link_to_unless_current page.title, page.route do
+            = link_to page.title, page.route, class: 'active'
 
     %article{role: 'main'}
       %h1= @title
       = yield
 
-    #right
-      %aside
-        - %w[latest support newsletter social syncro].each do |item|
-          %section{id: item}
-            = render "layouts/#{item}"
-      = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"
+    %aside
+      - %w[latest support newsletter social syncro].each do |item|
+        %section{id: item}
+          = render "layouts/#{item}"
+
+    = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"
 
     %footer © Syncro Synergy Croatia 2012.

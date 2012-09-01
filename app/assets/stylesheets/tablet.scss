@@ -2,6 +2,7 @@
 
   body {
     @include set-container-width;
+    &:before { @include box-shadow(lighten($link1, 39%) 0 0 15px 10px); }
   }
 
   .img {
@@ -9,16 +10,38 @@
     margin: 0 0 rhythm(.5) rhythm(.5);
   }
 
+  #header {
+    @include trailer;
+    @include trailing-border(1px, 1);
+
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+    margin-left: - $grid-padding;
+    margin-right: - $grid-padding;
+
+    border-color: rgba(black, .1);
+    background: lighten($link1, 39%);
+  }
+
   #logo {
+    @include trailer(0);
     float: left;
+    margin-left: - rhythm();
   }
 
   #lang {
+    @include rhythm(2, 0, 0, 0);
     float: right;
   }
 
+  #log {
+    @include rhythm(-1, .5, 0, .5);
+    @include trailing-border(1px, .5);
+    border-bottom-color: rgba(black, .1);
+    background: rgba($link1, .20);
+  }
+
   nav {
-    clear: both;
     text-align: left;
     a { padding-left: rhythm(.25); }
   }
