@@ -81,6 +81,7 @@ aside {
       @extend %border-radius;
       @include color-link(white, white);
       @include v-borders(1px, .1);
+      @include transition(background .2s);
       width: rhythm(1.15);
       margin-top: -5px;
       margin-left: rhythm(.1);
@@ -116,6 +117,7 @@ aside {
   border: none;
   background: nth($colors, 3);
   &:hover {
+    @include transition(background .2s);
     border: none;
     background: nth($colors, 1);
   }
