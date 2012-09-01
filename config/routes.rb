@@ -1,4 +1,17 @@
 SynergyCroatia::Application.routes.draw do
+  namespace :admin do
+    scope "(:locale)", locale: /en|hr/ do
+      root to: "home#index"
+
+      resources :projects do
+        resources :testimonials, only: [:new, :create]
+      end
+      resources :testimonials, except: [:new, :create]
+      resources :categories
+      resources :posts
+    end
+  end
+
   scope "(:locale)", locale: /en|hr/ do
     root to: "pages#index"
 
@@ -18,15 +31,16 @@ SynergyCroatia::Application.routes.draw do
       get "partners"
       get "contact"
     end
+    scope only: :show do
+      resources :projects
+      resources :posts
+    end
 
     controller :support do
       get "donate"
       get "volunteer"
-      post "volunteer", to: :apply
+      post "volunteer", to: :create
     end
-
-    resources :projects
-    resources :categories
 
     controller :errors do
       match "404", to: :not_found

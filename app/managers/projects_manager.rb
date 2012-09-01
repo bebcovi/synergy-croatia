@@ -1,11 +1,11 @@
-class ProjectsManager < Struct.new(:listener)
+class ProjectsManager < BaseManager
   def create(attributes)
     project = Project.new(attributes)
 
     if project.save
-      listener.create_succeeded(project)
+      create_succeeded(project)
     else
-      listener.create_failed(project)
+      create_failed(project)
     end
   end
 
@@ -13,14 +13,14 @@ class ProjectsManager < Struct.new(:listener)
     project = Project.find(id)
 
     if project.update_attributes(attributes)
-      listener.update_succeeded(project)
+      update_succeeded(project)
     else
-      listener.update_failed(project)
+      update_failed(project)
     end
   end
 
   def destroy(id)
     project = Project.destroy(id)
-    listener.destroy_succeeded(project)
+    destroy_succeeded(project)
   end
 end

@@ -24,4 +24,12 @@ class TestimonialPresenter < BasePresenter
   def project_duration
     date_range testimonial.project.begins_on, testimonial.project.ends_on
   end
+
+  def edit_button(text)
+    @template.edit_button text, edit_admin_testimonial_path(testimonial)
+  end
+
+  def delete_button(text)
+    @template.delete_button text, admin_testimonial_path(testimonial)
+  end
 end

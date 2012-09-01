@@ -9,7 +9,7 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    = auto_discovery_link_tag :atom, projects_path(format: "atom")
+    = auto_discovery_link_tag :atom, news_path(format: "atom")
   %body{class: "#{params[:controller]} #{params[:action]}"}
     %header#header
       #logo= link_to image_tag('logo.png', alt: 'logo'), root_path
@@ -19,7 +19,10 @@
 
     - if logged_in?
       #log
-        %p Prijavljeni ste kao administrator. | #{link_to "Odjava", logout_path, method: :delete}
+        %p
+          Prijavljeni ste kao administrator.
+          | #{link_to "Odjava", logout_path, method: :delete}
+          | #{link_to "Admin", admin_root_path}
 
     %nav
       %a#expand{href: '#'} ⇕
@@ -35,7 +38,7 @@
     %aside
       - %w[latest support newsletter social syncro].each do |item|
         %section{id: item}
-          = render "layouts/#{item}"
+          = render item
 
     = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"
 

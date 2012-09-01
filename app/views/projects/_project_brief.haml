@@ -1,5 +1,6 @@
-%article
-  - present project do |project_presenter|
+- present project do |project_presenter|
+
+  %article
 
     %h2= project_presenter.title
     = project_presenter.summary
@@ -12,4 +13,4 @@
       %dd= project_presenter.duration
 
       %dt= t(".infoletter")
-      %dd= link_to "Infoletter", project_presenter.infoletter.url
+      %dd= link_to "Infoletter", project_presenter.infoletter_url

@@ -1,5 +1,10 @@
 - present testimonial do |testimonial_presenter|
 
+  - if admin?
+    .controls-small
+      = testimonial_presenter.edit_button "Izmjeni"
+      = testimonial_presenter.delete_button "Izbriši"
+
   %blockquote
     = testimonial_presenter.content
     %p

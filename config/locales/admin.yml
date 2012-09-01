@@ -1,5 +1,6 @@
 hr: &admin
   simple_form:
+
     labels:
 
       project:
@@ -26,6 +27,17 @@ hr: &admin
       category:
         name_hr: "Naziv"
         name_en: "Naziv"
+
+      post:
+        title_hr: "Naslov"
+        title_en: "Naslov"
+        body_hr: "Sadržaj"
+        body_en: "Sadržaj"
+
+      testimonial:
+        content_hr: "Sadržaj"
+        content_en: "Sadržaj"
+        author: "Autor"
 
       defaults:
         username: "Korisničko ime"

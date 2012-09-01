@@ -1,0 +1,13 @@
+- present post do |post_presenter|
+
+  - if admin?
+    .controls-small
+      = post_presenter.edit_button "Izmjeni"
+      = post_presenter.delete_button "Izbriši"
+
+  %article
+
+    %header
+      %h1= post_presenter.title
+
+    = post_presenter.body

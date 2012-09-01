@@ -1,0 +1,7 @@
+- @title = "Tipovi projekata"
+
+%p= back_button "Natrag", admin_root_path
+
+%p= add_button "Novi tip projekta", new_admin_category_path
+
+= render partial: "categories/category", collection: @categories

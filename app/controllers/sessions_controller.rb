@@ -18,16 +18,16 @@ class SessionsController < ApplicationController
 
   # Callbacks
 
-  def create_session_succeeded
+  def create_succeeded
     redirect_to root_path
   end
 
-  def create_session_failed
+  def create_failed
     flash.now[:alert] = "Pogrešno korisničko ime ili lozinka."
     render :new
   end
 
-  def destroy_session_succeeded
+  def destroy_succeeded
     redirect_to :back
   end
 end

@@ -27,6 +27,6 @@ This seven-day training in the form of coaching workshops gives the opportunity 
   participating_countries: nil,
   infoletter: my_file("PCT_Infoletter.doc"),
   application_form: my_file("PCT_Application_form.doc"),
-  deadline: nil,
+  deadline: "15/04/2012",
   available_space: nil
 )

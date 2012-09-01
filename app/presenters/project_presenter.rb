@@ -64,11 +64,23 @@ class ProjectPresenter < BasePresenter
     end
   end
 
-  def edit_button(text, options)
-    @template.edit_button text, edit_project_path(project), options
+  def infoletter_url
+    project.infoletter.url
   end
 
-  def delete_button(text, options)
-    @template.delete_button text, project_path(project), options
+  def application_form_url
+    project.application_form.url
+  end
+
+  def edit_button(text, options = {})
+    @template.edit_button text, edit_admin_project_path(project), options
+  end
+
+  def delete_button(text, options = {})
+    @template.delete_button text, admin_project_path(project), options
+  end
+
+  def add_testimonial_button(text)
+    @template.add_button text, new_admin_project_testimonial_path(project)
   end
 end

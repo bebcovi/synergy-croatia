@@ -28,33 +28,4 @@ class ApplicationController < ActionController::Base
     session[:user_id].present?
   end
   helper_method :logged_in?
-
-  def authorize!
-    if not logged_in?
-      redirect_to root_path, alert: t("words.unauthorized")
-    end
-  end
-
-  # Referers
-
-  def store_referer!(options = {})
-    if request.referer
-      unless url_to_hash(request.url)[:controller] == url_to_hash(request.referer)[:controller]
-        session[:referer] = url_to_hash(request.referer).except(:locale)
-      end
-    else
-      session[:referer] = url_to_hash(options[:default]).except(:locale)
-    end
-  end
-
-  def back
-    session[:referer] || root_path
-  end
-  helper_method :back
-
-  private
-
-  def url_to_hash(url)
-    Rails.application.routes.recognize_path(url)
-  end
 end

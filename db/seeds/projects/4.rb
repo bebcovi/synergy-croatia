@@ -19,6 +19,6 @@ category.projects.create!(
   participating_countries: nil,
   infoletter: nil,
   application_form: nil,
-  deadline: nil,
+  deadline: "01/07/2011",
   available_space: nil
 )

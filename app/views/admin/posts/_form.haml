@@ -1,0 +1,14 @@
+- url = @post.new_record? ? admin_posts_path : admin_post_path(@post)
+
+= simple_form_for @post, url: url do |f|
+
+  = f.error_notification
+
+  = f.input :title_hr
+  = f.input :title_en
+  = f.input :body_hr
+  = f.input :body_en
+
+  .controls
+    = f.button :submit
+    = cancel_button "Odustani", admin_posts_path

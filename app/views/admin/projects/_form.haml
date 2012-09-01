@@ -1,9 +1,11 @@
-= simple_form_for @project do |f|
+- url = @project.new_record? ? admin_projects_path : admin_project_path(@project)
+
+= simple_form_for @project, url: url do |f|
 
   .inner
     = f.input :category do
       = f.association :category, prompt: "Izaberi...", wrapper: false, label: false
-      ili stvori #{link_to "novi", new_category_path}.
+      ili stvori #{link_to "novi", new_admin_category_path}.
     = f.input :name
     = f.input :country, priority: common_countries
     = f.input :city_hr
@@ -25,5 +27,5 @@
     = f.input :available_space
 
   .controls
-    = cancel_button "Odustani", root_path
+    = cancel_button "Odustani", admin_projects_path
     = f.button :submit

@@ -22,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def testimonials
-    @testimonials = Testimonial.limit(5).paginate(page: params[:page], per_page: 1)
+    @testimonials = Testimonial.paginate(page: params[:page], per_page: 1)
   end
 
   def partners

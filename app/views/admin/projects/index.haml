@@ -1,0 +1,9 @@
+- @title = "Projekti"
+
+%p= back_button "Natrag", admin_root_path
+
+%p= add_button "Novi projekt", new_admin_project_path
+
+= render partial: "projects/project", collection: @projects
+
+= will_paginate @projects
