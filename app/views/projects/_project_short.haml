@@ -1,11 +1,16 @@
 - present project do |project_presenter|
 
-  %article{class: project.training? ? "training" : "exchange"}
+  %article
 
-    %header
-      %h1= project_presenter.title
-      %p.info= project_presenter.location
+    %h2= project_presenter.title
+    = project_presenter.summary
 
-    = project_presenter.description
+    %dl
+      %dt= t(".location")
+      %dd= project_presenter.location
 
-    %p= link_to raw("Opširnije →"), project
+      %dt= t(".duration")
+      %dd= project_presenter.duration
+
+      %dt= t(".infoletter")
+      %dd= project_presenter.infoletter_link("Infoletter")

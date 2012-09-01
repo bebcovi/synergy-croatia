@@ -1,3 +1,5 @@
 - @title = @project.name
 
-= render @project
+%p= back_button "Natrag na projekte", news_path
+
+= render partial: "project_long", object: @project, as: :project

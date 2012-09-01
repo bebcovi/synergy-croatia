@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20120901191021) do
     t.string   "title_en"
     t.text     "body_hr"
     t.text     "body_en"
+    t.date     "expires_on"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

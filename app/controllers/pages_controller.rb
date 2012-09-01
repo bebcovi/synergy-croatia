@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def news
-    @projects = Project.upcoming
+    @news = News.all
 
     respond_to do |format|
       format.html

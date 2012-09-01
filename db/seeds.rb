@@ -16,6 +16,9 @@ Dir["#{Rails.root}/db/seeds/projects/*.rb"].each do |project|
   load project
 end
 
+Post.destroy_all
+load("#{Rails.root}/db/seeds/posts.rb")
+
 Testimonial.destroy_all
 load("#{Rails.root}/db/seeds/testimonials.rb")
 
