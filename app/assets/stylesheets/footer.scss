@@ -1,15 +1,12 @@
-footer {
-  $font-size: 14px;
-  @include adjust-font-size-to($font-size);
-  position: relative;
+#footer {
   clear: both;
   text-align: center;
   color: rgba(black, .35);
   &:after {
-    @include leader(.25, $font-size);
+    @include leader(.25);
     content: '';
     display: block;
-    height: rhythm(.25, $font-size);
+    height: rhythm(.25);
     background: rgba(black, .15);
   }
 }
