@@ -28,6 +28,7 @@ gem "active_attr"
 gem "will_paginate"
 gem "dropbox-sdk"
 gem "prawn"
+gem "nokogiri"
 
 group :development do
   gem "pry-rails"

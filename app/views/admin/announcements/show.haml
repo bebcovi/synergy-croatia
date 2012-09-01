@@ -1,0 +1,8 @@
+- @title = "Najava"
+
+%p= back_button "Natrag", admin_root_path
+
+- if @announcement
+  = render partial: "announcements/announcement", object: @announcement
+- else
+  %p= add_button "Dodaj najavu", new_admin_announcement_path

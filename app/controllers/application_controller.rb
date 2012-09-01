@@ -28,4 +28,10 @@ class ApplicationController < ActionController::Base
     session[:user_id].present?
   end
   helper_method :logged_in?
+
+  # Other
+
+  before_filter do
+    @announcement = Announcement.first
+  end
 end

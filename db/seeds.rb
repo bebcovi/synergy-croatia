@@ -18,3 +18,6 @@ end
 
 Testimonial.destroy_all
 load("#{Rails.root}/db/seeds/testimonials.rb")
+
+Announcement.destroy_all
+load("#{Rails.root}/db/seeds/announcement.rb")

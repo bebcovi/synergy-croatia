@@ -39,6 +39,10 @@ hr: &admin
         content_en: "Sadržaj"
         author: "Autor"
 
+      announcement:
+        content: "Sadržaj"
+        expires_on: "Istječe"
+
       defaults:
         username: "Korisničko ime"
         password: "Lozinka"

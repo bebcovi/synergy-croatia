@@ -1,0 +1,17 @@
+- present announcement do |announcement_presenter|
+
+  - if admin?
+    .small-controls
+      = announcement_presenter.edit_button "", title: "Izmjeni"
+      | #{announcement_presenter.delete_button "", title: "Izbriši"}
+
+  %dl
+
+    %dt Sadržaj (Hrvatski)
+    %dd= announcement_presenter.content_hr
+
+    %dt Sadržaj (Engleski)
+    %dd= announcement_presenter.content_en
+
+    %dt Istječe
+    %dd= announcement_presenter.expires_on

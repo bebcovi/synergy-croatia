@@ -9,6 +9,7 @@ SynergyCroatia::Application.routes.draw do
       resources :testimonials, except: [:new, :create]
       resources :categories
       resources :posts
+      resource :announcements
     end
   end
 
