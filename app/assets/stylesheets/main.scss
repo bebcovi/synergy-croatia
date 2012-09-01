@@ -48,21 +48,11 @@
       display: block;
       padding: rhythm(.25) rhythm();
       border-bottom: none;
-      &:hover {
-        @include v-borders;
-        border-color: rgba(black, .2);
-        background: white;
-      }
-    }
-    li:first-child a {
-      padding-left: rhythm();
-      border-left: none;
+      &:hover { background: none; }
     }
     .active {
-      a {
-        color: rgba(black, .75);
-        background: rgba(white, .1);
-      }
+      outline: 1px solid rgba(black, .2);
+      &, &:hover { background: white; }
     }
   }
 }

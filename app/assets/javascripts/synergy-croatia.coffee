@@ -5,7 +5,8 @@ window.SynergyCroatia =
     SynergyCroatia.Initializers.responsive()
 
     switch $('body').attr('class').split(' ')[1]
-      when 'volunteer' then SynergyCroatia.Initializers.volunteer()
+      when 'news'       then SynergyCroatia.Initializers.news()
+      when 'volunteer'  then SynergyCroatia.Initializers.volunteer()
 
 jQuery ->
   SynergyCroatia.init()
