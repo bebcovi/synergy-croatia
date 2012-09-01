@@ -75,12 +75,4 @@
     @include apply-side-rhythm-border(left);
   }
 
-  #newsletter {
-    button {
-      @include with-font-size(20px, 1.5) {
-        padding: 0 rhythm(.25);
-      }
-    }
-  }
-
 }
