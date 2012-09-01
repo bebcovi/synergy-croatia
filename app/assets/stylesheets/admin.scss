@@ -1,0 +1,18 @@
+#log {
+  @extend body:before;
+  @include leader(-1.35);
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  a {
+    @include color-link(white, white);
+    font-weight: normal;
+    border-bottom: none;
+  }
+}
+
+.small-controls {
+  float: right;
+  a { @extend %subtle; }
+}

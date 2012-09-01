@@ -2,8 +2,9 @@
 
 = simple_form_for :user do |f|
 
-  = f.input :username, input_html: {value: params[:user].try(:[], :username) }
+  = f.input :username, input_html: {value: params[:user].try(:[], :username), autofocus: true }
   = f.input :password
 
-  = f.button :submit, "Prijava"
-  = cancel_button "Odustani", root_path
+  .controls
+    = cancel_button "Odustani", root_path
+    = f.button :submit, "Prijava"

@@ -24,5 +24,6 @@
     = f.input :deadline
     = f.input :available_space
 
-  = f.button :submit
-  = cancel_button "Odustani", root_path
+  .controls
+    = cancel_button "Odustani", root_path
+    = f.button :submit

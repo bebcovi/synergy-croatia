@@ -46,15 +46,15 @@ module ApplicationHelper
   end
 
   def add_button(text, path, options = {})
-    link_to text, path, {class: "add"}.merge(options)
+    link_to text.prepend_icon("plus"), path, {class: "add"}.merge(options)
   end
 
   def edit_button(text, path, options = {})
-    link_to text, path, {class: "edit"}.merge(options)
+    link_to text.prepend_icon("pencil"), path, {class: "edit"}.merge(options)
   end
 
   def delete_button(text, path, options = {})
-    link_to text, path, {class: "delete", method: :delete, confirm: "Jeste li sigurni?"}.merge(options)
+    link_to text.prepend_icon("remove"), path, {class: "delete", method: :delete, confirm: "Jeste li sigurni?"}.merge(options)
   end
 
   def croatian?

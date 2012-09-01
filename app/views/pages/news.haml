@@ -2,6 +2,6 @@
 
 = render "projects_nav"
 
-= add_button "Novi trening", new_project_path if logged_in?
+%p= add_button "Novi trening", new_project_path if logged_in?
 
 = render partial: "projects/project_short", collection: @projects, as: :project

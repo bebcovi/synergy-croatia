@@ -65,9 +65,5 @@
     @include apply-side-rhythm-border(left);
   }
 
-  $cols: 3;
-  input[type='submit'], .cancel {
-    width: columns($cols, $main);
-  }
 
 }

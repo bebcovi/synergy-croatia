@@ -64,13 +64,6 @@
     margin-left: 0;
   }
 
-  $cols: 3;
-  input[type='submit'], .cancel {
-    float: right;
-    width: columns($cols, $main);
-    margin-left: rhythm(.5);
-  }
-
   #top {
     display: none;
   }

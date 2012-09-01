@@ -1,13 +1,19 @@
 form {
-  @include clearfix;
   .inner {
     padding: rhythm(.5);
     background: rgba(black, .025);
     border: 1px solid rgba(black, .1);
   }
+  p, ol, ul { @include trailer(.5); }
+  p { @include leader; }
+  ol, ul {
+    @extend %unstyled-list;
+    @include adjust-leading-to(1.5);
+  }
 }
 
 input, textarea, button, select {
+  margin: 0;
   font: {
     family: inherit;
     size: inherit;
@@ -16,24 +22,25 @@ input, textarea, button, select {
   color: $text;
 }
 
-input[type='text'], input[type='password'], input[type='url'], input[type='email'], input[type='number'], input[type='tel'], textarea {
-  @extend %border-radius;
+input[type='text'], input[type='password'], input[type='url'], input[type='email'], input[type='tel'], textarea {
+  @extend %text-field;
   display: block;
   width: 100%;
-  margin: 0;
-  padding: rhythm(.25);
-  border: 1px solid rgba(black, .25);
-  &:focus {
-    outline: none;
-    border-color: rgba(black, .5) !important;
-  }
 }
 
 textarea {
   max-width: 100%;
+  height: rhythm(8);
+}
+
+select[multiple] {
+  @extend %text-field;
+  display: block;
+  background: white;
 }
 
 input[type='number'] {
+  @extend %text-field;
   @extend %inline-block;
   width: rhythm(2);
   margin: 0 rhythm(.25);
@@ -49,21 +56,27 @@ input[type='number'] {
 label {
   &:hover { cursor: pointer; }
   &:after { content: ': '; }
+  &[for$=_hr]:after { content: ': ' image-url('lang/Croatia_small.png'); }
+  &[for$=_en]:after { content: ': ' image-url('lang/United-Kindom_small.png'); }
 }
 
-input[type='submit'], .cancel {
-  @include leader(.5);
-  display: block;
-  width: 49%;
-  padding: rhythm(.5);
+[type=checkbox], [type=radio] {
+  position: relative;
+  top: 1px;
+  margin-right: 6px;
+  & + label:after { content: ''; }
 }
 
-.cancel {
-  @extend %secondary-button;
-  float: left;
-}
+.controls {
+  @include rhythm(.5, 0, 0, 1);
+  text-align: right;
 
-input[type='submit'] {
-  @extend %primary-button;
-  float: right;
+  input, a {
+    @extend %inline-block;
+    width: rhythm(5);
+    margin-left: rhythm(.25);
+  }
+
+  input { @extend %primary-button; }
+  a     { @extend %secondary-button; }
 }

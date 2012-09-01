@@ -1,9 +1,12 @@
 - present project do |project_presenter|
 
   - if logged_in?
-    .controls-small
-      = project_presenter.edit_button "Izmjeni"
-      = project_presenter.delete_button "Izbriši"
+    .small-controls
+      = project_presenter.edit_button "", title: "Izmjeni"
+      |
+      = project_presenter.delete_button "", title: "Izbriši"
+
+  %p= back_button "Natrag na projekte", news_path
 
   %article
 

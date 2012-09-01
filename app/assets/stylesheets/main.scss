@@ -10,6 +10,7 @@
   }
 
   article {
+    clear: both;
     h1 {
       @include with-font-size(32px, 1.5) {
         $color: nth($colors, 1);

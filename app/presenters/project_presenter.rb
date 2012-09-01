@@ -64,11 +64,11 @@ class ProjectPresenter < BasePresenter
     end
   end
 
-  def edit_button(text)
-    @template.edit_button text, edit_project_path(project)
+  def edit_button(text, options)
+    @template.edit_button text, edit_project_path(project), options
   end
 
-  def delete_button(text)
-    @template.delete_button text, project_path(project)
+  def delete_button(text, options)
+    @template.delete_button text, project_path(project), options
   end
 end

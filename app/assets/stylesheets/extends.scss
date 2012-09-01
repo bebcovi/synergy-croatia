@@ -27,29 +27,55 @@
   }
 }
 
+%subtle {
+  $c1: rgba(black, .25);
+  $c2: rgba(black, .75);
+  @extend %inline-block;
+  @include color-link($c1, $c2);
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: $c1;
+  &:hover {
+    color: $c2;
+    background: none;
+  }
+}
+
+%text-field {
+  @extend %border-radius;
+  @include rhythm-borders(1px, .25);
+  margin: 0;
+  border-color: rgba(black, .25);
+  &:focus {
+    @include box-shadow(rgba(black, .1) 0 0 5px);
+    outline: none;
+    border-color: rgba(black, .5);
+  }
+}
+
 %button {
   @extend %inline-block;
-  @include box-shadow(rgba(white, .5) 0 0 0 1px inset);
-  @include text-shadow(white 0 1px 0);
+  @include rhythm-borders(1px, .5);
+  @include box-shadow(white 0 0 0 1px inset);
   @include border-radius;
-  text: {
-    transform: uppercase;
-    align: center;
-  }
-  letter-spacing: 1px;
+  cursor: pointer;
   margin: 0;
-  &:hover { cursor: pointer; }
+  text-align: center;
+  border-color: white;
 }
 
 %primary-button {
   $color: nth($colors, 3);
-  $bg: lighten($color, 25%);
+  $bg: lighten($color, 30%);
   $c1: darken($color, 20%);
   $c2: darken($color, 30%);
   @extend %button;
   @include color-link($c1, $c2);
   background: $bg;
-  border: 1px solid lighten($color, 10%);
+  border-color: lighten($color, 10%);
   color: $c1;
   &:hover {
     color: $c2;
@@ -60,17 +86,17 @@
 
 %secondary-button {
   $color: darken(white, 30%);
-  $bg: lighten($color, 25%);
+  $bg: lighten($color, 28%);
   $c1: darken($color, 20%);
   $c2: darken($color, 30%);
   @extend %button;
   @include color-link($c1, $c2);
   background: $bg;
-  border: 1px solid lighten($color, 10%);
+  border-color: lighten($color, 10%);
   color: $c1;
   &:hover {
     color: $c2;
-    background: lighten($bg, 3%);
+    background: lighten($bg, 1%);
     border-color: lighten($color, 10%);
   }
 }
