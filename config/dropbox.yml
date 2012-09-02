@@ -6,3 +6,5 @@ development: &development
   access_type: "app_folder"
 test:
   <<: *development
+production:
+  <<: *development
