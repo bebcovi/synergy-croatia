@@ -7,7 +7,7 @@ SynergyCroatia.Initializers.admin = ->
 
       $articles.each ->
         $(@).on 'toggle:expand', ->
-          $(@).find('.info, section').toggle()
+          $(@).find('.info, h2, p, .attachments').toggle()
           $(@).toggleClass('collapsed')
 
         $(@).find('.expand').on 'click', => $(@).trigger('toggle:expand')
