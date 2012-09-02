@@ -27,64 +27,16 @@ class ProjectPresenter < BasePresenter
     markdown project.summary
   end
 
-  def expenses
-    markdown project.expenses
+  def infoletter(text, options = {})
+    extension = project.infoletter.original_filename[/(?<=\.)\w{3,4}$/]
+    options.update(target: "_blank") if extension == "pdf"
+    link_to text, project.infoletter.url, {class: extension}.merge(options)
   end
 
-  def participating_countries
-    countries project.participating_countries
-  end
-
-  def intended_group
-    years = proc { |number| (number.to_i % 10).between?(1, 4) ? "godine" : "godina" }
-
-    case
-    when croatian?
-      case
-      when (project.minimum_age and project.maximum_age)
-        "Osobe u dobi od #{project.minimum_age} do #{project.maximum_age} #{years.(project.maximum_age)}."
-      when (project.minimum_age.nil? and project.maximum_age)
-        "Osobe mlađe od #{project.maximum_age} #{years.(project.maximum_age)}."
-      when (project.minimum_age and project.maximum_age.nil?)
-        "Osobe starije od #{project.minimum_age} #{years.(project.minimum_age)}."
-      when (project.minimum_age.nil? and project.maximum_age.nil?)
-        "Osobe u bilo kojoj dobi."
-      end
-    when english?
-      case
-      when (project.minimum_age and project.maximum_age)
-        "People that are between #{project.minimum_age} and #{project.maximum_age} years old."
-      when (project.minimum_age.nil? and project.maximum_age)
-        "People that are younger than #{project.maximum_age} years old."
-      when (project.minimum_age and project.maximum_age.nil?)
-        "People that are older than #{project.minimum_age} years old."
-      when (project.minimum_age.nil? and project.maximum_age.nil?)
-        "People of any age."
-      end
-    end
-  end
-
-  def infoletter_link(text, options = {})
-    if project.infoletter.exists?
-      if project.infoletter.original_filename[/\.\w{3,4}$/] == ".pdf"
-        options.update(target: "_blank")
-      end
-      link_to text, project.infoletter.url, options
-    else
-      link_to text, "#", options
-    end
-  end
-
-  def application_form_link(text, options = {})
-    if project.application_form.exists?
-      link_to text, project.application_form.url
-    else
-      link_to text, "#", options
-    end
-  end
-
-  def deadline
-    l project.deadline
+  def application_form(text, options = {})
+    extension = project.application_form.original_filename[/(?<=\.)\w{3,4}$/]
+    options.update(target: "_blank") if extension == "pdf"
+    link_to text, project.application_form.url, {class: extension}.merge(options)
   end
 
   def edit_button(text, options = {})

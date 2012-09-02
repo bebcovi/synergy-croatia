@@ -6,31 +6,8 @@
       %h1= project_presenter.title
       %p.info= project_presenter.location
 
-    %section
-      = project_presenter.description
+    = project_presenter.description
 
-    - if project.participating_countries?
-      %section
-        %h2 Tko sve sudjeluje?
-        %p= project_presenter.participating_countries
-
-    %section
-      %h2 Tko se može prijaviti?
-      %p= project_presenter.intended_group
-
-    %section
-      %h2 Troškovi
-      = project_presenter.expenses
-
-    %section
-      %h2 Želim saznati više...
-      %p
-        Za dodatne informacije možete preuzeti ovaj #{project_presenter.infoletter_link("infoletter")}.
-        Ako imate bilo kakvih pitanja, slobodno nas kontaktirajte na #{mail_to "synergy@synergy-croatia.com"}.
-
-    %section
-      %h2 Prijava
-      %p
-        Potrebno je ispuniti #{project_presenter.application_form_link("prijavnicu")} i
-        najkasnije do #{project_presenter.deadline} poslati na našu email adresu.
-        Prijave se odobravaju kronološkim redom.
+    %div.attachments
+      = project_presenter.infoletter("Infoletter")
+      = project_presenter.application_form("Prijavnica")

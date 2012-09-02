@@ -8,5 +8,5 @@
   = f.input :name_en
 
   .controls
-    = cancel_button "Odustani", admin_categories_path
+    = cancel_button "Odustani", (referer || admin_categories_path)
     = f.button :submit

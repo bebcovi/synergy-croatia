@@ -3,21 +3,19 @@
 = simple_form_for @project, url: url, defaults: {locale: :hr} do |f|
 
   .inner
+    = f.input :name
     = f.input :category do
       = f.association :category, prompt: "Izaberi...", wrapper: false, label: false
       ili stvori #{link_to "novi", new_admin_category_path}.
-    = f.input :name
     = f.input :country, priority: common_countries
     = f.input :city_hr
     = f.input :city_en
     = f.input :begins_on
     = f.input :ends_on
-    = f.input :description_hr
-    = f.input :description_en
+    = f.input :description_hr, input_html: {class: "big"}
+    = f.input :description_en, input_html: {class: "big"}
     = f.input :summary_hr
     = f.input :summary_en
-    = f.input :expenses_hr
-    = f.input :expenses_en
     = f.input :participating_countries, priority: common_countries, multiple: true, size: 10
     = f.input :age_restriction do
       #{f.number_field(:minimum_age)} – #{f.number_field(:maximum_age)}

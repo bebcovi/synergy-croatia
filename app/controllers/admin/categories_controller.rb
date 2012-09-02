@@ -2,6 +2,7 @@
 
 class Admin::CategoriesController < AdminController
   manages :categories
+  before_filter :store_referer!, only: :new
 
   # Actions
 
@@ -32,7 +33,7 @@ class Admin::CategoriesController < AdminController
   # Callbacks
 
   def create_succeeded(category)
-    redirect_to admin_categories_path, notice: "Tip projekta je uspješno stvoren."
+    redirect_to (referer || admin_categories_path), notice: "Tip projekta je uspješno stvoren."
   end
 
   def create_failed(category)

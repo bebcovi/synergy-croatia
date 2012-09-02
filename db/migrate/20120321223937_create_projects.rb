@@ -6,14 +6,12 @@ class CreateProjects < ActiveRecord::Migration
       t.text :description_en
       t.text :summary_hr
       t.text :summary_en
-      t.text :expenses_hr
-      t.text :expenses_en
-      t.date :begins_on
-      t.date :ends_on
-      t.string :participating_countries
+      t.text :participating_countries
+      t.string :country
       t.string :city_hr
       t.string :city_en
-      t.string :country
+      t.date :begins_on
+      t.date :ends_on
 
       if Rails.env.development?
         t.attachment :infoletter
