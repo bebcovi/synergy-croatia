@@ -80,3 +80,9 @@ label {
   input { @extend %primary-button; }
   a     { @extend %secondary-button; }
 }
+
+.small-controls {
+  float: right;
+  margin-left: rhythm(.5);
+  a { @extend %subtle; }
+}

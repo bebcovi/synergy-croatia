@@ -1,21 +1,7 @@
 - @title = "Projekti"
 
-%p= back_button "Natrag", admin_root_path
-
 %p= add_button "Novi projekt", new_admin_project_path
 
-- @projects.each do |project|
-
-  - present project do |project_presenter|
-
-    %article
-
-      .small-controls
-        = project_presenter.edit_button "", title: "Izmjeni"
-        | #{project_presenter.delete_button "", title: "Izbriši"}
-        | #{project_presenter.add_testimonial_button "Novo iskustvo"}
-
-      %header
-        %h1= project_presenter.title
+= render partial: "projects/project_long", collection: @projects, as: :project
 
 = will_paginate @projects

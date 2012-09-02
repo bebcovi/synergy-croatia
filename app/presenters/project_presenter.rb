@@ -47,7 +47,7 @@ class ProjectPresenter < BasePresenter
     @template.delete_button text, admin_project_path(project), options
   end
 
-  def add_testimonial_button(text)
-    @template.add_button text, new_admin_project_testimonial_path(project)
+  def add_testimonial_button(text, options = {})
+    @template.testimonial_button text, new_admin_project_testimonial_path(project), options
   end
 end

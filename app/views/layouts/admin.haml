@@ -12,15 +12,22 @@
   %body{class: body_class}
     %header#header
       #logo= link_to image_tag('logo.png', alt: 'logo'), root_path
+      - if logged_in?
+        #log
+          %p
+            Prijavljeni ste kao administrator.
+            | #{link_to "Odjava", logout_path, method: :delete}
       #lang
         = link_to image_tag('lang/Croatia.png', size: '32x32'), locale: :hr
         = link_to image_tag('lang/United-Kindom.png', size: '32x32'), locale: :en
 
-    - if logged_in?
-      #log
-        %p
-          Prijavljeni ste kao administrator.
-          | #{link_to "Odjava", logout_path, method: :delete}
+    %nav
+      %ol
+        %li= link_to "Projekti", admin_projects_path
+        %li= link_to "Iskustva polaznika", admin_testimonials_path
+        %li= link_to "Tipovi projekata", admin_categories_path
+        %li= link_to "Vijesti", admin_posts_path
+        %li= link_to "Najava", admin_announcement_path
 
     %article{role: 'main'}
       = yield

@@ -57,6 +57,14 @@ module ApplicationHelper
     link_to text.prepend_icon("remove"), path, {class: "delete", method: :delete, confirm: "Jeste li sigurni?"}.merge(options)
   end
 
+  def testimonial_button(text, path, options = {})
+    link_to text.prepend_icon("comments"), path, options
+  end
+
+  def expand_button(text, options = {})
+    link_to text.prepend_icon("menu"), "#", {class: "expand"}.merge(options)
+  end
+
   def croatian?
     I18n.locale == :hr
   end

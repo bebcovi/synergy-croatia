@@ -1,8 +1,6 @@
 - @title = "Iskustva polaznika"
 
-%p= back_button "Natrag", admin_root_path
-
-%p Nova iskustva polaznika možete stvarati kroz projekte.
+%p Nova iskustva polaznika stvaraju se kroz #{link_to "projekte", admin_projects_path}.
 
 = render partial: "testimonials/testimonial", collection: @testimonials
 

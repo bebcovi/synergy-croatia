@@ -24,7 +24,7 @@
         = link_to image_tag('lang/United-Kindom.png', size: '32x32'), locale: :en
 
     %nav
-      %a#expand{href: '#'} ⇕
+      = expand_button ""
       %ol
         = list_of navigation_pages do |page|
           = link_to_unless_current page.title, page.route do

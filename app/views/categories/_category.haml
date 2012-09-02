@@ -2,11 +2,11 @@
 
   - if admin? and category.not_in?(forbidden_categories)
     .small-controls
-      = category_presenter.edit_button "Izmjeni"
-      = category_presenter.delete_button "Izbriši"
+      #{category_presenter.edit_button ""}
+      | #{category_presenter.delete_button ""}
 
   %dl
-    %dt Naziv (Hrvatski)
+    %dt.hr Naziv
     %dd= category_presenter.name_hr
-    %dt Naziv (Engleski)
+    %dt.en Naziv
     %dd= category_presenter.name_en

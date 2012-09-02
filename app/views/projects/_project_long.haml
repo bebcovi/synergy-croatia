@@ -2,6 +2,13 @@
 
   %article
 
+    - if admin?
+      .small-controls
+        = project_presenter.edit_button "", title: "Izmjeni"
+        | #{project_presenter.delete_button "", title: "Izbriši"}
+        | #{project_presenter.add_testimonial_button "", title: "Dodaj iskustvo"}
+        | #{expand_button "", title: "Vidi sadržaj"}
+
     %header
       %h1= project_presenter.title
       %p.info= project_presenter.location

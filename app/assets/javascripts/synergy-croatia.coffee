@@ -8,5 +8,7 @@ window.SynergyCroatia =
       when 'news'       then SynergyCroatia.Initializers.news()
       when 'volunteer'  then SynergyCroatia.Initializers.volunteer()
 
+    SynergyCroatia.Initializers.admin() if $('body').hasClass('admin')
+
 jQuery ->
   SynergyCroatia.init()

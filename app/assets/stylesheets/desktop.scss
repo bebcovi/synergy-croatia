@@ -63,6 +63,7 @@
       padding: 0;
       border-bottom: none;
     }
+    .expand { display: none; }
   }
 
   aside {
@@ -84,6 +85,6 @@
     margin-right: - $grid-padding;
   }
 
-  #top, #expand { display: none; }
+  #top, { display: none; }
 
 }

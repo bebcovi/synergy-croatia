@@ -23,7 +23,6 @@
   p {
     @include with-font-size(13px) {
       @include trailer(0);
-      color: rgba(black, .5);
     }
   }
 }

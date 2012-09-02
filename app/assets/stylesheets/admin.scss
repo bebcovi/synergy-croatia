@@ -2,32 +2,38 @@ body.admin {
 
   #header { @include trailer; }
 
-  #logo {
-    text-align: left;
+  nav { @include leader(0); }
+
+  dt.hr:after { content: ': ' image-url('lang/Croatia_small.png'); }
+  dt.en:after { content: ': ' image-url('lang/United-Kindom_small.png'); }
+
+  &.projects {
+    .small-controls { @include leader(.25); }
   }
 
-  #log {
-    @include reset-columns;
-    @include rhythm(0, 0, 0, 0);
-    position: absolute;
-    text-align: center;
-    top: rhythm(.5);
-    right: 0;
+  &.testimonials {
+    blockquote {
+      @include trailer;
+      @include trailing-border($border-style: dashed);
+      border-color: rgba(nth($colors, 1), .75);
+      &:last-of-type { @include trailing-border(0px, 0); }
+    }
+    cite { cursor: pointer; }
   }
 
-  #lang {
-    text-align: right;
-  }
+  &.categories {
+    dl {
+      @include trailing-border(1px, .5);
+      @include trailer(.5);
+      border-color: rgba(black, .25);
+      &:last-of-type {
+        @include trailing-border(0px, 0);
+      }
+    }
 
-  [role=main] {
-    @include reset-columns;
-  }
-
+    .small-controls {
+      @include leader(.5);
     }
   }
-}
 
-.small-controls {
-  float: right;
-  a { @extend %subtle; }
 }
