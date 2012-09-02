@@ -32,7 +32,7 @@ SynergyCroatia::Application.routes.draw do
 
   namespace :admin do
     scope "(:locale)", locale: /en|hr/ do
-      root to: "home#index"
+      root to: "projects#index"
 
       resources :projects do
         resources :testimonials, only: [:new, :create]
