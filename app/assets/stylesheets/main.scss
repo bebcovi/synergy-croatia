@@ -1,5 +1,5 @@
 [role=main] {
-  @include trailer;
+  @include trailer(2);
 
   .img {
     @include trailer(.5);

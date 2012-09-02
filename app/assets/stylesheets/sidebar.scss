@@ -1,5 +1,5 @@
 aside {
-  @include leader(.5);
+  @include rhythm(.5, 0, 0, .5);
   color: rgba(black, .5);
 
   h1 {
