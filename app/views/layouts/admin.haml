@@ -23,7 +23,7 @@
 
     %nav
       %ol
-        = list_of navigation_pages do |page|
+        = list_of admin_navigation_pages do |page|
           = link_to_unless (params[:controller] == page.route[:controller]), page.title, page.route do
             = link_to page.title, page.route, class: "active"
 

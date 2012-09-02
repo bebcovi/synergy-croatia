@@ -3,7 +3,7 @@ module AdminHelper
     "admin #{params[:controller].split("/").last} #{params[:action]}"
   end
 
-  def navigation_pages
+  def admin_navigation_pages
     pages = [
       ["Projekti",           {controller: "admin/projects",      action: "index"}],
       ["Iskustva polaznika", {controller: "admin/testimonials",  action: "index"}],
