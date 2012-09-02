@@ -30,8 +30,12 @@ class ProjectPresenter < BasePresenter
   def infoletter(text, options = {})
     if project.infoletter.present?
       extension = project.infoletter.original_filename[/(?<=\.)\w{3,4}$/]
-      options.update(target: "_blank") if extension == "pdf"
-      link_to text, project.infoletter.url, {class: extension}.merge(options)
+      if extension == "pdf"
+        options.update(target: "_blank")
+        @template.pdf_file text, project.infoletter.url, options
+      else
+        @template.word_file text, project.infoletter.url, options
+      end
     else
       link_to text, "#"
     end
@@ -40,8 +44,12 @@ class ProjectPresenter < BasePresenter
   def application_form(text, options = {})
     if project.application_form.present?
       extension = project.application_form.original_filename[/(?<=\.)\w{3,4}$/]
-      options.update(target: "_blank") if extension == "pdf"
-      link_to text, project.application_form.url, {class: extension}.merge(options)
+      if extension == "pdf"
+        options.update(target: "_blank")
+        @template.pdf_file text, project.application_form.url, options
+      else
+        @template.word_file text, project.application_form.url, options
+      end
     else
       link_to text, "#"
     end

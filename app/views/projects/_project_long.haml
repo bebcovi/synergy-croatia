@@ -15,6 +15,6 @@
 
     = project_presenter.description
 
-    %div.attachments
-      = project_presenter.infoletter("Infoletter")
-      = project_presenter.application_form("Prijavnica")
+    %ol.attachments
+      %li= project_presenter.infoletter("Infoletter")
+      %li= project_presenter.application_form("Prijavnica")

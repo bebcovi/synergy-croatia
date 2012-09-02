@@ -65,6 +65,14 @@ module ApplicationHelper
     link_to text.prepend_icon("menu"), "#", {class: "expand"}.merge(options)
   end
 
+  def pdf_file(text, path, options = {})
+    link_to text.prepend_icon("file-pdf"), path, options
+  end
+
+  def word_file(text, path, options = {})
+    link_to text.prepend_icon("file-word"), path, options
+  end
+
   def croatian?
     I18n.locale == :hr
   end
