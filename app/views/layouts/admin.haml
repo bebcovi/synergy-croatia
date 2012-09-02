@@ -9,19 +9,20 @@
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body{class: "#{params[:controller]} #{params[:action]}"}
-    - if logged_in?
-      %p
-        Prijavljeni ste kao administrator.
-        | #{link_to "Odjava", logout_path, method: :delete}
-
-    #left
-      #logo= link_to image_tag('logo.png', size: '183x56', alt: 'logo'), root_path
+  %body{class: body_class}
+    %header#header
+      #logo= link_to image_tag('logo.png', alt: 'logo'), root_path
       #lang
         = link_to image_tag('lang/Croatia.png', size: '32x32'), locale: :hr
-        = link_to image_tag('lang/United-States.png', size: '32x32'), locale: :en
+        = link_to image_tag('lang/United-Kindom.png', size: '32x32'), locale: :en
+
+    - if logged_in?
+      #log
+        %p
+          Prijavljeni ste kao administrator.
+          | #{link_to "Odjava", logout_path, method: :delete}
 
     %article{role: 'main'}
       = yield
 
-    %footer © Syncro Synergy Croatia 2012.
+    %footer#footer © Syncro Synergy Croatia 2012.

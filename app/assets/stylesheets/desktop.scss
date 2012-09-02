@@ -25,7 +25,7 @@
     text-align: center;
   }
 
-  #logo, #lang {
+  #logo, #log, #lang {
     @include inline-block;
     float: none;
   }
@@ -35,11 +35,12 @@
     margin-right: rhythm();
   }
 
+  #lang { @include leader(.25); }
+
   #log {
-    padding-left: $grid-padding;
-    padding-right: $grid-padding;
-    margin-left: - $grid-padding;
-    margin-right: - $grid-padding;
+    right: rhythm();
+    z-index: 20;
+    text-align: right;
   }
 
   nav {

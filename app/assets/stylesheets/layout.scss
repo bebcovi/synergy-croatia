@@ -9,14 +9,17 @@ body {
   font-family: $sans;
   color: $text;
   &:before {
-    @include box-shadow(white 0 0 15px 10px);
+    @include background(
+      linear-gradient(
+        white,
+        rgba(white, 0)
+      )
+    );
     content: '';
-    position: relative;
+    position: absolute;
     z-index: 10;
     display: block;
-    height: rhythm(.35);
-    margin-left: - $grid-padding;
-    margin-right: - $grid-padding;
-    background: nth($colors, 3);
+    width: 100%;
+    height: rhythm();
   }
 }

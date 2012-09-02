@@ -8,9 +8,24 @@
 
 #logo {
   @extend %image-container;
-  @include rhythm(-1, 0, 0, .5);
   height: rhythm(4.75);
-  margin-left: - rhythm(1.5);
+  img {
+    margin-top: - rhythm();
+    margin-left: - rhythm(1.5);
+  }
+}
+
+#log {
+  @include rhythm(-0.5, 0, 0, .5);
+  margin-left: - $grid-padding;
+  margin-right: - $grid-padding;
+  text-align: center;
+  p {
+    @include with-font-size(13px) {
+      @include trailer(0);
+      color: rgba(black, .5);
+    }
+  }
 }
 
 #lang {

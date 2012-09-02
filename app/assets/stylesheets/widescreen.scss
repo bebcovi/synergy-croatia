@@ -23,24 +23,26 @@
 
   #logo {
     @include span-columns($navigation);
-    @include leader(-1);
     margin-left: 0;
-    margin-right: 0;
     text-align: right;
-    img { margin-left: - rhythm(2); }
+    img {
+      margin-left: - rhythm(2);
+    }
+  }
+
+  #log {
+    @include span-columns($main);
+    @include leader(2);
+    position: static;
+    display: block;
+    margin-left: 0;
+    text-align: left;
   }
 
   #lang {
     @include span-columns($sidebar omega);
-    @include leader(2);
+    @include leader(1.75);
     text-align: left;
-  }
-
-  #log {
-    text-align: left;
-    p {
-      @include squish($navigation, $sidebar);
-    }
   }
 
   nav {
