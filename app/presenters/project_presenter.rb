@@ -28,15 +28,23 @@ class ProjectPresenter < BasePresenter
   end
 
   def infoletter(text, options = {})
-    extension = project.infoletter.original_filename[/(?<=\.)\w{3,4}$/]
-    options.update(target: "_blank") if extension == "pdf"
-    link_to text, project.infoletter.url, {class: extension}.merge(options)
+    if project.infoletter.present?
+      extension = project.infoletter.original_filename[/(?<=\.)\w{3,4}$/]
+      options.update(target: "_blank") if extension == "pdf"
+      link_to text, project.infoletter.url, {class: extension}.merge(options)
+    else
+      link_to text, "#"
+    end
   end
 
   def application_form(text, options = {})
-    extension = project.application_form.original_filename[/(?<=\.)\w{3,4}$/]
-    options.update(target: "_blank") if extension == "pdf"
-    link_to text, project.application_form.url, {class: extension}.merge(options)
+    if project.application_form.present?
+      extension = project.application_form.original_filename[/(?<=\.)\w{3,4}$/]
+      options.update(target: "_blank") if extension == "pdf"
+      link_to text, project.application_form.url, {class: extension}.merge(options)
+    else
+      link_to text, "#"
+    end
   end
 
   def edit_button(text, options = {})

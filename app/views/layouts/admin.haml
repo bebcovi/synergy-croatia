@@ -23,11 +23,9 @@
 
     %nav
       %ol
-        %li= link_to "Projekti", admin_projects_path
-        %li= link_to "Iskustva polaznika", admin_testimonials_path
-        %li= link_to "Tipovi projekata", admin_categories_path
-        %li= link_to "Vijesti", admin_posts_path
-        %li= link_to "Najava", admin_announcement_path
+        = list_of navigation_pages do |page|
+          = link_to_unless (params[:controller] == page.route[:controller]), page.title, page.route do
+            = link_to page.title, page.route, class: "active"
 
     %article{role: 'main'}
       = yield
