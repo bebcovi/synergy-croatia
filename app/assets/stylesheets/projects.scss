@@ -3,6 +3,7 @@ body.projects {
     @include with-font-size(20px) {
       @extend %unstyled-list;
       @include leading-border(1px, 1, $border-style: dashed);
+      @include clearfix;
       border-color: rgba(black, .25);
       li {
         @include apply-side-rhythm-border(right, 1px, .5);
@@ -10,6 +11,12 @@ body.projects {
         margin-right: rhythm(.5);
         border-color: rgba(black, .5);
         &:last-child { @include apply-side-rhythm-border(right, 0px, 0); }
+      }
+      [class$=pdf] {
+        color: hsl(0, 60%, 45%);
+      }
+      [class$=word] {
+        color: hsl(245, 40%, 45%);
       }
     }
   }

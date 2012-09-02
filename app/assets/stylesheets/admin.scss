@@ -9,6 +9,7 @@ body.admin {
 
   &.projects {
     .small-controls { @include leader(.25); }
+    .attachments { @include trailer; }
   }
 
   &.testimonials {
