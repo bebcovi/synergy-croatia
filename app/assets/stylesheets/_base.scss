@@ -15,7 +15,7 @@ $default-transition-duration: 0.2s;
 $serif: 'Gentium Basic', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 $sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$colors: #195073 #7f8c1f #f6a93c #f2e5bd #9fd7c7;
+$colors: adjust-lightness(#00adef, -15%) #7f8c1f #ee913f #f2e5bd #9fd7c7;
 
 $facebook: #3b5998;
 $twitter: #00aced;
