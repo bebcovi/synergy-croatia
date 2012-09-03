@@ -1,6 +1,6 @@
 class VolunteersManager < BaseManager
   def create(attributes)
-    volunteer = Volunteer.new(attribute)
+    volunteer = Volunteer.new(attributes)
 
     if volunteer.valid?
       VolunteeringMailer.volunteer(volunteer).deliver
