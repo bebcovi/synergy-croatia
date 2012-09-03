@@ -70,7 +70,12 @@ aside {
 
 #syncro {
   $color: $syncro;
-  i { color: $syncro; }
+  i {
+    margin-top: -5px;
+    margin-right: rhythm(.1);
+    line-height: 0;
+    &:before { content: image-url('icon-syncro.png'); }
+  }
   a {
     $color1: $syncro;
     $color2: $link2;
