@@ -2,7 +2,7 @@
 
   = f.input :content_hr, as: :text
   = f.input :content_en, as: :text
-  = f.input :expires_on
+  = f.input :expires_on, default: 1.month.from_now
 
   .controls
     = cancel_button "Odustani", admin_announcement_path
