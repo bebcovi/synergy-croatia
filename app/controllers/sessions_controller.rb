@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   # Callbacks
 
   def create_succeeded
-    redirect_to root_path
+    redirect_to admin_root_path
   end
 
   def create_failed

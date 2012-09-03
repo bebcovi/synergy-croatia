@@ -17,6 +17,7 @@
           %p
             Prijavljeni ste kao administrator.
             | #{link_to "Odjava", logout_path, method: :delete}
+            | #{link_to "Natrag na stranicu", root_path}
       #lang
         = link_to image_tag('lang/Croatia.png', size: '32x32'), locale: :hr
         = link_to image_tag('lang/United-Kindom.png', size: '32x32'), locale: :en
