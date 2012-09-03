@@ -16,13 +16,8 @@ class Project < ActiveRecord::Base
     category == Category.find_by_name_en("Youth Exchange")
   end
 
-  if Rails.env.development?
-    has_attached_file :infoletter
-    has_attached_file :application_form
-  else
-    has_dropbox_file :infoletter
-    has_dropbox_file :application_form
-  end
+  has_attached_file :infoletter
+  has_attached_file :application_form
 
   translates :description
   translates :summary

@@ -12,15 +12,8 @@ class CreateProjects < ActiveRecord::Migration
       t.string :city_en
       t.date :begins_on
       t.date :ends_on
-
-      if Rails.env.development?
-        t.attachment :infoletter
-        t.attachment :application_form
-      else
-        t.string :infoletter
-        t.string :application_form
-      end
-
+      t.attachment :infoletter
+      t.attachment :application_form
       t.integer :maximum_age
       t.integer :minimum_age
       t.date :deadline
