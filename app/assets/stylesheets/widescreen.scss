@@ -11,12 +11,6 @@
     &:before { @include trailer(0); }
   }
 
-  h1 {
-    @include with-font-size(58px) {
-      @include trailer;
-    }
-  }
-
   [role=main] { @include span-columns($main); }
 
   #logo, #lang { @include trailer(0); }
@@ -47,7 +41,7 @@
 
   nav {
     @include span-columns($navigation);
-    @include leader;
+    @include leader(.5);
     text-align: right;
     li {
       @include trailer;
