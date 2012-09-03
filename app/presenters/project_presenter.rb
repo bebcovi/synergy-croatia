@@ -37,7 +37,7 @@ class ProjectPresenter < BasePresenter
         @template.word_file text, project.infoletter.url, options
       end
     else
-      link_to text, "#"
+      nil
     end
   end
 
@@ -51,7 +51,7 @@ class ProjectPresenter < BasePresenter
         @template.word_file text, project.application_form.url, options
       end
     else
-      link_to text, "#"
+      nil
     end
   end
 

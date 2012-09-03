@@ -10,7 +10,7 @@ class TestimonialPresenter < BasePresenter
   end
 
   def project
-    [project_name, project_country, project_duration].reject(&:empty?).join(", ")
+    [project_name, project_category, project_country, project_duration].reject(&:blank?).join(", ")
   end
 
   def project_name
@@ -23,6 +23,10 @@ class TestimonialPresenter < BasePresenter
 
   def project_duration
     date_range testimonial.project.begins_on, testimonial.project.ends_on
+  end
+
+  def project_category
+    testimonial.project.category.name
   end
 
   def edit_button(text)
