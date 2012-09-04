@@ -67,4 +67,15 @@ SynergyCroatia::Application.configure do
 
   # Use the routes to render HTTP-error pages instead of rendering static ones
   config.exceptions_app = self.routes
+
+  # SendGrid
+  config.action_mailer.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'herokuapp.com'
+  }
+  config.action_mailer.delivery_method = :smtp
 end
