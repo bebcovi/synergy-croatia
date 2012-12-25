@@ -1,0 +1,33 @@
+body.testimonials {
+
+  .pagination {
+    @include trailer;
+
+    * { display: none; }
+
+    :first-child,
+    :last-child {
+      display: inline-block;
+    }
+
+    span:first-child,
+    span:last-child {
+      padding: $half-spacing-unit - 1px;
+      color: rgba(black, .35);
+      border: 1px solid rgba(black, .1);
+      border-radius: $sb-border-radius;
+      background: rgba(black, .05);
+    }
+
+    a:first-child,
+    a:last-child {
+      @extend .btn;
+      @extend .btn_primary;
+    }
+
+    :first-child {
+      margin-right: $half-spacing-unit;
+    }
+  }
+
+}

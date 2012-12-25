@@ -1,0 +1,29 @@
+.sub_navigation {
+  $margin: 10px;
+  @extend .nav;
+
+  li { margin-bottom: $margin; }
+
+  a {
+    @include color-link(rgba(black, .25), $link-color);
+    height: 2 * $base-spacing-unit - $margin;
+    padding: $half-spacing-unit - $margin/2 $half-spacing-unit;
+    border-radius: $base-spacing-unit;
+    border-bottom: none;
+
+    @include on-interact {
+      background: rgba($link-color, .25);
+    }
+
+    &:active,
+    &.active {
+      color: white;
+      background: $link-color;
+    }
+  }
+
+  i {
+    display: inline-block;
+    margin-right: 4px;
+  }
+}

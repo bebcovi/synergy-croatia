@@ -29,11 +29,11 @@ class TestimonialPresenter < BasePresenter
     testimonial.project.category.name
   end
 
-  def edit_button(text)
-    @template.edit_button text, edit_admin_testimonial_path(testimonial)
+  def edit_button(text, options = {})
+    @template.edit_button text, edit_admin_testimonial_path(testimonial), options
   end
 
-  def delete_button(text)
-    @template.delete_button text, admin_testimonial_path(testimonial)
+  def delete_button(text, options = {})
+    @template.delete_button text, admin_testimonial_path(testimonial), options
   end
 end

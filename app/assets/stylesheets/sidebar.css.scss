@@ -1,0 +1,68 @@
+aside {
+  h3 {
+    $border: 1px solid rgba(black, .25);
+    @extend %bleed;
+    @include padding-leader(.5);
+    @include padding-trailer(.5, $border);
+    background: rgba(black, .05);
+
+    i {
+      display: inline-block;
+      margin-right: $quarter-spacing-unit;
+      color: rgba(black, .2);
+    }
+  }
+}
+
+.social {
+
+  .icon {
+    $size: 1.5 * $base-spacing-unit;
+    @include size($size);
+    display: inline-block;
+    text-align: center;
+    line-height: $size;
+    border: 1px solid;
+
+    i { font-size: 20px; }
+  }
+
+  @mixin social-icon($which, $color) {
+    .#{$which} {
+      @include color-link(white);
+      border-radius: 2px;
+      border-color: shade($color, 40%);
+      background-color: $color;
+    }
+  }
+
+  @mixin social-icon--lap-and-up($which, $color) {
+    .#{$which} {
+      @include color-link(white);
+      border-color: rgba($color, .9);
+      background-color: rgba($color, .65);
+      @include on-interact {
+        border-color: shade($color, 40%);
+        background-color: $color;
+      }
+    }
+  }
+
+  @include social-icon(facebook, $facebook-color);
+  @include social-icon(twitter, $twitter-color);
+  @include social-icon(feed, $feed-color);
+
+  @include media-query(lap-and-up) {
+    @include social-icon--lap-and-up(facebook, $facebook-color);
+    @include social-icon--lap-and-up(twitter, $twitter-color);
+    @include social-icon--lap-and-up(feed, $feed-color);
+  }
+}
+
+.icon-syncro {
+  position: relative;
+  top: 1px;
+  &:before {
+    content: image-url("icon-syncro.png");
+  }
+}

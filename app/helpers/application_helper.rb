@@ -9,6 +9,10 @@ module ApplicationHelper
     end
   end
 
+  def sub_navigation(&block)
+    content_tag :ol, class: "sub_navigation", &block
+  end
+
   def markdown(text)
     raw(Redcarpet::Markdown.new(SmartHTMLRenderer).render(text.to_s))
   end
@@ -42,27 +46,23 @@ module ApplicationHelper
   end
 
   def cancel_button(text, path, options = {})
-    link_to text, path, {class: "cancel"}.merge(options)
+    link_to text, path, {class: "cancel btn"}.merge(options)
   end
 
   def add_button(text, path, options = {})
-    link_to text.prepend_icon("plus"), path, {class: "add"}.merge(options)
+    link_to text.prepend_icon("plus"), path, {class: "add_item"}.merge(options)
   end
 
   def edit_button(text, path, options = {})
-    link_to text.prepend_icon("pencil"), path, {class: "edit"}.merge(options)
+    link_to text.prepend_icon("pencil"), path, {class: "edit_item"}.merge(options)
   end
 
   def delete_button(text, path, options = {})
-    link_to text.prepend_icon("remove"), path, {class: "delete", method: :delete, confirm: "Jeste li sigurni?"}.merge(options)
+    link_to text.prepend_icon("remove"), path, {class: "delete_item", method: :delete, confirm: "Jeste li sigurni?"}.merge(options)
   end
 
   def testimonial_button(text, path, options = {})
-    link_to text.prepend_icon("comments"), path, options
-  end
-
-  def expand_button(text, options = {})
-    link_to text.prepend_icon("menu"), "#", {class: "expand"}.merge(options)
+    link_to text.prepend_icon("add-comment"), path, {class: "add_testimonial"}.merge(options)
   end
 
   def pdf_file(text, path, options = {})

@@ -1,0 +1,109 @@
+form {
+  @include trailer;
+}
+
+input,
+textarea,
+button,
+select {
+  line-height: inherit;
+}
+
+#{$all-text-inputs},
+textarea {
+  @extend %text-field;
+}
+
+#{$all-text-inputs} {
+  height: 1.5 * $base-spacing-unit;
+}
+
+textarea {
+  height: 5.5 * $base-spacing-unit;
+}
+
+select[multiple] {
+}
+
+input[type="number"] {
+  width: 2.5 * $base-spacing-unit;
+}
+
+label {
+  cursor: pointer;
+  &:after { content: ": "; }
+  &[for$=_hr]:after { content: ": " image-url("lang/Croatia_small.png"); }
+  &[for$=_en]:after { content: ": " image-url("lang/United-Kindom_small.png"); }
+}
+
+select,
+input[type="file"] {
+  &:last-child,
+  ~ :last-child {
+    @include trailer(.5);
+  }
+}
+
+[type="checkbox"],
+[type="radio"] {
+}
+
+.btn {
+  $text-color: lighten(black, 20%);
+  @include sassy-button-structure;
+  @include sassy-button-gradient($base-color: darken(white, 5%), $text-color: $text-color);
+  @include on-interact {
+    color: $text-color;
+  }
+}
+
+.btn_primary {
+  @include sassy-button-gradient($base-color: $link-color);
+  @include on-interact {
+    color: $sb-text-color;
+  }
+}
+
+.add_item {
+  @include sassy-button-structure;
+  @include sassy-button-gradient($base-color: $green);
+  display: inline-block;
+  height: 2 * $base-spacing-unit;
+  @include on-interact {
+    color: $sb-text-color;
+  }
+}
+
+.form_actions {
+  @include leader;
+  @include trailer;
+
+  * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .cancel {
+    margin-right: 5px;
+  }
+}
+
+.controls {
+  @include trailer(.5);
+
+  a {
+    $text-color: lighten(black, 20%);
+    @include sassy-button-structure($padding: $quarter-spacing-unit - 1px $half-spacing-unit);
+    @include sassy-button-gradient($base-color: darken(white, 5%), $text-color: $text-color);
+    @include on-interact {
+      color: $text-color;
+    }
+    font-family: icons;
+  }
+
+  .delete_item {
+    &:active {
+      @include sassy-button-gradient($base-color: $red);
+    }
+  }
+}

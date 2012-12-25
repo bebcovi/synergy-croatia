@@ -1,0 +1,29 @@
+// layout
+
+$site-width:    960px;
+$site-padding:  20px;
+$fluid:         true;
+
+$quarter-spacing-unit: $half-spacing-unit / 2;
+
+// type
+
+$base-font-family:  "ff-tisa-web-pro";
+
+$base-regular:      400;
+$base-bold:         700;
+
+// colors
+
+$colors: darken(#00adef, 15%) #7f8c1f #ee913f #f2e5bd #9fd7c7;
+
+$facebook-color:  #3b5998;
+$twitter-color:   #00aced;
+$feed-color:      #ff6600;
+
+$syncro-color:    #7aced6;
+
+$text-color:      rgba(black, .8);
+
+$link-color:      nth($colors, 3);
+$link-hover:      nth($colors, 1);

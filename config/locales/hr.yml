@@ -50,6 +50,7 @@ hr:
       trainings: "Treninzi"
       exchange: "Razmjene mladih"
     archive_nav:
+      all: "Sva postignuća"
       projects: "Ostvareni projekti"
       partnerships: "Ostvarena partnerstva"
 
@@ -74,7 +75,6 @@ hr:
   words:
     and: "i"
     or: "ili"
-    top: "vrh"
     unauthorized: "Neovlašteni pristup"
 
   will_paginate:

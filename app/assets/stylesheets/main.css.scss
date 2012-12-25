@@ -1,0 +1,12 @@
+.main_content {
+  article {
+    @include trailer;
+  }
+
+  > p,
+  > div {
+    &:first-child {
+      @include leader;
+    }
+  }
+}

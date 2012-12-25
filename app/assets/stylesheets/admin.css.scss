@@ -1,0 +1,26 @@
+body.admin {
+
+  dt.hr:after { content: ": " image-url("lang/Croatia_small.png"); }
+  dt.en:after { content: ": " image-url("lang/United-Kindom_small.png"); }
+
+}
+
+.fade_out {
+  position: relative;
+  max-height: 22 * $base-spacing-unit;
+  overflow: hidden;
+  &:after {
+    @include position(absolute, 0 0px 0px 0px);
+    @include linear-gradient(rgba(white, 0), rgba(white, .75));
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    height: 2 * $base-spacing-unit;
+    pointer-events: none;
+  }
+}
+
+#project_category_id {
+  display: block;
+}

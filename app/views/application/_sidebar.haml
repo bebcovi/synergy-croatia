@@ -1,0 +1,8 @@
+%aside.site_sidebar
+  - if @announcement
+    %section.latest
+      = render "latest"
+
+  - %w[support newsletter social syncro].each do |item|
+    %section{class: item}
+      = render item

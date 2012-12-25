@@ -1,45 +1,24 @@
 !!!
-%html
+%html.no-js
   %head
-    %title Synergy Croatia &middot; #{@title}
-    %meta{charset: 'utf-8'}
-    %meta{name: 'robots', content: 'noindex'}
-    %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Gentium+Basic:400,700,400italic,700italic&subset=latin-ext,latin', :rel => 'stylesheet', :type => 'text/css'}
-    = favicon_link_tag "favicon.ico?v=1"
+    %title Synergy Croatia · #{@title}
+    %meta{charset: "utf-8"}
+    %meta{name: "robots", content: "noindex"}
+    = favicon_link_tag
     = stylesheet_link_tag "application"
-    = javascript_include_tag "application"
+    = render "shared/javascript"
     = csrf_meta_tags
     = auto_discovery_link_tag :atom, news_path(format: "atom")
 
   %body{class: "#{params[:controller]} #{params[:action]}"}
-    %header#header
-      #logo= link_to image_tag('logo.png', alt: 'logo'), root_path
-      - if logged_in?
-        #log
-          %p
-            Prijavljeni ste kao administrator.
-            | #{link_to "Odjava", logout_path, method: :delete}
-            | #{link_to "Admin", admin_root_path}
-      #lang
-        = link_to image_tag('lang/Croatia.png', size: '32x32'), locale: :hr
-        = link_to image_tag('lang/United-Kindom.png', size: '32x32'), locale: :en
+    = render "shared/header"
+    = render partial: "shared/navigation", locals: {admin: false}
 
-    %nav
-      = expand_button ""
-      %ol
-        = list_of navigation_pages do |page|
-          = link_to_unless_current page.title, page.route do
-            = link_to page.title, page.route, class: 'active'
+    .site.container
+      .main_content{role: "main"}
+        = yield
 
-    %article{role: 'main'}
-      %h1= @title
-      = yield
+      = render "sidebar"
+      = render "shared/footer"
 
-    %aside
-      = render "latest" if @announcement
-      - %w[support newsletter social syncro].each do |item|
-        = render item
-
-    = link_to "#{t("words.top").capitalize} ↑", "#", id: "top"
-
-    %footer#footer © Syncro Synergy Croatia 2012.
+    = javascript_include_tag "application"

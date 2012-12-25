@@ -1,0 +1,5 @@
+.copyright {
+  @extend .milli;
+  @include trailer(.5);
+  color: rgba(black, .35);
+}

@@ -47,6 +47,7 @@ en:
       trainings: "Trainings"
       exchange: "Youth exchange"
     archive_nav:
+      all: "All achievements"
       projects: "Achieved projects"
       partnerships: "Achieved partnerships"
 
@@ -75,4 +76,3 @@ en:
   words:
     and: "and"
     or: "or"
-    top: "top"

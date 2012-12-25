@@ -1,7 +1,6 @@
-%section#social
-  %h1= t(".title").prepend_icon("share")
-  %p
-    = t(".body") + ":"
-    = link_to icon("facebook"), "http://www.facebook.com/SynergyCroatia", id: "facebook"
-    = link_to icon("twitter"), "http://twitter.com/syncrotrainings", id: "twitter"
-    = link_to icon("feed"), news_path(format: "atom"), id: "feed"
+%h3= t(".title").prepend_icon("share")
+%p= t(".body") + ":"
+%p
+  = link_to icon("facebook"), "http://www.facebook.com/SynergyCroatia", class: "icon facebook"
+  = link_to icon("twitter"), "http://twitter.com/syncrotrainings", class: "icon twitter"
+  = link_to icon("feed"), news_path(format: "atom"), class: "icon feed"

@@ -10,6 +10,6 @@
   = f.input :body_en, input_html: {class: "big"}
   = f.input :expires_on, default: 1.month.from_now
 
-  .controls
+  .form_actions
     = cancel_button "Odustani", admin_posts_path
-    = f.button :submit
+    = f.button :submit, class: "btn_primary"

@@ -1,0 +1,46 @@
+@mixin spacer($dir, $type, $multiplier: 1, $border: false) {
+  $base: $base-spacing-unit * $multiplier;
+
+  @if $border {
+    $base: ($base-spacing-unit * $multiplier) - nth($border, 1);
+    border-#{$dir}: $border;
+  }
+
+  #{$type}-#{$dir}: $base;
+  #{$type}-#{$dir}: ($base / $base-font-size) * 1rem;
+}
+
+@mixin leader($multiplier: 1, $border: false) {
+  @include spacer(top, margin, $multiplier, $border);
+}
+
+@mixin trailer($multiplier: 1, $border: false) {
+  @include spacer(bottom, margin, $multiplier, $border);
+}
+
+@mixin padding-leader($multiplier: 1, $border: false) {
+  @include spacer(top, padding, $multiplier, $border);
+}
+
+@mixin padding-trailer($multiplier: 1, $border: false) {
+  @include spacer(bottom, padding, $multiplier, $border);
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin on-interact {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin color-link($color1, $color2: $color1) {
+  color: $color1;
+  @include on-interact {
+    color: $color2;
+  }
+}

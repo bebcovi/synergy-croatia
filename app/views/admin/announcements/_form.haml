@@ -4,6 +4,6 @@
   = f.input :content_en, as: :text
   = f.input :expires_on, default: 1.month.from_now
 
-  .controls
+  .form_actions
     = cancel_button "Odustani", admin_announcement_path
-    = f.button :submit
+    = f.button :submit, class: "btn_primary"

@@ -1,6 +1,14 @@
 //= require jquery
 //= require jquery_ujs
 //
-//= require synergy-croatia
+//= require main
 //
-//= require_tree .
+//= require helper
+//= require responsive
+//
+//= require news
+//= require archive
+//= require volunteer
+//= require admin
+//
+//= require init

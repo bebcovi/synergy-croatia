@@ -1,9 +1,9 @@
 - present category do |category_presenter|
 
   - if admin? and category.not_in?(forbidden_categories)
-    .small-controls
-      #{category_presenter.edit_button ""}
-      | #{category_presenter.delete_button ""}
+    .controls
+      = category_presenter.edit_button ""
+      = category_presenter.delete_button ""
 
   %dl
     %dt.hr Naziv

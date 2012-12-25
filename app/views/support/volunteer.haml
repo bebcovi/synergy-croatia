@@ -15,14 +15,16 @@
 
   %p U Syncro Synergy Croatia zanima me:
 
-  %ul
+  %ul.volunteer_interests
     = f.collection_check_boxes :interests, interests, :first, :last, collection_wrapper_tag: false, item_wrapper_tag: :li
-    %li #{check_box_tag :other}#{f.input :interests, wrapper: false, input_html: {name: "volunteer[interests][]"}, label: "Drugo", label_html: {for: "other"}}
+    %li
+      = check_box_tag :other
+      = f.input :interests, wrapper: false, input_html: {name: "volunteer[interests][]", class: "other_interests"}, label: "Drugo", label_html: {for: "other"}
 
-  = f.input :reason, as: :text
+  = f.input :reason, as: :text, input_html: {rows: 5}
 
-  .controls
-    = f.button :submit, "Prijavi se"
+  .form_actions
+    = f.button :submit, "Prijavi se", class: "btn_primary"
 
 :markdown
   Ako ne voliš ispunjavati web formulare, slobodno nam se javi na <synergy@synergy-croatia.com>.

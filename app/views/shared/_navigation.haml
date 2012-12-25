@@ -1,0 +1,12 @@
+%nav.site_navigation
+  .container
+    - id = "nav_expander"
+    %input{type: "checkbox", id: id}
+    %label{class: "expander", for: id}
+      = icon("chevron-right")
+
+    %ol
+      - pages = if admin then admin_navigation_pages else navigation_pages end
+      - pages.each do |page|
+        %li{class: request.path == page.route && "active"}
+          = link_to page.title, page.route

@@ -1,13 +1,16 @@
 - @title = t(".page_title")
 
-= markdown t(".body")
+%article
+  %h1= @title
 
-%dl
-  %dt Juraj Boljat
-  %dd +385 98 933 4747
+  = markdown t(".body")
 
-  %dt Maja Škrljak
-  %dd +385 91 539 7248
+  %dl.contact_info
+    %dt Juraj Boljat
+    %dd +385 98 933 4747
 
-  %dt Dubravka Matić
-  %dd +385 95 801 2061
+    %dt Maja Škrljak
+    %dd +385 91 539 7248
+
+    %dt Dubravka Matić
+    %dd +385 95 801 2061

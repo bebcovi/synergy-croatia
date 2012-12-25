@@ -1,16 +1,16 @@
 - present project do |project_presenter|
 
-  %article
+  %article.project_short
 
-    %h2= project_presenter.title
+    %h2.title= project_presenter.title
     = project_presenter.summary
 
     %dl
       %dt= t(".location")
-      %dd= project_presenter.location
+      %dd.location= project_presenter.location
 
       %dt= t(".duration")
-      %dd= project_presenter.duration
+      %dd.duration= project_presenter.duration
 
       %dt= t(".infoletter")
-      %dd= project_presenter.infoletter("Infoletter")
+      %dd.infoletter= project_presenter.infoletter("Infoletter")

@@ -5,8 +5,8 @@
   .inner
     = f.input :name
     = f.input :category do
-      = f.association :category, prompt: "Izaberi...", wrapper: false, label: false
-      ili stvori #{link_to "novi", new_admin_category_path}.
+      = f.association :category, prompt: "Odaberi…", wrapper: false, label: false
+      %p ili stvori #{link_to "novi", new_admin_category_path}.
     = f.input :country, priority: common_countries
     = f.input :city_hr
     = f.input :city_en
@@ -24,6 +24,6 @@
     = f.input :deadline
     = f.input :available_space
 
-  .controls
+  .form_actions
     = cancel_button "Odustani", admin_projects_path
-    = f.button :submit
+    = f.button :submit, class: "btn_primary"

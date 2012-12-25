@@ -1,0 +1,19 @@
+.partner_list {
+  @extend .unstyled_list;
+
+  .img {
+    @include trailer(.5);
+
+    a {
+      display: block;
+    }
+  }
+
+  img {
+    max-height: 2 * $base-line-height;
+  }
+
+  .name {
+    @include trailer(1.5);
+  }
+}

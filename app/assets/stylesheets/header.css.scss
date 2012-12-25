@@ -1,0 +1,28 @@
+.site_logo {
+  @include trailer(.5);
+  a {
+    @extend %image-container;
+  }
+  img {
+    max-height: 2 * $base-spacing-unit;
+  }
+}
+
+.logged_in {
+  @include trailer(.5);
+}
+
+.site_lang {
+  @extend .unstyled_list;
+  @extend .cf;
+  @include trailer(.5);
+
+  li {
+    float: left;
+    margin-right: $half-spacing-unit;
+  }
+
+  a {
+    @extend %image-container;
+  }
+}

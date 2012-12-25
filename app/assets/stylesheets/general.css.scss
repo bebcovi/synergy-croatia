@@ -1,0 +1,89 @@
+html {
+  overflow-y: scroll;
+}
+
+.container {
+  @if $fluid {
+    max-width: $site-width;
+  }
+  padding-left: $site-padding;
+  padding-right: $site-padding;
+}
+
+body {
+  font-family: $base-font-family;
+  color: $text-color;
+  padding: $half-spacing-unit 0;
+}
+
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  @include trailer;
+  @include padding-trailer(.5, 3px solid rgba(black, .75));
+  font-weight: $base-bold;
+}
+
+h2 {
+  @include trailer(.5);
+  @include padding-trailer(.5, 1px solid rgba(black, .25));
+  text-transform: uppercase;
+  font-weight: $base-regular;
+  letter-spacing: 1px;
+  color: $link-hover;
+}
+
+h3 {
+  @include trailer(0);
+  text-transform: none;
+  font-weight: $base-regular;
+  letter-spacing: 0;
+  border-bottom: none;
+}
+
+a {
+  @include color-link($link-color, $link-hover);
+  @include transition(color .2s, border-color .2s);
+  text-decoration: none;
+  border-bottom: 1px solid nth($colors, 4);
+  @include on-interact {
+    text-decoration: none;
+    border-bottom-color: nth($colors, 5);
+    background: rgba(nth($colors, 2), .1);
+  }
+}
+
+dl {
+  @extend .cf;
+  width: 100%;
+
+  dt, dd {
+    width: 50%;
+    float: left;
+    @include media-query(lap-and-up) {
+      width: 100/3 * 1%;
+    }
+  }
+
+  dt {
+    clear: both;
+    font-weight: $base-bold;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+blockquote {
+  padding-left: $half-spacing-unit;
+  border-left: $half-spacing-unit solid rgba(black, .1);
+  color: rgba(black, .5);
+  font-style: italic;
+}
+
+.img a {
+  @extend %image-container;
+}

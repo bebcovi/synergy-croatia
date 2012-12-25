@@ -1,0 +1,55 @@
+.site_navigation {
+  @include trailer(.5);
+
+  ol { @extend .unstyled_list; }
+
+  a {
+    display: block;
+    padding: $half-spacing-unit $quarter-spacing-unit;
+  }
+
+  .active a {
+    @include color-link($link-hover);
+  }
+}
+
+#nav_expander,
+.expander {
+  display: none;
+}
+
+@include media-query(palm) {
+  .site_navigation ol {
+    @include transition(.2s);
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #nav_expander:checked {
+    ~ label i:before {
+      content: "\e00f";
+    }
+
+    ~ ol {
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  .expander {
+    display: block;
+    padding: 0 6px;
+    color: white;
+    color: $link-color;
+    border: 1px solid $link-color;
+    border-radius: 3px;
+    background: $link-color;
+    background: rgba($link-color, .25);
+    &:after { content: ""; }
+  }
+}
+
+@include media-query(lap-and-up) {
+  .site_navigation  { display: block; }
+}

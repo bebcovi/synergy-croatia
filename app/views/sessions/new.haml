@@ -5,6 +5,6 @@
   = f.input :username, input_html: {value: params[:user].try(:[], :username), autofocus: true }
   = f.input :password
 
-  .controls
+  .form_actions
     = cancel_button "Odustani", root_path
-    = f.button :submit, "Prijava"
+    = f.button :submit, "Prijava", class: "btn btn_primary"

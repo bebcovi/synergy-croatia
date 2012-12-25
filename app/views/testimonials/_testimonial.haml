@@ -1,14 +1,15 @@
 - present testimonial do |testimonial_presenter|
 
-  %blockquote
+  %article{class: ("fade_out" if admin?)}
     - if admin?
-      .small-controls
-        #{testimonial_presenter.edit_button ""}
-        | #{testimonial_presenter.delete_button ""}
-        | #{expand_button "", title: "Vidi sadržaj"}
+      .controls
+        = testimonial_presenter.edit_button "", title: "Izmjeni"
+        = testimonial_presenter.delete_button "", title: "Izbriši"
 
-    = testimonial_presenter.content
-    %p
-      %cite
-        %strong #{testimonial_presenter.author},
-        #{testimonial_presenter.project}
+    %blockquote
+      = testimonial_presenter.content
+
+      %p
+        %cite
+          %strong #{testimonial_presenter.author},
+          #{testimonial_presenter.project}

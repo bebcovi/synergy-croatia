@@ -1,0 +1,41 @@
+.unstyled_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%bleed {
+  padding-left:   $site-padding;
+  padding-right:  $site-padding;
+  margin-left:  - $site-padding;
+  margin-right: - $site-padding;
+}
+
+%transition-all {
+  @include transition(all .2s);
+}
+
+%image-container {
+  display: inline-block;
+  line-height: 0;
+  border: 0;
+  &:hover { background: none; }
+}
+
+%text-field {
+  @include trailer(.5);
+  @include font-size($base-font-size - 2px);
+  width: 100%;
+  padding: $quarter-spacing-unit - 1px;
+  color: rgba(black, .5);
+  border: 1px solid rgba(black, .25);
+  border-radius: 3px;
+  &, &:focus {
+    cursor: auto !important;
+  }
+  &:focus {
+    @include box-shadow(0 0 5px 0 rgba(black, .25));
+    border-color: rgba(black, .5);
+    outline: none;
+  }
+}

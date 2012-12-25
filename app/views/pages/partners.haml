@@ -1,8 +1,17 @@
 - @title = t(".page_title")
 
-:markdown
-  Syncro je predan  stvaranju novih prilika, partnerstvo je oblik zajedničkog djelovanja. Organizacija ste i imate zanimljivi projekt ili biste željeli surađivati s nama javite nam se na <synergy@synergy-croatia.com>.
+%article
+  %h1= @title
 
-%ul
-  = list_of logos do |logo|
-    = link_to image_tag(logo.src, alt: logo.title, title: logo.title), logo.url, target: '_blank'
+  :markdown
+    Syncro je predan  stvaranju novih prilika, partnerstvo je oblik zajedničkog djelovanja. Organizacija ste i imate zanimljivi projekt ili biste željeli surađivati s nama javite nam se na <synergy@synergy-croatia.com>.
+
+  %ul.partner_list
+    = list_of logos do |logo|
+      %p.img
+        %a{href: logo.url, target: "_blank"}
+          = image_tag(logo.src, alt: logo.title)
+
+      %p.name
+        %a{href: logo.url, target: "_blank"}
+          = logo.title

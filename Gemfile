@@ -6,8 +6,8 @@ gem "pg"
 
 group :assets do
   gem "sass-rails"
-  gem "compass-rails"
-  gem "susy"
+  gem "bourbon"
+  gem "sassy-buttons-bourbon", path: "../Sassy-Buttons-bourbon"
   gem "jquery-rails"
   gem "coffee-rails"
   gem "uglifier"
