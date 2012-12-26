@@ -6,7 +6,6 @@
 //= require helper
 //= require responsive
 //
-//= require news
 //= require archive
 //= require volunteer
 //= require admin

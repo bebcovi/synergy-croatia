@@ -42,10 +42,6 @@ hr:
       page_title: "Kontakt"
       body: "Kontaktirajte nas putem emaila <synergy@synergy-croatia.com> ili putem telefona:"
 
-    projects_nav:
-      all: "Svi projekti"
-      trainings: "Treninzi"
-      exchange: "Razmjene mladih"
     archive_nav:
       all: "Sva postignuća"
       projects: "Ostvareni projekti"
