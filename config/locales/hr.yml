@@ -34,9 +34,6 @@ hr:
       navigation_title: "EVS"
     archive:
       page_title: "Postignuća"
-      location: "Lokacija"
-      duration: "Trajanje"
-      infoletter: "Infoletter"
     testimonials:
       page_title: "Iskustva polaznika"
     partners:
@@ -53,6 +50,12 @@ hr:
       all: "Sva postignuća"
       projects: "Ostvareni projekti"
       partnerships: "Ostvarena partnerstva"
+
+  projects:
+    project_short:
+      location: "Lokacija"
+      duration: "Trajanje"
+      infoletter: "Infoletter"
 
   support:
     donate:

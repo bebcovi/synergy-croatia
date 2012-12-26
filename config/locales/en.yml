@@ -1,5 +1,5 @@
 en:
-  layouts:
+  application:
     latest:
       title: "Latest news"
       body: "We're looking for three more lucky people for a youth exchange Value in Youth in Hungary!"
@@ -30,10 +30,7 @@ en:
       page_title: "European Voluntary Service"
       navigation_title: "EVS"
     archive:
-      page_title: "Achievments"
-      place: "Location"
-      duration: "Duration"
-      infoletter: "Infoletter"
+      page_title: "Achievements"
     testimonials:
       page_title: "Testimonials"
     partners:
@@ -50,6 +47,12 @@ en:
       all: "All achievements"
       projects: "Achieved projects"
       partnerships: "Achieved partnerships"
+
+  projects:
+    project_short:
+      location: "Location"
+      duration: "Duration"
+      infoletter: "Infoletter"
 
   support:
     donate:
