@@ -1,7 +1,8 @@
 // layout
 
-$site-width:    960px;
-$site-padding:  20px;
+$site-width:    $desk-start;
+$gutter-width:  20px;
+$site-padding:  $gutter-width;
 $fluid:         true;
 
 $quarter-spacing-unit: $half-spacing-unit / 2;

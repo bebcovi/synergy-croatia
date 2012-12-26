@@ -1,4 +1,6 @@
 .main_content {
+  overflow: hidden;
+
   article {
     @include trailer;
   }
@@ -8,5 +10,10 @@
     &:first-child {
       @include leader;
     }
+  }
+
+  @include media-query(desk) {
+    float: left;
+    width: 100/3 * 2%;
   }
 }
