@@ -1,6 +1,7 @@
 .sub_navigation {
   $margin: 10px;
   @extend .nav;
+  margin-bottom: 0;
 
   li { margin-bottom: $margin; }
 
