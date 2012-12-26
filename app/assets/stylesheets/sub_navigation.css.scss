@@ -1,7 +1,7 @@
 .sub_navigation {
   $margin: 10px;
   @extend .nav;
-  margin-bottom: 0;
+  @include trailer(.5);
 
   li { margin-bottom: $margin; }
 
