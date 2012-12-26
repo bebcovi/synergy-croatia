@@ -10,6 +10,7 @@
 
   .active a {
     @include color-link($link-hover);
+    font-weight: $base-bold;
   }
 }
 
@@ -60,6 +61,7 @@ $width: 801px;
 
 @include media-query(min-width $width) {
   .site_navigation  {
+    @include trailer;
     text-align: center;
 
     ol {
@@ -71,15 +73,24 @@ $width: 801px;
       display: table-cell;
     }
 
+    $height: 1.5 * $base-spacing-unit;
+    $padding: $quarter-spacing-unit - 1px;
     a {
+      margin-right: 1px;
+      padding: 0;
+      height: $height;
+      line-height: $height - 5px;
       border-top: 1px solid nth($colors, 4);
+      border-bottom: none;
       @include on-interact {
-        border-color: nth($colors, 5);
+        border-top-color: $link-hover;
+        background: none;
       }
     }
 
     .active a {
       border-color: $link-hover;
+      border-top-width: 2px;
     }
   }
 }
