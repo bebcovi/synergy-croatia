@@ -18,12 +18,26 @@
   display: none;
 }
 
+.expander {
+  @extend %unselectable;
+  padding: 0 6px;
+  color: white;
+  color: $link-color;
+  border: 1px solid $link-color;
+  border-radius: 3px;
+  background: $link-color;
+  background: rgba($link-color, .25);
+  &:after { content: ""; }
+}
+
 @include media-query(palm) {
-  .site_navigation ol {
-    @include transition(.2s);
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
+  .site_navigation {
+    ol {
+      @include transition(.2s);
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
   }
 
   #nav_expander:checked {
@@ -39,14 +53,6 @@
 
   .expander {
     display: block;
-    padding: 0 6px;
-    color: white;
-    color: $link-color;
-    border: 1px solid $link-color;
-    border-radius: 3px;
-    background: $link-color;
-    background: rgba($link-color, .25);
-    &:after { content: ""; }
   }
 }
 

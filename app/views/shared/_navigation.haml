@@ -1,12 +1,16 @@
 %nav.site_navigation
+  - pages = if admin then admin_navigation_pages else navigation_pages end
+
   .container
     - id = "nav_expander"
     %input{type: "checkbox", id: id}
     %label{class: "expander", for: id}
       = icon("chevron-right")
+      - pages.each do |page|
+        - if current_page?(page)
+          %span.current_page= page.title
 
     %ol
-      - pages = if admin then admin_navigation_pages else navigation_pages end
       - pages.each do |page|
-        %li{class: request.path == page.route && "active"}
+        %li{class: ("active" if current_page?(page))}
           = link_to page.title, page.route

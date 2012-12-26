@@ -9,6 +9,10 @@ module ApplicationHelper
     end
   end
 
+  def current_page?(page)
+    request.path == page.route
+  end
+
   def sub_navigation(&block)
     content_tag :ol, class: "sub_navigation", &block
   end

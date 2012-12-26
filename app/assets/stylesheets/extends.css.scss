@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+%unselectable {
+  @include user-select(none);
+}
+
 %bleed {
   padding-left:   $site-padding;
   padding-right:  $site-padding;
