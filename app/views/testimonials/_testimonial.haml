@@ -9,7 +9,7 @@
     %blockquote
       = testimonial_presenter.content
 
-      %p
-        %cite
-          %strong #{testimonial_presenter.author},
-          #{testimonial_presenter.project}
+      %footer
+        %b.author= testimonial_presenter.author
+        ,
+        = testimonial_presenter.project

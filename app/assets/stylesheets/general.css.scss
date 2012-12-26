@@ -84,6 +84,13 @@ blockquote {
   border-left: $half-spacing-unit solid rgba(black, .1);
   color: rgba(black, .5);
   font-style: italic;
+
+  .author {
+    &:before {
+      content: "—";
+      font-weight: $base-regular;
+    }
+  }
 }
 
 .img a {
