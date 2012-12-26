@@ -30,7 +30,9 @@
   &:after { content: ""; }
 }
 
-@include media-query(palm) {
+$width: 801px;
+
+@include media-query(max-width ($width - 1)) {
   .site_navigation {
     ol {
       @include transition(.2s);
@@ -56,6 +58,28 @@
   }
 }
 
-@include media-query(lap-and-up) {
-  .site_navigation  { display: block; }
+@include media-query(min-width $width) {
+  .site_navigation  {
+    text-align: center;
+
+    ol {
+      display: table;
+      width: 100%;
+    }
+
+    li {
+      display: table-cell;
+    }
+
+    a {
+      border-top: 1px solid nth($colors, 4);
+      @include on-interact {
+        border-color: nth($colors, 5);
+      }
+    }
+
+    .active a {
+      border-color: $link-hover;
+    }
+  }
 }

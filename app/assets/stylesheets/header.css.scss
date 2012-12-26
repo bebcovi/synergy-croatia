@@ -1,3 +1,7 @@
+.site_header .container {
+  @extend .cf;
+}
+
 .site_logo {
   @include trailer(.5);
   a {
@@ -24,5 +28,15 @@
 
   a {
     @extend %image-container;
+  }
+}
+
+@include media-query(min-width 380px) {
+  .site_logo {
+    float: left;
+  }
+
+  .site_lang {
+    float: right;
   }
 }
