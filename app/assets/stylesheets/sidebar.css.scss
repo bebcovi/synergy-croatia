@@ -51,46 +51,18 @@ aside {
 .social {
 
   .icon {
-    $size: 1.5 * $base-spacing-unit;
-    @include size($size);
-    display: inline-block;
-    text-align: center;
-    line-height: $size;
-    border: 1px solid;
-
-    i { font-size: 20px; }
+    @include sassy-button-structure($padding: $quarter-spacing-unit $half-spacing-unit);
   }
 
   @mixin social-icon($which, $color) {
     .#{$which} {
-      @include color-link(white);
-      border-radius: 2px;
-      border-color: shade($color, 40%);
-      background-color: $color;
-    }
-  }
-
-  @mixin social-icon--lap-and-up($which, $color) {
-    .#{$which} {
-      @include color-link(white);
-      border-color: rgba($color, .9);
-      background-color: rgba($color, .65);
-      @include on-interact {
-        border-color: shade($color, 40%);
-        background-color: $color;
-      }
+      @include sassy-button-gradient($base-color: $color);
     }
   }
 
   @include social-icon(facebook, $facebook-color);
   @include social-icon(twitter, $twitter-color);
   @include social-icon(feed, $feed-color);
-
-  @include media-query(lap-and-up) {
-    @include social-icon--lap-and-up(facebook, $facebook-color);
-    @include social-icon--lap-and-up(twitter, $twitter-color);
-    @include social-icon--lap-and-up(feed, $feed-color);
-  }
 }
 
 .icon-syncro {
