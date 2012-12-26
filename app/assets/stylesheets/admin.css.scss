@@ -3,6 +3,17 @@ body.admin {
   dt.hr:after { content: ": " image-url("lang/Croatia_small.png"); }
   dt.en:after { content: ": " image-url("lang/United-Kindom_small.png"); }
 
+  @include media-query(desk) {
+    .main_content {
+      float: none;
+      width: auto;
+    }
+  }
+
+}
+
+.logged_in {
+  clear: both;
 }
 
 .fade_out {
@@ -23,4 +34,10 @@ body.admin {
 
 #project_category_id {
   display: block;
+
+  @include media-query(lap-and-up) {
+    &, ~ p {
+      display: inline-block;
+    }
+  }
 }

@@ -31,9 +31,7 @@
   &:after { content: ""; }
 }
 
-$width: 801px;
-
-@include media-query(max-width ($width - 1)) {
+@include media-query(max-width ($navigation-break - 1)) {
   .site_navigation {
     ol {
       @include transition(.2s);
@@ -59,7 +57,7 @@ $width: 801px;
   }
 }
 
-@include media-query(min-width $width) {
+@include media-query(min-width $navigation-break) {
   .site_navigation  {
     @include trailer;
     text-align: center;
