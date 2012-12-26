@@ -27,6 +27,7 @@ aside {
     float: right;
     width: 100/3 * 1%;
     padding-left: $gutter-width;
+    color: rgba(black, .7);
 
     section {
       @include padding-trailer(1, 1px solid rgba(black, .25));
