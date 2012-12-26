@@ -2,6 +2,7 @@ body.testimonials {
 
   .pagination {
     @include trailer;
+    margin-top: 0;
 
     * { display: none; }
 
