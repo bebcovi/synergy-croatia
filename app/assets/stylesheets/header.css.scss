@@ -37,6 +37,7 @@
   }
 
   .site_lang {
+    @include leader(.5);
     float: right;
   }
 }
