@@ -24,6 +24,8 @@ $sidebar-border: 1px solid tint($link-color, 75%);
     @include padding-trailer(.5);
 
     i {
+      position: relative;
+      top: 2px;
       display: inline-block;
       margin-right: $quarter-spacing-unit;
       color: rgba($link-color, .5);
