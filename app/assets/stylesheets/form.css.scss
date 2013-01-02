@@ -38,8 +38,8 @@ input[type="number"] {
 label {
   cursor: pointer;
   &:after { content: ": "; }
-  &[for$=_hr]:after { content: ": " image-url("lang/Croatia_small.png"); }
-  &[for$=_en]:after { content: ": " image-url("lang/United-Kindom_small.png"); }
+  &[for$=_hr]:after { content: ": " image-url("lang/HR_small.png"); }
+  &[for$=_en]:after { content: ": " image-url("lang/GB_small.png"); }
 }
 
 select,

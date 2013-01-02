@@ -30,8 +30,9 @@
   @include trailer(.5);
 
   li {
+    line-height: 0;
     float: left;
-    margin-right: $half-spacing-unit;
+    margin-right: $quarter-spacing-unit;
   }
 
   a {
@@ -39,13 +40,19 @@
   }
 }
 
-@media (min-width: 380px) {
+@media (min-width: 260px) {
   .site_logo {
     float: left;
   }
 
   .site_lang {
-    @include leader(.5);
+    @include leader(.25);
     float: right;
+    margin-bottom: 0;
+
+    li {
+      float: none;
+      margin-right: 0;
+    }
   }
 }

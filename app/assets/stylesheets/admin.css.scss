@@ -1,7 +1,7 @@
 body.admin {
 
-  dt.hr:after { content: ": " image-url("lang/Croatia_small.png"); }
-  dt.en:after { content: ": " image-url("lang/United-Kindom_small.png"); }
+  dt.hr:after { content: ": " image-url("lang/HR_small.png"); }
+  dt.en:after { content: ": " image-url("lang/GB_small.png"); }
 
   @include media-query(desk) {
     .main_content {
