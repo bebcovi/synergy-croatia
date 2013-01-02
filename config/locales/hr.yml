@@ -23,13 +23,12 @@ hr:
       rss: "RSS"
 
   pages:
-    index:
-      page_title: "Mjesto za osobno izražavanje"
-    about:
-      page_title: "O nama"
     news:
       navigation_title: "Najave"
-      page_title: "Najave projekata"
+      page_title: "Poligon za učenje i igru"
+      title: "Najave projekata"
+    about:
+      page_title: "O nama"
     evs:
       page_title: "Europska volonterska služba"
       navigation_title: "EVS"

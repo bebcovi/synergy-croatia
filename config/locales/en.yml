@@ -20,12 +20,12 @@ en:
       body: "Follow us"
 
   pages:
-    index:
-      page_title: "A place for self-expression"
+    news:
+      navigation_title: "Upcoming"
+      page_title: "A polygon for learning and playing"
+      title: "Upcoming projects"
     about:
       page_title: "About us"
-    news:
-      page_title: "Upcoming"
     evs:
       page_title: "European Voluntary Service"
       navigation_title: "EVS"

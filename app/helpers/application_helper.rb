@@ -2,7 +2,7 @@
 
 module ApplicationHelper
   def navigation_pages
-    pages = %w[about news evs archive testimonials partners contact]
+    pages = %w[news about evs archive testimonials partners contact]
     pages.collect do |name|
       title = I18n.t!("pages.#{name}.navigation_title") rescue t("pages.#{name}.page_title")
       Struct.new(:title, :route).new(title, send("#{name}_path"))

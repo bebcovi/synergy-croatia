@@ -1,6 +1,6 @@
 SynergyCroatia::Application.routes.draw do
   scope "(:locale)", locale: /en|hr/ do
-    root to: "pages#index"
+    root to: "pages#news"
 
     controller :sessions do
       get "login", to: :new
@@ -9,7 +9,6 @@ SynergyCroatia::Application.routes.draw do
     end
 
     controller :pages do
-      get "index"
       get "about"
       get "news"
       get "evs"
