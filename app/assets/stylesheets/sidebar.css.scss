@@ -52,6 +52,7 @@ aside {
 
   .icon {
     @include sassy-button-structure($padding: $quarter-spacing-unit $half-spacing-unit);
+    margin-right: 3px;
   }
 
   @mixin social-icon($which, $color) {
