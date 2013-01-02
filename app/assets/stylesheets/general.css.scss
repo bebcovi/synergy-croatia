@@ -1,5 +1,7 @@
 html {
+  @include pattern-with-retina("site-bg", 100px 100px, rgba($link-color, .1));
   overflow-y: scroll;
+  text-shadow: rgba(white, .5) 0 1px;
 }
 
 .container {
@@ -15,10 +17,19 @@ html {
 body {
   font-family: $base-font-family;
   color: $text-color;
-  padding: $half-spacing-unit 0;
+}
+
+.site {
+  @extend .cf;
+  @include padding-leader(.5);
+  background: white;
+
+  @media (min-width: $navigation-break) {
+    @include padding-leader;
+  }
 
   @include media-query(desk) {
-    padding: $base-spacing-unit 0;
+    @include padding-trailer;
   }
 }
 
@@ -51,7 +62,11 @@ h3 {
 
 a {
   @include color-link($link-color, $link-hover);
-  @include transition(color .2s, border-color .2s);
+  @include transition(
+    color .2s,
+    text-shadow .2s,
+    border-color .2s
+  );
   text-decoration: none;
   border-bottom: 1px solid nth($colors, 4);
   @include on-interact {

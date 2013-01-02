@@ -1,3 +1,11 @@
+.site_header {
+  @include padding-leader(.5);
+
+  @include media-query(desk) {
+    @include padding-leader;
+  }
+}
+
 .site_header .container {
   @extend .cf;
 }
@@ -31,7 +39,7 @@
   }
 }
 
-@include media-query(min-width 380px) {
+@media (min-width: 380px) {
   .site_logo {
     float: left;
   }

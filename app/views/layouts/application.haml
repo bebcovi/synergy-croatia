@@ -14,11 +14,13 @@
     = render "shared/header"
     = render partial: "shared/navigation", locals: {admin: false}
 
-    .site.container
-      .main_content{role: "main"}
-        = yield
+    .site
+      .container
+        .main_content{role: "main"}
+          = yield
 
-      = render "sidebar"
-      = render "shared/footer"
+        = render "sidebar"
+
+    = render "shared/footer"
 
     = javascript_include_tag "application"

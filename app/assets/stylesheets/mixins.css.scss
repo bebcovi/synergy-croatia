@@ -26,6 +26,20 @@
   @include spacer(bottom, padding, $multiplier, $border);
 }
 
+@mixin retina-display {
+  @media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin pattern-with-retina($image, $size, $fallback) {
+  @include background-size($size);
+  background: $fallback image-url("patterns/#{$image}.png");
+  @include retina-display {
+    background-image: image-url("patterns/#{$image}_@2X.png");
+  }
+}
+
 @mixin no-bleed {
   margin-left: 0;
   margin-right: 0;

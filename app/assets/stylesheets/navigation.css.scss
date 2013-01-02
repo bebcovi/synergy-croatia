@@ -1,19 +1,31 @@
 .site_navigation {
-  @include trailer(.5);
+  @include pattern-with-retina("navigation-bg", 588px 375px, rgba($link-color, .2));
+  $border: 1px solid rgba($link-color, .25);
+  border-top: $border;
+  border-bottom: $border;
 
   ol {
+    @extend %bleed;
     @extend .unstyled_list;
     @extend .cf;
+    padding: 0;
   }
 
   a {
+    @include padding-leader(.5, 1px solid rgba($link-color, .25));
+    @include padding-trailer(.5);
     display: block;
-    padding: $half-spacing-unit $quarter-spacing-unit;
+    font-weight: $base-bold;
+    padding-left: $site-padding;
+    padding-right: $site-padding;
+    border-bottom: none;
+    &:hover {
+      background: none;
+    }
   }
 
   .active a {
     @include color-link($link-hover);
-    font-weight: $base-bold;
   }
 }
 
@@ -24,17 +36,21 @@
 
 .expander {
   @extend %unselectable;
-  padding: 0 6px;
-  color: white;
+  line-height: 1.5 * $base-spacing-unit;
   color: $link-color;
-  border: 1px solid $link-color;
-  border-radius: 3px;
-  background: $link-color;
-  background: rgba($link-color, .25);
   &:after { content: ""; }
+
+  i {
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  .current_page {
+    font-weight: $base-bold;
+  }
 }
 
-@include media-query(max-width ($navigation-break - 1)) {
+@media (max-width: $navigation-break - 1) {
   .site_navigation {
     ol {
       @include transition(.2s);
@@ -60,40 +76,34 @@
   }
 }
 
-@include media-query(min-width $navigation-break) {
+@media (min-width: $navigation-break) {
   .site_navigation  {
-    @include trailer;
-    text-align: center;
+    $height: 1.5 * $base-spacing-unit;
+    height: $height;
 
     ol {
-      width: 100%;
+      @include no-bleed;
+      margin-left: - $base-spacing-unit;
     }
 
     li {
-      width: 100/7 * 1%;
       float: left;
     }
 
-    $height: 1.5 * $base-spacing-unit;
-    $padding: $quarter-spacing-unit - 1px;
     a {
-      margin-right: 1px;
-      padding: 0;
+      @include color-link(rgba($link-color, .75), $link-hover);
       height: $height;
+      padding: 0 $base-spacing-unit;
       line-height: $height - 5px;
-      border-top: 1px solid nth($colors, 4);
-      border-bottom: 1px solid nth($colors, 4);
+      border: none;
       @include on-interact {
-        border-top-color: $link-hover;
-        border-bottom-color: $link-hover;
-        background: rgba($link-hover, .025);
+        text-shadow: rgba(white, .75) 0 1px;
+        background: none;
       }
     }
 
     .active a {
-      border-color: $link-hover;
-      border-top-width: 1px;
-      border-bottom-width: 2px;
+      text-shadow: rgba(white, .75) 0 1px;
     }
   }
 }

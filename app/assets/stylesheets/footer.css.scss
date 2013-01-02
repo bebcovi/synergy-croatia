@@ -1,6 +1,10 @@
+.site_footer {
+  @include padding-leader(.5, 1px solid rgba($link-color, .25));
+  @include padding-trailer(.5);
+}
+
 .copyright {
   @extend .milli;
-  @include trailer(.5);
-  clear: both;
-  color: rgba(black, .35);
+  margin-bottom: 0;
+  color: rgba($link-color, .75);
 }

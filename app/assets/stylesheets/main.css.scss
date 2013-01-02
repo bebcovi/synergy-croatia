@@ -1,5 +1,6 @@
 .main_content {
   overflow: hidden;
+  text-shadow: none;
 
   article {
     @include trailer;
@@ -12,7 +13,7 @@
     }
   }
 
-  @include media-query(min-width $navigation-break) {
+  @media (min-width: $navigation-break) {
     > p,
     > div {
       &:first-child {
@@ -24,5 +25,6 @@
   @include media-query(desk) {
     float: left;
     width: 100/3 * 2%;
+    padding-right: $gutter-width;
   }
 }
