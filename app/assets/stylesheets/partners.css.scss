@@ -5,11 +5,10 @@
     @include trailer(1.5);
   }
 
-  .img {
-    @include trailer(.5);
-
-    a {
-      display: inline-block;
+  a {
+    display: inline-block;
+    &:hover {
+      background: none;
     }
   }
 

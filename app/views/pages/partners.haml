@@ -8,10 +8,6 @@
 
   %ul.partner_list
     = list_of logos do |logo|
-      %p.img
-        %a{href: logo.url, target: "_blank"}
-          = image_tag(logo.src, alt: logo.title)
-
-      %p.name
-        %a{href: logo.url, target: "_blank"}
-          = logo.title
+      %a{href: logo.url, target: "_blank"}
+        = image_tag(logo.src, alt: logo.title)
+        %div= logo.title
