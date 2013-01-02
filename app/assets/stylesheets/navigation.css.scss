@@ -82,16 +82,18 @@
       height: $height;
       line-height: $height - 5px;
       border-top: 1px solid nth($colors, 4);
-      border-bottom: none;
+      border-bottom: 1px solid nth($colors, 4);
       @include on-interact {
         border-top-color: $link-hover;
-        background: none;
+        border-bottom-color: $link-hover;
+        background: rgba($link-hover, .025);
       }
     }
 
     .active a {
       border-color: $link-hover;
-      border-top-width: 2px;
+      border-top-width: 1px;
+      border-bottom-width: 2px;
     }
   }
 }
