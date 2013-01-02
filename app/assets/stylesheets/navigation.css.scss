@@ -1,7 +1,10 @@
 .site_navigation {
   @include trailer(.5);
 
-  ol { @extend .unstyled_list; }
+  ol {
+    @extend .unstyled_list;
+    @extend .cf;
+  }
 
   a {
     display: block;
@@ -63,12 +66,12 @@
     text-align: center;
 
     ol {
-      display: table;
       width: 100%;
     }
 
     li {
-      display: table-cell;
+      width: 100/7 * 1%;
+      float: left;
     }
 
     $height: 1.5 * $base-spacing-unit;

@@ -28,6 +28,7 @@ hr:
     about:
       page_title: "O nama"
     news:
+      navigation_title: "Najave"
       page_title: "Najave projekata"
     evs:
       page_title: "Europska volonterska služba"
@@ -35,6 +36,7 @@ hr:
     archive:
       page_title: "Postignuća"
     testimonials:
+      navigation_title: "Iskustva"
       page_title: "Iskustva polaznika"
     partners:
       page_title: "Partneri"
