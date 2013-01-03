@@ -13,6 +13,7 @@ $milli-size:  12px;
 
 // Sassy Buttons
 
-$sb-padding: ($base-line-height/2 - 1px) 20px;
-$sb-gradient-style: "simple";
-$sb-text-style: "raised";
+$sb-border-radius:  3px;
+$sb-padding:        ($base-line-height/2 - 1px) 20px;
+$sb-gradient-style: "matte";
+$sb-text-style:     "none";

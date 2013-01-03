@@ -55,9 +55,9 @@ input[type="file"] {
 }
 
 .btn {
-  $text-color: lighten(black, 20%);
+  $text-color: lighten(black, 30%);
   @include sassy-button-structure;
-  @include sassy-button-gradient($base-color: darken(white, 5%), $text-color: $text-color);
+  @include sassy-button-gradient($base-color: darken(white, 10%), $text-color: $text-color);
   @include on-interact {
     color: $text-color;
   }

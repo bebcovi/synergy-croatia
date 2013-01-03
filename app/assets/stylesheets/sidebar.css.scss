@@ -59,8 +59,9 @@ $sidebar-border: 1px solid tint($link-color, 65%);
 .social {
 
   .icon {
-    @include sassy-button-structure($padding: $quarter-spacing-unit $half-spacing-unit);
+    @include sassy-button-structure($padding: 3px 10px);
     margin-right: 3px;
+    text-shadow: none;
   }
 
   @mixin social-icon($which, $color) {
