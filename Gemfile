@@ -7,7 +7,7 @@ gem "pg"
 group :assets do
   gem "sass-rails"
   gem "bourbon"
-  gem "sassy-buttons-bourbon", path: "../Sassy-Buttons-bourbon"
+  gem "sassy-buttons-bourbon", github: "silvenon/Sassy-Buttons-bourbon"
   gem "jquery-rails"
   gem "coffee-rails"
   gem "uglifier"

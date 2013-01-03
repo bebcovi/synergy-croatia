@@ -5,8 +5,9 @@ GIT
     letter_opener (0.0.2)
       launchy
 
-PATH
-  remote: ../Sassy-Buttons-bourbon
+GIT
+  remote: git://github.com/silvenon/Sassy-Buttons-bourbon.git
+  revision: 979c64d4c417899380e238bfafea0f3079ffae1f
   specs:
     sassy-buttons-bourbon (0.1.4)
       bourbon (>= 3)
