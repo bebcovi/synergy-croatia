@@ -1,4 +1,4 @@
-$sidebar-border: 1px solid tint($link-color, 75%);
+$sidebar-border: 1px solid tint($link-color, 65%);
 .site_sidebar {
   @extend %bleed;
   @include padding-leader(.5, $sidebar-border);
@@ -34,19 +34,15 @@ $sidebar-border: 1px solid tint($link-color, 75%);
 
   @include media-query(desk) {
     @include no-bleed;
-    @include leader(-1);
-    @include padding-leader;
     @include padding-trailer(1, $sidebar-border);
     @include font-size($base-font-size - 2px);
-    margin-bottom: - $base-spacing-unit - 1px;
     float: right;
     width: 100/3 * 1%;
     padding-left: $gutter-width;
     padding-right: $gutter-width;
     color: rgba(black, .6);
-    border-top: none;
-    border-left: $sidebar-border;
-    border-right: $sidebar-border;
+    border: $sidebar-border;
+    border-radius: 2px;
 
     section {
       @include padding-trailer(1, 1px solid rgba($link-color, .1));
