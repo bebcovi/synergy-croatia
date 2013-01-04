@@ -61,31 +61,41 @@ $sidebar-border: 1px solid tint($link-color, 65%);
       }
     }
   }
-}
 
-.social {
+  .social {
 
-  .icon {
-    @include sassy-button-structure($padding: 3px 10px);
-    margin-right: 3px;
-    text-shadow: none;
+    .icon {
+      @include sassy-button-structure($padding: 3px 10px);
+      margin-right: 3px;
+      text-shadow: none;
+    }
+
+    @mixin social-icon($which, $color) {
+      .#{$which} {
+        @include sassy-button-gradient($base-color: $color);
+      }
+    }
+
+    @include social-icon(facebook, $facebook-color);
+    @include social-icon(twitter, $twitter-color);
+    @include social-icon(feed, $feed-color);
   }
 
-  @mixin social-icon($which, $color) {
-    .#{$which} {
-      @include sassy-button-gradient($base-color: $color);
+  .syncro {
+    h3 a:hover {
+      background: none;
+    }
+
+    a {
+      @include color-link($turquoiseDark, $link-hover);
     }
   }
 
-  @include social-icon(facebook, $facebook-color);
-  @include social-icon(twitter, $twitter-color);
-  @include social-icon(feed, $feed-color);
-}
-
-.icon-syncro {
-  position: relative;
-  top: 1px;
-  &:before {
-    content: image-url("icon-syncro.png");
+  .icon-syncro {
+    position: relative;
+    top: 3px;
+    &:before {
+      content: image-url("icon-syncro.png");
+    }
   }
 }
