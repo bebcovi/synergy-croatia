@@ -68,11 +68,11 @@ a {
     border-color .2s
   );
   text-decoration: none;
-  border-bottom: 1px solid nth($colors, 4);
+  border-bottom: 1px solid tint($link-color, 75%);
   @include on-interact {
     text-decoration: none;
-    border-bottom-color: nth($colors, 5);
-    background: rgba(nth($colors, 2), .1);
+    border-bottom-color: tint($link-hover, 50%);
+    background: rgba($link-hover, .1);
   }
 }
 
