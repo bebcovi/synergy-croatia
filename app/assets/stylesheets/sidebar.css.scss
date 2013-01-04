@@ -4,6 +4,7 @@ $sidebar-border: 1px solid tint($link-color, 65%);
   @include padding-leader(.5, $sidebar-border);
   @include padding-trailer(.5);
   @include pattern-with-retina("sidebar-bg", 200px 200px, rgba($link-color, .05));
+  color: shade($link-color, 50%);
 
   section {
     @include trailer;
@@ -40,7 +41,6 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     width: 100/3 * 1%;
     padding-left: $gutter-width;
     padding-right: $gutter-width;
-    color: rgba(black, .6);
     border: $sidebar-border;
     border-radius: 2px;
 
