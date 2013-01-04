@@ -10,14 +10,16 @@ en:
       volunteer: "Volunteer"
     newsletter:
       title: "Newsletter"
-      body: "Do you want to receive news about international events and educational possibilities for young people and adults? Subscribe to [our newsletter](http://eepurl.com/mDSGP)."
+      body: "Subscribe to [our newsletter](http://eepurl.com/mDSGP) and receive news about projects and events at Syncro!"
       submit: "Subscribe"
     syncro:
       title: "Syncro Training Center"
       body: "Syncro Synergy Croatia is holding professional programs of personal and professional excelence and coaching. More on"
     social:
-      title: "Social"
-      body: "Follow us"
+      title: "Follow us"
+      facebook: "Facebook"
+      twitter: "Twitter"
+      rss: "RSS"
 
   pages:
     news:

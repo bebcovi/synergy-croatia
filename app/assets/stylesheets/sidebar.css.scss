@@ -4,13 +4,15 @@ $sidebar-border: 1px solid tint($link-color, 65%);
   @include padding-leader(.5, $sidebar-border);
   @include padding-trailer(.5);
   @include pattern-with-retina("sidebar-bg", 200px 200px, rgba($link-color, .05));
+  @include font-size($base-font-size - 2px);
   color: shade($link-color, 50%);
 
   section {
-    @include trailer;
-    @include padding-trailer(1, 1px solid rgba($link-color, .1));
+    @extend %bleed;
+    @include trailer(.5);
+    @include padding-trailer(.5, 1px solid rgba($link-color, .1));
     &:last-child {
-      @include padding-trailer;
+      @include padding-trailer(.5);
       margin-bottom: 0;
       border-bottom: none;
     }
@@ -33,20 +35,25 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     }
   }
 
+  a {
+    border-bottom: none;
+  }
+
   @include media-query(desk) {
+    $padding: $gutter-width;
     @include no-bleed;
     @include padding-trailer(1, $sidebar-border);
-    @include font-size($base-font-size - 2px);
     float: right;
     width: 100/3 * 1%;
-    padding-left: $gutter-width;
-    padding-right: $gutter-width;
+    padding-left: $padding;
+    padding-right: $padding;
     border: $sidebar-border;
     border-radius: 2px;
 
     section {
-      @include padding-trailer(1, 1px solid rgba($link-color, .1));
-      @include trailer;
+      @include padding-trailer(.5, 1px solid rgba($link-color, .1));
+      @include trailer(.5);
+      @include bleed($padding);
       &:last-child {
         margin-bottom: 0;
         padding-bottom: 0;
