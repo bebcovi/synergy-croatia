@@ -1,9 +1,5 @@
 .site_header {
   @include padding-leader(.5);
-
-  @include media-query(desk) {
-    @include padding-leader;
-  }
 }
 
 .site_header .container {
@@ -12,9 +8,10 @@
 
 .site_logo {
   @include trailer(.5);
-  a {
-    @extend %image-container;
-  }
+  line-height: 0;
+
+  a { @extend %image-container; }
+
   img {
     max-height: 2 * $base-spacing-unit;
   }
@@ -62,7 +59,7 @@
   }
 
   .site_lang {
-    @include leader(.25);
+    @include leader(.1);
     float: right;
     margin-bottom: 0;
 
