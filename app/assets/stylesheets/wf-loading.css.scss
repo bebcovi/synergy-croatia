@@ -1,20 +1,5 @@
 .wf-loading {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  a,
-  ol,
-  ul,
-  dl,
-  label,
-  input,
-  select,
-  textarea,
-  button {
+  * {
     color: transparent !important;
     text-shadow: none !important;
   }

@@ -21,6 +21,10 @@ en:
       twitter: "Twitter"
       rss: "RSS"
 
+  shared:
+    header:
+      quote: "The real voyage of discovery consists not in <br>seeking new lands but seeing with new eyes."
+
   pages:
     news:
       navigation_title: "Upcoming"

@@ -21,6 +21,10 @@ hr:
       twitter: "Twitter"
       rss: "RSS"
 
+  shared:
+    header:
+      quote: "Pravo putovanje otkrivanja ne sastoji se u traženju <br>novih prostranstva nego u promatranju novim očima."
+
   pages:
     news:
       navigation_title: "Najave"

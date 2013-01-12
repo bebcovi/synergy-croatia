@@ -20,6 +20,14 @@
   }
 }
 
+.site_quote {
+  @include trailer(.5);
+  font-style: italic;
+  color: tint($orange, 30%);
+
+  br { display: none; }
+}
+
 .logged_in {
   @include trailer(.5);
 }
@@ -40,9 +48,17 @@
   }
 }
 
-@media (min-width: 260px) {
-  .site_logo {
+@media (min-width: 650px) {
+  .site_logo,
+  .site_quote {
     float: left;
+  }
+
+  .site_quote {
+    margin-left:  $base-spacing-unit;
+    margin-right: $base-spacing-unit;
+
+    br { display: inline; }
   }
 
   .site_lang {
