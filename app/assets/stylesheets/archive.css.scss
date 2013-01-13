@@ -1,2 +1,14 @@
 body.archive {
+
+  .main_content {
+    h2 {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .project_short {
+    @include padding-leader(.5, 1px solid rgba($turquoiseDark, .5));
+  }
+
 }
