@@ -106,10 +106,4 @@ input[type="file"] {
     }
     font-family: icons;
   }
-
-  .delete_item {
-    &:active {
-      @include sassy-button-gradient($base-color: $red);
-    }
-  }
 }
