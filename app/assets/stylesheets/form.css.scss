@@ -81,7 +81,7 @@ input[type="file"] {
 }
 
 .form_actions {
-  @include leader;
+  @include leader(.5);
   @include trailer;
 
   * {
