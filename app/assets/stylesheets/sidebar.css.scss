@@ -3,6 +3,7 @@ $sidebar-border: 1px solid tint($link-color, 65%);
   @extend %bleed;
   @include padding-leader(.5, $sidebar-border);
   @include padding-trailer(.5);
+  @include trailer(.5, $sidebar-border);
   @include pattern-with-retina("sidebar-bg", 200px 200px, rgba($link-color, .05));
   @include font-size($base-font-size - 2px);
   color: shade($link-color, 50%);
@@ -47,6 +48,7 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     width: 100/3 * 1%;
     padding-left: $padding;
     padding-right: $padding;
+    margin-bottom: 0;
     border: $sidebar-border;
     border-radius: 2px;
 
