@@ -1,14 +1,12 @@
 @include font-face(icons, "icons/icons", normal, $asset-pipeline: true);
 
-[class^="icon-"],
-[class*=" icon-"] {
-  -webkit-font-smoothing: antialiased;
+[class*="icon-"] {
+  font-family: icons;
   speak: none;
-  font: {
-    family: icons;
-    weight: normal;
-    style: normal;
-  }
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon-heart:before {
@@ -41,15 +39,6 @@
 .icon-plus:before {
   content: "\e009";
 }
-.icon-pencil:before {
-  content: "\e00a";
-}
-.icon-remove:before {
-  content: "\e00b";
-}
-.icon-comments:before {
-  content: "\e00c";
-}
 .icon-chevron-up:before {
   content: "\e00d";
 }
@@ -68,9 +57,27 @@
 .icon-file-word:before {
   content: "\e012";
 }
-.icon-tag:before {
-  content: "\e013";
+.icon-pencil:before {
+  content: "\e00a";
 }
-.icon-add-comment:before {
-  content: "\e014";
+.icon-image:before {
+  content: "\e015";
+}
+.icon-remove:before {
+  content: "\e017";
+}
+.icon-menu:before {
+  content: "\e00b";
+}
+.icon-eye:before {
+  content: "\e018";
+}
+.icon-eye-blocked:before {
+  content: "\e019";
+}
+.icon-exit:before {
+  content: "\e01a";
+}
+.icon-bubble-plus:before {
+  content: "\e016";
 }

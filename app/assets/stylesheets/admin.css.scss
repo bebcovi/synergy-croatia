@@ -16,6 +16,12 @@ body.admin {
   clear: both;
 }
 
+.add_item {
+  i {
+    margin-right: $half-spacing-unit / 2;
+  }
+}
+
 .fade_out {
   position: relative;
   max-height: 22 * $base-spacing-unit;

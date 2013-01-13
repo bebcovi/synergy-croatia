@@ -66,7 +66,7 @@ module ApplicationHelper
   end
 
   def testimonial_button(text, path, options = {})
-    link_to text.prepend_icon("add-comment"), path, {class: "add_testimonial"}.merge(options)
+    link_to text.prepend_icon("bubble-plus"), path, {class: "add_testimonial"}.merge(options)
   end
 
   def pdf_file(text, path, options = {})
