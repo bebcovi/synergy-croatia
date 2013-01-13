@@ -61,10 +61,6 @@
   }
 
   #nav_expander:checked {
-    ~ label i:before {
-      content: "\e00f";
-    }
-
     ~ ol {
       height: auto;
       opacity: 1;

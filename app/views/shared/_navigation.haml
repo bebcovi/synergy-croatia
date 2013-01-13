@@ -5,7 +5,7 @@
     - id = "nav_expander"
     %input{type: "checkbox", id: id}
     %label{class: "expander", for: id}
-      = icon("chevron-right")
+      = icon("menu")
       - pages.each do |page|
         - if current_page?(page)
           %span.current_page= page.title
