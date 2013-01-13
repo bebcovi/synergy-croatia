@@ -5,6 +5,7 @@ html {
 }
 
 .container {
+  @extend .cf;
   @if $fluid {
     max-width: $site-width;
   }
