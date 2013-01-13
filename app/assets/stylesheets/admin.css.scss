@@ -14,7 +14,7 @@ body.admin {
 
 .logged_in {
   @include font-size($base-font-size - 2px);
-  $width: 460px;
+  $width: 400px;
   margin: 0 auto;
   position: absolute;
   top: 0;
