@@ -13,8 +13,8 @@ module ApplicationHelper
     request.path == page.route
   end
 
-  def sub_navigation(&block)
-    content_tag :ol, class: "sub_navigation", &block
+  def filter(&block)
+    content_tag :ol, class: "filter", &block
   end
 
   def markdown(text)

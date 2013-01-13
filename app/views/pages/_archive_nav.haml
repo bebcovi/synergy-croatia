@@ -1,3 +1,3 @@
-= sub_navigation do
+= filter do
   = list_of [:all, :projects, :partnerships] do |category|
-    = link_to t(".#{category}").prepend_icon("tag"), "##{category}"
+    = link_to t(".#{category}"), "##{category}"

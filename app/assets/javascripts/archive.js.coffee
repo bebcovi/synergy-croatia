@@ -7,7 +7,7 @@ do ($ = jQuery) ->
 
       self.configure()
 
-      self.config.$subNav.on "click", "a", (event) ->
+      self.config.$filter.on "click", "a", (event) ->
         $this = $(@)
 
         event.preventDefault()
@@ -15,7 +15,7 @@ do ($ = jQuery) ->
         if $this.hasClass("active")
           $this.toggleClass("active")
         else
-          self.config.$subNavLinks.removeClass("active")
+          self.config.$filterLinks.removeClass("active")
           $this.addClass("active")
 
         switch $this.attr("href")
@@ -34,8 +34,8 @@ do ($ = jQuery) ->
       $main = $(".main_content")
 
       self.config =
-        $subNav:        $(".sub_navigation")
-        $subNavLinks:   $(".sub_navigation").find("a")
+        $filter:        $(".filter")
+        $filterLinks:   $(".filter").find("a")
 
         $all:           $main.find("article")
         $projects:      $main.find(".project")
