@@ -11,5 +11,5 @@
     - if logged_in?
       .logged_in
         Prijavljeni ste kao administrator.
-        | #{link_to "Odjava", logout_path, method: :delete}
-        | #{link_to "Admin", admin_root_path}
+        #{link_to "Admin", admin_root_path}
+        | #{link_to "Odjava".prepend_icon("exit"), logout_path, method: :delete}

@@ -13,7 +13,32 @@ body.admin {
 }
 
 .logged_in {
+  @include font-size($base-font-size - 2px);
+  $width: 460px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: $width;
+  margin-left: - $width/2;
+  padding: $half-spacing-unit;
+  text-align: center;
+  color: white;
+  text-shadow: none;
+  background: rgba(black, .75);
+  border: {
+    bottom-left-radius: 2px;
+    bottom-right-radius: 2px;
+  }
   clear: both;
+
+  a {
+    @include color-link($link-color, tint($link-color, 50%));
+    border-bottom: 0;
+    @include on-interact {
+      background: none;
+    }
+  }
 }
 
 .add_item {
