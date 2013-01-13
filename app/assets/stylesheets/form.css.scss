@@ -11,7 +11,7 @@ select {
 
 #{$all-text-inputs},
 textarea {
-  @extend %text-field;
+  @extend %text-input;
 }
 
 #{$all-text-inputs} {
