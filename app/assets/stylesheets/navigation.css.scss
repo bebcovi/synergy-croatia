@@ -57,13 +57,11 @@
       height: 0;
       opacity: 0;
       overflow: hidden;
-    }
-  }
 
-  #nav_expander:checked {
-    ~ ol {
-      height: auto;
-      opacity: 1;
+      &.expanded {
+        height: auto;
+        opacity: 1;
+      }
     }
   }
 
