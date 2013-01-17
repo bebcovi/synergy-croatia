@@ -11,10 +11,6 @@
   line-height: 0;
 
   a { @extend %image-container; }
-
-  img {
-    max-height: 2 * $base-spacing-unit;
-  }
 }
 
 .site_quote {
