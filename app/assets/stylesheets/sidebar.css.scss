@@ -4,7 +4,7 @@ $sidebar-border: 1px solid tint($link-color, 65%);
   @include padding-leader(.5, $sidebar-border);
   @include padding-trailer(.5);
   @include trailer(.5, $sidebar-border);
-  @include pattern-with-retina("sidebar-bg", 200px 200px, rgba($link-color, .05));
+  @include pattern-with-retina("sidebar-bg", 200px 200px, $sidebar-bg-color);
   @include font-size($base-font-size - 2px);
   color: shade($link-color, 50%);
 

@@ -1,5 +1,5 @@
 html {
-  @include pattern-with-retina("site-bg", 100px 100px, rgba($link-color, .1));
+  @include pattern-with-retina("site-bg", 100px 100px, $site-bg-color);
   overflow-y: scroll;
   text-shadow: rgba(white, .5) 0 1px;
 }

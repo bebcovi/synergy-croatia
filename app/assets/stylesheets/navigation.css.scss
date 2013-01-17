@@ -1,5 +1,5 @@
 .site_navigation {
-  @include pattern-with-retina("navigation-bg", 588px 375px, rgba($link-color, .2));
+  @include pattern-with-retina("navigation-bg", 588px 375px, $nav-bg-color);
   $border: 1px solid rgba($link-color, .25);
   border-top: $border;
   border-bottom: $border;
