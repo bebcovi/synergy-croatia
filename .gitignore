@@ -14,6 +14,9 @@
 /log/*.log
 tmp
 
+# Ignore all big images
+original
+
 *.DS_Store
 public/assets
 public/system
