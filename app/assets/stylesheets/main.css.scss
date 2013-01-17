@@ -6,6 +6,20 @@
     @include trailer;
   }
 
+  h1 {
+    @each $page in $pages {
+      body.#{$page} & {
+        @include prefixer(filter, sepia(50%), webkit moz ms spec);
+        padding: $base-spacing-unit $half-spacing-unit;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        border: 2px solid rgba(black, .5);
+        border-radius: 2px;
+        background: image-url("pages/#{$page}.jpg") 50% 50%;
+      }
+    }
+  }
+
   > p,
   > div {
     &:first-child {
