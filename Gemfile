@@ -32,7 +32,7 @@ gem "nokogiri"
 
 group :development do
   gem "pry-rails"
-  gem "letter_opener", github: "davidcornu/letter_opener"
+  gem "letter_opener"
 end
 
 group :development, :test do
@@ -45,4 +45,8 @@ group :test do
   gem "vcr"
   gem "fakeweb"
   gem "faraday"
+end
+
+group :production do
+  gem "exception_notification"
 end
