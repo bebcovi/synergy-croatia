@@ -1,5 +1,5 @@
 class VolunteeringMailer < ActionMailer::Base
-  default from: "janko.marohnic@gmail.com", to: "janko.marohnic@gmail.com"
+  default from: "Synergy Croatia #{ENV["SENDGRID_USERNAME"]}"
 
   def volunteer(attributes)
     @volunteer = attributes

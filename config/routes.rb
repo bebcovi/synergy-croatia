@@ -1,6 +1,4 @@
 SynergyCroatia::Application.routes.draw do
-  post "receive_email", to: "incoming_emails#forward"
-
   scope "(:locale)", locale: /en|hr/ do
     root to: "pages#news"
 
