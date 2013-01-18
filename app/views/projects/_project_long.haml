@@ -10,10 +10,12 @@
 
     - if admin?
       %h1.title= project_presenter.title
+
+    - unless admin?
       %p.location= project_presenter.location.prepend_icon("location")
 
-    = project_presenter.description
+      = project_presenter.description
 
-    %ol.attachments
-      = content_tag :li, project_presenter.infoletter("Infoletter") if project_presenter.infoletter?
-      = content_tag :li, project_presenter.application_form("Prijavnica") if project_presenter.application_form?
+      %ol.attachments
+        = content_tag :li, project_presenter.infoletter("Infoletter") if project_presenter.infoletter?
+        = content_tag :li, project_presenter.application_form("Prijavnica") if project_presenter.application_form?
