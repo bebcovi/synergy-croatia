@@ -8,6 +8,9 @@ SynergyCroatia::Application.routes.draw do
       delete "logout", to: :destroy
     end
 
+    resources :posts
+    resources :projects
+
     controller :pages do
       get "about"
       get "news"
@@ -17,15 +20,16 @@ SynergyCroatia::Application.routes.draw do
       get "partners"
       get "contact"
     end
-    scope only: :show do
-      resources :projects
-      resources :posts
-    end
 
     controller :support do
       get "donate"
       get "volunteer"
       post "volunteer", to: :create
+    end
+
+    controller :errors do
+      match "404", to: :not_found
+      match "500", to: :internal_server_error
     end
   end
 
@@ -40,13 +44,6 @@ SynergyCroatia::Application.routes.draw do
       resources :categories
       resources :posts
       resource :announcement
-    end
-  end
-
-  scope "(:locale)", locale: /en|hr/ do
-    controller :errors do
-      match "404", to: :not_found
-      match "500", to: :internal_server_error
     end
   end
 end

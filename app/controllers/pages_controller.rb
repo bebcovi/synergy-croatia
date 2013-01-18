@@ -1,10 +1,4 @@
 class PagesController < ApplicationController
-  def index
-  end
-
-  def about
-  end
-
   def news
     @news = News.all
 
@@ -12,6 +6,9 @@ class PagesController < ApplicationController
       format.html
       format.atom { render layout: false }
     end
+  end
+
+  def about
   end
 
   def evs
@@ -26,5 +23,8 @@ class PagesController < ApplicationController
   end
 
   def partners
+  end
+
+  def contact
   end
 end

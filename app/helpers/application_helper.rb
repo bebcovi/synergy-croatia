@@ -5,12 +5,13 @@ module ApplicationHelper
     pages = %w[news about evs archive testimonials partners contact]
     pages.collect do |name|
       title = I18n.t!("pages.#{name}.navigation_title") rescue t("pages.#{name}.page_title")
-      Struct.new(:title, :route).new(title, send("#{name}_path"))
+      Struct.new(:title, :route).new(title, {controller: "pages", action: name})
     end
   end
 
-  def current_page?(page)
-    request.path == page.route
+  def current_page_title(pages)
+    result = pages.find { |page| current_page?(page.route) }
+    result.try(:title)
   end
 
   def filter(&block)

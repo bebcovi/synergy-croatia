@@ -6,11 +6,9 @@
     %input{type: "checkbox", id: id}
     %label{class: "expander", for: id}
       = icon("menu")
-      - pages.each do |page|
-        - if current_page?(page)
-          %span.current_page= page.title
+      %span.current_page= current_page_title(pages)
 
     %ol
       - pages.each do |page|
-        %li{class: ("active" if current_page?(page))}
+        %li{class: ("active" if current_page?(page.route))}
           = link_to page.title, page.route
