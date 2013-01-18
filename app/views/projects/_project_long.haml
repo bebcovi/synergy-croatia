@@ -15,5 +15,5 @@
     = project_presenter.description
 
     %ol.attachments
-      %li= project_presenter.infoletter("Infoletter")
-      %li= project_presenter.application_form("Prijavnica")
+      = content_tag :li, project_presenter.infoletter("Infoletter") if project_presenter.infoletter?
+      = content_tag :li, project_presenter.application_form("Prijavnica") if project_presenter.application_form?

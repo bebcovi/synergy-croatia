@@ -2,9 +2,8 @@
   - pages = if admin then admin_navigation_pages else navigation_pages end
 
   .container
-    - id = "nav_expander"
-    %input{type: "checkbox", id: id}
-    %label{class: "expander", for: id}
+    %input{type: "checkbox", id: "nav_expander"}
+    %label{class: "expander", for: "nav_expander"}
       = icon("menu")
       %span.current_page= current_page_title(pages)
 
