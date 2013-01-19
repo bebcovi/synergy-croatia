@@ -4,6 +4,12 @@ html {
   text-shadow: rgba(white, .5) 0 1px;
 }
 
+@include selection {
+  color: white;
+  text-shadow: none !important;
+  background: $link-color;
+}
+
 .container {
   @extend .cf;
   @if $fluid {

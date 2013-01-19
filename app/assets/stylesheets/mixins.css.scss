@@ -72,3 +72,15 @@
     color: $color2;
   }
 }
+
+@mixin selection {
+  ::-moz-selection {
+    @content;
+  }
+  ::-webkit-selection {
+    @content;
+  }
+  ::selection {
+    @content;
+  }
+}
