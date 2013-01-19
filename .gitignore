@@ -20,3 +20,4 @@ original
 *.DS_Store
 public/assets
 public/system
+config/settings.yml

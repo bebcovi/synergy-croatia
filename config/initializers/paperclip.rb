@@ -7,7 +7,10 @@ ActiveRecord::Base.send(:extend, Module.new do
     else
       super name, {
         storage: :dropbox,
-        dropbox_credentials: "#{Rails.root}/config/dropbox.yml"
+        dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
+        dropbox_options: {
+          path: ->(style) { "Synergy/#{style}/#{id}_#{send(name).original_filename}" }
+        }
       }.merge(options)
     end
   end

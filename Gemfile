@@ -33,18 +33,19 @@ gem "nokogiri"
 group :development do
   gem "pry-rails"
   gem "letter_opener"
+  gem "faraday_middleware", ">= 0.8"
 end
 
 group :development, :test do
   gem "debugger", :require => "debugger"
   gem "rspec-rails"
+  gem "faraday", ">= 0.8"
 end
 
 group :test do
   gem "factory_girl_rails"
   gem "vcr"
   gem "fakeweb"
-  gem "faraday"
 end
 
 group :production do

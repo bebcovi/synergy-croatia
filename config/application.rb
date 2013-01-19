@@ -9,6 +9,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
+
 module SynergyCroatia
   class Application < Rails::Application
     config.autoload_paths += ["#{Rails.root}/lib"]
@@ -27,5 +29,13 @@ module SynergyCroatia
 
     config.i18n.available_locales = [:en, :hr]
     config.i18n.default_locale = :hr
+  end
+end
+
+unless ENV["MANUAL_ENV"] == "yes"
+  config = YAML.load(File.read(Rails.root.join("config/settings.yml"))) || {}
+  config.merge! config.fetch(Rails.env, {})
+  config.each do |key, value|
+    ENV[key] = value.to_s unless value.is_a?(Hash)
   end
 end

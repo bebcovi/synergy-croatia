@@ -243,7 +243,8 @@ DEPENDENCIES
   exception_notification
   factory_girl_rails
   fakeweb
-  faraday
+  faraday (>= 0.8)
+  faraday_middleware (>= 0.8)
   haml-rails
   i18n-country-translations
   i18n_country_select
