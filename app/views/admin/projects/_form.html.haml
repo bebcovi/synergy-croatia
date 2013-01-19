@@ -21,9 +21,11 @@
     = f.input :age_restriction do
       #{f.number_field(:minimum_age)} – #{f.number_field(:maximum_age)}
     = f.input :infoletter
-    = raw "Trenutno učitano: #{uploaded_file(@project.infoletter, "Infoletter")}" if @project.infoletter?
+    - if @project.infoletter?
+      .uploaded= raw "(Trenutno učitano: #{uploaded_file(@project.infoletter, "Infoletter")})"
     = f.input :application_form
-    = raw "Trenutno učitano: #{uploaded_file(@project.application_form, "Prijavnica")}" if @project.application_form?
+    - if @project.application_form?
+      .uploaded= raw "(Trenutno učitano: #{uploaded_file(@project.application_form, "Prijavnica")})"
     = f.input :deadline
     = f.input :available_space
 

@@ -1,5 +1,11 @@
 form {
   @include trailer;
+
+  .uploaded {
+    @extend .milli;
+    margin-top: - $half-spacing-unit;
+    margin-bottom: $half-spacing-unit;
+  }
 }
 
 input,
