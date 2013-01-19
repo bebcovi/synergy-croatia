@@ -1,3 +1,5 @@
+require "active_support/core_ext/string/strip"
+
 def my_file(filename)
   content_type = CONTENT_TYPES[filename[/\.\w{3,4}$/]]
   Rack::Test::UploadedFile.new("#{Rails.root}/db/seeds/files/#{filename}", content_type)
@@ -8,17 +10,8 @@ CONTENT_TYPES = {
   ".doc" => "application/msword"
 }
 
-Category.destroy_all
-load("#{Rails.root}/db/seeds/categories.rb")
-
-Project.destroy_all
-Dir["#{Rails.root}/db/seeds/projects/*.rb"].each &method(:load)
-
-Post.destroy_all
-load("#{Rails.root}/db/seeds/posts.rb")
-
-Testimonial.destroy_all
-load("#{Rails.root}/db/seeds/testimonials.rb")
-
-Announcement.destroy_all
-load("#{Rails.root}/db/seeds/announcement.rb")
+load Rails.root.join("db/seeds/categories.rb")
+load Rails.root.join("db/seeds/projects.rb")
+load Rails.root.join("db/seeds/posts.rb")
+load Rails.root.join("db/seeds/testimonials.rb")
+load Rails.root.join("db/seeds/announcements.rb")

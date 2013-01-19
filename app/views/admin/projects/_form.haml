@@ -3,7 +3,8 @@
 = simple_form_for @project, url: url, defaults: {locale: :hr} do |f|
 
   .inner
-    = f.input :name
+    = f.input :name_en
+    = f.input :name_hr
     = f.input :category do
       = f.association :category, prompt: "Odaberi…", wrapper: false, label: false
       %p ili stvori #{link_to "novi", new_admin_category_path}.

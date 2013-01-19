@@ -1,8 +1,7 @@
 # encoding: utf-8
 
-category = Category.find_by_name_en("Basic Synergy training")
-category.projects.create!(
-  name: "Unique & United",
+Project.create!(
+  name_hr: "Unique & United",
   country: "CZ",
   city_hr: "Naše Kamenka",
   city_en: "Naše Kamenka",
@@ -16,5 +15,6 @@ category.projects.create!(
   infoletter: nil,
   application_form: nil,
   deadline: "01/07/2011",
-  available_space: nil
+  available_space: nil,
+  category: Category.find_by_name_en("Basic Synergy training"),
 )

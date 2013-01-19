@@ -1,30 +1,29 @@
 # encoding: utf-8
 
-category = Category.find_by_name_en("Practicing Coaching training")
-category.projects.create!(
-  name: nil,
-  description_hr: <<-DESCRIPTION,
-## O čemu se radi
+Project.create!(
+  name_hr: nil,
+  description_hr: <<-DESCRIPTION.strip_heredoc,
+    ## O čemu se radi
 
-Practicing Coaching je trening za one koji rade s pojedincima ili grupama, koji vole raditi na osnaživanju drugih, i usmjereni su poticanju najboljeg u svakoj osobi.
+    Practicing Coaching je trening za one koji rade s pojedincima ili grupama, koji vole raditi na osnaživanju drugih, i usmjereni su poticanju najboljeg u svakoj osobi.
 
-Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik svjesno koristi različite coaching tehnike usklađene sa vlastitim stilom. Vještine na treningu se stječu kroz iskustveno učenje. Treneri su Stella Saratsi and Marco Vlaming.
+    Ovaj sedmo-dnevni treningu u obliku coaching radionica daje priliku da polaznik svjesno koristi različite coaching tehnike usklađene sa vlastitim stilom. Vještine na treningu se stječu kroz iskustveno učenje. Treneri su Stella Saratsi and Marco Vlaming.
 
-## Kada i gdje u Nizozemskoj?
+    ## Kada i gdje u Nizozemskoj?
 
-Trening će se odvijati od 4. do 10.5.2012. u Ommenu.
+    Trening će se odvijati od 4. do 10.5.2012. u Ommenu.
 
-## Tko se može prijaviti?
+    ## Tko se može prijaviti?
 
-Svi koji rade s ljudime i žele otkriti mogućnosti coachinga ili žele unaprijediti kompetencije u coachingu. Mlađi od 18 trebaju kontaktirati Olde Vechte prije upisa.
+    Svi koji rade s ljudime i žele otkriti mogućnosti coachinga ili žele unaprijediti kompetencije u coachingu. Mlađi od 18 trebaju kontaktirati Olde Vechte prije upisa.
 
-## Želim saznati više…
+    ## Želim saznati više…
 
-Za dodatne informacije možete preuzeti priloženi infoletter, a ako imate pitanja, kontakt email je <synergy@synergy-croatia.com>.
+    Za dodatne informacije možete preuzeti priloženi infoletter, a ako imate pitanja, kontakt email je <synergy@synergy-croatia.com>.
 
-## Kako da se prijavim?
+    ## Kako da se prijavim?
 
-Zainteresirani neka ispune priloženu prijavnicu i pošalju ju na gore navedenu adresu s naznakom “za coaching trening“.
+    Zainteresirani neka ispune priloženu prijavnicu i pošalju ju na gore navedenu adresu s naznakom “za coaching trening“.
   DESCRIPTION
   summary_hr: %(Practicing Coaching je trening za one koji rade s pojedincima ili grupama, koji vole raditi na osnaživanju drugih, i usmjereni su poticanju najboljeg u svakoj osobi.),
   country: "NL",
@@ -38,5 +37,6 @@ Zainteresirani neka ispune priloženu prijavnicu i pošalju ju na gore navedenu 
   infoletter: my_file("PCT_Infoletter.doc"),
   application_form: my_file("PCT_Application_form.doc"),
   deadline: "15/04/2012",
-  available_space: nil
+  available_space: nil,
+  category: Category.find_by_name_en("Practicing Coaching training"),
 )

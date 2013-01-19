@@ -5,10 +5,14 @@ hr: &admin
 
       project:
         category: "Tip projekta"
-        name: "Naziv"
-        description: "Opis"
-        summary: "Sažetak"
-        expenses: "Troškovi"
+        name_en: "Naziv"
+        name_hr: "Naziv"
+        description_en: "Opis"
+        description_hr: "Opis"
+        summary_en: "Sažetak"
+        summary_hr: "Sažetak"
+        expenses_en: "Troškovi"
+        expenses_hr: "Troškovi"
         begins_on: "Počinje"
         ends_on: "Završava"
         participating_countries: "Zemlje sudionice"
@@ -21,19 +25,24 @@ hr: &admin
         available_space: "Broj slobodnih mjesta"
 
       category:
-        name: "Naziv"
+        name_en: "Naziv"
+        name_hr: "Naziv"
 
       post:
-        title: "Naslov"
-        body: "Sadržaj"
+        title_en: "Naslov"
+        title_hr: "Naslov"
+        body_en: "Sadržaj"
+        body_hr: "Sadržaj"
 
       testimonial:
-        content: "Sadržaj"
+        content_en: "Sadržaj"
+        content_hr: "Sadržaj"
         author: "Autor"
         expires_on: "Istječe"
 
       announcement:
-        content: "Sadržaj"
+        content_en: "Sadržaj"
+        content_hr: "Sadržaj"
         expires_on: "Istječe"
 
       defaults:

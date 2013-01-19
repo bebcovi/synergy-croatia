@@ -1,5 +1,6 @@
 # encoding: utf-8
 
+Category.destroy_all
 Category.create! [
   {name_en: "Youth Exchange",               name_hr: "Razmjena mladih"},
   {name_en: "Basic Synergy training",       name_hr: "Osnovni Synergy trening"},

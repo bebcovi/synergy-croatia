@@ -19,10 +19,7 @@ class Project < ActiveRecord::Base
   has_attached_file :infoletter
   has_attached_file :application_form
 
-  translates :description
-  translates :summary
-  translates :expenses
-  translates :city
+  translates :name, :description, :summary, :expenses, :city
 
   def duration
     (ends_on - begins_on).to_i + 1

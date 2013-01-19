@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120901191021) do
+ActiveRecord::Schema.define(:version => 20130119132024) do
 
   create_table "announcements", :force => true do |t|
     t.string   "content_hr"
@@ -31,13 +31,11 @@ ActiveRecord::Schema.define(:version => 20120901191021) do
     t.string   "title_en"
     t.text     "body_hr"
     t.text     "body_en"
-    t.date     "expires_on"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "projects", :force => true do |t|
-    t.string   "name"
     t.text     "description_hr"
     t.text     "description_en"
     t.text     "summary_hr"
@@ -63,6 +61,8 @@ ActiveRecord::Schema.define(:version => 20120901191021) do
     t.integer  "category_id"
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.string   "name_en"
+    t.string   "name_hr"
   end
 
   create_table "testimonials", :force => true do |t|
