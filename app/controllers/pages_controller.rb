@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def news
-    @news = News.all
+    @news = News.all.paginate(page: params[:page], per_page: 3)
 
     respond_to do |format|
       format.html

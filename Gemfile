@@ -25,7 +25,7 @@ gem "i18n_country_select"
 
 # Other
 gem "active_attr"
-gem "will_paginate"
+gem "will_paginate", require: ["will_paginate", "will_paginate/array"]
 gem "paperclip-dropbox", "~> 1.0"
 gem "prawn"
 gem "nokogiri"
