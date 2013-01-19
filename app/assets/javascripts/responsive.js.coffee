@@ -8,8 +8,7 @@ do ($ = jQuery) ->
 
     navigation: ->
       @config.$expander.on "click", =>
-        if document.width < 960
-          @config.$navigation.toggleClass("expanded")
+        @config.$navigation.toggleClass("expanded")
 
     configure: ->
       @config =
