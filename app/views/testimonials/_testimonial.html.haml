@@ -1,6 +1,6 @@
 - present testimonial do |testimonial_presenter|
 
-  %article{class: ("fade_out" if admin?)}
+  .testimonial{class: ("fade_out" if admin?)}
     - if admin?
       .controls
         = testimonial_presenter.edit_button "Izmjeni"

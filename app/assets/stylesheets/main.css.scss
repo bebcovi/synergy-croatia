@@ -6,7 +6,7 @@
     @include trailer;
   }
 
-  h1 {
+  > h1:first-child {
     @each $page in $pages {
       body.#{$page} & {
         @include prefixer(filter, sepia(50%), webkit moz ms spec);
