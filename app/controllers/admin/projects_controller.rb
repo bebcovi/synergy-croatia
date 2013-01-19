@@ -14,7 +14,7 @@ class Admin::ProjectsController < AdminController
   end
 
   def create
-    project_manager.create(params[:project])
+    projects_manager.create(params[:project])
   end
 
   def edit
@@ -22,11 +22,11 @@ class Admin::ProjectsController < AdminController
   end
 
   def update
-    project_manager.update(params[:id], params[:project])
+    projects_manager.update(params[:id], params[:project])
   end
 
   def destroy
-    project_manager.destroy(params[:id])
+    projects_manager.destroy(params[:id])
   end
 
   # Callbacks
