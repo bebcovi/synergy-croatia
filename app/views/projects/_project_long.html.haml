@@ -4,9 +4,9 @@
 
     - if admin?
       .controls
-        = project_presenter.edit_button "", title: "Izmjeni"
-        = project_presenter.add_testimonial_button "", title: "Dodaj iskustvo"
-        = project_presenter.delete_button "", title: "Izbriši"
+        = project_presenter.edit_button "Izmjeni"
+        = project_presenter.add_testimonial_button "Dodaj iskustvo"
+        = project_presenter.delete_button "Izbriši"
 
     - if admin?
       %h2.title= project_presenter.title

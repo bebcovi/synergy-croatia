@@ -2,8 +2,8 @@
 
   - if admin? and category.not_in?(forbidden_categories)
     .controls
-      = category_presenter.edit_button ""
-      = category_presenter.delete_button ""
+      = category_presenter.edit_button "Izmjeni"
+      = category_presenter.delete_button "Izbriši"
 
   %dl
     %dt.hr Naziv

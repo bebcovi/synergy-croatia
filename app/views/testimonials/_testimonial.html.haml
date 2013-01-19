@@ -3,8 +3,8 @@
   %article{class: ("fade_out" if admin?)}
     - if admin?
       .controls
-        = testimonial_presenter.edit_button "", title: "Izmjeni"
-        = testimonial_presenter.delete_button "", title: "Izbriši"
+        = testimonial_presenter.edit_button "Izmjeni"
+        = testimonial_presenter.delete_button "Izbriši"
 
     %blockquote
       = testimonial_presenter.content
