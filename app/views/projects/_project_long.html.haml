@@ -9,6 +9,8 @@
         = project_presenter.delete_button "", title: "Izbriši"
 
     - if admin?
+      %h2.title= project_presenter.title
+    - else
       %h1.title= project_presenter.title
 
     - unless admin?
