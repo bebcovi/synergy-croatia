@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/silvenon/Sassy-Buttons-bourbon.git
-  revision: 979c64d4c417899380e238bfafea0f3079ffae1f
+  revision: 68f401a4b9bb2896ca9f37113256fad918a679cd
   specs:
     sassy-buttons-bourbon (0.1.4)
       bourbon (>= 3)
@@ -184,7 +184,7 @@ GEM
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
     ruby-rc4 (0.1.5)
-    sass (3.2.4)
+    sass (3.2.5)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
