@@ -49,7 +49,7 @@ body.admin {
 
 .fade_out {
   position: relative;
-  max-height: 22 * $base-spacing-unit;
+  max-height: 10 * $base-spacing-unit;
   overflow: hidden;
   &:after {
     @include position(absolute, 0 0px 0px 0px);
