@@ -6,7 +6,7 @@ html {
 
 @include selection {
   color: white;
-  text-shadow: none !important;
+  text-shadow: none;
   background: $link-color;
 }
 
