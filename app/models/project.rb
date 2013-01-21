@@ -9,11 +9,11 @@ class Project < ActiveRecord::Base
   scope :forecoming, where("#{table_name}.ends_on < current_date")
 
   def training?
-    category != Category.find_by_name_en("Youth Exchange")
+    category.name_en != "Youth Exchange"
   end
 
   def exchange?
-    category == Category.find_by_name_en("Youth Exchange")
+    category.name_en == "Youth Exchange"
   end
 
   has_attached_file :infoletter
