@@ -51,6 +51,7 @@ body.admin {
   position: relative;
   max-height: 10 * $base-spacing-unit;
   overflow: hidden;
+  margin-bottom: $base-spacing-unit;
   &:after {
     @include position(absolute, 0 0px 0px 0px);
     @include linear-gradient(rgba(white, 0), rgba(white, .75));
