@@ -19,5 +19,20 @@ Testimonial.create!(
 
     Ljudi sa svih strana koji rade mnogo zanimlljivih stvari i tako su razičitih osobnosti -- bili su tamo s istim ciljem -- narasti kao osoba, poboljšati sebe i pomoći drugima da učine isto.
   CONTENT
+  content_en: <<-CONTENT.strip_heredoc,
+    I don’t exactly remember when I first heard of Synergy, but I remember I liked it immediately. One-week coaching training in a small town of Ommen, Netherlands.
+
+    I had a good feeling and lots of expectations… and I was glad to realize it was right and that my expectations were surpassed. The level of hospitality was more like the one I had when visiting friends, and it was created by the people, the trainers and the general idea of Synergy Group.
+
+    Non-formal part showed their dedication, which, compared to similar experiences, is rarely on that level of sincerity. The beauty was that it was transferred to the formal part, the training, where everyone could see it.
+
+    It made the group feel comfortable, which made all the sincerity and sharing possible – an important factor in the overall quality of the training.
+
+    The content and theory were short, simple, and very practical. The concepts were laid out just so one can grasp the idea, and then we practiced until we fully understood and mastered a technique.
+
+    The next thing was the exchange of experiences with other participants, which was quite intensive. The feeling of openness and inclusion was there from the beginning. The Diversity of our backgrounds -- geographically, culturally, educationally, professionally and personally was immensely rich. It was great!
+
+    People from all sides doing such diverse things and with different personalities – were there with the same goal -- to grow as a person, develop and help others do the same.
+  CONTENT
   project: Category.find_by_name_en("Practicing Coaching training").projects.first,
 )

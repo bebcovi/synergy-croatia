@@ -37,11 +37,13 @@ hr:
       navigation_title: "EVS"
     archive:
       page_title: "Postignuća"
+      body: "Većina projekata sufinancirana su kroz program Europske Unije Youth in Action ili Mladi na djelu. Više o programu na stranicama [Agencije za mobilnost i programe EU](http://mobilnost.hr/)."
     testimonials:
       navigation_title: "Iskustva"
       page_title: "Iskustva polaznika"
     partners:
       page_title: "Partneri"
+      body: "Syncro je predan  stvaranju novih prilika, partnerstvo je oblik zajedničkog djelovanja. Organizacija ste i imate zanimljivi projekt ili biste željeli surađivati s nama javite nam se na <synergy@synergy-croatia.com>."
     contact:
       page_title: "Kontakt"
       body: "Kontaktirajte nas putem emaila <synergy@synergy-croatia.com> ili putem telefona:"
@@ -64,6 +66,12 @@ hr:
       iban: "Za uplate iz inozemstva"
     volunteer:
       page_title: "Volontiranje"
+      interest_1: "Sudjelovanje u organizaciji međunarodnih projekata"
+      interest_2: "Organiziranje radionica i događaja u Hrvatskoj"
+      interest_3: "Vođenje projekata"
+      interest_4: "Asistiranje"
+      other: "Drugo"
+      apply: "Prijavi se"
 
   errors:
     not_found:

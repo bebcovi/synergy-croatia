@@ -1,0 +1,32 @@
+- @title = t(".page_title")
+
+:markdown
+  If you want to develop your organizational skills, team-work, designing interesting projects putting your ideas into action, get further educated throughout Europe while having support by the Syncro team? Apply to volunteer in Syncro Synergy Croatia!
+
+= simple_form_for @volunteer, url: volunteer_path do |f|
+
+  = f.error_notification
+
+  = f.input :name
+  = f.input :profession
+  = f.input :age
+  = f.input :email
+  = f.input :phone
+
+  %p In Synergy Croatia I'm interested in:
+
+  %ul.volunteer_interests
+    = f.collection_check_boxes :interests, interests, :first, :last, collection_wrapper_tag: false, item_wrapper_tag: :li
+    %li
+      = check_box_tag :other
+      = f.input :interests, wrapper: false, input_html: {name: "volunteer[interests][]", class: "other_interests"}, label: t(".other"), label_html: {for: "other"}
+
+  = f.input :reason, as: :text, input_html: {rows: 5}
+
+  .form_actions
+    = f.button :submit, t(".apply"), class: "btn_primary"
+
+:markdown
+  If you don't like filling out web forms, feel free to contact us at <synergy@synergy-croatia.com>.
+
+  Volunteers in Syncro get their mentor who follows and supports their work during the year. With the help of the mentor, the volunteers determine what they want to learn and develop during that time. Once they have their goals set, the volunteers start by observing and assisting. Following their individual plan and preferences they are included in smaller tasks, and later into larger. Volunteers that exhibit independence and reliability will be given the option to strat leading projects and be more involved in the organizing team.

@@ -17,5 +17,12 @@ Testimonial.create!(
 
     Motivira ljude da iskoriste svoj potencijal i uživaju u svemu što im život pruža. Hvala Syncro. :)
   CONTENT
+  content_en: <<-CONTENT.strip_heredoc,
+    "DE ČEŠKIBUS"
+
+    Basic Synergy Training “Unique & United” was really a remarkable experience for me. I met wonderful young people from Czech Republic, Hungary, Bulgaria, Romania and Turkey which thrilled me with their activeness, sincerity, support, courage and life energy and inspired me to be more active.
+
+    The training itself had me thinking about my role in society and about my influence on others. It showed me that every one of us has a superpower, and that together we can create things above all expectations. Also, defining certain steps of some psychological and sociological processes, the usual conundrum in my head became somewhat more structured. I see things and events little more clearly so it’s easier to handle them. :) I came to know some psychological tools that I can use when needed.  Besides all this, the trainings boosts up self-confidence and it is extremely fun. It motivates people to use their potential and enjoy what life offers. Thank you Syncro. :)
+  CONTENT
   project: Project.find_by_name_hr("Unique & United"),
 )

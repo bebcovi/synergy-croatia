@@ -37,10 +37,12 @@ en:
       navigation_title: "EVS"
     archive:
       page_title: "Achievements"
+      body: "Most projects are financed by the Youth in Action Programmme of EU. More about the programme you can find at the site of Croatian [Agency for Mobility and EU programmes](http://www.mobilnost.hr/index_en.php)."
     testimonials:
       page_title: "Testimonials"
     partners:
       page_title: "Partners"
+      body: "Syncro is dedicated to networking and creating partnerships. If you have a project and wish to work with us, contact us at <synergy@synergy-croatia.com>."
     contact:
       page_title: "Contact"
       body: "Contact us via email <synergy@synergy-croatia.com> or phone:"
@@ -63,6 +65,12 @@ en:
       iban: "For payment from foreign countries"
     volunteer:
       page_title: "Volunteering"
+      interest_1: "Taking part in the organization of international projects"
+      interest_2: "Organizing events and workshops in Croatia"
+      interest_3: "Project management"
+      interest_4: "Assisting"
+      other: "Other"
+      apply: "Apply"
 
   trainings:
     index:
