@@ -56,8 +56,19 @@ input[type="file"] {
   }
 }
 
+form {
+
 [type="checkbox"],
 [type="radio"] {
+  ~ label {
+    display: inline-block;
+    margin-left: .5em;
+    &:after {
+      content: "";
+    }
+  }
+}
+
 }
 
 .btn {
