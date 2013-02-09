@@ -1,0 +1,47 @@
+.pagination {
+  $color: $orange;
+  $color-hover: shade($color, 15%);
+  background: rgba(black, .05);
+  padding: $half-spacing-unit;
+  border: 1px solid rgba(black, .2);
+  border-radius: 3px;
+  text-align: center;
+
+  * {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid rgba(black, .2);
+    border-radius: 2px;
+    background: white;
+  }
+
+  .disabled {
+    color: rgba(black, .35);
+  }
+
+  .gap {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgba(black, .5);
+    border: none;
+    background: none;
+  }
+
+  em {
+    font-style: normal;
+    background: $color;
+    color: white;
+    font-weight: $base-bold;
+    border-color: $color-hover;
+  }
+
+  a {
+    @include color-link(rgba($color, .75), $color-hover);
+    @include transition(none);
+    text-decoration: none;
+    @include on-interact {
+      background-color: rgba($color, .1);
+      border-color: rgba($color, .5);
+    }
+  }
+}
