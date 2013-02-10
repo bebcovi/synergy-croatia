@@ -4,7 +4,7 @@
 
     %header
       %h1= project_presenter.title
-      %p.info= project_presenter.location
+      %p.location= project_presenter.location.prepend_icon("location")
 
     = project_presenter.summary
 
