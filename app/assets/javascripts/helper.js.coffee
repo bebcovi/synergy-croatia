@@ -17,7 +17,7 @@ do ($ = jQuery) ->
     targetBlank: ->
       $("a").each ->
         $this = $(@)
-        if not ~$this.attr("href").search(/^(#|\/$|\/\w)/)
+        if not ~$this.attr("href").search(/^(#|\/)/)
           $this.attr "target", "_blank"
 
   App.Other.helper.init()
