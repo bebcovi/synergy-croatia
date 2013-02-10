@@ -28,11 +28,11 @@ module ApplicationHelper
 
   def date_range(from, till)
     if from.year != till.year
-      "#{from.strftime('%-d.%-m.%Y')}–#{till.strftime('%-d.%-m.%Y.')}"
+      "#{from.strftime('%-d.%-m.%Y.')}–#{till.strftime('%-d.%-m.%Y.')}"
     elsif from.month != till.month
-      "#{from.strftime('%-d.%-m')}–#{till.strftime('%-d.%-m.%Y.')}"
+      "#{from.strftime('%-d.%-m.')}–#{till.strftime('%-d.%-m.%Y.')}"
     else
-      "#{from.strftime('%-d')}–#{till.strftime('%-d.%-m.%Y.')}"
+      "#{from.strftime('%-d.')}–#{till.strftime('%-d.%-m.%Y.')}"
     end
   end
 
