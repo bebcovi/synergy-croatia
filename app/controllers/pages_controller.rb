@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def archive
-    @projects = Project.forecoming.available_in(I18n.locale)
+    @projects = Project.forecoming
   end
 
   def testimonials
