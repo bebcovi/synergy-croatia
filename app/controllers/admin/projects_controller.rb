@@ -50,6 +50,6 @@ class Admin::ProjectsController < AdminController
   end
 
   def destroy_succeeded(project)
-    redirect_to admin_projects, notice: "Projekt je uspješno izbrisan."
+    redirect_to admin_projects_path, notice: "Projekt je uspješno izbrisan."
   end
 end

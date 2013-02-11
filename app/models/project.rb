@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
   default_scope order("#{table_name}.ends_on DESC")
   scope :upcoming, where("#{table_name}.ends_on >= current_date")
   scope :forecoming, where("#{table_name}.ends_on < current_date")
+  scope :available_in, ->(language) { where("projects.name_#{language} IS NOT NULL AND projects.description_#{language} IS NOT NULL") }
 
   def training?
     category.name_en != "Youth Exchange"
