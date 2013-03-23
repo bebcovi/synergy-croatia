@@ -79,7 +79,7 @@ SynergyCroatia::Application.configure do
   }
   config.action_mailer.delivery_method = :smtp
 
-  config.middleware.use ExceptionNotifier,
-    sender_address: "Outward Bound <#{ENV["SENDGRID_USERNAME"]}>",
-    exception_recipients: ["janko.marohnic@gmail.com"]
+  # config.middleware.use ExceptionNotifier,
+  #   sender_address: "Outward Bound <#{ENV["SENDGRID_USERNAME"]}>",
+  #   exception_recipients: ["janko.marohnic@gmail.com"]
 end
