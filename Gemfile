@@ -37,7 +37,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "debugger", :require => "debugger"
+  # gem "debugger", :require => "debugger"
   gem "rspec-rails"
   gem "faraday", ">= 0.8"
 end
