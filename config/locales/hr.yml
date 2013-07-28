@@ -1,8 +1,7 @@
 hr:
+  name: "Synergy Croatia"
+
   application:
-    latest:
-      title: "Zadnje najave"
-      body: "Tražimo još troje sretnika za razmjenu mladih Value in Youth u Mađarskoj!"
     support:
       title: "Podržite nas"
       body: "Želite podržati razvoj obrazovnih mogućnosti za mlade?"
@@ -11,17 +10,16 @@ hr:
     newsletter:
       title: "Newsletter"
       body: "Prijavite se na [naš newsletter](http://eepurl.com/mDSGP) i primajte obavijesti o novim projektima i događanjima u Syncru!"
-      submit: "Prijavi se"
     syncro:
       title: "Syncro Trening Centar"
-      body: "Syncro provodi programe osobne i profesionalne izvrsnosti i coachinga. Više na"
+      body: "Syncro provodi programe osobne i profesionalne izvrsnosti i coachinga. Više na [www.syncro.hr](http://www.syncro.hr)."
     social:
       title: "Pratite nas"
       facebook: "Facebook"
       twitter: "Twitter"
       rss: "RSS"
-
-  shared:
+    footer:
+      organization: "Syncro Synergy Croatia"
     header:
       quote: "Pravo putovanje otkrivanja ne sastoji se u traženju <br>novih prostranstva nego u promatranju novim očima."
 
@@ -53,12 +51,6 @@ hr:
       projects: "Ostvareni projekti"
       partnerships: "Ostvarena partnerstva"
 
-  projects:
-    project_short:
-      location: "Lokacija"
-      duration: "Trajanje"
-      infoletter: "Infoletter"
-
   support:
     donate:
       page_title: "Donacija"
@@ -72,26 +64,3 @@ hr:
       interest_4: "Asistiranje"
       other: "Drugo"
       apply: "Prijavi se"
-
-  errors:
-    not_found:
-      page_title: "Stranica nije pronađena"
-      title: "404"
-      message: "Stranica koju tražite nije pronađena"
-    internal_server_error:
-      page_title: "Greška"
-      title: "500"
-      message: "Dogodila se greška"
-
-  words:
-    and: "i"
-    or: "ili"
-    unauthorized: "Neovlašteni pristup"
-
-  will_paginate:
-    previous_label: "&larr; Prethodna"
-    next_label: "Sljedeća &rarr;"
-    page_gap: "&hellip;"
-
-  countries:
-    CZ: "Češka"

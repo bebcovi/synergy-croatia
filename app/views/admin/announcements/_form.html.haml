@@ -1,9 +1,0 @@
-= simple_form_for @announcement, url: admin_announcement_path, defaults: {locale: :hr} do |f|
-
-  = f.input :content_hr, as: :text
-  = f.input :content_en, as: :text
-  = f.input :expires_on, default: 1.month.from_now
-
-  .form_actions
-    = f.button :submit, class: "btn_primary"
-    = cancel_button "Odustani", admin_announcement_path

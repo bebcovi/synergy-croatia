@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class VolunteerPdf < Prawn::Document
   def initialize(volunteer)
     super()

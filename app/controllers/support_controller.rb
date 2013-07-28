@@ -1,10 +1,4 @@
-# encoding: utf-8
-
 class SupportController < ApplicationController
-  manages :volunteers
-
-  # Actions
-
   def donate
   end
 
@@ -12,18 +6,21 @@ class SupportController < ApplicationController
     @volunteer = Volunteer.new
   end
 
-  def create
-    volunteers_manager.create(params[:volunteer])
+  def create_volunteer
+    @volunteer = Volunteer.new
+    @volunteer.assign_attributes(volunteer_params)
+
+    if @volunteer.valid?
+      VolunteeringMailer.volunteer(@volunteer)
+      redirect_to root_path, notice: "Vaša prijava je poslana, uskoro ćemo vam se javiti. Hvala."
+    else
+      render :volunteer
+    end
   end
 
-  # Callbacks
+  private
 
-  def create_succeeded(volunteer)
-    redirect_to root_path, notice: "Vaša prijava je poslana, uskoro ćemo vam se javiti. Hvala."
-  end
-
-  def create_failed(volunteer)
-    @volunteer = volunteer
-    render :volunteer
+  def volunteer_params
+    params.require(:volunteer).permit!
   end
 end

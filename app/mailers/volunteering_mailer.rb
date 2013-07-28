@@ -4,6 +4,6 @@ class VolunteeringMailer < ActionMailer::Base
   def volunteer(attributes)
     @volunteer = attributes
     attachments["volonter.pdf"] = VolunteerPdf.new(@volunteer).render
-    mail(subject: "Prijava za volontiranje")
+    mail(to: ENV["VOLUNTEER_EMAIL"], subject: "Prijava za volontiranje")
   end
 end

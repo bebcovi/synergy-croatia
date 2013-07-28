@@ -1,8 +1,7 @@
 en:
+  name: "Synergy Croatia"
+
   application:
-    latest:
-      title: "Latest news"
-      body: "We're looking for three more lucky people for a youth exchange Value in Youth in Hungary!"
     support:
       title: "Support us"
       body: "Do you want to support the development of educational possibilities for young people?"
@@ -11,17 +10,16 @@ en:
     newsletter:
       title: "Newsletter"
       body: "Subscribe to [our newsletter](http://eepurl.com/mDSGP) and receive news about projects and events at Syncro!"
-      submit: "Subscribe"
     syncro:
       title: "Syncro Training Center"
-      body: "Syncro is delivering programs of personal and professional excellence and coaching. More on"
+      body: "Syncro is delivering programs of personal and professional excellence and coaching. More on [www.syncro.hr](http://www.syncro.hr)."
     social:
       title: "Follow us"
       facebook: "Facebook"
       twitter: "Twitter"
       rss: "RSS"
-
-  shared:
+    footer:
+      organization: "Syncro Synergy Croatia"
     header:
       quote: "The real voyage of discovery consists not in <br>seeking new lands but seeing with new eyes."
 
@@ -52,12 +50,6 @@ en:
       projects: "Achieved projects"
       partnerships: "Achieved partnerships"
 
-  projects:
-    project_short:
-      location: "Location"
-      duration: "Duration"
-      infoletter: "Infoletter"
-
   support:
     donate:
       page_title: "Donation"
@@ -71,21 +63,3 @@ en:
       interest_4: "Assisting"
       other: "Other"
       apply: "Apply"
-
-  trainings:
-    index:
-      trainings: "Trainings"
-
-  errors:
-    not_found:
-      page_title: "Page not found"
-      title: "404"
-      message: "The page you're looking for can not be found."
-    internal_server_error:
-      page_title: "Internal server error"
-      title: "500"
-      message: "There has been an error"
-
-  words:
-    and: "and"
-    or: "or"

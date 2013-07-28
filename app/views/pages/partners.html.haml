@@ -5,7 +5,7 @@
 = markdown t(".body")
 
 %ul.partner_list
-  = list_of logos do |logo|
-    %a{href: logo.url, target: "_blank"}
-      = image_tag(logo.src, alt: logo.title)
-      %div= logo.title
+  = list_of @partners do |partner|
+    %a{href: partner.url, target: "_blank"}
+      = image_tag(partner.photo_url(:small), alt: partner.name)
+      %div= partner.name
