@@ -6,6 +6,7 @@ class CreatePartners < ActiveRecord::Migration
       t.string :photo
       t.string :url_en
       t.string :url_hr
+      t.integer :position
     end
   end
 end

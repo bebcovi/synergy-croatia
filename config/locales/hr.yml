@@ -25,9 +25,8 @@ hr:
 
   pages:
     news:
-      navigation_title: "Najave"
+      navigation_title: "Vijesti"
       page_title: "Poligon za učenje i igru"
-      title: "Najave projekata"
     about:
       page_title: "O nama"
     evs:
@@ -35,16 +34,13 @@ hr:
       navigation_title: "EVS"
     archive:
       page_title: "Postignuća"
-      body: "Većina projekata sufinancirana su kroz program Europske Unije Youth in Action ili Mladi na djelu. Više o programu na stranicama [Agencije za mobilnost i programe EU](http://mobilnost.hr/)."
     testimonials:
       navigation_title: "Iskustva"
       page_title: "Iskustva polaznika"
     partners:
       page_title: "Partneri"
-      body: "Syncro je predan  stvaranju novih prilika, partnerstvo je oblik zajedničkog djelovanja. Organizacija ste i imate zanimljivi projekt ili biste željeli surađivati s nama javite nam se na <synergy@synergy-croatia.com>."
     contact:
       page_title: "Kontakt"
-      body: "Kontaktirajte nas putem emaila <synergy@synergy-croatia.com> ili putem telefona:"
 
     archive_nav:
       all: "Sva postignuća"

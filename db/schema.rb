@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130728122952) do
+ActiveRecord::Schema.define(version: 20130921134031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,11 +42,12 @@ ActiveRecord::Schema.define(version: 20130728122952) do
   end
 
   create_table "partners", force: true do |t|
-    t.string "name_en"
-    t.string "name_hr"
-    t.string "photo"
-    t.string "url_en"
-    t.string "url_hr"
+    t.string  "name_en"
+    t.string  "name_hr"
+    t.string  "photo"
+    t.string  "url_en"
+    t.string  "url_hr"
+    t.integer "position"
   end
 
   create_table "posts", force: true do |t|
@@ -75,6 +76,8 @@ ActiveRecord::Schema.define(version: 20130728122952) do
     t.string   "capacity_hr"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "summary_hr"
+    t.text     "summary_en"
   end
 
   create_table "testimonials", force: true do |t|
@@ -82,6 +85,23 @@ ActiveRecord::Schema.define(version: 20130728122952) do
     t.text     "content_en"
     t.string   "author"
     t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "texts", force: true do |t|
+    t.text     "body_en"
+    t.text     "body_hr"
+    t.string   "controller"
+    t.string   "action"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "encrypted_password"
+    t.datetime "remember_created_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

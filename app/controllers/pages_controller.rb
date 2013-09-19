@@ -12,18 +12,21 @@ class PagesController < ApplicationController
   end
 
   def archive
-    @projects = Project.forecoming.decorate
+    @projects = Project
+      .forecoming
+      .order(begins_on: :desc)
+      .decorate
   end
 
   def testimonials
     @testimonials = Testimonial
       .available_in(I18n.locale)
       .paginate(page: params[:page], per_page: 1)
-    @testimonials = PaginationDecorator.decorate(@testimonials)
+      .decorate
   end
 
   def partners
-    @partners = Partner.all
+    @partners = Partner.decorate
   end
 
   def contact

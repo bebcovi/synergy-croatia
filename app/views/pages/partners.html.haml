@@ -2,10 +2,10 @@
 
 %h1= @title
 
-= markdown t(".body")
+= @text.body
 
 %ul.partner_list
   = list_of @partners do |partner|
-    %a{href: partner.url, target: "_blank"}
+    = link_to partner.url, target: "_blank" do
       = image_tag(partner.photo_url(:small), alt: partner.name)
       %div= partner.name

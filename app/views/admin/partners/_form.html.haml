@@ -1,0 +1,28 @@
+= simple_form_for [:admin, @partner], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :photo, as: :file do
+        .list-inline-block
+          = image_tag @partner.photo_url(:small), height: 100 if @partner.photo?
+          = f.input_field :photo
+          = f.hidden_field :photo_cache
+
+  %h2 English
+
+  %fieldset.inputs
+    %ol
+      = f.input :name_en
+      = f.input :url_en
+
+  %h2 Croatian
+
+  %fieldset.inputs
+    %ol
+      = f.input :name_hr
+      = f.input :url_hr
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path

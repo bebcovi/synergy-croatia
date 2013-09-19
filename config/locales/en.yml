@@ -25,9 +25,8 @@ en:
 
   pages:
     news:
-      navigation_title: "Upcoming"
+      navigation_title: "News"
       page_title: "A polygon for learning and playing"
-      title: "Upcoming projects"
     about:
       page_title: "About us"
     evs:
@@ -35,15 +34,12 @@ en:
       navigation_title: "EVS"
     archive:
       page_title: "Achievements"
-      body: "Most projects are financed by the Youth in Action Programmme of EU. More about the programme you can find at the site of Croatian [Agency for Mobility and EU programmes](http://www.mobilnost.hr/index_en.php)."
     testimonials:
       page_title: "Testimonials"
     partners:
       page_title: "Partners"
-      body: "Syncro is dedicated to networking and creating partnerships. If you have a project and wish to work with us, contact us at <synergy@synergy-croatia.com>."
     contact:
       page_title: "Contact"
-      body: "Contact us via email <synergy@synergy-croatia.com> or phone:"
 
     archive_nav:
       all: "All achievements"
