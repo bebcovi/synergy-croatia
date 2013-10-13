@@ -1,4 +1,4 @@
-do ($ = jQuery) ->
+jQuery ->
 
   App.Other.responsive =
 
@@ -12,7 +12,7 @@ do ($ = jQuery) ->
 
     configure: ->
       @config =
-        $expander:    $("#nav_expander")
+        $expander:    $(".nav_expander")
         $navigation:  $(".site_navigation").find("ol")
 
   App.Other.responsive.init()

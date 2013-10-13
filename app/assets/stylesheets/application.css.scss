@@ -1,27 +1,14 @@
-@charset "UTF-8";
-
-@import "overrides";
-
-@import "bourbon";
-@import "sassy-buttons";
-@import "inuit";
-@import "icons";
-@import "color-me-sass";
+@import "config";
+@import "synergy";
 
 @import "variables";
-@import "functions";
-@import "mixins";
 @import "extends";
 
-@import "wf-loading";
-
 @import "general";
-@import "form";
 @import "pagination";
 
 @import "header";
 @import "navigation";
-@import "filter";
 @import "main";
 @import "sidebar";
 @import "footer";
@@ -33,5 +20,3 @@
 
 @import "donate";
 @import "volunteer";
-
-@import "admin";

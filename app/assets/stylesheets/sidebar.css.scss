@@ -40,7 +40,7 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     border-bottom: none;
   }
 
-  @include media-query(desk) {
+  @include media-query(desk-and-up) {
     $padding: $gutter-width;
     @include no-bleed;
     @include padding-trailer(1, $sidebar-border);
@@ -48,7 +48,6 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     width: 100/3 * 1%;
     padding-left: $padding;
     padding-right: $padding;
-    margin-bottom: 0;
     border: $sidebar-border;
     border-radius: 2px;
 

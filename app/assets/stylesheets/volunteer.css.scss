@@ -1,6 +1,10 @@
 .volunteer_interests {
   list-style: none;
   margin-left: $base-spacing-unit;
+
+  input[type="checkbox"] {
+    margin-right: $hsu/2;
+  }
 }
 
 .js {

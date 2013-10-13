@@ -1,4 +1,4 @@
-do ($ = jQuery) ->
+jQuery ->
 
   controllerAction = $("body").attr("class").split(" ")
 

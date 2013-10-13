@@ -5,13 +5,11 @@ html {
 }
 
 @include selection {
-  color: white;
-  text-shadow: none;
   background: $link-color;
 }
 
 .container {
-  @extend .cf;
+  @extend %cf;
   @if $fluid {
     max-width: $site-width;
   }
@@ -27,7 +25,7 @@ body {
 }
 
 .site {
-  @extend .cf;
+  @extend %cf;
   @include padding-leader(.5);
   background: white;
 
@@ -35,13 +33,9 @@ body {
     @include padding-leader;
   }
 
-  @include media-query(desk) {
+  @include media-query(desk-and-up) {
     @include padding-trailer;
   }
-}
-
-h1, h2, h3 {
-  text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -69,12 +63,6 @@ h3 {
 
 a {
   @include color-link($link-color, $link-hover);
-  @include transition(
-    color .2s,
-    text-shadow .2s,
-    border-color .2s
-  );
-  text-decoration: none;
   border-bottom: 1px solid tint($link-color, 75%);
   @include on-interact {
     text-decoration: none;
@@ -83,8 +71,12 @@ a {
   }
 }
 
+b {
+  font-style: normal;
+}
+
 dl {
-  @extend .cf;
+  @extend %cf;
   width: 100%;
 
   dt, dd {
@@ -119,6 +111,6 @@ blockquote {
   }
 }
 
-.img a {
-  @extend %image-container;
+.btn_primary {
+  @include sassy-button-gradient($base-color: $link-color);
 }

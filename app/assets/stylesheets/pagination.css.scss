@@ -1,6 +1,7 @@
 .pagination {
   $color: $orange;
   $color-hover: shade($color, 15%);
+  @include trailer;
   background: rgba(black, .05);
   padding: $half-spacing-unit;
   border: 1px solid rgba(black, .2);

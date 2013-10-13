@@ -6,8 +6,8 @@
 
   ol {
     @extend %bleed;
-    @extend .unstyled_list;
-    @extend .cf;
+    @extend %unstyled-list;
+    @extend %cf;
     padding: 0;
   }
 
@@ -29,13 +29,10 @@
   }
 }
 
-#nav_expander,
-.expander {
-  display: none;
-}
-
-.expander {
+.nav_expander {
   @extend %unselectable;
+  display: none;
+  cursor: pointer;
   line-height: 1.5 * $base-spacing-unit;
   color: $link-color;
   &:after { content: ""; }
@@ -65,7 +62,7 @@
     }
   }
 
-  .expander {
+  .nav_expander {
     display: block;
   }
 }

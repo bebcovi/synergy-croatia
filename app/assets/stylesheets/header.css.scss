@@ -3,7 +3,7 @@
 }
 
 .site_header .container {
-  @extend .cf;
+  @extend %cf;
 }
 
 .site_logo {
@@ -26,8 +26,8 @@
 }
 
 .site_lang {
-  @extend .unstyled_list;
-  @extend .cf;
+  @extend %unstyled-list;
+  @extend %cf;
   @include trailer(.5);
 
   li {
