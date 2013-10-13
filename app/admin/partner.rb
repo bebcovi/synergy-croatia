@@ -18,11 +18,11 @@ ActiveAdmin.register Partner do
 
   show title: ->(partner) { partner.to_s } do |testimonial|
     attributes_table do
-      row "Photo" do
-        img src: testimonial.photo_url(:small)
+      row :photo do
+        image_tag partner.photo_url(:small), height: 100
       end
     end
 
-    locale_attributes :content
+    locale_attributes :name, :url
   end
 end
