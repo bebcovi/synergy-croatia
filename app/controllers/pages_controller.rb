@@ -20,6 +20,7 @@ class PagesController < ApplicationController
 
   def testimonials
     @testimonials = Testimonial
+      .order{created_at.desc}
       .available_in(I18n.locale)
       .paginate(page: params[:page], per_page: 1)
       .decorate

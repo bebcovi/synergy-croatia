@@ -1,13 +1,12 @@
-Text.delete_all
-
 texts = [
   ["pages", "about"],
   ["pages", "evs"],
   ["pages", "contact"],
   ["pages", "archive"],
   ["pages", "partners"],
+  ["pages", "testimonials"],
 ]
 
 texts.each do |controller, action|
-  Text.new(controller: controller, action: action)
+  Text.create(controller: controller, action: action)
 end

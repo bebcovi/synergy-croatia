@@ -1,20 +1,6 @@
 ActiveAdmin.setup do |config|
 
-  # == Site Title
-  #
-  # Set the title that is displayed on the main layout
-  # for each of the active admin pages.
-  #
   config.site_title = "Synergy Croatia"
-
-
-  # == Controller Filters
-  #
-  # You can add before, after and around filters to all of your
-  # Active Admin resources and pages from here.
-  #
-  # config.before_filter :do_something_awesome
-
 
   config.namespace :admin do |admin|
     admin.build_menu do |menu|
@@ -38,7 +24,9 @@ ActiveAdmin.setup do |config|
         add_text.(Text.find("pages/archive"), page, priority: 1)
       end
 
-      menu.add label: "Testimonials", priority: 5
+      menu.add label: "Testimonials", priority: 5 do |page|
+        add_text.(Text.find("pages/testimonials"), page, priority: 1)
+      end
 
       menu.add label: "Partners", priority: 6
 
