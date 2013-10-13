@@ -2,8 +2,8 @@
 
 %h1= @title
 
--# = render "archive_nav"
-
 = @text.body
 
 = render partial: "projects/project_short", collection: @projects, as: :project
+
+= will_paginate @projects, page_links: false
