@@ -38,4 +38,6 @@ ActiveAdmin.setup do |config|
     end
   end
 
+  config.register_javascript "synergy-croatia_active_admin.js"
+
 end
