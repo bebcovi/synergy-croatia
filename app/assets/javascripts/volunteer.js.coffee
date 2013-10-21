@@ -1,18 +1,20 @@
 jQuery ->
 
-  App.Controllers.volunteer =
+  if App.action == "volunteer"
 
-    init: ->
-      self = this
+    module =
 
-      self.configure()
+      init: ->
+        self = this
+        self.configure()
+        self.config.$checkbox.on "click", ->
+          self.config.$field.toggle()
 
-      self.config.$checkbox.on "click", ->
-        self.config.$field.toggle()
+      configure: ->
+        self = this
 
-    configure: ->
-      self = this
+        self.config =
+          $checkbox:  $("#other")
+          $field:     $(".other_interests")
 
-      self.config =
-        $checkbox:  $("#other")
-        $field:     $(".other_interests")
+    module.init()

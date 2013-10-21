@@ -3,13 +3,4 @@
 //
 //= require synergy
 //
-//= require main
-//
-//= require helper
-//= require responsive
-//
-//= require archive
-//= require volunteer
-//= require admin
-//
-//= require init
+//= require_tree .
