@@ -3,7 +3,7 @@
   %fieldset.inputs
     %ol
       = f.input :photo, as: :file do
-        .list-inline-block
+        .unsemantic
           = image_tag @partner.photo_url(:small), height: 100 if @partner.photo?
           = f.input_field :photo
           = f.hidden_field :photo_cache
