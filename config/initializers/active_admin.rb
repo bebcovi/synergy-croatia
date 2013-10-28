@@ -10,7 +10,7 @@ ActiveAdmin.setup do |config|
                  priority: options[:priority]
       end
 
-      menu.add label: "Upcoming", priority: 1
+      menu.add label: "News", priority: 1
 
       menu.add label: "About us", priority: 2 do |page|
         add_text.(Text.find("pages/about"), page, priority: 1)

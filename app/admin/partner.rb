@@ -10,6 +10,9 @@ ActiveAdmin.register Partner do
 
   index do
     selectable_column
+    column :photo do |partner|
+      image_tag partner.photo.url(:small), height: 50
+    end
     column :name
     default_actions
   end
