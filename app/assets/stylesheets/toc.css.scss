@@ -1,0 +1,9 @@
+.toc {
+  top: 10 * $bsu;
+
+  a {
+    @include on-interact {
+      color: $link-hover;
+    }
+  }
+}
