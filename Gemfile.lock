@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: 842de14acc28d624039877f0f946c3f878482c1c
+  revision: 5ee37383a8a3f7e6c66f6b3b8e9364c1f75d098e
   specs:
     synergy (1)
       active_attr
@@ -67,6 +67,7 @@ GIT
       thin
       turbolinks
       uglifier
+      unf
       unicorn
       will_paginate
 
@@ -304,6 +305,9 @@ GEM
     uglifier (2.3.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.3)
+      unf_ext
+    unf_ext (0.0.6)
     unicorn (4.6.3)
       kgio (~> 2.6)
       rack
