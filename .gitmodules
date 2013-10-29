@@ -1,0 +1,3 @@
+[submodule "vendor/assets/stylesheets/base-style"]
+	path = vendor/assets/stylesheets/base-style
+	url = https://github.com/silvenon/base-style.git
