@@ -1,4 +1,5 @@
 texts = [
+  ["pages", "news"],
   ["pages", "about"],
   ["pages", "evs"],
   ["pages", "contact"],
