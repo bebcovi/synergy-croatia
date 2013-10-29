@@ -3,7 +3,7 @@ ruby "2.0.0"
 source "https://rubygems.org"
 
 gem "rails", ">= 4"
-gem "synergy", path: "~/Code/synergy"
+gem "synergy", github: "twin/synergy"
 
 gem "prawn", ">= 0.12"
 
