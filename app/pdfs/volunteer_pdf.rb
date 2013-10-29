@@ -1,3 +1,5 @@
+require "prawn"
+
 class VolunteerPdf < Prawn::Document
   def initialize(volunteer)
     super()
