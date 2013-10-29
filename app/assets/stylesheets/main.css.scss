@@ -43,3 +43,8 @@
     padding-right: $gutter-width;
   }
 }
+
+.intro {
+  @include font-size($base-font-size - 1px);
+  color: tint($orange, 20%);
+}
