@@ -1,5 +1,8 @@
 .site
   .container
+    - if flash[:notice]
+      .notice= flash[:notice]
+
     %article.main_content{role: "main"}
       = yield
 

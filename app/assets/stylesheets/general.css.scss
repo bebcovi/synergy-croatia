@@ -121,3 +121,10 @@ blockquote {
 .btn_primary {
   @include sassy-button-gradient($base-color: $link-color);
 }
+
+.notice {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  background-color: tint(lighten(green, 10%), 60%);
+}
