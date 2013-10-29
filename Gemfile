@@ -5,6 +5,8 @@ source "https://rubygems.org"
 gem "rails", ">= 4"
 gem "synergy", github: "twin/synergy"
 
+gem "newrelic_rpm"
+
 gem "prawn", ">= 0.12"
 
 # Gems pulled from GitHub cannot be in the gemspec
