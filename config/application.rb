@@ -7,5 +7,7 @@ module SynergyCroatia
   class Application < Rails::Application
     config.i18n.default_locale = :hr
     config.time_zone = "Zagreb"
+
+    config.initialize_on_precompile = false
   end
 end
