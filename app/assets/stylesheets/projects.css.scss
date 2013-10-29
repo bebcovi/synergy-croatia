@@ -10,7 +10,8 @@
 }
 
 article {
-  .location {
+  p.location {
+    @include trailer(.5);
     font-style: italic;
     color: rgba(black, .5);
   }

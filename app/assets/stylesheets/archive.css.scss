@@ -8,7 +8,7 @@ body.archive {
   }
 
   .project_short {
-    @include padding-leader(.5, 1px solid rgba($turquoiseDark, .5));
+    @include padding-leader(.5);
   }
 
 }

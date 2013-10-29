@@ -21,6 +21,7 @@ html {
 
 body {
   font-family: $base-font-family;
+  font-weight: 300;
   color: $text-color;
 }
 
@@ -39,24 +40,26 @@ body {
 }
 
 h1 {
-  @include trailer;
+  @include trailer(.5);
   @include padding-trailer(.5, 3px solid rgba(black, .75));
-  font-weight: $base-bold;
+  @include font-size($h1-size, 1.25);
+  font-weight: 400;
 }
 
 h2 {
   @include trailer(.5);
-  @include padding-trailer(.5, 1px solid rgba(black, .25));
+  @include padding-trailer(0, 1px solid rgba($orange, .25));
+  @include font-size($h2-size);
   text-transform: uppercase;
-  font-weight: $base-regular;
+  font-weight: 300;
   letter-spacing: 1px;
-  color: $turquoiseDark;
+  color: tint($orange, 30%);
 }
 
 h3 {
   @include trailer(0);
   text-transform: none;
-  font-weight: $base-regular;
+  font-weight: 300;
   letter-spacing: 0;
   border-bottom: none;
 }
@@ -69,6 +72,10 @@ a {
     border-bottom-color: tint($link-hover, 50%);
     background: rgba($link-hover, .1);
   }
+}
+
+strong {
+  font-weight: 400;
 }
 
 b {
@@ -89,7 +96,7 @@ dl {
 
   dt {
     clear: both;
-    font-weight: $base-bold;
+    font-weight: 400;
   }
 
   dd {
@@ -106,7 +113,7 @@ blockquote {
   .author {
     &:before {
       content: "—";
-      font-weight: $base-regular;
+      font-weight: 300;
     }
   }
 }

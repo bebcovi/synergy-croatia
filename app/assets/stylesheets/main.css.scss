@@ -9,6 +9,7 @@
     @each $page in $pages {
       body.#{$page} & {
         @include prefixer(filter, sepia(50%), webkit moz ms spec);
+        @include trailer;
         max-width: $page-cover-max-width;
         padding: $base-spacing-unit $half-spacing-unit;
         color: white;

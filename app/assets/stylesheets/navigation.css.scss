@@ -15,7 +15,7 @@
     @include padding-leader(.5, 1px solid rgba($link-color, .25));
     @include padding-trailer(.5);
     display: block;
-    font-weight: $base-bold;
+    font-weight: 400;
     padding-left: $site-padding;
     padding-right: $site-padding;
     border-bottom: none;
@@ -43,7 +43,7 @@
   }
 
   .current_page {
-    font-weight: $base-bold;
+    font-weight: 400;
   }
 }
 
