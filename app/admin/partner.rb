@@ -21,7 +21,7 @@ ActiveAdmin.register Partner do
   index do
     selectable_column
     column :position do |partner|
-      link_to(raw("<i class='icon-caret-up'></i>"), [:move_higher, :admin, partner], method: :put) +
+      link_to(raw("<i class='icon-caret-up'></i>"), [:move_higher, :admin, partner], method: :put) + raw("<br>") +
       link_to(raw("<i class='icon-caret-down'></i>"), [:move_lower, :admin, partner], method: :put)
     end
     column :photo do |partner|
