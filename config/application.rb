@@ -11,5 +11,7 @@ module SynergyCroatia
     config.time_zone = "Zagreb"
 
     config.initialize_on_precompile = false
+
+    config.assets.version = "1.0"
   end
 end
