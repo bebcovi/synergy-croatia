@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: 4325026450eccf67b147ce6ee44a7ca768e63fdb
+  revision: dc1ba808de4e137366641884d7a7b5a458eaa99f
   specs:
     synergy (1)
       active_attr
@@ -178,7 +178,7 @@ GEM
       activesupport (>= 3.2, < 5)
     hashery (2.1.1)
     hike (1.2.3)
-    i18n (0.6.8)
+    i18n (0.6.9)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
