@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: 961df3f61dd561c5919610616b71f2c8aa2f3fb7
+  revision: f514bfd1fcd1a1cf24201b16b1438de53a95d0c6
   specs:
     synergy (1)
       active_attr
@@ -224,7 +224,7 @@ GEM
     prawn (0.12.0)
       pdf-reader (>= 0.9.0)
       ttfunk (~> 1.0.2)
-    pry (0.9.12.4)
+    pry (0.9.12.5)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
