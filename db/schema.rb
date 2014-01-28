@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028181715) do
+ActiveRecord::Schema.define(version: 20140128125909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 20131028181715) do
     t.string   "cover_photo"
     t.text     "summary_en"
     t.text     "summary_hr"
+    t.boolean  "cover_photo_processing"
+    t.string   "cover_photo_tmp"
   end
 
   create_table "projects", force: true do |t|
@@ -82,6 +84,8 @@ ActiveRecord::Schema.define(version: 20131028181715) do
     t.text     "summary_hr"
     t.text     "summary_en"
     t.string   "cover_photo"
+    t.boolean  "cover_photo_processing"
+    t.string   "cover_photo_tmp"
   end
 
   create_table "testimonials", force: true do |t|
