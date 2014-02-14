@@ -1,0 +1,65 @@
+@if $global-border-box {
+  *, *:before, *:after {
+    @include box-sizing(border-box !important);
+  }
+}
+
+html {
+  overflow-y: scroll;
+  font: #{($base-font-size/16px) * 1em}/#{$line-height-ratio} serif;
+  color: $text-color;
+  min-height: 100%;
+}
+
+body {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.container {
+  @extend %cf;
+  max-width: $site-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $site-padding;
+  padding-right: $site-padding;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+p, blockquote, address,
+form, table, figure,
+pre {
+  margin-bottom: $base-spacing-unit;
+}
+
+hgroup :last-child {
+  margin-bottom: 0;
+}
+
+ul, ol, dd {
+  margin-left: 2 * $base-spacing-unit;
+}
+
+img {
+  max-width: 100%;
+
+  &[width],
+  &[height] {
+    max-width: none;
+  }
+}
+
+table {
+  width: 100%;
+}

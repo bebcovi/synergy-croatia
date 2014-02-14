@@ -1,0 +1,98 @@
+// layout
+
+@mixin unstyled-list {
+  margin: 0;
+  list-style: none;
+}
+
+// type
+
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  font-size: ($font-size / $base-font-size) * 1rem;
+  line-height: ceil($font-size/$base-line-height) * ($base-line-height/$font-size);
+}
+
+// interaction
+
+@mixin on-interact {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin selection {
+  ::-moz-selection {
+    @content;
+  }
+  ::-webkit-selection {
+    @content;
+  }
+  ::selection {
+    @content;
+  }
+}
+
+@mixin color-link($color1, $color2: $color1) {
+  color: $color1;
+  @include on-interact {
+    color: $color2;
+  }
+}
+
+// retina display
+
+@mixin pattern-with-retina($image, $size, $fallback) {
+  @include background-size($size);
+  background: $fallback image-url("patterns/#{$image}.png");
+  @include hidpi {
+    background-image: image-url("patterns/#{$image}_@2X.png");
+  }
+}
+
+// bleed
+
+@mixin bleed($amount) {
+  padding-left:   $amount;
+  padding-right:  $amount;
+  margin-left:  - $amount;
+  margin-right: - $amount;
+}
+
+@mixin no-bleed {
+  padding-left:   0;
+  padding-right:  0;
+  margin-left:    0;
+  margin-right:   0;
+}
+
+// responsive
+
+$palm-end:  $lap-start - 1px;
+$lap-end:   $desk-start - 1px;
+$desk-end:  $widescreen-start - 1px;
+
+@mixin media-query($media-query){
+  @if $media-query == palm {
+    @media only screen and (max-width: $palm-end) { @content; }
+  }
+  @if $media-query == lap {
+    @media only screen and (min-width: $lap-start) and (max-width: $lap-end) { @content; }
+  }
+  @if $media-query == lap-and-up {
+    @media only screen and (min-width: $lap-start) { @content; }
+  }
+  @if $media-query == portable {
+    @media only screen and (max-width: $lap-end) { @content; }
+  }
+  @if $media-query == desk {
+    @media only screen and (min-width: $desk-start) and (max-width: $desk-end) { @content; }
+  }
+  @if $media-query == desk-and-up {
+    @media only screen and (min-width: $desk-start) { @content; }
+  }
+  @if $media-query == widescreen {
+    @media only screen and (min-width: $widescreen-start) { @content; }
+  }
+}

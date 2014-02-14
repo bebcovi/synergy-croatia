@@ -1,0 +1,37 @@
+// layout
+
+%unstyled-list {
+  @include unstyled-list;
+}
+
+%cf {
+  @extend .clearfix;
+}
+
+// interaction
+
+%unselectable {
+  @include user-select(none);
+}
+
+%transition-all {
+  @include transition(.2s);
+}
+
+// design
+
+%img-polaroid {
+  display: inline-block;
+  padding: 4px;
+  background: white;
+  border: 1px solid rgba(black, .25);
+}
+
+// bleed
+
+%bleed {
+  padding-left:   $site-padding;
+  padding-right:  $site-padding;
+  margin-left:  - $site-padding;
+  margin-right: - $site-padding;
+}
