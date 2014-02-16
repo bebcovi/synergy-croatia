@@ -1,22 +1,9 @@
 .toc {
-  @extend %unstyled-list;
-  margin-bottom: $bsu;
-  padding-left: $bsu;
-  list-style: square;
-  color: rgba(#000, .35);
-  font-family: $helvetica;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: 1px;
-
   a {
     @include color-link(rgba(#000, .35), $orange);
-    border-bottom: none;
   }
 
   li.active a {
-    font-weight: bold;
     @include color-link($orange);
   }
 }
