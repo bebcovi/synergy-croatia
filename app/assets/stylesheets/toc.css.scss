@@ -1,9 +1,13 @@
 .toc {
-  top: 10 * $bsu;
+  @extend %unstyled-list;
+  margin-bottom: $bsu;
+  padding-left: $bsu;
+  list-style: square;
+  color: rgba(#000, .35);
 
   a {
-    @include on-interact {
-      color: $link-hover;
-    }
+    @include color-link(rgba(#000, .35), $orange);
+    font-size: 15px;
+    border-bottom: none;
   }
 }
