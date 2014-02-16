@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: b327f465579e68efbde8f0d250bc0f49d77c7cde
+  revision: 45dbc1e12c15a330604a22b9df973b2cb6af84bc
   specs:
     synergy (1)
       active_attr
@@ -56,7 +56,9 @@ GIT
       mini_magick
       nokogiri
       pg
+      pry-debugger
       pry-rails (>= 0.3.2)
+      pry-stack_explorer
       pry-theme
       puma
       quiet_assets
@@ -138,8 +140,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    columnize (0.3.6)
     daemons (1.1.9)
     debug_inspector (0.0.2)
+    debugger (1.6.5)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.1)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.1)
     devise (3.1.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -232,8 +241,14 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-debugger (0.2.2)
+      debugger (~> 1.3)
+      pry (~> 0.9.10)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    pry-stack_explorer (0.4.9.1)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     pry-theme (1.0.2)
       coderay (~> 1.1)
       json (~> 1.8)
