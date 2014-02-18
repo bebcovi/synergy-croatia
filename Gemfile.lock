@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: fb79153fed15cc415ec9ab6bf776bed570a74be5
+  revision: 52fa46a0aeaf4fcccfdfe106687d9c34763e20b6
   specs:
     synergy (1)
       active_attr
@@ -233,7 +233,7 @@ GEM
     pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
-    polyglot (0.3.3)
+    polyglot (0.3.4)
     prawn (0.12.0)
       pdf-reader (>= 0.9.0)
       ttfunk (~> 1.0.2)
