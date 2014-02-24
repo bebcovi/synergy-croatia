@@ -1,9 +1,32 @@
 .toc {
+  @extend %unstyled-list;
+  margin-bottom: $bsu;
+  color: rgba(#000, .35);
+  font-family: $helvetica;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 1px;
+
   a {
-    @include color-link(rgba(#000, .35), $orange);
+    @include color-link(rgba(#000, .5), $orange);
+    display: block;
+    padding: $hsu/2 0;
+    border-bottom: 1px solid rgba($link-hover, .25);
   }
 
   li.active a {
     @include color-link($orange);
+    font-weight: bold;
+  }
+
+  @include media-query(lap-and-up) {
+    width: $toc-width;
+    float: left;
+    margin-right: $bsu;
+
+    & ~ * {
+      overflow: hidden;
+    }
   }
 }

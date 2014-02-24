@@ -39,7 +39,7 @@
 
   @include media-query(desk-and-up) {
     float: left;
-    width: 100/3 * 2%;
+    width: 100/4 * 3%;
     padding-right: $gutter-width;
   }
 }
