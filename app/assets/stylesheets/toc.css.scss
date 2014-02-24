@@ -13,6 +13,11 @@
     display: block;
     padding: $hsu/2 0;
     border-bottom: 1px solid rgba($link-hover, .25);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
   }
 
   li.active a {
