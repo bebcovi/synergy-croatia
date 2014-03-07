@@ -48,3 +48,7 @@
   @include font-size($base-font-size - 1px);
   color: tint($orange, 20%);
 }
+
+.project_short, .post_short {
+  @include clearfix;
+}
