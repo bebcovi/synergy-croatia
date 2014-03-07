@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: 4ccbfbefe0ad292cdaeea01f429c550ef964a0ad
+  revision: 6ad5aaeb67cf447d96efdf509af10386f9c91fa6
   specs:
     synergy (1)
       active_attr
