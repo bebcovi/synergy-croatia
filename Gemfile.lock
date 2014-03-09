@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: 6ad5aaeb67cf447d96efdf509af10386f9c91fa6
+  revision: b201bf82e225ac293afd212e70c72f7d24716d23
   specs:
     synergy (1)
       active_attr
@@ -43,6 +43,7 @@ GIT
       binding_of_caller (>= 0.7.2)
       bourbon
       carrierwave (>= 0.9)
+      carrierwave_backgrounder
       coffee-rails
       dotenv
       draper
@@ -68,6 +69,7 @@ GIT
       simple_form (>= 3.0.0)
       spring (>= 1.0.1)
       squeel (>= 1.1)
+      sucker_punch (~> 0.5.1)
       thin
       uglifier
       unf
@@ -127,6 +129,10 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    carrierwave_backgrounder (0.3.0)
+      carrierwave (~> 0.5)
+    celluloid (0.14.1)
+      timers (>= 1.0.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -187,6 +193,7 @@ GEM
       activesupport (>= 3.2, < 5)
     hashery (2.1.1)
     hike (1.2.3)
+    hitimes (1.2.1)
     i18n (0.6.9)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
@@ -281,7 +288,8 @@ GEM
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
     ruby-rc4 (0.1.5)
-    sass (3.2.14)
+    sass (3.3.0)
+      rake
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -305,6 +313,8 @@ GEM
       activesupport (>= 3.0)
       polyamorous (~> 0.6.0)
     subexec (0.2.3)
+    sucker_punch (0.5.1)
+      celluloid (~> 0.14.1)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -313,6 +323,8 @@ GEM
     thread_safe (0.2.0)
       atomic (>= 1.1.7, < 2)
     tilt (1.4.1)
+    timers (2.0.0)
+      hitimes
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
