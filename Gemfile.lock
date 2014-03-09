@@ -34,7 +34,7 @@ GIT
 
 GIT
   remote: git://github.com/twin/synergy.git
-  revision: b201bf82e225ac293afd212e70c72f7d24716d23
+  revision: 8e8faac84e06b532f01267d635825a89f2ae6f68
   specs:
     synergy (1)
       active_attr
@@ -65,6 +65,7 @@ GIT
       rails (>= 4.0.0)
       rails_12factor
       redcarpet (= 3)
+      sass (~> 3.2.12)
       sass-rails
       simple_form (>= 3.0.0)
       spring (>= 1.0.1)
@@ -288,8 +289,7 @@ GEM
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
     ruby-rc4 (0.1.5)
-    sass (3.3.0)
-      rake
+    sass (3.2.15)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
