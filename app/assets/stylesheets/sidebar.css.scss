@@ -13,7 +13,8 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     @extend %bleed;
     @include trailer(.5);
     @include padding-trailer(.5, 1px solid rgba($link-color, .1));
-    &:last-child {
+
+    &:last-child:not(.syncro) {
       @include padding-trailer(.5);
       margin-bottom: 0;
       border-bottom: none;
@@ -56,7 +57,7 @@ $sidebar-border: 1px solid tint($link-color, 65%);
       @include padding-trailer(.5, 1px solid rgba($link-color, .1));
       @include trailer(.5);
       @include bleed($padding);
-      &:last-child {
+      &:last-child:not(.syncro) {
         margin-bottom: 0;
         padding-bottom: 0;
         border-bottom: 0;
@@ -80,10 +81,22 @@ $sidebar-border: 1px solid tint($link-color, 65%);
 
     @include social-icon(facebook, $facebook-color);
     @include social-icon(twitter, $twitter-color);
+    @include social-icon(youtube, $youtube-color);
     @include social-icon(feed, $feed-color);
   }
 
   .syncro {
+    margin-top: - ($half-spacing-unit + 1px);
+    margin-right: - ($gutter-width + 1px);
+    margin-left: - ($gutter-width + 1px);
+    margin-bottom: - $base-spacing-unit;
+    padding-top: $half-spacing-unit;
+    padding-bottom: $base-spacing-unit;
+    border: 1px solid #a5d5df;
+    background-image: url("http://www.syncro.hr/assets/patterns/sidebar-bg.png");
+    background-color: rgb(246, 254, 254);
+    color: #004353;
+
     h3 a:hover {
       background: none;
     }
