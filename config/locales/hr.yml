@@ -33,6 +33,8 @@ hr:
     evs:
       page_title: "Europska volonterska služba"
       navigation_title: "EVS"
+    projects:
+      page_title: "Projekti"
     archive:
       page_title: "Postignuća"
     testimonials:

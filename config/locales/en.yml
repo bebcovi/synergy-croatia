@@ -33,6 +33,8 @@ en:
     evs:
       page_title: "European Voluntary Service"
       navigation_title: "EVS"
+    projects:
+      page_title: "Projects"
     archive:
       page_title: "Achievements"
     testimonials:

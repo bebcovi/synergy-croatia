@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def news
-    @news = News.all
-      .map(&:decorate)
+    @posts = Post.available_in(I18n.locale)
+      .decorate
       .paginate(page: params[:page], per_page: 3)
   end
 
@@ -9,6 +9,12 @@ class PagesController < ApplicationController
   end
 
   def evs
+  end
+
+  def projects
+    @projects = Project.available_in(I18n.locale)
+      .decorate
+      .paginate(page: params[:page], per_page: 3)
   end
 
   def archive

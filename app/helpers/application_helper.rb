@@ -1,6 +1,6 @@
 module ApplicationHelper
   def navigation_pages
-    pages = %w[news about evs archive testimonials partners gallery contact]
+    pages = %w[news about evs projects testimonials partners gallery contact]
     pages.collect do |name|
       {
         title: (I18n.t!("pages.#{name}.navigation_title") rescue t("pages.#{name}.page_title")),
