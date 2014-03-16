@@ -1,0 +1,10 @@
+.fancybox-wrap {
+  a {
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

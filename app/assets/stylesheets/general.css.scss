@@ -70,7 +70,7 @@ a {
   @include on-interact {
     text-decoration: none;
     border-bottom-color: tint($link-hover, 50%);
-    background: rgba($link-hover, .1);
+    background-color: rgba($link-hover, .1);
   }
 }
 
