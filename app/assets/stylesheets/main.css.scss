@@ -5,20 +5,16 @@
     @include trailer;
   }
 
-  > h1:first-child {
-    @each $page in $pages {
-      body.#{$page} & {
-        @include prefixer(filter, sepia(50%), webkit moz ms spec);
-        @include trailer;
-        max-width: $page-cover-max-width;
-        padding: $base-spacing-unit $half-spacing-unit;
-        color: white;
-        text-shadow: 1px 1px 2px black;
-        border: 2px solid rgba(black, .5);
-        border-radius: 2px;
-        background: image-url("pages/#{$page}.jpg") 50% 50%;
-      }
-    }
+  h1.has-background {
+    @include prefixer(filter, sepia(50%), webkit moz ms spec);
+    @include trailer;
+    max-width: $page-cover-max-width;
+    padding: $base-spacing-unit $half-spacing-unit;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border: 2px solid rgba(black, .5);
+    border-radius: 2px;
+    background-position: 50% 50%;
   }
 
   > p,
