@@ -1,6 +1,6 @@
 - @title = t(".page_title")
 
-%ul.albums
+%ul.album_list
   = list_of @albums do |album|
-    = link_to album_path(album), style: "background-image: url(#{album.cover_photo.url(:small)})" do
+    = link_to album_path(album), style: "background-image: url(#{album.cover_photo.url(:medium)})" do
       .album_title= album.name

@@ -1,0 +1,115 @@
+.album_list,
+.album_photos {
+  @include clearfix;
+  @extend %unstyled-list;
+
+  li  { position: relative; }
+  a   { display: inline-block; }
+}
+
+.album_list {
+  $spacing: $half-spacing-unit;
+  margin-bottom: 0;
+  text-align: center;
+
+  li {
+    float: left;
+    width: 50%;
+    height: 300px;
+    margin-bottom: $spacing;
+    line-height: 0;
+
+    &:nth-child(2n) {
+      padding-right: 2px;
+    }
+
+    @include media-query(palm) {
+      width: auto;
+      max-width: 500px; // FIXME: magic number
+      float: none;
+    }
+
+    @include media-query(lap-and-up) {
+      &:nth-child(2n+1) {
+        padding-right: $spacing/2;
+      }
+
+      &:nth-child(2n) {
+        padding-left: $spacing/2;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba($orange, .75);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 1px 1px 0 rgba(black, .25);
+    @include on-interact {
+      .album_title {
+        background: rgba($link-color, .75);
+        color: white;
+      }
+    }
+  }
+}
+
+.album_title {
+  @extend %transition-all;
+  $margin: 5px;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: $half-spacing-unit/2 $half-spacing-unit;
+  line-height: $base-line-height;
+  color: rgba(black, .5);
+  border-top: 1px solid white;
+  background: rgba(white, .75);
+}
+
+.album_photos {
+  $width: 33%;
+  $height: 200px;
+  $spacing: 1px;
+
+  li {
+    @include size($width, $height);
+    float: left;
+    overflow: hidden;
+    margin: 0 $spacing $spacing 0;
+  }
+
+  a {
+    @extend %transition-all;
+    color: transparent;
+    background: transparent;
+    &:after {
+      content: '\e600';
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-family: icomoon;
+      font-size: 32px;
+      line-height: $height;
+      text-align: center;
+      color: inherit;
+      background: inherit;
+    }
+
+    $hover-color: black;
+    &:hover {
+      background: rgba($hover-color, .75);
+      color: white;
+    }
+  }
+
+  img { max-width: none; }
+}

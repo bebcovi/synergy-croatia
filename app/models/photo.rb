@@ -1,3 +1,5 @@
+require "pathname"
+
 class Photo < ActiveRecord::Base
   belongs_to :album
 
@@ -13,5 +15,10 @@ class Photo < ActiveRecord::Base
 
   def url(*args)
     image.url(*args)
+  end
+
+  def title
+    filename = Pathname.new(image.file.filename)
+    filename.basename(filename.extname)
   end
 end
