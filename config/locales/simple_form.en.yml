@@ -9,3 +9,8 @@ en:
         phone: "Phone number"
         other: "Other"
         reason: "I want to volunteer because"
+      album:
+        cover_photo:
+          image: "Cover photo"
+        photos:
+          image: "Photos"
