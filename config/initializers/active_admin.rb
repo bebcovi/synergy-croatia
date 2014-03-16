@@ -22,25 +22,19 @@ ActiveAdmin.setup do |config|
         add_text.(Text.find("pages/evs"), page, priority: 1)
       end
 
-      menu.add label: "Achievements", priority: 4 do |page|
-        add_text.(Text.find("pages/archive"), page, priority: 1)
-      end
+      menu.add label: "Projects", priority: 4
 
-      menu.add label: "Testimonials", priority: 5 do |page|
-        add_text.(Text.find("pages/testimonials"), page, priority: 1)
-      end
-
-      menu.add label: "Partners", priority: 6 do |page|
+      menu.add label: "Partners", priority: 5 do |page|
         add_text.(Text.find("pages/partners"), page, priority: 1)
       end
 
-      menu.add label: "Gallery", priority: 7
+      menu.add label: "Gallery", priority: 6
 
-      menu.add label: "Contact", priority: 8 do |page|
+      menu.add label: "Contact", priority: 7 do |page|
         add_text.(Text.find("pages/contact"), page, priority: 1)
       end
 
-      menu.add label: "Sidebar", priority: 9
+      menu.add label: "Sidebar", priority: 8
     end
   end
 
