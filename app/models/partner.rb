@@ -6,4 +6,6 @@ class Partner < ActiveRecord::Base
   acts_as_list
 
   validates_presence_of :name_en, :name_hr, :photo, :url_en, :url_hr
+
+  default_scope -> { order{position.asc} }
 end

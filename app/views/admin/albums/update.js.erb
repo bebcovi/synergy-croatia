@@ -1,0 +1,26 @@
+<% photos_attributes = params[:album][:photos_attributes].values %>
+
+<% if photos_attributes.any? { |hash| hash[:image].present? } %>
+
+  var photo = $('<%= simple_form_for [:admin, @album], defaults: {wrapper_tag: :li} do |f|
+    f.simple_fields_for :photos, @album.photos.last, child_index: @album.photos.count - 1 do |p|
+      render "photo", f: p
+    end
+  end.delete("\n").html_safe %>')
+
+  photo.find("div").remove()
+  photo = $(photo.html())
+
+  $("ol.photos").append(photo)
+
+<% else %>
+
+  var id = "<%= begin
+    hash = photos_attributes.find { |hash| hash["_destroy"] == "true" }
+    hash["id"]
+  end %>"
+
+  $("#photo_" + id).next("input").remove()
+  $("#photo_" + id).remove()
+
+<% end %>

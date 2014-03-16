@@ -34,11 +34,13 @@ ActiveAdmin.setup do |config|
         add_text.(Text.find("pages/partners"), page, priority: 1)
       end
 
-      menu.add label: "Contact", priority: 7 do |page|
+      menu.add label: "Gallery", priority: 7
+
+      menu.add label: "Contact", priority: 8 do |page|
         add_text.(Text.find("pages/contact"), page, priority: 1)
       end
 
-      menu.add label: "Sidebar", priority: 8
+      menu.add label: "Sidebar", priority: 9
     end
   end
 

@@ -1,0 +1,44 @@
+= simple_form_for [:admin, @album], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :name_en
+      = f.input :description_en
+
+  %fieldset.inputs
+    %ol
+      = f.input :name_hr
+      = f.input :description_hr
+
+  %fieldset.inputs
+    %ol
+      = f.simple_fields_for :cover_photo, @album.cover_photo do |c|
+        = c.input :image do
+          .list-inline-block
+            = image_tag @album.cover_photo.image.url(:small), height: 100 if @album.cover_photo.present?
+            = c.input_field :image
+            = c.hidden_field :image_cache
+
+  - if @album.persisted?
+
+    %fieldset.inputs
+      %ol
+        = f.simple_fields_for :photos, Photo.new, child_index: -1 do |p|
+          = p.input :image
+
+      %ol.photos
+        = f.simple_fields_for :photos do |p|
+          = render "photo", f: p
+
+  - else
+
+    %fieldset.inputs
+      %ol
+        %li.input
+          %label Photos
+          %p.inline-hints You will be able to add photos after you create the album.
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Done", collection_path
