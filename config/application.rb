@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require "rails"
 require "synergy"
+require "fancybox2-rails"
 
 require "newrelic_rpm" if Rails.env.production?
 

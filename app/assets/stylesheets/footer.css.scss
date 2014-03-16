@@ -1,10 +1,24 @@
 .site_footer {
   @include padding-leader(.5, 1px solid rgba($link-color, .25));
   @include padding-trailer(.5);
+  color: rgba($link-color, .75);
 }
 
 .copyright {
   @extend .milli;
   margin-bottom: 0;
-  color: rgba($link-color, .75);
+}
+
+.authorship {
+  margin-bottom: 0;
+}
+
+@include media-query(lap-and-up) {
+  .copyright {
+    float: left;
+  }
+
+  .authorship {
+    float: right;
+  }
 }
