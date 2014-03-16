@@ -24,6 +24,9 @@ en:
     header:
       quote: "The real voyage of discovery consists not in <br>seeking new lands but seeing with new eyes."
 
+  search:
+    placeholder: "Search"
+
   pages:
     news:
       navigation_title: "News"

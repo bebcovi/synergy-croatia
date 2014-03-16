@@ -24,6 +24,9 @@ hr:
     header:
       quote: "Pravo putovanje otkrivanja ne sastoji se u traženju <br>novih prostranstva nego u promatranju novim očima."
 
+  search:
+    placeholder: "Pretraživanje"
+
   pages:
     news:
       navigation_title: "Vijesti"
