@@ -39,6 +39,8 @@ en:
       page_title: "Testimonials"
     partners:
       page_title: "Partners"
+    gallery:
+      page_title: "Gallery"
     contact:
       page_title: "Contact"
 

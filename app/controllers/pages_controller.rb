@@ -31,6 +31,10 @@ class PagesController < ApplicationController
     @partners = Partner.decorate
   end
 
+  def gallery
+    @albums = Album.decorate
+  end
+
   def contact
   end
 end

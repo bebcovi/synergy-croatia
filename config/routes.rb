@@ -9,8 +9,11 @@ SynergyCroatia::Application.routes.draw do
       get "archive"
       get "testimonials"
       get "partners"
+      get "gallery"
       get "contact"
     end
+
+    resources :albums
 
     controller :support do
       get "donate"

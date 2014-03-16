@@ -10,4 +10,8 @@ class Photo < ActiveRecord::Base
   def present?
     image.present?
   end
+
+  def url(*args)
+    image.url(*args)
+  end
 end

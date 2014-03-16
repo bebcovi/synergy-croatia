@@ -40,6 +40,8 @@ hr:
       page_title: "Iskustva polaznika"
     partners:
       page_title: "Partneri"
+    gallery:
+      page_title: "Galerija"
     contact:
       page_title: "Kontakt"
 

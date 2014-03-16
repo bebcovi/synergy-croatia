@@ -1,0 +1,7 @@
+- @title = @album.name
+
+%h1= @album.name
+
+%ul.album_photos
+  = list_of @album.photos do |photo|
+    = link_to image_tag(photo.image.url(:small), alt: photo.title), photo.image.url
