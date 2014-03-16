@@ -1,0 +1,3 @@
+= form_tag request.path, method: :get do
+  = search_field_tag :q, params[:q]
+  = submit_tag "Traži"

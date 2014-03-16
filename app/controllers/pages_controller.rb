@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def news
     @posts = Post.available_in(I18n.locale)
-      .decorate
-      .paginate(page: params[:page], per_page: 3)
+    @posts = @posts.search(params[:q]) if params[:q].present?
+    @posts = @posts.decorate.paginate(page: params[:page], per_page: 3)
   end
 
   def about
@@ -13,8 +13,8 @@ class PagesController < ApplicationController
 
   def projects
     @projects = Project.available_in(I18n.locale)
-      .decorate
-      .paginate(page: params[:page], per_page: 3)
+    @projects = @projects.search(params[:q]) if params[:q]
+    @projects = @projects.decorate.paginate(page: params[:page], per_page: 3)
   end
 
   def archive
