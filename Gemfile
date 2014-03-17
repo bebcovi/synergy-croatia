@@ -6,6 +6,7 @@ gem "rails", ">= 4"
 gem "synergy", github: "twin/synergy"
 
 gem "fancybox2-rails"
+gem "rmagick"
 
 gem "newrelic_rpm"
 

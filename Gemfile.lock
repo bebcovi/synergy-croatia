@@ -305,6 +305,7 @@ GEM
     request_store (1.0.5)
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
+    rmagick (2.13.2)
     ruby-rc4 (0.1.5)
     sass (3.2.15)
     sass-rails (4.0.2)
@@ -368,5 +369,6 @@ DEPENDENCIES
   newrelic_rpm
   prawn (>= 0.12)
   rails (>= 4)
+  rmagick
   sassy-buttons-bourbon!
   synergy!

@@ -1,0 +1,17 @@
+= simple_form_for [:admin, @page_photo], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :image
+
+    - if @page_photo.persisted?
+
+      = image_tag @page_photo.image.url, id: "cropbox"
+
+      - %w[x y w h].each do |attribute|
+        = f.hidden_field "crop_#{attribute}"
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", resource_path

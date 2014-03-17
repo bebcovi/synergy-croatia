@@ -9,4 +9,10 @@ module ApplicationHelper
       }
     end
   end
+
+  def title(value)
+    content_tag :h1, style: ("background-image: url(#{@page_photo.image.url(:display)})" if @page_photo) do
+      value
+    end
+  end
 end
