@@ -1,6 +1,6 @@
 module ApplicationHelper
   def navigation_pages
-    pages = %w[news about evs projects partners gallery contact]
+    pages = %w[news about evs projects partnerships gallery contact]
     pages.delete("gallery") if Album.count == 0
     pages.collect do |name|
       {

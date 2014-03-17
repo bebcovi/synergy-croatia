@@ -33,8 +33,9 @@ class PagesController < ApplicationController
       .decorate
   end
 
-  def partners
+  def partnerships
     @partners = Partner.decorate
+    @text.object.send(:"body_#{I18n.locale}") << view_context.render("partners")
   end
 
   def gallery

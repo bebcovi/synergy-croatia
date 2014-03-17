@@ -15,7 +15,7 @@ class PagePhoto < ActiveRecord::Base
       super(Integer(uid))
     rescue ArgumentError
       controller, action = uid.split("/")
-      where(controller: controller, action: action).first
+      find_by(controller: controller, action: action)
     end
   end
 

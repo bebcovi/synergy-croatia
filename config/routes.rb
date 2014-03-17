@@ -8,7 +8,7 @@ SynergyCroatia::Application.routes.draw do
       get "evs"
       get "projects"
       get "testimonials"
-      get "partners"
+      get "partnerships"
       get "gallery"
       get "contact"
     end

@@ -1,5 +1,5 @@
 ActiveAdmin.register Partner do
-  menu parent: "Partners", priority: 2
+  menu parent: "Partners", priority: 3
 
   config.sort_order = "position_asc"
 

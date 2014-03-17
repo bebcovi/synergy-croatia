@@ -34,7 +34,7 @@ ActiveAdmin.setup do |config|
 
       menu.add label: "Partners", priority: 5 do |page|
         add_page_photo.("pages/partnerships", page, priority: 1)
-        add_text.("pages/partners", page, priority: 2)
+        add_text.("pages/partnerships", page, priority: 2)
       end
 
       menu.add label: "Gallery", priority: 6
