@@ -40,7 +40,8 @@ ActiveAdmin.setup do |config|
       menu.add label: "Gallery", priority: 6
 
       menu.add label: "Contact", priority: 7 do |page|
-        add_text.("pages/contact", page, priority: 1)
+        add_page_photo.("pages/contact", page, priority: 1)
+        add_text.("pages/contact", page, priority: 2)
       end
 
       menu.add label: "Sidebar", priority: 8

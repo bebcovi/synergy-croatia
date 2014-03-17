@@ -7,7 +7,6 @@ class PagePhoto < ActiveRecord::Base
   before_update :initialize_cropping
   after_update { image.recreate_versions! if image.present? }
 
-  validates_presence_of :image
   validates_uniqueness_of :action, scope: :controller
 
   def self.find(uid)
