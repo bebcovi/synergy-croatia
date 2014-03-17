@@ -1,6 +1,7 @@
 .main_content {
 
   .search {
+    max-width: 400px;
     position: relative;
     margin-top: $base-spacing-unit;
   }
@@ -15,26 +16,16 @@
   }
 
   .search-btn {
+    @include sassy-button-structure(50%, 16px, 0);
+    @include sassy-button-gradient($base-color: $orange);
     position: absolute;
     z-index: 5;
     top: 6px;
-    right: 6px;
+    right: 7px;
     width: $base-spacing-unit;
     height: $base-spacing-unit;
     text-align: center;
     line-height: $base-spacing-unit;
-    margin: 0;
-    padding: 0;
-    border-radius: 50%;
-    background: $orange;
-    border: none;
-    color: white;
-    font-size: 16px;
-
-    &:hover,
-    &:focus {
-      background: shade($orange, 20%);
-    }
 
     i {
       position: relative;
