@@ -82,6 +82,14 @@ b {
   font-style: normal;
 }
 
+img {
+  p & {
+    float: left;
+    margin-top: $half-spacing-unit;
+    margin-right: $base-spacing-unit;
+  }
+}
+
 dl {
   @extend %cf;
   width: 100%;
