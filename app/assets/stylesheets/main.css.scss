@@ -5,7 +5,7 @@
     @include trailer;
   }
 
-  > h1:first-child { //.has-background {
+  > h1:first-child:not(.album-title) { //.has-background {
     @include prefixer(filter, sepia(50%), webkit moz ms spec);
     @include trailer;
     max-width: $page-cover-max-width;

@@ -5,4 +5,8 @@ class AlbumDecorator < Draper::Decorator
   def to_s
     name
   end
+
+  def description
+    h.markdown super
+  end
 end

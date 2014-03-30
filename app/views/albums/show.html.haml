@@ -1,6 +1,8 @@
 - @title = @album.name
 
-%h1= @album.name
+%h1.album-title= @album.name
+
+= @album.description
 
 %ul.album_photos
   = list_of @album.photos do |photo|
