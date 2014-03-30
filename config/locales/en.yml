@@ -36,6 +36,8 @@ en:
     evs:
       page_title: "European Voluntary Service"
       navigation_title: "EVS"
+    trainings:
+      page_title: "Trainings"
     projects:
       page_title: "Projects"
     archive:

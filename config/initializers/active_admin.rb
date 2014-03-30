@@ -23,29 +23,34 @@ ActiveAdmin.setup do |config|
         add_text.("pages/about", page, priority: 2)
       end
 
-      menu.add label: "Projects", priority: 3 do |page|
+      menu.add label: "Trainings", priority: 3 do |page|
+        add_page_photo.("pages/trainings", page, priority: 1)
+        add_text.("pages/trainings", page, priority: 2)
+      end
+
+      menu.add label: "Projects", priority: 4 do |page|
         add_page_photo.("pages/projects", page, priority: 1)
         add_text.("pages/projects", page, priority: 2)
       end
 
-      menu.add label: "Partnerships", priority: 4 do |page|
+      menu.add label: "Partnerships", priority: 5 do |page|
         add_page_photo.("pages/partnerships", page, priority: 1)
         add_text.("pages/partnerships", page, priority: 2)
       end
 
-      menu.add label: "EVS", priority: 5 do |page|
+      menu.add label: "EVS", priority: 6 do |page|
         add_page_photo.("pages/evs", page, priority: 1)
         add_text.("pages/evs", page, priority: 2)
       end
 
-      menu.add label: "Gallery", priority: 6
+      menu.add label: "Gallery", priority: 7
 
-      menu.add label: "Contact", priority: 7 do |page|
+      menu.add label: "Contact", priority: 8 do |page|
         add_page_photo.("pages/contact", page, priority: 1)
         add_text.("pages/contact", page, priority: 2)
       end
 
-      menu.add label: "Sidebar", priority: 8
+      menu.add label: "Sidebar", priority: 9
     end
   end
 

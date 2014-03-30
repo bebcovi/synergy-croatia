@@ -36,6 +36,8 @@ hr:
     evs:
       page_title: "Europska volonterska služba"
       navigation_title: "EVS"
+    trainings:
+      page_title: "Treninzi"
     projects:
       page_title: "Projekti"
     archive:

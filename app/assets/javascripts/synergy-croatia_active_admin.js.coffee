@@ -10,6 +10,8 @@ jQuery ->
     switch text
       when "News"         then $("li#news").addClass("current")
       when "About us"     then $("li#about_us").addClass("current")
+      when "Projects"     then $("li#projects").addClass("current")
+      when "Trainings"    then $("li#trainings").addClass("current")
       when "EVS"          then $("li#evs").addClass("current")
       when "Achievements" then $("li#achievements").addClass("current")
       when "Testimonials" then $("li#testimonials").addClass("current")
