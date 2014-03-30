@@ -1,5 +1,5 @@
 - text.parts.each do |part|
-  - if part.title =~ /#{params[:q]}/ or part.body =~ /#{params[:q]}/
+  - if part.title =~ /#{params[:q]}/i or part.body =~ /#{params[:q]}/i
     %li
       = link_to text.to_s, action: text.action
       &gt;
