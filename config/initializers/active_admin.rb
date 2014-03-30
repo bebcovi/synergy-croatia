@@ -23,19 +23,19 @@ ActiveAdmin.setup do |config|
         add_text.("pages/about", page, priority: 2)
       end
 
-      menu.add label: "EVS", priority: 3 do |page|
-        add_page_photo.("pages/evs", page, priority: 1)
-        add_text.("pages/evs", page, priority: 2)
-      end
-
-      menu.add label: "Projects", priority: 4 do |page|
+      menu.add label: "Projects", priority: 3 do |page|
         add_page_photo.("pages/projects", page, priority: 1)
         add_text.("pages/projects", page, priority: 2)
       end
 
-      menu.add label: "Partnerships", priority: 5 do |page|
+      menu.add label: "Partnerships", priority: 4 do |page|
         add_page_photo.("pages/partnerships", page, priority: 1)
         add_text.("pages/partnerships", page, priority: 2)
+      end
+
+      menu.add label: "EVS", priority: 5 do |page|
+        add_page_photo.("pages/evs", page, priority: 1)
+        add_text.("pages/evs", page, priority: 2)
       end
 
       menu.add label: "Gallery", priority: 6
