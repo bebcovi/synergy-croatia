@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def news
-    @posts = Post.available_in(I18n.locale)
-    @posts = @posts.search(params[:q]) if params[:q].present?
-    @posts = @posts.decorate.paginate(page: params[:page], per_page: 3)
+    @news = News.all
+      .map(&:decorate)
+      .paginate(page: params[:page], per_page: 3)
   end
 
   def about
