@@ -44,4 +44,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def search
+    @results = PgSearch.multisearch(params[:q])
+  end
 end

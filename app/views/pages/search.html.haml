@@ -1,0 +1,6 @@
+- @title = t(".page_title")
+
+%ol.search-results
+  - @results.each do |result|
+    = render partial: "pages/search/#{result.searchable_type.downcase}",
+             object: result.searchable.decorate

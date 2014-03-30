@@ -12,6 +12,7 @@ SynergyCroatia::Application.routes.draw do
       get "partnerships"
       get "gallery"
       get "contact"
+      get "search"
     end
 
     resources :albums

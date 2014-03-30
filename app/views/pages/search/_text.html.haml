@@ -1,0 +1,9 @@
+- text.parts.each do |part|
+  - if part.title =~ /#{params[:q]}/ or part.body =~ /#{params[:q]}/
+    %li
+      = link_to text.to_s, action: text.action
+      &gt;
+      - if part.title
+        = link_to part.title, action: text.action, anchor: part.title.parameterize
+      - else
+        = link_to "Općenito", action: text.action

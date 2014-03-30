@@ -50,6 +50,8 @@ en:
       page_title: "Gallery"
     contact:
       page_title: "Contact"
+    search:
+      page_title: "Search"
 
     archive_nav:
       all: "All achievements"

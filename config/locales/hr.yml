@@ -51,6 +51,8 @@ hr:
       page_title: "Galerija"
     contact:
       page_title: "Kontakt"
+    search:
+      page_title: "Pretraga"
 
     archive_nav:
       all: "Sva postignuća"
