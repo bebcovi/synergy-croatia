@@ -1,18 +1,25 @@
-.main_content {
+.site_navigation {
 
   .search {
-    max-width: 400px;
+    max-width: 190px;
     position: relative;
-    margin-top: $base-spacing-unit;
+    margin: 0;
+    margin-top: 5px;
   }
 
   .search-field {
     position: relative;
     border-radius: 50px;
+    height: $base-spacing-unit;
+    padding: 7px;
     padding-right: 36px;
-    padding-left: 14px;
     font-family: $helvetica;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1;
+
+    @include placeholder {
+      line-height: 1.2 !important;
+    }
   }
 
   .search-btn {
@@ -20,17 +27,17 @@
     @include sassy-button-gradient($base-color: $orange);
     position: absolute;
     z-index: 5;
-    top: 6px;
-    right: 7px;
-    width: $base-spacing-unit;
-    height: $base-spacing-unit;
+    top: 3px;
+    right: 4px;
+    width: 21px;
+    height: 21px;
     text-align: center;
     line-height: $base-spacing-unit;
 
     i {
       position: relative;
-      top: 2px;
-      right: 1px;
+      top: 1px;
     }
   }
+
 }
