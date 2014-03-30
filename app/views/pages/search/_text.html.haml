@@ -2,8 +2,9 @@
   - if part.title =~ /#{params[:q]}/i or part.body =~ /#{params[:q]}/i
     %li
       = link_to text.to_s, action: text.action
-      &gt;
-      - if part.title
-        = link_to part.title, action: text.action, anchor: part.title.parameterize
-      - else
-        = link_to "Općenito", action: text.action
+      - if text.toc?
+        &gt;
+        - if part.title
+          = link_to part.title, action: text.action, anchor: part.title.parameterize
+        - else
+          = link_to "Općenito", action: text.action
