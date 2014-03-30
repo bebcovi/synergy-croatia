@@ -14,3 +14,7 @@ en:
           image: "Cover photo"
         photos:
           image: "Photos"
+    hints:
+      text:
+        body_en: "Write only \"##\" titles or smaller, don't write \"#\" titles."
+        body_hr: "Write only \"##\" titles or smaller, don't write \"#\" titles."
