@@ -94,7 +94,7 @@
     a {
       @include color-link(rgba($link-color, .75), $link-hover);
       height: $height;
-      padding: 0 $base-spacing-unit;
+      padding: 0 $half-spacing-unit;
       line-height: $height - 5px;
       border: none;
       @include on-interact {
