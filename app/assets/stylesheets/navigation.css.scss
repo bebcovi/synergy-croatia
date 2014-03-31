@@ -11,6 +11,16 @@
     padding: 0;
   }
 
+  li {
+    &:last-child {
+      padding-left: $half-spacing-unit;
+      @media (min-width: $navigation-break) {
+        padding-left: 0;
+        float: right;
+      }
+    }
+  }
+
   a {
     @include padding-leader(.5, 1px solid rgba($link-color, .25));
     @include padding-trailer(.5);
