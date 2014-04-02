@@ -23,17 +23,9 @@
     li {
       @include trailer(.5);
       float: left;
-      width: 100/3 * 1%;
+      width: 100/2 * 1%;
       height: 6 * $base-spacing-unit;
       padding-right: $bsu;
-
-      &:before {
-        content: "";
-        display: inline-block;
-        vertical-align: bottom;
-        height: 100%;
-        margin-left: -0.2em;
-      }
     }
 
     img {
@@ -44,8 +36,7 @@
     }
 
     a {
-      display: inline-block;
-      vertical-align: bottom;
+      width: 100%;
 
       &:hover img {
         opacity: 1;
