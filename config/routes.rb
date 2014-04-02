@@ -15,6 +15,8 @@ SynergyCroatia::Application.routes.draw do
       get "search"
     end
 
+    get "partners" => redirect("partnerships#partners")
+
     resources :albums
 
     controller :support do
