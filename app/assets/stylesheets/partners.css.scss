@@ -26,6 +26,14 @@
       width: 100/2 * 1%;
       height: 6 * $base-spacing-unit;
       padding-right: $bsu;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: bottom;
+        height: 100%;
+        margin-left: -0.25em;
+      }
     }
 
     img {
@@ -37,6 +45,8 @@
 
     a {
       width: 100%;
+      display: inline-block;
+      vertical-align: bottom;
 
       &:hover img {
         opacity: 1;
