@@ -7,6 +7,8 @@
 
   a {
     display: inline-block;
+    border-bottom: none;
+
     &:hover {
       background: none;
     }
