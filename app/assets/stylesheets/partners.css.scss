@@ -14,15 +14,24 @@
 
   img {
     max-height: 2 * $base-line-height;
+    margin-bottom: $half-spacing-unit/2;
   }
 
   @include media-query(desk-and-up) {
     li {
+      @include trailer(.5);
       float: left;
-      width: 50%;
+      width: 100/3 * 1%;
       height: 6 * $base-spacing-unit;
-      margin-bottom: 0;
       padding-right: $bsu;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: bottom;
+        height: 100%;
+        margin-left: -0.2em;
+      }
     }
 
     img {
@@ -33,6 +42,9 @@
     }
 
     a {
+      display: inline-block;
+      vertical-align: bottom;
+
       &:hover img {
         opacity: 1;
         -webkit-filter: grayscale(0%);
