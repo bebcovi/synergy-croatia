@@ -8,6 +8,8 @@
           = f.input_field :photo
           = f.hidden_field :photo_cache
 
+      = f.input :kind, as: :select, collection: %w[international local], include_blank: false
+
   %h2 English
 
   %fieldset.inputs

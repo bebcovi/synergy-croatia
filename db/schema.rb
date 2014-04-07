@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140330182017) do
+ActiveRecord::Schema.define(version: 20140407171812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "unaccent"
   enable_extension "pg_trgm"
+  enable_extension "unaccent"
 
   create_table "albums", force: true do |t|
     t.string   "name_en"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140330182017) do
     t.string  "url_en"
     t.string  "url_hr"
     t.integer "position"
+    t.string  "kind",     default: "international"
   end
 
   create_table "pg_search_documents", force: true do |t|

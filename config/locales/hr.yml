@@ -1,5 +1,8 @@
 hr:
   name: "Synergy Croatia"
+  partners: "Partneri"
+  local: "Lokalni"
+  international: "Međunarodni"
 
   application:
     support:

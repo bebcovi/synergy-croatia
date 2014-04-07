@@ -1,5 +1,8 @@
 en:
   name: "Synergy Croatia"
+  partners: "Partners"
+  local: "Local"
+  international: "International"
 
   application:
     support:

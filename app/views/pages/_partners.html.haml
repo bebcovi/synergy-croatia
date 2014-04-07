@@ -1,7 +1,7 @@
-%h2 Partners
+%h2 #{t("partners")} – #{t(kind)}
 
 %ul.partner_list
-  = list_of @partners do |partner|
+  = list_of partners do |partner|
     = link_to partner.url, target: "_blank" do
       = image_tag(partner.photo_url(:small), alt: partner.name)
       %div= partner.name

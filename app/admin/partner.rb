@@ -38,6 +38,7 @@ ActiveAdmin.register Partner do
       row :photo do
         image_tag partner.photo_url(:small), height: 100
       end
+      row :kind
     end
 
     locale_attributes :name, :url
