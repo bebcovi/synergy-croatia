@@ -2,7 +2,7 @@ require "acts_as_list"
 require "squeel"
 
 class Partner < ActiveRecord::Base
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :photo, PartnerPhotoUploader
   required_locale_columns :name, :url, validations: false
   acts_as_list
 
