@@ -6,6 +6,6 @@ class PartnerPhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :small do
-    resize_to_limit 150, 150
+    resize_to_limit 150, 80
   end
 end
