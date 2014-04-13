@@ -6,7 +6,6 @@
   }
 
   > h1:first-child:not(.album-title) { //.has-background {
-    @include prefixer(filter, sepia(50%), webkit moz ms spec);
     @include trailer;
     max-width: $page-cover-max-width;
     padding: $base-spacing-unit $half-spacing-unit;
