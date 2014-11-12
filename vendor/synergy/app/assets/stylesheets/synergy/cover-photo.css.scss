@@ -1,0 +1,14 @@
+.article-cover-photo {
+  float: right;
+  max-width: 300px;
+  margin-top: $hsu/2;
+  margin-bottom: $hsu;
+  margin-left: $hsu;
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+    padding: 4px;
+    border: 1px solid rgba(black, .25);
+  }
+}

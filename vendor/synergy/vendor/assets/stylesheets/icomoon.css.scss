@@ -1,0 +1,124 @@
+@include font-face(icomoon, "icomoon/icomoon", normal, $asset-pipeline: true);
+
+[class*="icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-images:before {
+  content: "\e02e";
+}
+.icon-bubble-plus:before {
+  content: "\e177";
+}
+.icon-eye-blocked:before {
+  content: "\e2da";
+}
+.icon-eye:before {
+  content: "\e2d9";
+}
+.icon-menu:before {
+  content: "\e2ac";
+}
+.icon-menu2:before {
+  content: "\e2b0";
+}
+.icon-menu3:before {
+  content: "\e2b1";
+}
+.icon-remove:before {
+  content: "\e250";
+}
+.icon-image:before {
+  content: "\e02c";
+}
+.icon-pencil:before {
+  content: "\e011";
+}
+.icon-file-word:before {
+  content: "\e4e4";
+}
+.icon-file-pdf:before {
+  content: "\e4e2";
+}
+.icon-chevron-up:before {
+  content: "\e3b0";
+}
+.icon-chevron-right:before {
+  content: "\e3b1";
+}
+.icon-chevron-down:before {
+  content: "\e3b2";
+}
+.icon-chevron-left:before {
+  content: "\e3b3";
+}
+.icon-plus:before {
+  content: "\e376";
+}
+.icon-location:before {
+  content: "\e0f1";
+}
+.icon-calendar:before {
+  content: "\e116";
+}
+.icon-feed:before {
+  content: "\e4a0";
+}
+.icon-twitter:before {
+  content: "\e49d";
+}
+.icon-facebook:before {
+  content: "\e498";
+}
+.icon-share:before {
+  content: "\e48c";
+}
+.icon-envelop:before {
+  content: "\e0ec";
+}
+.icon-phone:before {
+  content: "\e0db";
+}
+.icon-heart:before {
+  content: "\e30a";
+}
+.icon-exit:before {
+  content: "\e37e";
+}
+.icon-spinner:before {
+  content: "\e1a9";
+}
+.icon-caret-up:before {
+  content: "\e3b4";
+}
+.icon-caret-right:before {
+  content: "\e3b5";
+}
+.icon-caret-down:before {
+  content: "\e3b6";
+}
+.icon-caret-left:before {
+  content: "\e3b7";
+}
+.icon-youtube:before {
+  content: "\e4a3";
+}
+.icon-bullhorn:before {
+  content: "\e05f";
+}
+.icon-resize-full:before {
+  content: "\e600";
+}
+.icon-search:before {
+  content: "\e1b7";
+}

@@ -1,0 +1,30 @@
+= simple_form_for [:admin, @post], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :cover_photo do
+        .unsemantic
+          = image_tag @post.cover_photo_url(:small), height: 100 if @post.cover_photo?
+          = f.input_field :cover_photo
+          = f.hidden_field :cover_photo_cache
+
+  %h2 English
+
+  %fieldset.inputs
+    %ol
+      = f.input :title_en
+      = f.input :body_en, input_html: {rows: 15}
+      = f.input :summary_en, input_html: {rows: 5}
+
+  %h2 Croatian
+
+  %fieldset.inputs
+    %ol
+      = f.input :title_hr
+      = f.input :body_hr, input_html: {rows: 15}
+      = f.input :summary_hr, input_html: {rows: 5}
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path

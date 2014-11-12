@@ -1,0 +1,7 @@
+<% if @current?: %>
+  <i class="icon-spinner"></i>
+  <div class="admin-progress">
+    <div class="admin-progress-bar" style="width: <%= (@current / @total) * 100 %>%"></div>
+  </div>
+  <span class="admin-progress-info"><%= @current %> out of <%= @total %> uploaded</span>
+<% end %>

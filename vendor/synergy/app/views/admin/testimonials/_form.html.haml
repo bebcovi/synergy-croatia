@@ -1,0 +1,25 @@
+= simple_form_for [:admin, @testimonial], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :author
+
+  %h2 English
+
+  %fieldset.inputs
+    %ol
+      = f.input :content_en, input_html: {rows: 15}
+      = f.input :project_en
+
+  %h2 Croatian
+
+  %fieldset.inputs
+    %ol
+      = f.input :content_hr, input_html: {rows: 15}
+      = f.input :project_hr
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path
+

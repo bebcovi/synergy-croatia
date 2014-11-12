@@ -1,0 +1,22 @@
+= simple_form_for [:admin, (@announcement.object rescue @announcement)], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :expires_on
+
+  %h2 English
+
+  %fieldset.inputs
+    %ol
+      = f.input :content_en, as: :text, input_html: {rows: 6}
+
+  %h2 Croatian
+
+  %fieldset.inputs
+    %ol
+      = f.input :content_hr, as: :text, input_html: {rows: 6}
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path

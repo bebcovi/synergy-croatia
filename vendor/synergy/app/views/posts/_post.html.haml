@@ -1,0 +1,10 @@
+%article.post_short
+
+  %header
+    %h1= post.title
+
+  - if post.cover_photo?
+    .article-cover-photo
+      = image_tag post.cover_photo_url(:medium)
+
+  = post.summary

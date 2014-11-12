@@ -1,0 +1,13 @@
+%nav.site_navigation
+  .container
+    .nav_expander
+      = icon("menu")
+      %span.current_page= current_page_title(navigation_pages)
+
+    %ol
+      - navigation_pages.each do |page|
+        %li{class: ("active" if current_page?(page[:path]))}
+          = link_to page[:title], page[:path]
+
+      %li= render "search_field" if defined?(SynergyCroatia)
+

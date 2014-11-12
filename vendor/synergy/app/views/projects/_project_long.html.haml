@@ -1,0 +1,15 @@
+%article.project_long
+
+  %h1.title= project.title
+
+  %p.location= project.location.prepend_icon("location")
+
+  - if project.cover_photo?
+    .article-cover-photo
+      = image_tag project.cover_photo_url(:medium)
+
+  = markdown project.description
+
+  %ul.attachments
+    = list_of project.attachments do |attachment|
+      = link_to attachment.name, attachment.file.url

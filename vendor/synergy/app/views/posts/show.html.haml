@@ -1,0 +1,5 @@
+- @title = @post.title
+
+%p= back_button t("pages.news.navigation_title"), news_path
+
+= render "post_long", post: @post

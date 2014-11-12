@@ -1,0 +1,97 @@
+@mixin font-size($font-size, $line-height: false) {
+  font-size: $font-size;
+  font-size: ($font-size / $base-font-size) * 1rem;
+
+  @if $line-height {
+    line-height: ($line-height * $base-line-height) / $font-size;
+  } @else {
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  }
+}
+
+@mixin spacer($dir, $multiplier: 1, $type: margin, $border: false) {
+  $base: $base-spacing-unit * $multiplier;
+
+  @if $border {
+    $base: ($base-spacing-unit * $multiplier) - nth($border, 1);
+    border-#{$dir}: $border;
+  }
+
+  #{$type}-#{$dir}: $base;
+  #{$type}-#{$dir}: ($base / $base-font-size) * 1rem;
+}
+
+@mixin leader($multiplier: 1, $border: false) {
+  @include spacer(top, $multiplier, margin, $border);
+}
+
+@mixin trailer($multiplier: 1, $border: false) {
+  @include spacer(bottom, $multiplier, margin, $border);
+}
+
+@mixin padding-leader($multiplier: 1, $border: false) {
+  @include spacer(top, $multiplier, padding, $border);
+}
+
+@mixin padding-trailer($multiplier: 1, $border: false) {
+  @include spacer(bottom, $multiplier, padding, $border);
+}
+
+@mixin retina-display {
+  @media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+@mixin pattern-with-retina($image, $size, $fallback) {
+  @include background-size($size);
+  background: $fallback image-url("patterns/#{$image}.png");
+  @include retina-display {
+    background-image: image-url("patterns/#{$image}_@2X.png");
+  }
+}
+
+@mixin bleed($amount) {
+  padding-left:   $amount;
+  padding-right:  $amount;
+  margin-left:  - $amount;
+  margin-right: - $amount;
+}
+
+@mixin no-bleed {
+  padding-left:   0;
+  padding-right:  0;
+  margin-left:    0;
+  margin-right:   0;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin on-interact {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin color-link($color1, $color2: $color1) {
+  color: $color1;
+  @include on-interact {
+    color: $color2;
+  }
+}
+
+@mixin selection {
+  ::-moz-selection {
+    @content;
+  }
+  ::-webkit-selection {
+    @content;
+  }
+  ::selection {
+    @content;
+  }
+}

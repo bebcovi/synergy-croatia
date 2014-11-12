@@ -1,0 +1,21 @@
+en:
+  application:
+    latest:
+      title: "Latest news"
+
+  projects:
+    project_short:
+      location: "Location"
+      duration: "Duration"
+      attachments: "Attachments"
+
+  words:
+    more: "More"
+    and: "and"
+    or: "or"
+    back: "Back"
+
+  will_paginate:
+    previous_label: "⇽ Previous"
+    next_label: "Next ⇾"
+    page_gap: "&hellip;"

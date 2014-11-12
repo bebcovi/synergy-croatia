@@ -1,0 +1,11 @@
+%article.project_short
+
+  %header
+    %h1= smarty_pants project.title
+    %p.location= project.location.prepend_icon("location")
+
+  - if project.cover_photo?
+    .article-cover-photo
+      = image_tag project.cover_photo_url(:medium)
+
+  = project.summary

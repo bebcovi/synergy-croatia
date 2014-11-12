@@ -1,0 +1,19 @@
+.login
+
+  %h2= title "#{render_or_call_method_or_proc_on(self, active_admin_application.site_title)} #{t('active_admin.devise.login.title')}"
+
+  - scope = Devise::Mapping.find_scope!(resource_name)
+  = simple_form_for resource, as: resource_name, url: send(:"#{scope}_session_path"), html: {id: "session_new"}, defaults: {wrapper: false} do |f|
+
+    %fieldset.inputs
+      %ol
+        %li= f.input :username, input_html: {autofocus: true}
+        %li= f.input :password
+        %li= f.input :remember_me, as: :hidden, input_html: {value: true}
+
+    %fieldset.actions
+      %ol
+        %li= f.button :submit, "Login"
+        %li.cancel= link_to "Cancel", root_path
+
+  = render "active_admin/devise/shared/links"

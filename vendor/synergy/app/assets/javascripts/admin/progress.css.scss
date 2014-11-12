@@ -1,0 +1,24 @@
+$color: tint($primary-color, 20%);
+
+.admin-progress {
+  display: inline-block;
+  width: 200px;
+  height: 6px;
+  border: 1px solid $color;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+  .admin-progress-bar {
+    display: inline-block;
+    height: 100%;
+    background-color: $color;
+    vertical-align: top;
+  }
+
+  .admin-progress-info {
+    margin-left: 10px;
+    color: tint(black, 50%);
+    font-size: 10px;
+    vertical-align: middle;
+  }

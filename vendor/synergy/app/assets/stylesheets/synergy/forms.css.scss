@@ -1,0 +1,114 @@
+form {
+  @include trailer;
+
+  .uploaded {
+    @extend .milli;
+    margin-top: - $half-spacing-unit;
+    margin-bottom: $half-spacing-unit;
+  }
+}
+
+input,
+textarea,
+button,
+select {
+  line-height: inherit;
+}
+
+#{$all-text-inputs},
+textarea {
+  @extend %text-input;
+}
+
+#{$all-text-inputs} {
+  height: 1.5 * $base-spacing-unit;
+}
+
+textarea {
+  max-width: 100%;
+  height: 5.5 * $base-spacing-unit;
+
+  @include media-query(desk-and-up) {
+    height: 7.5 * $base-spacing-unit;
+  }
+}
+
+select[multiple] {
+  display: block;
+}
+
+input[type="number"] {
+  width: 2.5 * $base-spacing-unit;
+}
+
+label {
+  cursor: pointer;
+  &:after { content: ": "; }
+  &[for$=_hr]:after { content: ": " image-url("lang/HR_small.png"); }
+  &[for$=_en]:after { content: ": " image-url("lang/GB_small.png"); }
+}
+
+select,
+input[type="file"] {
+  &:last-child,
+  ~ :last-child {
+    @include trailer(.5);
+  }
+}
+
+[type="checkbox"],
+[type="radio"] {
+}
+
+.btn {
+  $text-color: lighten(black, 30%);
+  @include sassy-button-structure;
+  @include sassy-button-gradient($base-color: darken(white, 10%), $text-color: $text-color);
+  @include on-interact {
+    color: $text-color;
+  }
+}
+
+.btn_primary {
+  @include on-interact {
+    color: $sb-text-color;
+  }
+}
+
+.add_item {
+  @include sassy-button-structure;
+  @include sassy-button-gradient($base-color: $green);
+  display: inline-block;
+  height: 2 * $base-spacing-unit;
+  @include on-interact {
+    color: $sb-text-color;
+  }
+}
+
+.form_actions {
+  @include leader(.5);
+  @include trailer;
+
+  * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .cancel {
+    margin-right: 5px;
+  }
+}
+
+.controls {
+  @include trailer(.5);
+
+  a {
+    $text-color: lighten(black, 20%);
+    @include sassy-button-structure($padding: $hsu/2 - 1px $half-spacing-unit);
+    @include sassy-button-gradient($base-color: darken(white, 5%), $text-color: $text-color);
+    @include on-interact {
+      color: $text-color;
+    }
+    font-family: icomoon;
+  }
+}

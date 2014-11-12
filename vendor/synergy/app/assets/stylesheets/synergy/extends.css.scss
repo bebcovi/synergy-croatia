@@ -1,0 +1,6 @@
+%image-container {
+  display: inline-block;
+  line-height: 0;
+  border: 0;
+  &:hover { background: none; }
+}

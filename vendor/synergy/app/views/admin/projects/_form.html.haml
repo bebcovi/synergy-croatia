@@ -1,0 +1,49 @@
+= simple_form_for [:admin, @project], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :cover_photo do
+        .unsemantic
+          = image_tag @project.cover_photo_url(:small), height: 100 if @project.cover_photo?
+          = f.input_field :cover_photo
+          = f.hidden_field :cover_photo_cache
+      = f.association :category
+      = f.input :begins_on
+      = f.input :ends_on
+      = f.input :deadline
+
+  %h2 English
+
+  %fieldset.inputs
+    %ol
+      = f.input :name_en
+      = f.input :description_en, input_html: {rows: 15}
+      = f.input :summary_en, as: :text, input_html: {rows: 5}
+      = f.input :location_en
+      = f.input :age_restriction_en
+      = f.input :capacity_en
+
+  %h2 Croatian
+
+  %fieldset.inputs
+    %ol
+      = f.input :name_hr
+      = f.input :description_hr, input_html: {rows: 15}
+      = f.input :summary_hr, as: :text, input_html: {rows: 5}
+      = f.input :location_hr
+      = f.input :age_restriction_hr
+      = f.input :capacity_hr
+
+  %fieldset.inputs.attachments
+    %ol
+      %li
+        %label Attachments
+        = link_to_add_fields "Add attachment", f, :attachments
+
+      = f.simple_fields_for :attachments do |a|
+        = render "attachment_fields", {f: a}
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", collection_path

@@ -1,0 +1,211 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+@import "bourbon";
+@import "synergy/mixins";
+@import "icomoon";
+@import "admin/progress";
+@import "synergy/animations";
+@import "synergy/spinner";
+
+@import "jquery.Jcrop";
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+
+body.active_admin {
+  form {
+    /* Text fields */
+    input[type=text], input[type=password], input[type=email], input[type=number], input[type=url], input[type=tel], textarea {
+      font-size: 1.3em;
+    }
+
+    fieldset.attachments {
+      input[type=text] {
+        width: 30%
+      }
+    }
+
+    .fields {
+      margin-bottom: 10px;
+    }
+  }
+
+  .attributes_table {
+    td {
+      font-size: 1.3em;
+    }
+  }
+
+  .post_cover_photo,
+  .project_cover_photo,
+  .partner_photo {
+    .unsemantic {
+      > * {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      img {
+        margin-right: 20px;
+      }
+    }
+
+    input[type="checkbox"] {
+      margin-right: 4px;
+    }
+  }
+
+  .attachments {
+    .unsemantic {
+      @include position(relative);
+      padding: 10px;
+      background-color: rgba(black, .025);
+      border: 1px solid rgba(black, .1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .fields-remove-attachment {
+      @include position(absolute, 40px 20px 0 0);
+
+      a {
+        color: rgba(black, .25);
+        text-decoration: none;
+        font-size: 24px;
+
+        &:hover,
+        &:focus {
+          color: rgba(black, .5);
+        }
+      }
+    }
+  }
+
+  .input.text_toc {
+    label.radio {
+      width: 8%;
+    }
+    input {
+      margin-right: 5px;
+    }
+  }
+
+  .col-position {
+    vertical-align: middle;
+    text-align: center;
+
+    a {
+      font-size: 22px;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: black;
+      }
+    }
+  }
+}
+
+// copied from http://github.com/twin/outward-bound
+
+body.active_admin {
+  .progress {
+    float: right;
+    width: 25%;
+
+    .bar {
+      height: 100%;
+      background-color: darken(green, .2)
+    }
+  }
+
+  ol.photos {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    img { vertical-align: middle; }
+
+    .photo {
+      position: relative;
+      float: left;
+      padding: 0;
+      margin: 10px;
+
+      .icon-spinner {
+        @include position(absolute, 50% 50% 0 0);
+        font-size: 32px;
+        margin-top: -16px;
+        margin-right: -16px;
+        text-shadow: white 0 0 5px;
+      }
+    }
+
+    .delete_photo {
+      @include position(absolute, 0px 0 0 0px);
+      @include color-link(rgba(white, .75), white);
+      display: inline-block;
+      padding: 2px 6px;
+      text-decoration: none;
+      background-color: rgba(black, .5);
+
+      @include on-interact {
+        background-color: rgba(black, .75);
+      }
+    }
+  }
+
+  .list-inline-block {
+    > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  td.position {
+    a {
+      text-decoration: none;
+      margin-right: 2px;
+      padding: 0 4px;
+
+      &:first-child {
+
+      }
+    }
+  }
+
+  .icon-spinner,
+  .icon-checkmark-circle {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 16px;
+    vertical-align: -2px;
+  }
+
+  .icon-spinner {
+    @include animation(spin 1s linear infinite);
+  }
+
+  .icon-checkmark-circle {
+    color: green;
+  }
+}

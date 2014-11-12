@@ -1,0 +1,13 @@
+.wf-loading {
+  * {
+    color: transparent !important;
+    text-shadow: none !important;
+  }
+
+  .site_navigation,
+  .site_sub_navigation {
+    ol {
+      display: none;
+    }
+  }
+}

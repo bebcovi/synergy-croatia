@@ -1,0 +1,21 @@
+hr:
+  application:
+    latest:
+      title: "Zadnje najave"
+
+  projects:
+    project_short:
+      location: "Lokacija"
+      duration: "Trajanje"
+      attachments: "Prilozi"
+
+  words:
+    more: "Opširnije"
+    and: "i"
+    or: "ili"
+    back: "Natrag"
+
+  will_paginate:
+    previous_label: "⇽ Prethodna"
+    next_label: "Sljedeća ⇾"
+    page_gap: "&hellip;"

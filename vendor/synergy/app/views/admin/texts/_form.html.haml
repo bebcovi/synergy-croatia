@@ -1,0 +1,22 @@
+= simple_form_for [:admin, @text.object], defaults: {wrapper_tag: :li} do |f|
+
+  %fieldset.inputs
+    %ol
+      = f.input :toc, as: :radio_buttons
+
+  %h2 English
+
+  %fieldset.inputs
+    %ol
+      = f.input :body_en, input_html: {rows: 15}
+
+  %h2 Croatian
+
+  %fieldset.inputs
+    %ol
+      = f.input :body_hr, input_html: {rows: 15}
+
+  %fieldset.actions
+    %ol
+      %li= f.button :submit
+      %li.cancel= link_to "Cancel", resource_path

@@ -1,0 +1,6 @@
+.spinner {
+  @include animation(spin 1s infinite linear);
+  display: inline-block;
+  font-size: 16px;
+  color: rgba(black, .35);
+}

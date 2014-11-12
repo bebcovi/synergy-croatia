@@ -1,0 +1,21 @@
+.project_short,
+.project_long,
+.post_short {
+  clear: both;
+
+  .icon-file-pdf {
+    color: #F91D0A;
+  }
+
+  .icon-file-word {
+    color: #2a5598;
+  }
+}
+
+article {
+  p.location {
+    @include trailer(.5);
+    font-style: italic;
+    color: rgba(black, .5);
+  }
+}

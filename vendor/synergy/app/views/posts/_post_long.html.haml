@@ -1,0 +1,9 @@
+%article
+
+  %h1.title= post.title
+
+  - if post.cover_photo?
+    .article-cover-photo
+      = image_tag post.cover_photo_url(:medium)
+
+  = post.body

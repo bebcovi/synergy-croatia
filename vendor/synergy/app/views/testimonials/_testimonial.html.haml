@@ -1,0 +1,8 @@
+.testimonial
+
+  %blockquote
+    %header
+      %b.author= testimonial.author
+      = ", #{testimonial.project}" if testimonial.project.present?
+
+    = testimonial.content

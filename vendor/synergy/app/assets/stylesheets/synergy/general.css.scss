@@ -1,0 +1,21 @@
+h1, h2, h3, h4 {
+  text-rendering: optimizeLegibility;
+}
+
+@include selection {
+  color: white;
+  text-shadow: none;
+}
+
+a {
+  @include transition(
+    color .2s,
+    text-shadow .2s,
+    border-color .2s
+  );
+  text-decoration: none;
+}
+
+.img a {
+  @extend %image-container;
+}

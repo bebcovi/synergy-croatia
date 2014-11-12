@@ -1,0 +1,4 @@
+%ol.toc
+  - parts.each do |part|
+    - if part.title.present?
+      %li= link_to part.title, anchor: part.id
