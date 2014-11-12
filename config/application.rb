@@ -4,6 +4,7 @@ require "rails"
 require "synergy"
 require "fancybox2-rails"
 require "pg_search"
+require "acts_as_list"
 
 require "newrelic_rpm" if Rails.env.production?
 

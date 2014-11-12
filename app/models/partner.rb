@@ -1,4 +1,3 @@
-require "acts_as_list"
 require "squeel"
 
 class Partner < ActiveRecord::Base

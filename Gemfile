@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails", ">= 4"
-gem "synergy", github: "twin/synergy"
+gem "synergy", git: "git@github.com:twin/synergy.git"
 
 gem "carrierwave_backgrounder", "0.3.0"
 gem "timers", "2.0.0"
