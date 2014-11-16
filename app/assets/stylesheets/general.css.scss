@@ -43,7 +43,7 @@ h1 {
   @include trailer(.5);
   @include padding-trailer(.5, 3px solid rgba(black, .75));
   @include font-size($h1-size, 1.25);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 h2 {
