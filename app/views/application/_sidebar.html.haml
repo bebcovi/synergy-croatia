@@ -6,3 +6,7 @@
   - %w[support newsletter social syncro].each do |item|
     %section{class: item}
       = render item
+
+  %section.sponsor
+    = link_to image_tag("nzrcd.jpg", size: "150x150", alt: "logo"), "http://zaklada.civilnodrustvo.hr/frontpage"
+    %p Centar za osobni i profesionalni razvoj Syncro - Synergy Croatia je korisnik institucionalne podrške Nacionalne zaklade za razvoj civilnoga društva za stabilizaciju i/ili razvoj udruge

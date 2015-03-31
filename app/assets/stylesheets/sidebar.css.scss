@@ -14,12 +14,6 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     @include trailer(.5);
     @include padding-trailer(.5, 1px solid rgba($link-color, .1));
 
-    &:last-child:not(.syncro) {
-      @include padding-trailer(.5);
-      margin-bottom: 0;
-      border-bottom: none;
-    }
-
     p:last-child {
       margin-bottom: 0;
     }
@@ -57,8 +51,8 @@ $sidebar-border: 1px solid tint($link-color, 65%);
       @include padding-trailer(.5, 1px solid rgba($link-color, .1));
       @include trailer(.5);
       @include bleed($padding);
-      &:last-child:not(.syncro) {
-        margin-bottom: 0;
+      &:last-child {
+        margin-bottom: -0.5em;
         padding-bottom: 0;
         border-bottom: 0;
       }
@@ -87,11 +81,11 @@ $sidebar-border: 1px solid tint($link-color, 65%);
 
   .syncro {
     margin-top: - ($half-spacing-unit + 1px);
+    margin-bottom: 0;
     margin-right: - ($gutter-width + 1px);
     margin-left: - ($gutter-width + 1px);
-    margin-bottom: - $base-spacing-unit;
     padding-top: $half-spacing-unit;
-    padding-bottom: $base-spacing-unit;
+    padding-bottom: $base-spacing-unit/2;
     border: 1px solid #a5d5df;
     background-image: url("http://www.syncro.hr/assets/patterns/sidebar-bg.png");
     background-color: rgb(246, 254, 254);
@@ -111,6 +105,22 @@ $sidebar-border: 1px solid tint($link-color, 65%);
     top: 3px;
     &:before {
       content: image-url("icon-syncro.png");
+    }
+  }
+
+  $color: #0097d0;
+
+  .sponsor {
+    padding-top: 0.5em;
+    text-align: center;
+
+    img {
+      border-radius: 50%;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      text-align: left;
     }
   }
 }
